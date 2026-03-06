@@ -135,9 +135,12 @@ export default function BiodataPreview({ data, template, themeMeta }: Props) {
     };
 
     const renderGodIcon = () => {
-        if (data.godIcon?.isHidden) return null;
+        const isHidden = data.godIcon?.isHidden;
         return (
-            <div className="flex flex-col items-center justify-center" style={{ marginBottom: meta.godIconSpacing }}>
+            <div
+                className="flex flex-col items-center justify-center"
+                style={{ marginBottom: meta.godIconSpacing, visibility: isHidden ? 'hidden' : 'visible' }}
+            >
                 {data.godIcon?.url && (
                     <img src={data.godIcon.url} alt="God Icon" className="w-16 h-16 md:w-20 md:h-20 object-contain mb-2 drop-shadow-md" />
                 )}
