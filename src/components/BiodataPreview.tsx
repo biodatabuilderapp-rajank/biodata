@@ -54,7 +54,7 @@ export default function BiodataPreview({ data, template, themeMeta }: Props) {
                 className="flex flex-row items-start"
                 style={{ paddingBottom: meta.fieldSpacing, fontSize: meta.baseFontSize, fontFamily: meta.fontFamily }}
             >
-                <span className="font-semibold shrink-0 pr-2 flex justify-between" style={{ color: meta.labelColor, width: '25cqi' }}>
+                <span className="font-semibold shrink-0 pr-2 flex justify-between" style={{ color: meta.labelColor, width: '27cqi' }}>
                     <span>{label}</span>
                     <span>:</span>
                 </span>
