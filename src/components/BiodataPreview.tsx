@@ -27,20 +27,20 @@ interface Props {
 
 export default function BiodataPreview({ data, template, themeMeta }: Props) {
     const defaultMeta: ThemeMeta = {
-        containerPadding: "50px 30px 30px 30px",
+        containerPadding: "6.25cqi 3.75cqi 3.75cqi 3.75cqi", // 50 30 30 30
         godIconTextColor: "#8b0000",
         headingColor: "#333333",
         labelColor: "#555555",
         valueColor: "#111111",
         pageBackgroundColor: "#ffffff",
-        profilePhotoTop: "3rem",
-        profilePhotoRight: "3rem",
+        profilePhotoTop: "10cqi",
+        profilePhotoRight: "10cqi",
         fontFamily: "'Noto Serif', Georgia, serif",
-        baseFontSize: "13px",
-        sectionTitleFontSize: "17px",
-        sectionSpacing: "20px",
-        fieldSpacing: "5px",
-        godIconSpacing: "16px",
+        baseFontSize: "1.625cqi",
+        sectionTitleFontSize: "2.125cqi",
+        sectionSpacing: "2.5cqi",
+        fieldSpacing: "0.625cqi",
+        godIconSpacing: "2cqi",
     };
 
     const meta: ThemeMeta = { ...defaultMeta, ...themeMeta };
@@ -49,10 +49,10 @@ export default function BiodataPreview({ data, template, themeMeta }: Props) {
         if (!value) return null;
         return (
             <div
-                className="flex flex-col sm:flex-row sm:items-start"
+                className="flex flex-row items-start"
                 style={{ paddingBottom: meta.fieldSpacing, fontSize: meta.baseFontSize, fontFamily: meta.fontFamily }}
             >
-                <span className="w-40 sm:w-48 min-w-[10rem] sm:min-w-[12rem] font-semibold shrink-0 pr-2 flex justify-between" style={{ color: meta.labelColor }}>
+                <span className="font-semibold shrink-0 pr-2 flex justify-between" style={{ color: meta.labelColor, width: '25cqi' }}>
                     <span>{label}</span>
                     <span>:</span>
                 </span>
@@ -126,8 +126,8 @@ export default function BiodataPreview({ data, template, themeMeta }: Props) {
 
         return (
             <div
-                className={`absolute z-20 shrink-0 ${data.profilePhoto.shape === 'circle' ? 'rounded-full' : 'rounded-2xl'} overflow-hidden shadow-sm w-32 h-32 md:w-36 md:h-36`}
-                style={{ top: meta.profilePhotoTop, right: meta.profilePhotoRight }}
+                className={`absolute z-20 shrink-0 ${data.profilePhoto.shape === 'circle' ? 'rounded-full' : 'rounded-2xl'} overflow-hidden shadow-sm`}
+                style={{ top: meta.profilePhotoTop, right: meta.profilePhotoRight, width: '18cqi', height: '18cqi' }}
             >
                 <img src={data.profilePhoto.url} alt="Profile" className="w-full h-full object-cover" />
             </div>
@@ -142,10 +142,10 @@ export default function BiodataPreview({ data, template, themeMeta }: Props) {
                 style={{ marginBottom: meta.godIconSpacing, visibility: isHidden ? 'hidden' : 'visible' }}
             >
                 {data.godIcon?.url && (
-                    <img src={data.godIcon.url} alt="God Icon" className="w-16 h-16 md:w-20 md:h-20 object-contain mb-2 drop-shadow-md" />
+                    <img src={data.godIcon.url} alt="God Icon" className="object-contain mb-2 drop-shadow-md" style={{ width: '10cqi', height: '10cqi' }} />
                 )}
                 {data.godIcon?.text && (
-                    <div className="text-lg md:text-xl font-bold font-serif drop-shadow-sm" style={{ color: meta.godIconTextColor }}>
+                    <div className="font-bold font-serif drop-shadow-sm" style={{ color: meta.godIconTextColor, fontSize: '2.5cqi' }}>
                         {data.godIcon.text}
                     </div>
                 )}
@@ -154,7 +154,7 @@ export default function BiodataPreview({ data, template, themeMeta }: Props) {
     };
 
     return (
-        <div className="w-full h-full flex flex-col items-center relative" style={{ padding: meta.containerPadding, backgroundColor: meta.pageBackgroundColor }}>
+        <div className="w-full h-full flex flex-col items-center relative" style={{ padding: meta.containerPadding, backgroundColor: meta.pageBackgroundColor, containerType: 'inline-size' }}>
             {renderProfilePhoto()}
             {renderGodIcon()}
             <div className="w-full text-left">
