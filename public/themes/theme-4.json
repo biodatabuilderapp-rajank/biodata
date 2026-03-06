@@ -12,5 +12,6 @@
     "sectionTitleFontSize": "2.5cqi",
     "sectionSpacing": "1.875cqi",
     "fieldSpacing": "0.625cqi",
-    "godIconSpacing": "7.5cqi"
+    "godIconSpacing": "7.5cqi",
+    "godIconFontSize": "2.5cqi"
 }

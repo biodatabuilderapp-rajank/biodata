@@ -1,5 +1,5 @@
 {
-    "containerPadding": "6.25cqi 3.75cqi 3.75cqi 3.75cqi",
+    "containerPadding": "2.25cqi 2.75cqi 2.25cqi 2.75cqi",
     "godIconTextColor": "#8B1E3F",
     "headingColor": "#7A5A00",
     "labelColor": "#444444",
@@ -8,9 +8,10 @@
     "profilePhotoTop": "10cqi",
     "profilePhotoRight": "10cqi",
     "fontFamily": "'Noto Serif', Georgia, serif",
-    "baseFontSize": "2cqi",
-    "sectionTitleFontSize": "2.5cqi",
     "sectionSpacing": "1.875cqi",
-    "fieldSpacing": "0.625cqi",
-    "godIconSpacing": "2cqi"
+    "fieldSpacing": "0.75cqi",
+    "godIconSpacing": "2cqi",
+    "godIconFontSize": "2.75cqi",
+    "sectionTitleFontSize": "2.75cqi",
+    "baseFontSize": "2.25cqi"
 }

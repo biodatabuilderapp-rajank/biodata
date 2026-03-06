@@ -17,6 +17,7 @@ export interface ThemeMeta {
     sectionSpacing: string;
     fieldSpacing: string;
     godIconSpacing: string;
+    godIconFontSize: string;
 }
 
 interface Props {
@@ -41,6 +42,7 @@ export default function BiodataPreview({ data, template, themeMeta }: Props) {
         sectionSpacing: "2.5cqi",
         fieldSpacing: "0.625cqi",
         godIconSpacing: "2cqi",
+        godIconFontSize: "2.5cqi",
     };
 
     const meta: ThemeMeta = { ...defaultMeta, ...themeMeta };
@@ -145,7 +147,7 @@ export default function BiodataPreview({ data, template, themeMeta }: Props) {
                     <img src={data.godIcon.url} alt="God Icon" className="object-contain mb-2 drop-shadow-md" style={{ width: '10cqi', height: '10cqi' }} />
                 )}
                 {data.godIcon?.text && (
-                    <div className="font-bold font-serif drop-shadow-sm" style={{ color: meta.godIconTextColor, fontSize: '2.5cqi' }}>
+                    <div className="font-bold font-serif drop-shadow-sm flex-shrink-0" style={{ color: meta.godIconTextColor, fontSize: meta.godIconFontSize }}>
                         {data.godIcon.text}
                     </div>
                 )}
