@@ -1,36 +1,170 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BiodataBuilder — Free Marriage Biodata Maker
 
-## Getting Started
+**Website:** [biodatabuilder.in](https://biodatabuilder.in)
+**Contact:** biodatabuilderapp@gmail.com
 
-First, run the development server:
+A free, no-sign-up Indian marriage biodata maker built with Next.js. Users fill in their details, pick a beautiful theme, and instantly download their biodata as a high-quality PDF or PNG.
+
+---
+
+## Tech Stack
+
+- **Framework:** Next.js 16 (App Router)
+- **Styling:** Tailwind CSS
+- **Export:** `html-to-image` + `jsPDF`
+- **Icons:** Lucide React
+
+---
+
+## Getting Started (Development)
 
 ```bash
+# Install dependencies
+npm install
+
+# Start the dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```
+src/
+├── app/
+│   ├── page.tsx              # Home page (hero, features, SEO)
+│   ├── layout.tsx            # Root layout (metadata, JSON-LD, AdSense)
+│   ├── sitemap.ts            # Auto-generated sitemap
+│   ├── robots.ts             # robots.txt
+│   ├── create/               # Biodata form page
+│   ├── preview/              # Preview, theme selection & download page
+│   ├── faq/                  # FAQ page
+│   ├── privacy-policy/       # Privacy Policy page
+│   ├── terms/                # Terms of Use page
+│   └── api/themes/           # API route: scans public/themes for available themes
+├── components/
+│   ├── BiodataForm.tsx       # Multi-section form with inline editing
+│   ├── BiodataPreview.tsx    # Preview component (reads ThemeMeta styles)
+│   ├── AdSlot.tsx            # Google AdSense slot (plug-and-play)
+│   ├── ImageCropper.tsx      # Profile photo crop modal
+│   └── GodIconSelector.tsx   # God icon picker modal
+public/
+├── themes/                   # Theme PNG files + JSON metadata (theme-1.png, theme-1.json, ...)
+└── god_icons/                # God icon images
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Adding New Themes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Drop your theme image (`theme-N.png`) into `public/themes/`.
+2. Create a companion `theme-N.json` in the same folder with the following structure:
 
-## Deploy on Vercel
+```json
+{
+  "containerPadding": "60px 40px 30px 40px",
+  "godIconTextColor": "#8B0000",
+  "headingColor": "#1a1a1a",
+  "labelColor": "#444444",
+  "valueColor": "#111111",
+  "fullNameColor": "#000000",
+  "marriageBiodataLabelColor": "#8B0000",
+  "pageBackgroundColor": "#ffffff",
+  "profilePhotoTop": "80px",
+  "profilePhotoRight": "80px"
+}
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. That's it! The `/api/themes` endpoint automatically scans the folder — no code changes needed.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Activating Google AdSense
+
+Follow these steps **after** AdSense approves your site:
+
+### Step 1 — Get Your Publisher ID
+Log in to [Google AdSense](https://adsense.google.com) and copy your publisher ID. It looks like: `ca-pub-XXXXXXXXXXXXXXXX`.
+
+### Step 2 — Enable the AdSense Script
+Open `src/app/layout.tsx` and uncomment this block (update with your real publisher ID):
+
+```tsx
+// Before (commented out):
+{/* <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossOrigin="anonymous" /> */}
+
+// After (uncommented + real ID):
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_REAL_ID" crossOrigin="anonymous" />
+```
+
+### Step 3 — Enable the AdSlot Component
+In your `.env.production` file (create if it doesn't exist), add:
+
+```env
+NEXT_PUBLIC_ADSENSE_ENABLED=true
+```
+
+This flips the `<AdSlot>` component from "render nothing" to "render the ad unit".
+
+### Step 4 — Place Your Ad Units
+`<AdSlot>` is already imported-ready. Add it in strategic places:
+
+```tsx
+import AdSlot from "@/components/AdSlot";
+
+// Usage example:
+<AdSlot
+  slotId="home-below-steps"
+  adClient="ca-pub-XXXXXXXXXXXXXXXX"
+  adSlot="1234567890"
+  className="my-6"
+/>
+```
+
+Recommended placements (already marked with `// TODO: AdSlot` comments):
+- Home page: below "How it Works" section
+- Create page: below the form
+- Preview page: below the theme selector
+
+### Step 5 — Initialize Ad Units (in `layout.tsx`)
+After uncommenting the AdSense script, also add this inside `<body>`:
+
+```tsx
+<Script id="adsense-init" strategy="afterInteractive">
+  {`(adsbygoogle = window.adsbygoogle || []).push({});`}
+</Script>
+```
+
+---
+
+## SEO Configuration
+
+All SEO settings live in `src/app/layout.tsx`:
+- Title, description, keywords
+- OpenGraph and Twitter card metadata
+- JSON-LD structured data (`SoftwareApplication` schema)
+- `metadataBase` set to `https://biodatabuilder.in`
+
+**OG Image:** Place a 1200×630px image at `public/og-image.png` for social sharing previews.
+
+---
+
+## Deployment
+
+Recommended: **[Vercel](https://vercel.com)** (one-click Next.js deploy)
+
+```bash
+# Build for production
+npm run build
+
+# Start production server
+npm start
+```
+
+After deploying, submit your sitemap to [Google Search Console](https://search.google.com/search-console):
+```
+https://biodatabuilder.in/sitemap.xml
+```

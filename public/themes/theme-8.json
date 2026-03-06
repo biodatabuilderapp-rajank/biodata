@@ -1,0 +1,16 @@
+{
+    "containerPadding": "30px 30px 30px 30px",
+    "godIconTextColor": "#F5E6A8",
+    "headingColor": "#D4C08A",
+    "labelColor": "#E6E6F0",
+    "valueColor": "#FFFFFF",
+    "pageBackgroundColor": "",
+    "profilePhotoTop": "168px",
+    "profilePhotoRight": "30px",
+    "fontFamily": "'Noto Serif', Georgia, serif",
+    "baseFontSize": "16px",
+    "sectionTitleFontSize": "20px",
+    "sectionSpacing": "15px",
+    "fieldSpacing": "5px",
+    "godIconSpacing": "16px"
+}
