@@ -156,7 +156,7 @@ export default function PreviewPage() {
                     <div
                         id="biodata-preview-container"
                         className="relative w-full shadow-2xl bg-white overflow-hidden"
-                        style={{ maxWidth: '800px', aspectRatio: '1240/1754' }}
+                        style={{ maxWidth: '800px', aspectRatio: '1240/1754', containerType: 'inline-size' }}
                     >
                         {/* Background Image */}
                         <img

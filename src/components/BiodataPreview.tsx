@@ -156,7 +156,7 @@ export default function BiodataPreview({ data, template, themeMeta }: Props) {
     };
 
     return (
-        <div className="w-full h-full flex flex-col items-center relative" style={{ padding: meta.containerPadding, backgroundColor: meta.pageBackgroundColor, containerType: 'inline-size' }}>
+        <div className="w-full h-full flex flex-col items-center relative z-10" style={{ padding: meta.containerPadding, backgroundColor: meta.pageBackgroundColor }}>
             {renderProfilePhoto()}
             {renderGodIcon()}
             <div className="w-full text-left">
