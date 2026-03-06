@@ -28,14 +28,14 @@ interface Props {
 
 export default function BiodataPreview({ data, template, themeMeta }: Props) {
     const defaultMeta: ThemeMeta = {
-        containerPadding: "12.25cqi 9.75cqi 9.75cqi 9.75cqi", // +6cqi compensation for removed parent wrapper
+        containerPadding: "6.25cqi 3.75cqi 3.75cqi 3.75cqi", // 50 30 30 30
         godIconTextColor: "#8b0000",
         headingColor: "#333333",
         labelColor: "#555555",
         valueColor: "#111111",
         pageBackgroundColor: "#ffffff",
-        profilePhotoTop: "16cqi",
-        profilePhotoRight: "16cqi",
+        profilePhotoTop: "10cqi",
+        profilePhotoRight: "10cqi",
         fontFamily: "'Noto Serif', Georgia, serif",
         baseFontSize: "1.625cqi",
         sectionTitleFontSize: "2.125cqi",
