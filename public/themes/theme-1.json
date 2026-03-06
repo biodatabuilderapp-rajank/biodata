@@ -10,7 +10,7 @@
     "fontFamily": "'Noto Serif', Georgia, serif",
     "sectionSpacing": "1.875cqi",
     "fieldSpacing": "0.75cqi",
-    "godIconSpacing": "2cqi",
+    "godIconSpacing": "1cqi",
     "godIconFontSize": "2.75cqi",
     "sectionTitleFontSize": "2.75cqi",
     "baseFontSize": "2.45cqi"

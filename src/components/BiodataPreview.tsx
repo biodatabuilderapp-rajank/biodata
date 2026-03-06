@@ -144,7 +144,7 @@ export default function BiodataPreview({ data, template, themeMeta }: Props) {
                 style={{ marginBottom: meta.godIconSpacing, visibility: isHidden ? 'hidden' : 'visible' }}
             >
                 {data.godIcon?.url && (
-                    <img src={data.godIcon.url} alt="God Icon" className="object-contain drop-shadow-md" style={{ width: '14cqi', height: '14cqi', marginBottom: '1cqi' }} />
+                    <img src={data.godIcon.url} alt="God Icon" className="object-contain drop-shadow-md" style={{ width: '14cqi', height: '14cqi', marginBottom: '0cqi' }} />
                 )}
                 {data.godIcon?.text && (
                     <div className="font-bold font-serif drop-shadow-sm flex-shrink-0" style={{ color: meta.godIconTextColor, fontSize: meta.godIconFontSize }}>
