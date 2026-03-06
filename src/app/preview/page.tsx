@@ -165,7 +165,7 @@ export default function PreviewPage() {
                             className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
                         />
                         {/* Foreground Content */}
-                        <div className="relative z-10 w-full h-full p-[6%] overflow-hidden">
+                        <div className="relative z-10 w-full h-full overflow-hidden">
                             <BiodataPreview data={data} template={template} themeMeta={themeMeta} />
                         </div>
                     </div>
