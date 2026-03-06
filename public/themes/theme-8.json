@@ -8,10 +8,10 @@
     "profilePhotoTop": "21cqi",
     "profilePhotoRight": "3.75cqi",
     "fontFamily": "'Noto Serif', Georgia, serif",
-    "baseFontSize": "2cqi",
-    "sectionTitleFontSize": "2.5cqi",
+    "baseFontSize": "2.45cqi",
+    "sectionTitleFontSize": "2.75cqi",
     "sectionSpacing": "1.875cqi",
     "fieldSpacing": "0.625cqi",
     "godIconSpacing": "2cqi",
-    "godIconFontSize": "2.5cqi"
+    "godIconFontSize": "2.75cqi"
 }
