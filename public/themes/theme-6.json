@@ -1,17 +1,17 @@
 {
     "pageBackgroundColor": "",
-    "containerPadding": "12.5cqi 7.5cqi 3.75cqi",
+    "containerPadding": "18cqi 15cqi 0",
     "fontFamily": "'Noto Serif', Georgia, serif",
     "headingColor": "#E6C36A",
     "labelColor": "#E8E8E8",
     "valueColor": "#FFFFFF",
     "baseFontSize": "2cqi",
     "sectionTitleFontSize": "2.5cqi",
-    "sectionSpacing": "1.875cqi",
-    "fieldSpacing": "0.625cqi",
+    "sectionSpacing": "1cqi",
+    "fieldSpacing": "0.5cqi",
     "godIconTextColor": "#FFDFA3",
     "godIconFontSize": "2.5cqi",
-    "godIconSpacing": "2cqi",
-    "profilePhotoTop": "30cqi",
-    "profilePhotoRight": "7.5cqi"
+    "godIconSpacing": "1cqi",
+    "profilePhotoTop": "23cqi",
+    "profilePhotoRight": "15.5cqi"
 }
