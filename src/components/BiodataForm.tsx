@@ -18,6 +18,7 @@ const SectionTitleInput = ({ section, data, updateSectionTitle }: { section: Exc
         onChange={(e) => updateSectionTitle(section, e.target.value)}
         className="bg-transparent border-b-2 border-transparent hover:border-zinc-300 dark:hover:border-zinc-700 focus:border-indigo-500 focus:outline-none transition-colors w-full px-1 py-0.5 text-lg font-semibold text-zinc-900 dark:text-zinc-100"
         title="Edit Section Title"
+        tabIndex={-1}
     />
 );
 
@@ -57,12 +58,14 @@ const Input = ({ section, field, data, updateSection, updateLabel, removeField, 
                     onChange={(e) => updateLabel(section, field, e.target.value)}
                     className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 bg-transparent border-b border-transparent hover:border-zinc-300 dark:hover:border-zinc-600 focus:border-indigo-500 focus:outline-none py-0.5 px-1 -ml-1 transition-colors w-full sm:w-auto"
                     title="Edit Field Label"
+                    tabIndex={-1}
                 />
                 {removeField && (
                     <button
                         onClick={() => removeField(section, field)}
-                        className="text-zinc-400 hover:text-red-500 p-0.5 rounded transition-colors opacity-0 group-hover/field:opacity-100"
+                        className="text-zinc-400 hover:text-red-500 p-0.5 rounded transition-colors shrink-0"
                         title="Remove field"
+                        tabIndex={-1}
                     >
                         <X className="w-3.5 h-3.5" />
                     </button>
