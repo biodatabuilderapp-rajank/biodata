@@ -3,21 +3,21 @@
 import { Biodata } from "@/app/create/page";
 
 export interface ThemeMeta {
+    pageBackgroundColor: string;
     containerPadding: string;
-    godIconTextColor: string;
+    fontFamily: string;
     headingColor: string;
     labelColor: string;
     valueColor: string;
-    pageBackgroundColor: string;
-    profilePhotoTop: string;
-    profilePhotoRight: string;
-    fontFamily: string;
     baseFontSize: string;
     sectionTitleFontSize: string;
     sectionSpacing: string;
     fieldSpacing: string;
-    godIconSpacing: string;
+    godIconTextColor: string;
     godIconFontSize: string;
+    godIconSpacing: string;
+    profilePhotoTop: string;
+    profilePhotoRight: string;
 }
 
 interface Props {
@@ -28,21 +28,21 @@ interface Props {
 
 export default function BiodataPreview({ data, template, themeMeta }: Props) {
     const defaultMeta: ThemeMeta = {
+        pageBackgroundColor: "#ffffff",
         containerPadding: "6.25cqi 3.75cqi 3.75cqi 3.75cqi", // 50 30 30 30
-        godIconTextColor: "#8b0000",
+        fontFamily: "'Noto Serif', Georgia, serif",
         headingColor: "#333333",
         labelColor: "#555555",
         valueColor: "#111111",
-        pageBackgroundColor: "#ffffff",
-        profilePhotoTop: "10cqi",
-        profilePhotoRight: "10cqi",
-        fontFamily: "'Noto Serif', Georgia, serif",
         baseFontSize: "1.625cqi",
         sectionTitleFontSize: "2.125cqi",
         sectionSpacing: "2.5cqi",
         fieldSpacing: "0.625cqi",
-        godIconSpacing: "2cqi",
+        godIconTextColor: "#8b0000",
         godIconFontSize: "2.5cqi",
+        godIconSpacing: "2cqi",
+        profilePhotoTop: "10cqi",
+        profilePhotoRight: "10cqi",
     };
 
     const meta: ThemeMeta = { ...defaultMeta, ...themeMeta };
