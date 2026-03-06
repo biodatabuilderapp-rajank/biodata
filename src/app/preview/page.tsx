@@ -90,7 +90,11 @@ export default function PreviewPage() {
         const element = document.getElementById("biodata-preview-container");
         if (!element) return;
         try {
-            const imgData = await toPng(element, { quality: 1, pixelRatio: 2 });
+            // Guarantee identical print-quality resolution (2000px wide) regardless of screen size
+            const targetWidth = 2000;
+            const dynamicPixelRatio = targetWidth / element.offsetWidth;
+
+            const imgData = await toPng(element, { quality: 1, pixelRatio: dynamicPixelRatio });
             // A4 dimensions: 210 x 297 mm
             const pdf = new jsPDF("p", "mm", "a4");
             const pdfWidth = pdf.internal.pageSize.getWidth();
@@ -106,7 +110,10 @@ export default function PreviewPage() {
         const element = document.getElementById("biodata-preview-container");
         if (!element) return;
         try {
-            const imgData = await toPng(element, { quality: 1, pixelRatio: 2 });
+            const targetWidth = 2000;
+            const dynamicPixelRatio = targetWidth / element.offsetWidth;
+
+            const imgData = await toPng(element, { quality: 1, pixelRatio: dynamicPixelRatio });
             const link = document.createElement("a");
             link.href = imgData;
             link.download = `${data.personalDetails.fullName?.value || "Biodata"}.png`;
