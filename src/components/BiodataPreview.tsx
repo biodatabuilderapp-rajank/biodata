@@ -105,7 +105,7 @@ export default function BiodataPreview({ data, template, themeMeta }: Props) {
 
             {hasAnyValue(data.familyDetails) && (
                 <section style={{ marginBottom: meta.sectionSpacing }}>
-                    <h2 className="font-bold tracking-wider mb-1" style={{ color: meta.headingColor, fontSize: meta.sectionTitleFontSize, fontFamily: meta.fontFamily }}>
+                    <h2 className="font-bold tracking-wider" style={{ color: meta.headingColor, fontSize: meta.sectionTitleFontSize, fontFamily: meta.fontFamily, paddingBottom: meta.fieldSpacing }}>
                         {data.familyDetails.title}
                     </h2>
                     {renderSectionRows("familyDetails", ["fatherName", "fatherOccupation", "motherName", "motherOccupation", "siblings"])}
@@ -114,7 +114,7 @@ export default function BiodataPreview({ data, template, themeMeta }: Props) {
 
             {hasAnyValue(data.contactDetails) && (
                 <section>
-                    <h2 className="font-bold tracking-wider mb-1" style={{ color: meta.headingColor, fontSize: meta.sectionTitleFontSize, fontFamily: meta.fontFamily }}>
+                    <h2 className="font-bold tracking-wider" style={{ color: meta.headingColor, fontSize: meta.sectionTitleFontSize, fontFamily: meta.fontFamily, paddingBottom: meta.fieldSpacing }}>
                         {data.contactDetails.title}
                     </h2>
                     {renderSectionRows("contactDetails", ["contactNumber", "email", "address"])}
@@ -144,7 +144,7 @@ export default function BiodataPreview({ data, template, themeMeta }: Props) {
                 style={{ marginBottom: meta.godIconSpacing, visibility: isHidden ? 'hidden' : 'visible' }}
             >
                 {data.godIcon?.url && (
-                    <img src={data.godIcon.url} alt="God Icon" className="object-contain mb-2 drop-shadow-md" style={{ width: '14cqi', height: '14cqi' }} />
+                    <img src={data.godIcon.url} alt="God Icon" className="object-contain drop-shadow-md" style={{ width: '14cqi', height: '14cqi', marginBottom: '1cqi' }} />
                 )}
                 {data.godIcon?.text && (
                     <div className="font-bold font-serif drop-shadow-sm flex-shrink-0" style={{ color: meta.godIconTextColor, fontSize: meta.godIconFontSize }}>
@@ -160,9 +160,7 @@ export default function BiodataPreview({ data, template, themeMeta }: Props) {
             {renderProfilePhoto()}
             {renderGodIcon()}
             <div className="w-full text-left">
-                <div className="space-y-4 px-2 mt-2">
-                    {renderSections()}
-                </div>
+                {renderSections()}
             </div>
         </div>
     );
