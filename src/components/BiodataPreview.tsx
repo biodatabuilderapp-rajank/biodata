@@ -60,7 +60,7 @@ export default function BiodataPreview({ data, template, themeMeta }: Props) {
                     <span>{label}</span>
                     <span>:</span>
                 </span>
-                <span className="font-medium" style={{ color: meta.valueColor }}>
+                <span className="font-medium whitespace-pre-wrap" style={{ color: meta.valueColor }}>
                     {value}
                 </span>
             </div>

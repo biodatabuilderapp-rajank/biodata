@@ -71,13 +71,22 @@ const Input = ({ section, field, data, updateSection, updateLabel, removeField, 
                     </button>
                 )}
             </div>
-            <input
-                type={type}
-                placeholder={placeholder}
-                className="w-full px-4 py-2.5 bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all text-zinc-900 dark:text-zinc-100"
-                value={fieldData.value}
-                onChange={(e) => updateSection(section, field, e.target.value)}
-            />
+            {type === "textarea" ? (
+                <textarea
+                    placeholder={placeholder}
+                    className="w-full px-4 py-2.5 bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all text-zinc-900 dark:text-zinc-100 min-h-[100px] resize-y"
+                    value={fieldData.value}
+                    onChange={(e) => updateSection(section, field, e.target.value)}
+                />
+            ) : (
+                <input
+                    type={type}
+                    placeholder={placeholder}
+                    className="w-full px-4 py-2.5 bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all text-zinc-900 dark:text-zinc-100"
+                    value={fieldData.value}
+                    onChange={(e) => updateSection(section, field, e.target.value)}
+                />
+            )}
         </div>
     );
 };
@@ -240,7 +249,7 @@ export default function BiodataForm({ data, onChange }: Props) {
                     <>
                         <Input data={data} updateSection={updateSection} updateLabel={updateLabel} removeField={removeField} section="contactDetails" field="contactNumber" type="tel" />
                         <Input data={data} updateSection={updateSection} updateLabel={updateLabel} removeField={removeField} section="contactDetails" field="email" type="email" />
-                        <Input data={data} updateSection={updateSection} updateLabel={updateLabel} removeField={removeField} section="contactDetails" field="address" placeholder="e.g. Andheri West, Mumbai" />
+                        <Input data={data} updateSection={updateSection} updateLabel={updateLabel} removeField={removeField} section="contactDetails" field="address" placeholder="e.g. Andheri West, Mumbai" type="textarea" />
                     </>
                 )}
 
