@@ -1,6 +1,6 @@
 {
     "pageBackgroundColor": "",
-    "containerPadding": "10cqi 12cqi 0",
+    "containerPadding": "11cqi 12cqi 0",
     "fontFamily": "'Noto Serif', Georgia, serif",
     "headingColor": "#E6C97A",
     "labelColor": "#F5E6E6",
@@ -13,6 +13,6 @@
     "godIconFontSize": "2.5cqi",
     "godIconSpacing": "2cqi",
     "godIconHideStrategy": "visibility",
-    "profilePhotoTop": "10.5cqi",
-    "profilePhotoRight": "8.5cqi"
+    "profilePhotoTop": "0",
+    "profilePhotoRight": "0"
 }
