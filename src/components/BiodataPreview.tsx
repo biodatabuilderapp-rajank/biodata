@@ -16,6 +16,7 @@ export interface ThemeMeta {
     godIconTextColor: string;
     godIconFontSize: string;
     godIconSpacing: string;
+    godIconHideStrategy?: "visibility" | "display";
     profilePhotoTop: string;
     profilePhotoRight: string;
 }
@@ -41,6 +42,7 @@ export default function BiodataPreview({ data, template, themeMeta }: Props) {
         godIconTextColor: "#8b0000",
         godIconFontSize: "2.5cqi",
         godIconSpacing: "2cqi",
+        godIconHideStrategy: "visibility",
         profilePhotoTop: "10cqi",
         profilePhotoRight: "10cqi",
     };
@@ -138,10 +140,24 @@ export default function BiodataPreview({ data, template, themeMeta }: Props) {
 
     const renderGodIcon = () => {
         const isHidden = data.godIcon?.isHidden;
+        const hideStrategy = meta.godIconHideStrategy || 'visibility';
+
+        const style: React.CSSProperties = {
+            marginBottom: meta.godIconSpacing,
+        };
+
+        if (isHidden) {
+            if (hideStrategy === 'display') {
+                style.display = 'none';
+            } else {
+                style.visibility = 'hidden';
+            }
+        }
+
         return (
             <div
                 className="flex flex-col items-center justify-center"
-                style={{ marginBottom: meta.godIconSpacing, visibility: isHidden ? 'hidden' : 'visible' }}
+                style={style}
             >
                 {data.godIcon?.url && (
                     <img src={data.godIcon.url} alt="God Icon" className="object-contain drop-shadow-md" style={{ width: '14cqi', height: '14cqi', marginBottom: '0cqi' }} />

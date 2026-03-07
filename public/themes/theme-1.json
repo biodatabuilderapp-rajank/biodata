@@ -12,6 +12,7 @@
     "godIconTextColor": "#8B1E3F",
     "godIconFontSize": "2.5cqi",
     "godIconSpacing": "2cqi",
+    "godIconHideStrategy": "visibility",
     "profilePhotoTop": "15cqi",
     "profilePhotoRight": "10.5cqi"
 }
