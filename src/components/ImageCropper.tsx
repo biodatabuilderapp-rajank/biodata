@@ -27,9 +27,14 @@ const getCroppedImg = async (imageSrc: string, pixelCrop: any, shape: "circle" |
         return "";
     }
 
+    // Prevent huge base64 strings from crashing localStorage limit (5MB)
+    // Scale down the cropped area to a max dimension of 400px (plenty for a small profile box)
+    const MAX_SIZE = 400;
+    const scale = Math.min(MAX_SIZE / pixelCrop.width, 1);
+
     // Set canvas size to match the bounding box of the crop
-    canvas.width = pixelCrop.width;
-    canvas.height = pixelCrop.height;
+    canvas.width = pixelCrop.width * scale;
+    canvas.height = pixelCrop.height * scale;
 
     // Draw the cropped image area to the canvas
     ctx.drawImage(
@@ -40,14 +45,14 @@ const getCroppedImg = async (imageSrc: string, pixelCrop: any, shape: "circle" |
         pixelCrop.height,
         0,
         0,
-        pixelCrop.width,
-        pixelCrop.height
+        canvas.width,
+        canvas.height
     );
 
     return new Promise((resolve) => {
-        canvas.toBlob((file) => {
-            resolve(URL.createObjectURL(file!));
-        }, "image/png");
+        // Return a persistent base64 data string instead of a temporary blob URL 
+        // string so it survives page reloads!
+        resolve(canvas.toDataURL("image/png"));
     });
 };
 
