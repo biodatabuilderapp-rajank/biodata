@@ -13,8 +13,9 @@ const geist = Geist({
 export const metadata: Metadata = {
   metadataBase: new URL("https://biodatabuilder.in"),
   icons: {
-    icon: "/favicon.png",
-    apple: "/favicon.png",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.png",
+    apple: "/apple-touch-icon.png",
   },
   title: {
     default: "Free Marriage Biodata Maker Online | Create & Download PDF",
