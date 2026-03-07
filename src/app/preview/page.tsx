@@ -128,7 +128,7 @@ export default function PreviewPage() {
     if (!isLoaded) return <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 flex items-center justify-center">Loading...</div>;
 
     return (
-        <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 font-sans flex flex-col">
+        <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 font-sans flex flex-col lg:overflow-hidden lg:h-screen">
             {/* Header */}
             <header className="h-16 bg-white dark:bg-black border-b border-zinc-200 dark:border-zinc-800 flex items-center justify-between px-6 sticky top-0 z-20 shrink-0">
                 <div className="flex items-center gap-4">
@@ -150,13 +150,13 @@ export default function PreviewPage() {
             </header>
 
             {/* Main Content Area */}
-            <main className="flex-1 overflow-hidden flex flex-col lg:flex-row max-w-[1600px] w-full mx-auto h-[calc(100vh-64px)]">
-                <div className="flex-1 bg-zinc-200/50 dark:bg-zinc-900/50 p-4 md:p-8 overflow-y-auto flex justify-center items-start lg:h-full">
+            <main className="flex-1 flex flex-col lg:flex-row max-w-[1600px] w-full mx-auto lg:overflow-hidden">
+                <div className="flex-1 bg-zinc-200/50 dark:bg-zinc-900/50 p-4 md:p-8 flex justify-center items-start lg:overflow-y-auto lg:h-full">
                     {/* The Preview wrapper that ensures the 1240x1754 aspect ratio is maintained */}
                     <div
                         id="biodata-preview-container"
-                        className="relative w-full shadow-2xl bg-white overflow-hidden"
-                        style={{ maxWidth: '800px', aspectRatio: '1240/1754', containerType: 'inline-size' }}
+                        className="relative w-full shadow-2xl bg-white overflow-hidden shrink-0 preview-container-adaptive"
+                        style={{ aspectRatio: '1240/1754', containerType: 'inline-size' }}
                     >
                         {/* Background Image */}
                         <img
@@ -172,7 +172,7 @@ export default function PreviewPage() {
                 </div>
 
                 {/* Theme Selector Sidebar / Bottom Bar */}
-                <div className="w-full lg:w-48 xl:w-64 bg-white dark:bg-zinc-950 border-t lg:border-t-0 lg:border-l border-zinc-200 dark:border-zinc-800 p-4 xl:p-6 lg:relative lg:h-full overflow-y-auto shadow-[0_-4px_20px_rgba(0,0,0,0.05)] lg:shadow-none z-10 shrink-0">
+                <div className="w-full lg:w-48 xl:w-64 bg-white dark:bg-zinc-950 border-t lg:border-t-0 lg:border-l border-zinc-200 dark:border-zinc-800 p-4 xl:p-6 lg:relative lg:h-full lg:overflow-y-auto shadow-[0_-4px_20px_rgba(0,0,0,0.05)] lg:shadow-none z-10 shrink-0">
                     <div className="flex items-center gap-2 mb-4 xl:mb-6">
                         <Palette className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
                         <h2 className="text-base xl:text-lg font-semibold text-zinc-900 dark:text-zinc-100">Choose Theme</h2>

@@ -61,3 +61,20 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #c4b5fd transparent;
 }
+
+/* ── Specific Adjustments ── */
+.preview-container-adaptive {
+  /* Default constraint for mobile / small screens */
+  max-width: 800px;
+}
+
+@media (min-width: 1024px) {
+  .preview-container-adaptive {
+    /* 
+      1240/1754 = ~0.70695
+      128px reserved for header (64px) + padding (32px * 2) 
+      This ensures the A4 preview fits completely vertically on desktop screens.
+    */
+    max-width: min(800px, calc((100vh - 128px) * 0.70695));
+  }
+}
