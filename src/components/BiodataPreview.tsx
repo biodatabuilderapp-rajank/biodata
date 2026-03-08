@@ -160,7 +160,7 @@ export default function BiodataPreview({ data, template, themeMeta }: Props) {
                 style={style}
             >
                 {data.godIcon?.url && (
-                    <img src={data.godIcon.url} alt="God Icon" className="object-contain drop-shadow-md" style={{ width: '12cqi', height: '12cqi', marginBottom: '0cqi' }} />
+                    <img src={data.godIcon.url} alt="God Icon" className="object-contain drop-shadow-md" style={{ width: '12cqi', height: '12cqi', marginBottom: '1cqi' }} />
                 )}
                 {data.godIcon?.text && (
                     <div className="font-bold font-serif drop-shadow-sm flex-shrink-0" style={{ color: meta.godIconTextColor, fontSize: meta.godIconFontSize }}>
