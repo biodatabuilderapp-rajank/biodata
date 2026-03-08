@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Logo from "@/components/Logo";
 import { MoveRight, FileText, Image as ImageIcon, Download, CheckCircle2, Star, Sparkles, Shield, Smartphone, Zap } from "lucide-react";
+import ClientThemeGallery from "@/components/ClientThemeGallery";
 
 const STEPS = [
   {
@@ -158,17 +159,17 @@ export default function Home() {
               Choose from beautiful Indian biodata templates, fill in your details, and instantly download a stunning biodata in PDF or PNG — completely free, no account needed.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 sm:px-0">
               <Link
                 href="/create"
-                className="group flex h-14 items-center justify-center gap-3 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 px-8 text-white font-semibold text-base transition-all hover:shadow-2xl hover:shadow-indigo-500/25 hover:-translate-y-1 shadow-lg shadow-indigo-500/20 w-full sm:w-auto"
+                className="group flex h-12 sm:h-14 items-center justify-center gap-2 sm:gap-3 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 px-6 sm:px-8 text-white font-semibold text-sm sm:text-base transition-all hover:shadow-2xl hover:shadow-indigo-500/25 hover:-translate-y-1 shadow-lg shadow-indigo-500/20 w-full sm:w-auto"
               >
-                Create Biodata Now — It's Free
-                <MoveRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                <span>Create Biodata<span className="hidden sm:inline"> Now — It's Free</span></span>
+                <MoveRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1 shrink-0" />
               </Link>
               <Link
                 href="#how-it-works"
-                className="flex h-14 items-center justify-center gap-2 rounded-full border border-zinc-200 dark:border-zinc-800 px-8 text-zinc-700 dark:text-zinc-300 font-medium text-base hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-all w-full sm:w-auto"
+                className="flex h-12 sm:h-14 items-center justify-center gap-2 rounded-full border border-zinc-200 dark:border-zinc-800 px-6 sm:px-8 text-zinc-700 dark:text-zinc-300 font-medium text-sm sm:text-base hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-all w-full sm:w-auto"
               >
                 See How It Works
               </Link>
@@ -211,13 +212,13 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="text-center mt-10">
+            <div className="text-center mt-10 px-4 sm:px-0">
               <Link
                 href="/create"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 font-semibold text-sm hover:bg-zinc-800 dark:hover:bg-zinc-100 transition-all shadow-md hover:shadow-lg"
+                className="flex sm:inline-flex justify-center items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 font-semibold text-sm hover:bg-zinc-800 dark:hover:bg-zinc-100 transition-all shadow-md hover:shadow-lg w-full sm:w-auto max-w-xs mx-auto"
               >
                 Start Creating Now
-                <MoveRight className="w-4 h-4" />
+                <MoveRight className="w-4 h-4 shrink-0" />
               </Link>
             </div>
           </div>
@@ -234,26 +235,15 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Static theme preview grid — shows first 6 themes */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-6">
-              {["theme-1.png", "theme-2.png", "theme-3.png"].map((t) => (
-                <div key={t} className="group relative rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-md hover:shadow-2xl transition-all hover:-translate-y-1 aspect-[1240/1754] bg-zinc-100 dark:bg-zinc-800">
-                  <img src={`/themes/${t}`} alt={`Biodata theme ${t}`} className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                    <Link href="/create" className="w-full py-2 rounded-xl bg-white text-zinc-900 font-semibold text-sm text-center">
-                      Use This Theme
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
+            {/* Dynamic theme preview grid — shows 4 random themes optimized for mobile/desktop layout */}
+            <ClientThemeGallery />
 
-            <div className="text-center mt-10">
+            <div className="text-center mt-8 sm:mt-10 px-4 sm:px-0">
               <Link
                 href="/create"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-indigo-200 dark:border-indigo-800 text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/30 font-semibold text-sm hover:bg-indigo-100 dark:hover:bg-indigo-900/30 transition-all"
+                className="flex sm:inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full border border-indigo-200 dark:border-indigo-800 text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/30 font-semibold text-sm hover:bg-indigo-100 dark:hover:bg-indigo-900/30 transition-all w-full sm:w-auto max-w-xs mx-auto"
               >
-                <FileText className="w-4 h-4" />
+                <FileText className="w-4 h-4 shrink-0" />
                 Browse All Themes
               </Link>
             </div>
@@ -340,10 +330,10 @@ export default function Home() {
                 </p>
                 <Link
                   href="/create"
-                  className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-indigo-700 font-bold text-base hover:bg-indigo-50 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1"
+                  className="flex sm:inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-white text-indigo-700 font-bold text-sm sm:text-base hover:bg-indigo-50 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 w-full sm:w-auto"
                 >
-                  Create My Biodata — Free
-                  <MoveRight className="w-5 h-5" />
+                  <span>Create My Biodata<span className="hidden sm:inline"> — Free</span></span>
+                  <MoveRight className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
                 </Link>
               </div>
             </div>
