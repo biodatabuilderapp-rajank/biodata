@@ -1,9 +1,9 @@
 {
     "pageBackgroundColor": "",
-    "containerPadding": "7.25cqi 10cqi 0",
+    "containerPadding": "9cqi 9cqi 0",
     "fontFamily": "'Noto Serif', Georgia, serif",
     "headingColor": "#9A7A12",
-    "labelColor": "#5A4A3A",
+    "labelColor": "#5C4A36",
     "valueColor": "#1A1A1A",
     "baseFontSize": "2cqi",
     "sectionTitleFontSize": "2.5cqi",

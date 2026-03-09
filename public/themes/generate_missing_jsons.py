@@ -1,153 +1,216 @@
-import os
-import json
-from PIL import Image
 import numpy as np
+from PIL import Image
 import colorsys
+import json
 
-# ---------- Utilities ----------
+BACKGROUND_THRESHOLD = 25
+
+
+# ---------- Utility ----------
 
 def rgb_to_hex(rgb):
-    return '#{:02X}{:02X}{:02X}'.format(rgb[0], rgb[1], rgb[2])
+    return '#%02x%02x%02x' % tuple(int(x) for x in rgb)
 
-def brightness(color):
-    r, g, b = color
-    return (r * 299 + g * 587 + b * 114) / 1000
 
-def adjust_color(rgb, target_l):
-    """
-    Takes an RGB tuple, converts to HSL, forces Lightness to target_l,
-    and returns an RGB hex string.
-    """
-    r, g, b = [x / 255.0 for x in rgb]
-    h, l, s = colorsys.rgb_to_hls(r, g, b)
-    
-    new_r, new_g, new_b = colorsys.hls_to_rgb(h, target_l, s)
-    return rgb_to_hex((int(new_r * 255), int(new_g * 255), int(new_b * 255)))
+def color_distance(c1, c2):
+    return np.linalg.norm(np.array(c1) - np.array(c2))
+
+
+def is_background(pixel, background):
+    return color_distance(pixel, background) < BACKGROUND_THRESHOLD
+
+
+# ---------- Background Detection ----------
+
+def detect_background_color(img):
+    h, w, _ = img.shape
+
+    center = img[h//2-50:h//2+50, w//2-50:w//2+50]
+    avg = center.mean(axis=(0,1))
+
+    return avg
+
 
 # ---------- Frame Color Detection ----------
 
-def detect_frame_color(image_path):
-    img = Image.open(image_path).convert("RGB")
-    # Downscale for performance during frame detection
-    img = img.resize((150, 150), Image.Resampling.LANCZOS)
-    w, h = img.size
-    pixels = np.array(img)
+def detect_frame_color(img, background):
+
+    h, w, _ = img.shape
 
     border_pixels = []
-    border_pixels.extend(pixels[0])       # top
-    border_pixels.extend(pixels[h-1])     # bottom
-    border_pixels.extend(pixels[:,0])     # left
-    border_pixels.extend(pixels[:,w-1])   # right
 
-    avg = np.mean(border_pixels, axis=0)
-    return tuple(avg.astype(int))
+    border_thickness = int(min(h, w) * 0.1)
 
-# ---------- Safe Padding Detection ----------
+    top = img[0:border_thickness,:,:]
+    bottom = img[h-border_thickness:h,:,:]
+    left = img[:,0:border_thickness,:]
+    right = img[:,w-border_thickness:w,:]
 
-def detect_padding_and_center(image_path):
-    img = Image.open(image_path).convert("RGB")
-    w, h = img.size
-    pixels = np.array(img)
+    borders = [top, bottom, left, right]
 
-    # Use the precise center pixel to understand if the text area is light or dark
-    center_color = pixels[h//2][w//2]
-    threshold = 15
+    for b in borders:
+        pixels = b.reshape(-1,3)
+
+        for p in pixels:
+            if not is_background(p, background):
+                border_pixels.append(p)
+
+    if len(border_pixels) < 100:
+        return background
+
+    pixels = np.array(border_pixels)
+
+    # Quantize to reduce noise
+    pixels = (pixels // 10) * 10
+
+    colors, counts = np.unique(pixels, axis=0, return_counts=True)
+    dominant = colors[counts.argmax()]
+
+    return dominant
+
+
+# ---------- Padding Detection ----------
+
+def detect_padding(img, background):
+
+    h, w, _ = img.shape
 
     top = 0
+    bottom = 0
+    left = 0
+    right = 0
+
+    # top
     for y in range(h):
-        if np.linalg.norm(pixels[y][w//2] - center_color) < threshold:
+        if not np.all([is_background(p, background) for p in img[y]]):
             top = y
             break
 
-    left = 0
+    # bottom
+    for y in range(h-1, -1, -1):
+        if not np.all([is_background(p, background) for p in img[y]]):
+            bottom = h - y
+            break
+
+    # left
     for x in range(w):
-        if np.linalg.norm(pixels[h//2][x] - center_color) < threshold:
+        column = img[:,x]
+        if not np.all([is_background(p, background) for p in column]):
             left = x
             break
 
-    padding_y = int((top / h) * 100)
-    padding_x = int((left / w) * 100)
+    # right
+    for x in range(w-1, -1, -1):
+        column = img[:,x]
+        if not np.all([is_background(p, background) for p in column]):
+            right = w - x
+            break
 
-    return f"{padding_y}cqi {padding_x}cqi 0", tuple(center_color.astype(int))
+    if top < 20 and right < 20 and bottom < 20 and left < 20:
+        return 120, 100, 120, 100 # 12% vertical, 10% horizontal default padding
 
-# ---------- Theme Color Logic ----------
+    return top, right, bottom, left
 
-def generate_theme_colors(center_color, frame_color):
-    center_brightness = brightness(center_color)
 
-    # 1. Darken or lighten the dominent frame color to use for the text fields
-    if center_brightness > 150:
-        # Light Background -> We need dark text (low Lightness)
-        heading_color = adjust_color(frame_color, 0.25)
-        label_color = adjust_color(frame_color, 0.35)
-        god_icon_color = adjust_color(frame_color, 0.30)
-        value_color = "#1A1A1A"  # Always solid dark for readablity
+# ---------- Color Adjustment ----------
+
+def adjust_color(rgb, target_lightness):
+
+    r,g,b = rgb / 255
+
+    h,l,s = colorsys.rgb_to_hls(r,g,b)
+
+    s = max(s, 0.35)   # avoid dull gray colors
+
+    r,g,b = colorsys.hls_to_rgb(h, target_lightness, s)
+
+    return np.array([r*255, g*255, b*255])
+
+
+# ---------- Main Theme Generator ----------
+
+def generate_theme(image_path):
+
+    img = Image.open(image_path).convert("RGB")
+    img = img.resize((1000,1000))
+
+    img = np.array(img)
+
+    background = detect_background_color(img)
+    frame_color = detect_frame_color(img, background)
+
+    top,right,bottom,left = detect_padding(img, background)
+
+    bg_lightness = background.mean()
+
+    if bg_lightness > 127:
+        # Light background -> Dark text
+        heading = adjust_color(frame_color, 0.25)
+        label = adjust_color(frame_color, 0.35)
+        god = adjust_color(frame_color, 0.30)
+        value = adjust_color(frame_color, 0.15)
     else:
-        # Dark Background -> We need light text (high Lightness)
-        heading_color = adjust_color(frame_color, 0.85)
-        label_color = adjust_color(frame_color, 0.75)
-        god_icon_color = adjust_color(frame_color, 0.80)
-        value_color = "#FFFFFF"  # Always solid light for readability
+        # Dark background -> Light text
+        heading = adjust_color(frame_color, 0.85)
+        label = adjust_color(frame_color, 0.75)
+        god = adjust_color(frame_color, 0.80)
+        value = adjust_color(frame_color, 0.95)
 
-    return {
-        "godIconTextColor": god_icon_color,
-        "headingColor": heading_color,
-        "labelColor": label_color,
-        "valueColor": value_color
-    }
+    theme = {
 
+        "pageBackgroundColor": "", #rgb_to_hex(background)
 
-# ---------- JSON Generator ----------
+        "containerPadding": f"{int((top/1000)*100)}cqi {int((right/1000)*100)}cqi {int((bottom/1000)*100)}cqi {int((left/1000)*100)}cqi",
 
-def generate_json_for_image(image_path, json_path):
-    print(f"Processing {image_path}...")
-
-    # Extract padding and visual anchors
-    padding, center_color = detect_padding_and_center(image_path)
-    frame_color = detect_frame_color(image_path)
-    
-    # Generate text colors derived from the border aesthetics
-    colors = generate_theme_colors(center_color, frame_color)
-
-    data = {
-        "pageBackgroundColor": "", # Enforced empty per user requirement
-        "containerPadding": padding,
         "fontFamily": "'Noto Serif', Georgia, serif",
-        "headingColor": colors["headingColor"],
-        "labelColor": colors["labelColor"],
-        "valueColor": colors["valueColor"],
+
+        "headingColor": rgb_to_hex(heading),
+        "labelColor": rgb_to_hex(label),
+        "valueColor": rgb_to_hex(value),
+
         "baseFontSize": "2cqi",
         "sectionTitleFontSize": "2.5cqi",
+
         "sectionSpacing": "1.875cqi",
         "fieldSpacing": "0.75cqi",
-        "godIconTextColor": colors["godIconTextColor"],
+
+        "godIconTextColor": rgb_to_hex(god),
         "godIconFontSize": "2.5cqi",
         "godIconSpacing": "2cqi",
+
         "godIconHideStrategy": "visibility",
+
         "profilePhotoTop": "0",
-        "profilePhotoRight": "0",
-        "detectedFrameColor": rgb_to_hex(frame_color)
+        "profilePhotoRight": "0"
+
     }
 
-    with open(json_path, "w") as f:
-        json.dump(data, f, indent=4)
+    return theme
 
-    print(f"Generated {json_path}")
 
-# ---------- Runner ----------
+# ---------- Run ----------
 
 def main():
+
+    import os
     directory = "."
+
     for filename in os.listdir(directory):
+
         if filename.endswith(".png") and filename.startswith("theme-"):
+
             base = os.path.splitext(filename)[0]
             json_file = base + ".json"
             json_path = os.path.join(directory, json_file)
 
             if not os.path.exists(json_path):
-                image_path = os.path.join(directory, filename)
-                generate_json_for_image(image_path, json_path)
+                print(f"Generating for {filename}...")
+                theme = generate_theme(os.path.join(directory, filename))
 
+                with open(json_path, "w") as f:
+                    json.dump(theme, f, indent=4)
+
+    print("All missing themes generated successfully")
 
 if __name__ == "__main__":
     main()
