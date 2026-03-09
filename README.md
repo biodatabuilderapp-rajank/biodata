@@ -56,29 +56,23 @@ public/
 └── god_icons/                # God icon images
 ```
 
----
-
 ## Adding New Themes
 
-1. Drop your theme image (`theme-N.png`) into `public/themes/`.
-2. Create a companion `theme-N.json` in the same folder with the following structure:
+The application includes an intelligent Python script that organically extracts aesthetic colors and safe padding anchors directly from image borders.
 
-```json
-{
-  "containerPadding": "60px 40px 30px 40px",
-  "godIconTextColor": "#8B0000",
-  "headingColor": "#1a1a1a",
-  "labelColor": "#444444",
-  "valueColor": "#111111",
-  "fullNameColor": "#000000",
-  "marriageBiodataLabelColor": "#8B0000",
-  "pageBackgroundColor": "#ffffff",
-  "profilePhotoTop": "80px",
-  "profilePhotoRight": "80px"
-}
-```
+1. Drop your high-resolution theme image (`theme-N.png`) into `public/themes/`.
+2. Open your terminal and activate the Python virtual environment:
+   ```bash
+   cd public/themes
+   source .venv/bin/activate
+   ```
+3. Run the generator script:
+   ```bash
+   python generate_missing_jsons.py
+   ```
+4. The script will instantaneously scan your folder, locate the new `theme-N.png`, mathematically derive its dominant border hue and optimal `<cqi>` padding limits, and output a perfectly formatted `theme-N.json` configuration file!
 
-3. That's it! The `/api/themes` endpoint automatically scans the folder — no code changes needed.
+*Note: The `/api/themes` endpoint automatically scans the folder, so no Next.js code changes are needed when dropping new themes.*
 
 ---
 
