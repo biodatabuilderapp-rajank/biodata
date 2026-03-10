@@ -15,7 +15,8 @@ export default function PreviewPage() {
     const [themeMeta, setThemeMeta] = useState<ThemeMeta | undefined>();
     const [themes, setThemes] = useState<string[]>([]);
     const [isLoaded, setIsLoaded] = useState(false);
-    const [isDownloading, setIsDownloading] = useState(false);
+    const [isDownloadingPDF, setIsDownloadingPDF] = useState(false);
+    const [isDownloadingPNG, setIsDownloadingPNG] = useState(false);
 
     useEffect(() => {
         // Fetch themes dynamically from server
@@ -88,11 +89,11 @@ export default function PreviewPage() {
     }, [template]);
 
     const handleDownloadPDF = async () => {
-        if (isDownloading) return;
-        setIsDownloading(true);
+        if (isDownloadingPDF || isDownloadingPNG) return;
+        setIsDownloadingPDF(true);
         const element = document.getElementById("biodata-preview-container");
         if (!element) {
-            setIsDownloading(false);
+            setIsDownloadingPDF(false);
             return;
         }
         try {
@@ -110,16 +111,16 @@ export default function PreviewPage() {
         } catch (error) {
             console.error("Error generating PDF:", error);
         } finally {
-            setIsDownloading(false);
+            setIsDownloadingPDF(false);
         }
     };
 
     const handleDownloadPNG = async () => {
-        if (isDownloading) return;
-        setIsDownloading(true);
+        if (isDownloadingPDF || isDownloadingPNG) return;
+        setIsDownloadingPNG(true);
         const element = document.getElementById("biodata-preview-container");
         if (!element) {
-            setIsDownloading(false);
+            setIsDownloadingPNG(false);
             return;
         }
         try {
@@ -136,7 +137,7 @@ export default function PreviewPage() {
         } catch (error) {
             console.error("Error generating PNG:", error);
         } finally {
-            setIsDownloading(false);
+            setIsDownloadingPNG(false);
         }
     };
 
@@ -155,19 +156,19 @@ export default function PreviewPage() {
                 <div className="flex items-center gap-3">
                     <button
                         onClick={handleDownloadPNG}
-                        disabled={isDownloading}
+                        disabled={isDownloadingPDF || isDownloadingPNG}
                         className="hidden sm:flex items-center gap-2 px-4 py-2 text-sm font-medium text-zinc-700 bg-zinc-100 hover:bg-zinc-200 dark:text-zinc-300 dark:bg-zinc-900 dark:hover:bg-zinc-800 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                        {isDownloading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
+                        {isDownloadingPNG ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
                         PNG
                     </button>
                     <button
                         onClick={handleDownloadPDF}
-                        disabled={isDownloading}
+                        disabled={isDownloadingPDF || isDownloadingPNG}
                         className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors shadow-sm shadow-indigo-500/20 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-indigo-600"
                     >
-                        {isDownloading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
-                        {isDownloading ? "Downloading..." : "PDF"}
+                        {isDownloadingPDF ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
+                        PDF
                     </button>
                 </div>
             </header>
@@ -224,15 +225,15 @@ export default function PreviewPage() {
                     <div className="mt-6 flex flex-col gap-3 lg:hidden">
                         <button
                             onClick={handleDownloadPDF}
-                            disabled={isDownloading}
+                            disabled={isDownloadingPDF || isDownloadingPNG}
                             className="w-full flex justify-center items-center gap-2 px-4 py-3 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors shadow-sm shadow-indigo-500/20 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-indigo-600"
                         >
-                            {isDownloading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
-                            {isDownloading ? "Downloading..." : "Download PDF"}
+                            {isDownloadingPDF ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
+                            Download PDF
                         </button>
                     </div>
                 </div>
-            </main>
-        </div>
+            </main >
+        </div >
     );
 }
