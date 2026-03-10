@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { ArrowLeft, Download, Palette } from "lucide-react";
+import { ArrowLeft, Download, Palette, Loader2 } from "lucide-react";
 import BiodataPreview from "@/components/BiodataPreview";
 import { Biodata, initialData } from "@/app/create/page";
 import { toPng } from 'html-to-image';
@@ -15,6 +15,7 @@ export default function PreviewPage() {
     const [themeMeta, setThemeMeta] = useState<ThemeMeta | undefined>();
     const [themes, setThemes] = useState<string[]>([]);
     const [isLoaded, setIsLoaded] = useState(false);
+    const [isDownloading, setIsDownloading] = useState(false);
 
     useEffect(() => {
         // Fetch themes dynamically from server
@@ -87,8 +88,13 @@ export default function PreviewPage() {
     }, [template]);
 
     const handleDownloadPDF = async () => {
+        if (isDownloading) return;
+        setIsDownloading(true);
         const element = document.getElementById("biodata-preview-container");
-        if (!element) return;
+        if (!element) {
+            setIsDownloading(false);
+            return;
+        }
         try {
             // Guarantee identical print-quality resolution (2000px wide) regardless of screen size
             const targetWidth = 2000;
@@ -103,12 +109,19 @@ export default function PreviewPage() {
             pdf.save(`${data.personalDetails.fullName?.value || "Biodata"}.pdf`);
         } catch (error) {
             console.error("Error generating PDF:", error);
+        } finally {
+            setIsDownloading(false);
         }
     };
 
     const handleDownloadPNG = async () => {
+        if (isDownloading) return;
+        setIsDownloading(true);
         const element = document.getElementById("biodata-preview-container");
-        if (!element) return;
+        if (!element) {
+            setIsDownloading(false);
+            return;
+        }
         try {
             const targetWidth = 2000;
             const dynamicPixelRatio = targetWidth / element.offsetWidth;
@@ -122,6 +135,8 @@ export default function PreviewPage() {
             document.body.removeChild(link);
         } catch (error) {
             console.error("Error generating PNG:", error);
+        } finally {
+            setIsDownloading(false);
         }
     };
 
@@ -138,13 +153,21 @@ export default function PreviewPage() {
                     <div className="font-semibold text-lg text-zinc-900 dark:text-zinc-50">Preview & Download</div>
                 </div>
                 <div className="flex items-center gap-3">
-                    <button onClick={handleDownloadPNG} className="hidden sm:flex items-center gap-2 px-4 py-2 text-sm font-medium text-zinc-700 bg-zinc-100 hover:bg-zinc-200 dark:text-zinc-300 dark:bg-zinc-900 dark:hover:bg-zinc-800 rounded-lg transition-colors">
-                        <Download className="w-4 h-4" />
+                    <button
+                        onClick={handleDownloadPNG}
+                        disabled={isDownloading}
+                        className="hidden sm:flex items-center gap-2 px-4 py-2 text-sm font-medium text-zinc-700 bg-zinc-100 hover:bg-zinc-200 dark:text-zinc-300 dark:bg-zinc-900 dark:hover:bg-zinc-800 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                        {isDownloading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
                         PNG
                     </button>
-                    <button onClick={handleDownloadPDF} className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors shadow-sm shadow-indigo-500/20">
-                        <Download className="w-4 h-4" />
-                        PDF
+                    <button
+                        onClick={handleDownloadPDF}
+                        disabled={isDownloading}
+                        className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors shadow-sm shadow-indigo-500/20 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-indigo-600"
+                    >
+                        {isDownloading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
+                        {isDownloading ? "Downloading..." : "PDF"}
                     </button>
                 </div>
             </header>
@@ -199,9 +222,13 @@ export default function PreviewPage() {
                     </div>
 
                     <div className="mt-6 flex flex-col gap-3 lg:hidden">
-                        <button onClick={handleDownloadPDF} className="w-full flex justify-center items-center gap-2 px-4 py-3 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors shadow-sm shadow-indigo-500/20">
-                            <Download className="w-4 h-4" />
-                            Download PDF
+                        <button
+                            onClick={handleDownloadPDF}
+                            disabled={isDownloading}
+                            className="w-full flex justify-center items-center gap-2 px-4 py-3 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors shadow-sm shadow-indigo-500/20 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-indigo-600"
+                        >
+                            {isDownloading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
+                            {isDownloading ? "Downloading..." : "Download PDF"}
                         </button>
                     </div>
                 </div>
