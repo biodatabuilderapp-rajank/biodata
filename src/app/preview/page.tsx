@@ -224,6 +224,14 @@ export default function PreviewPage() {
 
                     <div className="mt-6 flex flex-col gap-3 lg:hidden">
                         <button
+                            onClick={handleDownloadPNG}
+                            disabled={isDownloadingPDF || isDownloadingPNG}
+                            className="w-full flex justify-center items-center gap-2 px-4 py-3 text-sm font-medium text-zinc-700 bg-zinc-100 hover:bg-zinc-200 dark:text-zinc-300 dark:bg-zinc-900 dark:hover:bg-zinc-800 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
+                            {isDownloadingPNG ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
+                            Download PNG
+                        </button>
+                        <button
                             onClick={handleDownloadPDF}
                             disabled={isDownloadingPDF || isDownloadingPNG}
                             className="w-full flex justify-center items-center gap-2 px-4 py-3 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors shadow-sm shadow-indigo-500/20 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-indigo-600"
