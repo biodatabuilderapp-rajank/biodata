@@ -1,0 +1,22 @@
+{
+    "personalDetails.title": "व्यक्तिगत विवरण",
+    "personalDetails.fullName": "पूरा नाम",
+    "personalDetails.dateOfBirth": "जन्म तिथि एवं समय",
+    "personalDetails.height": "ऊँचाई",
+    "personalDetails.bloodGroup": "रक्त समूह",
+    "personalDetails.complexion": "रंग-रूप",
+    "personalDetails.maritalStatus": "वैवाहिक स्थिति",
+    "personalDetails.education": "उच्चतम शिक्षा",
+    "personalDetails.occupation": "व्यवसाय / नौकरी",
+    "personalDetails.annualIncome": "वार्षिक आय",
+    "familyDetails.title": "पारिवारिक विवरण",
+    "familyDetails.fatherName": "पिता का नाम",
+    "familyDetails.fatherOccupation": "पिता का व्यवसाय",
+    "familyDetails.motherName": "माता का नाम",
+    "familyDetails.motherOccupation": "माता का व्यवसाय",
+    "familyDetails.siblings": "भाई-बहन",
+    "contactDetails.title": "संपर्क जानकारी",
+    "contactDetails.contactNumber": "संपर्क नंबर",
+    "contactDetails.email": "ईमेल पता",
+    "contactDetails.address": "पता"
+}

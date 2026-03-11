@@ -1,0 +1,22 @@
+{
+    "personalDetails.title": "தனிப்பட்ட விவரங்கள்",
+    "personalDetails.fullName": "முழு பெயர்",
+    "personalDetails.dateOfBirth": "பிறந்த தேதி & நேரம்",
+    "personalDetails.height": "உயரம்",
+    "personalDetails.bloodGroup": "இரத்த வகை",
+    "personalDetails.complexion": "நிறம்",
+    "personalDetails.maritalStatus": "திருமண நிலை",
+    "personalDetails.education": "உயர்கல்வி",
+    "personalDetails.occupation": "தொழில் / வேலை",
+    "personalDetails.annualIncome": "வருடாந்திர வருவாய்",
+    "familyDetails.title": "குடும்ப விவரங்கள்",
+    "familyDetails.fatherName": "தந்தையின் பெயர்",
+    "familyDetails.fatherOccupation": "தந்தையின் தொழில்",
+    "familyDetails.motherName": "தாயின் பெயர்",
+    "familyDetails.motherOccupation": "தாயின் தொழில்",
+    "familyDetails.siblings": "உடன்பிறந்தவர்கள்",
+    "contactDetails.title": "தொடர்பு தகவல்",
+    "contactDetails.contactNumber": "தொடர்பு எண்",
+    "contactDetails.email": "மின்னஞ்சல் முகவரி",
+    "contactDetails.address": "முகவரி"
+}

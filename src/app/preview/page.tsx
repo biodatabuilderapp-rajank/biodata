@@ -8,6 +8,7 @@ import { Biodata, initialData } from "@/app/create/page";
 import { toPng } from 'html-to-image';
 import jsPDF from "jspdf";
 import { ThemeMeta } from "@/components/BiodataPreview";
+import LanguageSelector from "@/components/LanguageSelector";
 
 export default function PreviewPage() {
     const [data, setData] = useState<Biodata>(initialData);
@@ -17,6 +18,7 @@ export default function PreviewPage() {
     const [isLoaded, setIsLoaded] = useState(false);
     const [isDownloadingPDF, setIsDownloadingPDF] = useState(false);
     const [isDownloadingPNG, setIsDownloadingPNG] = useState(false);
+    const [language, setLanguage] = useState("en");
 
     useEffect(() => {
         // Fetch themes dynamically from server
@@ -41,30 +43,35 @@ export default function PreviewPage() {
             }
         };
 
-        fetchThemes();
+        const loadBiodataAndLanguage = () => {
+            const saved = localStorage.getItem("biodataData");
+            if (saved) {
+                try {
+                    const parsed = JSON.parse(saved);
 
-        const saved = localStorage.getItem("biodataData");
-        if (saved) {
-            try {
-                const parsed = JSON.parse(saved);
+                    // Migrate professional details from old local storage schemas
+                    if (!parsed.personalDetails.education) {
+                        parsed.personalDetails.education = parsed.professionalDetails?.education || { label: "Highest Education", value: "" };
+                    }
+                    if (!parsed.personalDetails.occupation) {
+                        parsed.personalDetails.occupation = parsed.professionalDetails?.occupation || { label: "Occupation / Job", value: "" };
+                    }
+                    if (!parsed.personalDetails.annualIncome) {
+                        parsed.personalDetails.annualIncome = parsed.professionalDetails?.annualIncome || { label: "Annual Income", value: "" };
+                    }
 
-                // Migrate professional details from old local storage schemas
-                if (!parsed.personalDetails.education) {
-                    parsed.personalDetails.education = parsed.professionalDetails?.education || { label: "Highest Education", value: "" };
+                    setData(parsed);
+                } catch (e) {
+                    console.error("Failed to parse saved biodata");
                 }
-                if (!parsed.personalDetails.occupation) {
-                    parsed.personalDetails.occupation = parsed.professionalDetails?.occupation || { label: "Occupation / Job", value: "" };
-                }
-                if (!parsed.personalDetails.annualIncome) {
-                    parsed.personalDetails.annualIncome = parsed.professionalDetails?.annualIncome || { label: "Annual Income", value: "" };
-                }
-
-                setData(parsed);
-            } catch (e) {
-                console.error("Failed to parse saved biodata");
             }
-        }
-        setIsLoaded(true);
+            const savedLang = localStorage.getItem("biodataLang");
+            if (savedLang) setLanguage(savedLang);
+            setIsLoaded(true);
+        };
+
+        fetchThemes();
+        loadBiodataAndLanguage();
     }, []);
 
     // Fetch theme metadata whenever the template changes
@@ -154,6 +161,13 @@ export default function PreviewPage() {
                     <div className="font-semibold text-lg text-zinc-900 dark:text-zinc-50">Preview & Download</div>
                 </div>
                 <div className="flex items-center gap-3">
+                    <LanguageSelector
+                        value={language}
+                        onChange={(lang) => {
+                            setLanguage(lang);
+                            localStorage.setItem("biodataLang", lang);
+                        }}
+                    />
                     <button
                         onClick={handleDownloadPNG}
                         disabled={isDownloadingPDF || isDownloadingPNG}
@@ -190,7 +204,7 @@ export default function PreviewPage() {
                         />
                         {/* Foreground Content */}
                         <div className="relative z-10 w-full h-full overflow-hidden">
-                            <BiodataPreview data={data} template={template} themeMeta={themeMeta} />
+                            <BiodataPreview data={data} template={template} themeMeta={themeMeta} language={language} />
                         </div>
                     </div>
                 </div>

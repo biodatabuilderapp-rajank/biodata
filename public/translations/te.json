@@ -1,0 +1,22 @@
+{
+    "personalDetails.title": "వ్యక్తిగత వివరాలు",
+    "personalDetails.fullName": "పూర్తి పేరు",
+    "personalDetails.dateOfBirth": "పుట్టిన తేదీ & సమయం",
+    "personalDetails.height": "ఎత్తు",
+    "personalDetails.bloodGroup": "రక్త సమూహం",
+    "personalDetails.complexion": "వర్ణం",
+    "personalDetails.maritalStatus": "వైవాహిక స్థితి",
+    "personalDetails.education": "అత్యున్నత విద్య",
+    "personalDetails.occupation": "వృత్తి / ఉద్యోగం",
+    "personalDetails.annualIncome": "వార్షిక ఆదాయం",
+    "familyDetails.title": "కుటుంబ వివరాలు",
+    "familyDetails.fatherName": "తండ్రి పేరు",
+    "familyDetails.fatherOccupation": "తండ్రి వృత్తి",
+    "familyDetails.motherName": "తల్లి పేరు",
+    "familyDetails.motherOccupation": "తల్లి వృత్తి",
+    "familyDetails.siblings": "అన్నదమ్ములు-అక్కచెల్లెళ్ళు",
+    "contactDetails.title": "సంప్రదింపు సమాచారం",
+    "contactDetails.contactNumber": "సంప్రదింపు నంబర్",
+    "contactDetails.email": "ఇమెయిల్ చిరునామా",
+    "contactDetails.address": "చిరునామా"
+}

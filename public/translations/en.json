@@ -1,0 +1,22 @@
+{
+    "personalDetails.title": "Personal Details",
+    "personalDetails.fullName": "Full Name",
+    "personalDetails.dateOfBirth": "Date of Birth & Time",
+    "personalDetails.height": "Height",
+    "personalDetails.bloodGroup": "Blood Group",
+    "personalDetails.complexion": "Complexion",
+    "personalDetails.maritalStatus": "Marital Status",
+    "personalDetails.education": "Highest Education",
+    "personalDetails.occupation": "Occupation / Job",
+    "personalDetails.annualIncome": "Annual Income",
+    "familyDetails.title": "Family Details",
+    "familyDetails.fatherName": "Father's Name",
+    "familyDetails.fatherOccupation": "Father's Occupation",
+    "familyDetails.motherName": "Mother's Name",
+    "familyDetails.motherOccupation": "Mother's Occupation",
+    "familyDetails.siblings": "Siblings",
+    "contactDetails.title": "Contact Info",
+    "contactDetails.contactNumber": "Contact Number",
+    "contactDetails.email": "Email Address",
+    "contactDetails.address": "Address"
+}
