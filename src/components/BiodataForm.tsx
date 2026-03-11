@@ -109,29 +109,36 @@ export default function BiodataForm({ data, onChange, language, onLanguageChange
         if (!pendingLang) return;
         setIsSwitching(true);
         try {
-            const [enMap, targetMap] = await Promise.all([
+            // Fetch: English baseline, current language (to recognise previously-set defaults), and target language
+            const [enMap, currentMap, targetMap] = await Promise.all([
                 fetch("/translations/en.json").then((r) => r.json()),
+                fetch(`/translations/${language}.json`).then((r) => r.json()),
                 fetch(`/translations/${pendingLang}.json`).then((r) => r.json()),
             ]);
 
-            // Translate a label only if the field exists AND it still matches the English default
+            // A label is considered "default" (translatable) if it matches either
+            // the English default OR whatever the current language's default is.
+            // This handles en→hi→gu chaining correctly.
             const translateField = (
                 key: string,
                 field: { label: string; value: string } | undefined
             ): { label: string; value: string } | undefined => {
                 if (!field) return field;
                 const enDefault = enMap[key] as string | undefined;
+                const currentDefault = currentMap[key] as string | undefined;
                 const translated = targetMap[key] as string | undefined;
-                if (!enDefault || !translated) return field;
-                const newLabel = field.label === enDefault ? translated : field.label;
-                return { ...field, label: newLabel };
+                if (!translated) return field;
+                const isDefault = field.label === enDefault || field.label === currentDefault;
+                return { ...field, label: isDefault ? translated : field.label };
             };
 
             const translateTitle = (key: string, current: string): string => {
                 const enDefault = enMap[key] as string | undefined;
+                const currentDefault = currentMap[key] as string | undefined;
                 const translated = targetMap[key] as string | undefined;
-                if (!enDefault || !translated) return current;
-                return current === enDefault ? translated : current;
+                if (!translated) return current;
+                const isDefault = current === enDefault || current === currentDefault;
+                return isDefault ? translated : current;
             };
 
             const updated: Biodata = {
