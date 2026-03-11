@@ -93,6 +93,7 @@ import { useRouter } from "next/navigation";
 export default function CreatePage() {
     const [data, setData] = useState<Biodata>(initialData);
     const [isLoaded, setIsLoaded] = useState(false);
+    const [language, setLanguage] = useState("en");
     const router = useRouter();
 
     useEffect(() => {
@@ -118,11 +119,18 @@ export default function CreatePage() {
             }
         }
         setIsLoaded(true);
+        const savedLang = localStorage.getItem("biodataLang");
+        if (savedLang) setLanguage(savedLang);
     }, []);
 
     const handleDataChange = (newData: Biodata) => {
         setData(newData);
         localStorage.setItem("biodataData", JSON.stringify(newData));
+    };
+
+    const handleLanguageChange = (lang: string) => {
+        setLanguage(lang);
+        localStorage.setItem("biodataLang", lang);
     };
 
     const handlePreview = () => {
@@ -148,7 +156,7 @@ export default function CreatePage() {
             </header>
 
             <main className="max-w-[800px] mx-auto p-4 md:p-6 lg:p-8 min-h-[calc(100vh-64px)] overflow-y-auto px-4 pb-24">
-                <BiodataForm data={data} onChange={handleDataChange} />
+                <BiodataForm data={data} onChange={handleDataChange} language={language} onLanguageChange={handleLanguageChange} />
 
                 <div className="mt-8 flex justify-end">
                     <button onClick={handlePreview} className="w-full sm:w-auto px-8 py-3.5 text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl transition-colors shadow-sm shadow-indigo-500/20">

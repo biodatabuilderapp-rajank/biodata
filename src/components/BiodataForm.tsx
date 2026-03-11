@@ -1,14 +1,17 @@
 "use client";
 
 import { Biodata } from "@/app/create/page";
-import { Plus, X, ImagePlus, Settings2 } from "lucide-react";
+import { Plus, X, ImagePlus, Settings2, Languages, AlertTriangle } from "lucide-react";
 import { useState } from "react";
 import ImageCropper from "./ImageCropper";
 import GodIconSelector from "./GodIconSelector";
+import { SUPPORTED_LANGUAGES } from "./LanguageSelector";
 
 interface Props {
     data: Biodata;
     onChange: (data: Biodata) => void;
+    language: string;
+    onLanguageChange: (lang: string) => void;
 }
 
 const SectionTitleInput = ({ section, data, updateSectionTitle }: { section: Exclude<keyof Biodata, 'profilePhoto' | 'godIcon'>, data: Biodata, updateSectionTitle: (section: Exclude<keyof Biodata, 'profilePhoto' | 'godIcon'>, value: string) => void }) => (
@@ -91,9 +94,85 @@ const Input = ({ section, field, data, updateSection, updateLabel, removeField, 
     );
 };
 
-export default function BiodataForm({ data, onChange }: Props) {
+export default function BiodataForm({ data, onChange, language, onLanguageChange }: Props) {
     const [imageToCrop, setImageToCrop] = useState<string | null>(null);
     const [showGodIconSelector, setShowGodIconSelector] = useState(false);
+    const [pendingLang, setPendingLang] = useState<string | null>(null);
+    const [isSwitching, setIsSwitching] = useState(false);
+
+    const handleLanguageRequest = (lang: string) => {
+        if (lang === language) return;
+        setPendingLang(lang);
+    };
+
+    const confirmLanguageSwitch = async () => {
+        if (!pendingLang) return;
+        setIsSwitching(true);
+        try {
+            const [enMap, targetMap] = await Promise.all([
+                fetch("/translations/en.json").then((r) => r.json()),
+                fetch(`/translations/${pendingLang}.json`).then((r) => r.json()),
+            ]);
+
+            // Helper: update a single label if it still matches the English default
+            const translate = (key: string, current: string): string => {
+                const enDefault = enMap[key] as string | undefined;
+                const translated = targetMap[key] as string | undefined;
+                if (!enDefault || !translated) return current;
+                // Only replace if the user hasn't customized this label
+                // (matches English default OR any previously translated default)
+                const allDefaults = Object.values(SUPPORTED_LANGUAGES).map(
+                    (l) => l.code
+                );
+                // Simple heuristic: if label still equals the en default, it's untouched
+                if (current === enDefault) return translated;
+                // Also allow switching between translated defaults (en→hi→gu etc.)
+                const prevTargetMap = enMap; // Compare against known defaults conservatively
+                return current === enDefault ? translated : current;
+            };
+
+            const updated: Biodata = {
+                ...data,
+                personalDetails: {
+                    ...data.personalDetails,
+                    title: (() => { const k = "personalDetails.title"; return data.personalDetails.title === enMap[k] ? targetMap[k] : data.personalDetails.title; })(),
+                    fullName: { ...data.personalDetails.fullName, label: translate("personalDetails.fullName", data.personalDetails.fullName.label) },
+                    dateOfBirth: { ...data.personalDetails.dateOfBirth, label: translate("personalDetails.dateOfBirth", data.personalDetails.dateOfBirth.label) },
+                    height: { ...data.personalDetails.height, label: translate("personalDetails.height", data.personalDetails.height.label) },
+                    bloodGroup: { ...data.personalDetails.bloodGroup, label: translate("personalDetails.bloodGroup", data.personalDetails.bloodGroup.label) },
+                    complexion: { ...data.personalDetails.complexion, label: translate("personalDetails.complexion", data.personalDetails.complexion.label) },
+                    maritalStatus: { ...data.personalDetails.maritalStatus, label: translate("personalDetails.maritalStatus", data.personalDetails.maritalStatus.label) },
+                    education: { ...data.personalDetails.education, label: translate("personalDetails.education", data.personalDetails.education.label) },
+                    occupation: { ...data.personalDetails.occupation, label: translate("personalDetails.occupation", data.personalDetails.occupation.label) },
+                    annualIncome: { ...data.personalDetails.annualIncome, label: translate("personalDetails.annualIncome", data.personalDetails.annualIncome.label) },
+                },
+                familyDetails: {
+                    ...data.familyDetails,
+                    title: (() => { const k = "familyDetails.title"; return data.familyDetails.title === enMap[k] ? targetMap[k] : data.familyDetails.title; })(),
+                    fatherName: { ...data.familyDetails.fatherName, label: translate("familyDetails.fatherName", data.familyDetails.fatherName.label) },
+                    fatherOccupation: { ...data.familyDetails.fatherOccupation, label: translate("familyDetails.fatherOccupation", data.familyDetails.fatherOccupation.label) },
+                    motherName: { ...data.familyDetails.motherName, label: translate("familyDetails.motherName", data.familyDetails.motherName.label) },
+                    motherOccupation: { ...data.familyDetails.motherOccupation, label: translate("familyDetails.motherOccupation", data.familyDetails.motherOccupation.label) },
+                    siblings: { ...data.familyDetails.siblings, label: translate("familyDetails.siblings", data.familyDetails.siblings.label) },
+                },
+                contactDetails: {
+                    ...data.contactDetails,
+                    title: (() => { const k = "contactDetails.title"; return data.contactDetails.title === enMap[k] ? targetMap[k] : data.contactDetails.title; })(),
+                    contactNumber: { ...data.contactDetails.contactNumber, label: translate("contactDetails.contactNumber", data.contactDetails.contactNumber.label) },
+                    email: { ...data.contactDetails.email, label: translate("contactDetails.email", data.contactDetails.email.label) },
+                    address: { ...data.contactDetails.address, label: translate("contactDetails.address", data.contactDetails.address.label) },
+                },
+            };
+
+            onChange(updated);
+            onLanguageChange(pendingLang);
+        } catch (e) {
+            console.error("Failed to switch language", e);
+        } finally {
+            setIsSwitching(false);
+            setPendingLang(null);
+        }
+    };
 
     const handlePhotoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.files && e.target.files.length > 0) {
@@ -272,6 +351,60 @@ export default function BiodataForm({ data, onChange }: Props) {
 
     return (
         <div className="space-y-6">
+            {/* Language Selector */}
+            <div className="p-5 bg-white dark:bg-black rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
+                <div className="flex items-center justify-between gap-4">
+                    <div className="flex items-center gap-2">
+                        <Languages className="w-5 h-5 text-indigo-500 shrink-0" />
+                        <div>
+                            <div className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Biodata Language</div>
+                            <div className="text-xs text-zinc-500 dark:text-zinc-400">Field labels and section titles will be translated</div>
+                        </div>
+                    </div>
+                    <select
+                        value={pendingLang ?? language}
+                        onChange={(e) => handleLanguageRequest(e.target.value)}
+                        className="text-sm font-medium text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer transition-colors"
+                    >
+                        {SUPPORTED_LANGUAGES.map((lang) => (
+                            <option key={lang.code} value={lang.code}>
+                                {lang.native}
+                            </option>
+                        ))}
+                    </select>
+                </div>
+
+                {/* Confirmation banner */}
+                {pendingLang && (
+                    <div className="mt-4 p-3 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl flex items-start gap-3">
+                        <AlertTriangle className="w-4 h-4 text-amber-600 dark:text-amber-400 mt-0.5 shrink-0" />
+                        <div className="flex-1 min-w-0">
+                            <p className="text-sm text-amber-800 dark:text-amber-300 font-medium">
+                                Switch to {SUPPORTED_LANGUAGES.find(l => l.code === pendingLang)?.native}?
+                            </p>
+                            <p className="text-xs text-amber-700 dark:text-amber-400 mt-0.5">
+                                Default field labels will be translated. Labels you&apos;ve already customized won&apos;t be changed.
+                            </p>
+                        </div>
+                        <div className="flex gap-2 shrink-0">
+                            <button
+                                onClick={() => setPendingLang(null)}
+                                className="text-xs px-2.5 py-1.5 rounded-lg border border-zinc-300 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+                            >
+                                Cancel
+                            </button>
+                            <button
+                                onClick={confirmLanguageSwitch}
+                                disabled={isSwitching}
+                                className="text-xs px-2.5 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-medium transition-colors disabled:opacity-50"
+                            >
+                                {isSwitching ? "Switching..." : "Switch"}
+                            </button>
+                        </div>
+                    </div>
+                )}
+            </div>
+
             {/* Photo & Symbol Configuration Section */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 {/* Profile Photo Control */}

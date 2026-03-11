@@ -8,7 +8,7 @@ import { Biodata, initialData } from "@/app/create/page";
 import { toPng } from 'html-to-image';
 import jsPDF from "jspdf";
 import { ThemeMeta } from "@/components/BiodataPreview";
-import LanguageSelector from "@/components/LanguageSelector";
+
 
 export default function PreviewPage() {
     const [data, setData] = useState<Biodata>(initialData);
@@ -18,7 +18,7 @@ export default function PreviewPage() {
     const [isLoaded, setIsLoaded] = useState(false);
     const [isDownloadingPDF, setIsDownloadingPDF] = useState(false);
     const [isDownloadingPNG, setIsDownloadingPNG] = useState(false);
-    const [language, setLanguage] = useState("en");
+
 
     useEffect(() => {
         // Fetch themes dynamically from server
@@ -65,8 +65,6 @@ export default function PreviewPage() {
                     console.error("Failed to parse saved biodata");
                 }
             }
-            const savedLang = localStorage.getItem("biodataLang");
-            if (savedLang) setLanguage(savedLang);
             setIsLoaded(true);
         };
 
@@ -161,13 +159,6 @@ export default function PreviewPage() {
                     <div className="font-semibold text-lg text-zinc-900 dark:text-zinc-50">Preview & Download</div>
                 </div>
                 <div className="flex items-center gap-3">
-                    <LanguageSelector
-                        value={language}
-                        onChange={(lang) => {
-                            setLanguage(lang);
-                            localStorage.setItem("biodataLang", lang);
-                        }}
-                    />
                     <button
                         onClick={handleDownloadPNG}
                         disabled={isDownloadingPDF || isDownloadingPNG}
@@ -204,7 +195,7 @@ export default function PreviewPage() {
                         />
                         {/* Foreground Content */}
                         <div className="relative z-10 w-full h-full overflow-hidden">
-                            <BiodataPreview data={data} template={template} themeMeta={themeMeta} language={language} />
+                            <BiodataPreview data={data} template={template} themeMeta={themeMeta} />
                         </div>
                     </div>
                 </div>
