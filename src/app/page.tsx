@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Logo from "@/components/Logo";
-import { MoveRight, FileText, Image as ImageIcon, Download, CheckCircle2, Star, Sparkles, Shield, Smartphone, Zap } from "lucide-react";
+import { MoveRight, FileText, Image as ImageIcon, Download, CheckCircle2, Star, Sparkles, Shield, Smartphone, Zap, Languages } from "lucide-react";
 import ClientThemeGallery from "@/components/ClientThemeGallery";
 
 const STEPS = [
@@ -73,6 +73,13 @@ const FEATURES = [
     color: "text-indigo-600 dark:text-indigo-400",
     bg: "bg-indigo-50 dark:bg-indigo-950/30",
   },
+  {
+    icon: <Languages className="w-5 h-5" />,
+    title: "6 Indian Languages",
+    description: "Create biodata in Hindi, Gujarati, Marathi, Tamil, Telugu, or English — your choice.",
+    color: "text-teal-600 dark:text-teal-400",
+    bg: "bg-teal-50 dark:bg-teal-950/30",
+  },
 ];
 
 const TESTIMONIALS = [
@@ -112,6 +119,10 @@ const FAQS = [
   {
     q: "Can I add my profile photo?",
     a: "Yes! You can upload and crop your profile photo and choose between a circular or square frame.",
+  },
+  {
+    q: "Which languages are supported?",
+    a: "You can create your biodata in English, Hindi (हिंदी), Gujarati (ગુજરાતી), Marathi (मराठी), Tamil (தமிழ்), and Telugu (తెలుగు). Simply select your language at the top of the form — field labels and section titles will be translated automatically.",
   },
 ];
 
@@ -177,7 +188,7 @@ export default function Home() {
 
             {/* Trust indicators */}
             <div className="flex flex-wrap items-center justify-center gap-6 mt-12 text-sm text-zinc-500 dark:text-zinc-500">
-              {["No registration", "Instant download", "High-quality PDF & PNG", "Completely free"].map(t => (
+              {["No registration", "Instant download", "High-quality PDF & PNG", "Completely free", "6 Indian languages"].map(t => (
                 <div key={t} className="flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-emerald-500" />
                   {t}
