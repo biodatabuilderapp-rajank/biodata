@@ -114,20 +114,23 @@ export default function BiodataForm({ data, onChange, language, onLanguageChange
                 fetch(`/translations/${pendingLang}.json`).then((r) => r.json()),
             ]);
 
-            // Helper: update a single label if it still matches the English default
-            const translate = (key: string, current: string): string => {
+            // Translate a label only if the field exists AND it still matches the English default
+            const translateField = (
+                key: string,
+                field: { label: string; value: string } | undefined
+            ): { label: string; value: string } | undefined => {
+                if (!field) return field;
+                const enDefault = enMap[key] as string | undefined;
+                const translated = targetMap[key] as string | undefined;
+                if (!enDefault || !translated) return field;
+                const newLabel = field.label === enDefault ? translated : field.label;
+                return { ...field, label: newLabel };
+            };
+
+            const translateTitle = (key: string, current: string): string => {
                 const enDefault = enMap[key] as string | undefined;
                 const translated = targetMap[key] as string | undefined;
                 if (!enDefault || !translated) return current;
-                // Only replace if the user hasn't customized this label
-                // (matches English default OR any previously translated default)
-                const allDefaults = Object.values(SUPPORTED_LANGUAGES).map(
-                    (l) => l.code
-                );
-                // Simple heuristic: if label still equals the en default, it's untouched
-                if (current === enDefault) return translated;
-                // Also allow switching between translated defaults (en→hi→gu etc.)
-                const prevTargetMap = enMap; // Compare against known defaults conservatively
                 return current === enDefault ? translated : current;
             };
 
@@ -135,32 +138,32 @@ export default function BiodataForm({ data, onChange, language, onLanguageChange
                 ...data,
                 personalDetails: {
                     ...data.personalDetails,
-                    title: (() => { const k = "personalDetails.title"; return data.personalDetails.title === enMap[k] ? targetMap[k] : data.personalDetails.title; })(),
-                    fullName: { ...data.personalDetails.fullName, label: translate("personalDetails.fullName", data.personalDetails.fullName.label) },
-                    dateOfBirth: { ...data.personalDetails.dateOfBirth, label: translate("personalDetails.dateOfBirth", data.personalDetails.dateOfBirth.label) },
-                    height: { ...data.personalDetails.height, label: translate("personalDetails.height", data.personalDetails.height.label) },
-                    bloodGroup: { ...data.personalDetails.bloodGroup, label: translate("personalDetails.bloodGroup", data.personalDetails.bloodGroup.label) },
-                    complexion: { ...data.personalDetails.complexion, label: translate("personalDetails.complexion", data.personalDetails.complexion.label) },
-                    maritalStatus: { ...data.personalDetails.maritalStatus, label: translate("personalDetails.maritalStatus", data.personalDetails.maritalStatus.label) },
-                    education: { ...data.personalDetails.education, label: translate("personalDetails.education", data.personalDetails.education.label) },
-                    occupation: { ...data.personalDetails.occupation, label: translate("personalDetails.occupation", data.personalDetails.occupation.label) },
-                    annualIncome: { ...data.personalDetails.annualIncome, label: translate("personalDetails.annualIncome", data.personalDetails.annualIncome.label) },
+                    title: translateTitle("personalDetails.title", data.personalDetails.title),
+                    fullName: translateField("personalDetails.fullName", data.personalDetails.fullName)!,
+                    dateOfBirth: translateField("personalDetails.dateOfBirth", data.personalDetails.dateOfBirth)!,
+                    height: translateField("personalDetails.height", data.personalDetails.height)!,
+                    bloodGroup: translateField("personalDetails.bloodGroup", data.personalDetails.bloodGroup)!,
+                    complexion: translateField("personalDetails.complexion", data.personalDetails.complexion)!,
+                    maritalStatus: translateField("personalDetails.maritalStatus", data.personalDetails.maritalStatus)!,
+                    education: translateField("personalDetails.education", data.personalDetails.education)!,
+                    occupation: translateField("personalDetails.occupation", data.personalDetails.occupation)!,
+                    annualIncome: translateField("personalDetails.annualIncome", data.personalDetails.annualIncome)!,
                 },
                 familyDetails: {
                     ...data.familyDetails,
-                    title: (() => { const k = "familyDetails.title"; return data.familyDetails.title === enMap[k] ? targetMap[k] : data.familyDetails.title; })(),
-                    fatherName: { ...data.familyDetails.fatherName, label: translate("familyDetails.fatherName", data.familyDetails.fatherName.label) },
-                    fatherOccupation: { ...data.familyDetails.fatherOccupation, label: translate("familyDetails.fatherOccupation", data.familyDetails.fatherOccupation.label) },
-                    motherName: { ...data.familyDetails.motherName, label: translate("familyDetails.motherName", data.familyDetails.motherName.label) },
-                    motherOccupation: { ...data.familyDetails.motherOccupation, label: translate("familyDetails.motherOccupation", data.familyDetails.motherOccupation.label) },
-                    siblings: { ...data.familyDetails.siblings, label: translate("familyDetails.siblings", data.familyDetails.siblings.label) },
+                    title: translateTitle("familyDetails.title", data.familyDetails.title),
+                    fatherName: translateField("familyDetails.fatherName", data.familyDetails.fatherName)!,
+                    fatherOccupation: translateField("familyDetails.fatherOccupation", data.familyDetails.fatherOccupation)!,
+                    motherName: translateField("familyDetails.motherName", data.familyDetails.motherName)!,
+                    motherOccupation: translateField("familyDetails.motherOccupation", data.familyDetails.motherOccupation)!,
+                    siblings: translateField("familyDetails.siblings", data.familyDetails.siblings)!,
                 },
                 contactDetails: {
                     ...data.contactDetails,
-                    title: (() => { const k = "contactDetails.title"; return data.contactDetails.title === enMap[k] ? targetMap[k] : data.contactDetails.title; })(),
-                    contactNumber: { ...data.contactDetails.contactNumber, label: translate("contactDetails.contactNumber", data.contactDetails.contactNumber.label) },
-                    email: { ...data.contactDetails.email, label: translate("contactDetails.email", data.contactDetails.email.label) },
-                    address: { ...data.contactDetails.address, label: translate("contactDetails.address", data.contactDetails.address.label) },
+                    title: translateTitle("contactDetails.title", data.contactDetails.title),
+                    contactNumber: translateField("contactDetails.contactNumber", data.contactDetails.contactNumber)!,
+                    email: translateField("contactDetails.email", data.contactDetails.email)!,
+                    address: translateField("contactDetails.address", data.contactDetails.address)!,
                 },
             };
 
