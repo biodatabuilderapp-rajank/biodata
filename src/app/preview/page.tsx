@@ -60,16 +60,6 @@ export default function PreviewPage() {
                         parsed.personalDetails.annualIncome = parsed.professionalDetails?.annualIncome || { label: "Annual Income", value: "" };
                     }
 
-                    // Restore any standard fields that were accidentally deleted
-                    const sections = ["personalDetails", "familyDetails", "contactDetails"] as const;
-                    for (const section of sections) {
-                        for (const key of Object.keys(initialData[section])) {
-                            if (!(key in parsed[section])) {
-                                (parsed[section] as any)[key] = (initialData[section] as any)[key];
-                            }
-                        }
-                    }
-
                     setData(parsed);
                 } catch (e) {
                     console.error("Failed to parse saved biodata");
