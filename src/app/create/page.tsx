@@ -114,10 +114,12 @@ export default function CreatePage() {
                 }
 
                 // Restore any standard fields that were accidentally deleted,
-                // but only on a hard browser refresh (new session).
-                // sessionStorage clears on refresh; survives client-side navigation.
-                const isNewSession = !sessionStorage.getItem("formSession");
-                if (isNewSession) {
+                // but only on a true browser reload (F5 / Ctrl+R / Ctrl+Shift+R).
+                // PerformanceNavigationTiming.type === "reload" on browser refresh,
+                // and "navigate" on client-side navigation — exactly the distinction we need.
+                const nav = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming | undefined;
+                const isReload = nav?.type === "reload";
+                if (isReload) {
                     const sections = ["personalDetails", "familyDetails", "contactDetails"] as const;
                     for (const section of sections) {
                         for (const key of Object.keys(initialData[section])) {
@@ -127,7 +129,6 @@ export default function CreatePage() {
                         }
                     }
                 }
-                sessionStorage.setItem("formSession", "1");
 
                 setData(parsed);
             } catch (e) {
