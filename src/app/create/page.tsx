@@ -90,6 +90,10 @@ export const initialData: Biodata = {
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
+// Module-level flag: resets to false on every browser refresh (module re-executes),
+// stays true across SPA navigations within the same browser session.
+let _hasRestoredMissingFields = false;
+
 export default function CreatePage() {
     const [data, setData] = useState<Biodata>(initialData);
     const [isLoaded, setIsLoaded] = useState(false);
@@ -114,12 +118,13 @@ export default function CreatePage() {
                 }
 
                 // Restore any standard fields that were accidentally deleted,
-                // but only on a true browser reload (F5 / Ctrl+R / Ctrl+Shift+R).
-                // PerformanceNavigationTiming.type === "reload" on browser refresh,
-                // and "navigate" on client-side navigation — exactly the distinction we need.
+                // but ONLY on a hard browser reload — not on client-side navigation.
+                // We combine the PerformanceNavigationTiming "reload" check with a
+                // module-level flag to avoid false-positives when the component
+                // remounts during SPA navigation (where the perf entry stays "reload").
                 const nav = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming | undefined;
-                const isReload = nav?.type === "reload";
-                if (isReload) {
+                if (nav?.type === "reload" && !_hasRestoredMissingFields) {
+                    _hasRestoredMissingFields = true;
                     const sections = ["personalDetails", "familyDetails", "contactDetails"] as const;
                     for (const section of sections) {
                         for (const key of Object.keys(initialData[section])) {
