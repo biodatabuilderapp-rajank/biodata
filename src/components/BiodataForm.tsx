@@ -1,12 +1,11 @@
-"use client";
-
-import { Biodata } from "@/app/create/page";
 import { Plus, X, ImagePlus, Settings2, Languages } from "lucide-react";
 import { useState } from "react";
 import ImageCropper from "./ImageCropper";
 import GodIconSelector from "./GodIconSelector";
 import { SUPPORTED_LANGUAGES } from "./LanguageSelector";
 import { translateBiodata } from "@/lib/translateBiodata";
+import { useUITranslation } from "@/lib/useUITranslation";
+import { Biodata } from "@/app/create/page";
 
 interface Props {
     data: Biodata;
@@ -98,6 +97,7 @@ const Input = ({ section, field, data, updateSection, updateLabel, removeField, 
 export default function BiodataForm({ data, onChange, language, onLanguageChange }: Props) {
     const [imageToCrop, setImageToCrop] = useState<string | null>(null);
     const [showGodIconSelector, setShowGodIconSelector] = useState(false);
+    const { t } = useUITranslation(language);
     const [isSwitching, setIsSwitching] = useState(false);
 
     const handleLanguageSwitch = async (lang: string) => {
@@ -297,8 +297,8 @@ export default function BiodataForm({ data, onChange, language, onLanguageChange
                     <div className="flex items-center gap-2">
                         <Languages className="w-5 h-5 text-indigo-500 shrink-0" />
                         <div>
-                            <div className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Biodata Language</div>
-                            <div className="text-xs text-zinc-500 dark:text-zinc-400">Field labels and section titles will be translated</div>
+                            <div className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">{t("create.lang.label") || "Biodata Language"}</div>
+                            <div className="text-xs text-zinc-500 dark:text-zinc-400">{t("create.lang.subtitle") || "Field labels and section titles will be translated"}</div>
                         </div>
                     </div>
                     <select
@@ -322,11 +322,11 @@ export default function BiodataForm({ data, onChange, language, onLanguageChange
                 <div className="p-5 bg-white dark:bg-black rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col">
                     <div className="flex justify-between items-center mb-4">
                         <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
-                            Profile Photo
+                            {t("create.photo.label") || "Profile Photo"}
                         </h3>
                         <label className="flex items-center gap-2 text-xs text-zinc-600 dark:text-zinc-400 cursor-pointer">
                             <input type="checkbox" checked={data.profilePhoto?.isHidden || false} onChange={togglePhotoHidden} className="rounded border-zinc-300 text-indigo-600 focus:ring-indigo-500" />
-                            Hide on Biodata
+                            {t("create.photo.hide") || "Hide on Biodata"}
                         </label>
                     </div>
 
@@ -344,20 +344,20 @@ export default function BiodataForm({ data, onChange, language, onLanguageChange
                         <div className="flex-1 flex flex-col gap-2">
                             <div className="flex gap-2">
                                 <button onClick={() => document.getElementById('photo-upload')?.click()} className="text-xs px-3 py-1.5 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 transition-colors rounded-lg font-medium text-zinc-700 dark:text-zinc-300 flex-1">
-                                    {data.profilePhoto?.url ? 'Change Photo' : 'Upload Photo'}
+                                    {data.profilePhoto?.url ? (t("create.photo.change") || 'Change Photo') : (t("create.photo.upload") || 'Upload Photo')}
                                 </button>
                                 <input id="photo-upload" type="file" accept="image/*" className="hidden" onChange={handlePhotoUpload} />
                                 {data.profilePhoto?.url && (
                                     <button onClick={removePhoto} className="text-xs px-3 py-1.5 text-red-600 bg-red-50 hover:bg-red-100 dark:bg-red-500/10 dark:hover:bg-red-500/20 transition-colors rounded-lg font-medium">
-                                        Remove
+                                        {t("create.photo.remove") || "Remove"}
                                     </button>
                                 )}
                             </div>
 
                             {data.profilePhoto?.url && (
                                 <div className="flex bg-zinc-100 dark:bg-zinc-900 p-0.5 rounded-lg z-0 relative">
-                                    <button onClick={() => updatePhotoShape('circle')} className={`flex-1 text-[10px] font-medium py-1 rounded-md transition-all ${data.profilePhoto?.shape === 'circle' ? 'bg-white dark:bg-zinc-800 shadow text-indigo-600 dark:text-indigo-400' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100'}`}>Circular</button>
-                                    <button onClick={() => updatePhotoShape('square')} className={`flex-1 text-[10px] font-medium py-1 rounded-md transition-all ${data.profilePhoto?.shape === 'square' ? 'bg-white dark:bg-zinc-800 shadow text-indigo-600 dark:text-indigo-400' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100'}`}>Square</button>
+                                    <button onClick={() => updatePhotoShape('circle')} className={`flex-1 text-[10px] font-medium py-1 rounded-md transition-all ${data.profilePhoto?.shape === 'circle' ? 'bg-white dark:bg-zinc-800 shadow text-indigo-600 dark:text-indigo-400' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100'}`}>{t("create.photo.circle") || "Circular"}</button>
+                                    <button onClick={() => updatePhotoShape('square')} className={`flex-1 text-[10px] font-medium py-1 rounded-md transition-all ${data.profilePhoto?.shape === 'square' ? 'bg-white dark:bg-zinc-800 shadow text-indigo-600 dark:text-indigo-400' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100'}`}>{t("create.photo.square") || "Square"}</button>
                                 </div>
                             )}
                         </div>
@@ -368,11 +368,11 @@ export default function BiodataForm({ data, onChange, language, onLanguageChange
                 <div className="p-5 bg-white dark:bg-black rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col">
                     <div className="flex justify-between items-center mb-4">
                         <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
-                            Symbol / God Icon
+                            {t("create.godIcon.label") || "Symbol / God Icon"}
                         </h3>
                         <label className="flex items-center gap-2 text-xs text-zinc-600 dark:text-zinc-400 cursor-pointer">
                             <input type="checkbox" checked={data.godIcon?.isHidden || false} onChange={toggleGodIconHidden} className="rounded border-zinc-300 text-indigo-600 focus:ring-indigo-500" />
-                            Hide
+                            {t("create.godIcon.hide") || "Hide"}
                         </label>
                     </div>
 
@@ -388,7 +388,7 @@ export default function BiodataForm({ data, onChange, language, onLanguageChange
                         <div className="flex-1 flex flex-col gap-2">
                             <button onClick={() => setShowGodIconSelector(true)} className="w-full text-xs px-3 py-2 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 transition-colors rounded-lg font-medium text-zinc-700 dark:text-zinc-300 flex items-center justify-center gap-2">
                                 <Settings2 className="w-3.5 h-3.5" />
-                                Choose Icon
+                                {t("create.godIcon.change") || "Choose Icon"}
                             </button>
                             <input
                                 type="text"

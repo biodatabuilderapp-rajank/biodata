@@ -89,6 +89,7 @@ export const initialData: Biodata = {
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { translateBiodata } from "@/lib/translateBiodata";
+import { useUITranslation } from "@/lib/useUITranslation";
 
 // Module-level flag: resets to false on every browser refresh (module re-executes),
 // stays true across SPA navigations within the same browser session.
@@ -99,6 +100,7 @@ export default function CreatePage() {
     const [isLoaded, setIsLoaded] = useState(false);
     const [language, setLanguage] = useState("en");
     const router = useRouter();
+    const { t } = useUITranslation(language);
 
     useEffect(() => {
         const loadInitialData = async () => {
@@ -198,11 +200,11 @@ export default function CreatePage() {
                     <Link href="/" className="p-2 -ml-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100">
                         <ArrowLeft className="w-5 h-5" />
                     </Link>
-                    <div className="font-semibold text-lg text-zinc-900 dark:text-zinc-50">Create Biodata</div>
+                    <div className="font-semibold text-lg text-zinc-900 dark:text-zinc-50">{t("create.title") || "Create Biodata"}</div>
                 </div>
                 <div className="flex items-center gap-3">
                     <button onClick={handlePreview} className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors shadow-sm shadow-indigo-500/20">
-                        Preview & Select Theme
+                        {t("create.previewBtn") || "Preview & Select Theme"}
                     </button>
                 </div>
             </header>
@@ -212,7 +214,7 @@ export default function CreatePage() {
 
                 <div className="mt-8 flex justify-end">
                     <button onClick={handlePreview} className="w-full sm:w-auto px-8 py-3.5 text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl transition-colors shadow-sm shadow-indigo-500/20">
-                        Preview & Select Theme
+                        {t("create.previewBtn") || "Preview & Select Theme"}
                     </button>
                 </div>
             </main>

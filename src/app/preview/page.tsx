@@ -8,6 +8,7 @@ import { Biodata, initialData } from "@/app/create/page";
 import { toPng } from 'html-to-image';
 import jsPDF from "jspdf";
 import { ThemeMeta } from "@/components/BiodataPreview";
+import { useUITranslation } from "@/lib/useUITranslation";
 
 
 export default function PreviewPage() {
@@ -18,6 +19,10 @@ export default function PreviewPage() {
     const [isLoaded, setIsLoaded] = useState(false);
     const [isDownloadingPDF, setIsDownloadingPDF] = useState(false);
     const [isDownloadingPNG, setIsDownloadingPNG] = useState(false);
+    
+    // We get the language from localStorage to know what UI language they selected
+    const [language, setLanguage] = useState("en");
+    const { t } = useUITranslation(language);
 
 
     useEffect(() => {
@@ -65,6 +70,9 @@ export default function PreviewPage() {
                     console.error("Failed to parse saved biodata");
                 }
             }
+            const savedLang = localStorage.getItem("biodataLang");
+            if (savedLang) setLanguage(savedLang);
+            
             setIsLoaded(true);
         };
 
@@ -156,7 +164,7 @@ export default function PreviewPage() {
                     <Link href="/create" className="p-2 -ml-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100">
                         <ArrowLeft className="w-5 h-5" />
                     </Link>
-                    <div className="font-semibold text-lg text-zinc-900 dark:text-zinc-50">Preview & Download</div>
+                    <div className="font-semibold text-lg text-zinc-900 dark:text-zinc-50">{t("preview.title") || "Preview & Download"}</div>
                 </div>
                 <div className="flex items-center gap-3">
                     <button
@@ -165,7 +173,7 @@ export default function PreviewPage() {
                         className="hidden sm:flex items-center gap-2 px-4 py-2 text-sm font-medium text-zinc-700 bg-zinc-100 hover:bg-zinc-200 dark:text-zinc-300 dark:bg-zinc-900 dark:hover:bg-zinc-800 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                         {isDownloadingPNG ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
-                        PNG
+                        {t("preview.downloadPng") || "PNG"}
                     </button>
                     <button
                         onClick={handleDownloadPDF}
@@ -173,7 +181,7 @@ export default function PreviewPage() {
                         className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors shadow-sm shadow-indigo-500/20 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-indigo-600"
                     >
                         {isDownloadingPDF ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
-                        PDF
+                        {t("preview.downloadPdf") || "PDF"}
                     </button>
                 </div>
             </header>
@@ -204,7 +212,7 @@ export default function PreviewPage() {
                 <div className="w-full lg:w-48 xl:w-64 bg-white dark:bg-zinc-950 border-t lg:border-t-0 lg:border-l border-zinc-200 dark:border-zinc-800 p-4 xl:p-6 lg:relative lg:h-full lg:overflow-y-auto shadow-[0_-4px_20px_rgba(0,0,0,0.05)] lg:shadow-none z-10 shrink-0">
                     <div className="flex items-center gap-2 mb-4 xl:mb-6">
                         <Palette className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
-                        <h2 className="text-base xl:text-lg font-semibold text-zinc-900 dark:text-zinc-100">Choose Theme</h2>
+                        <h2 className="text-base xl:text-lg font-semibold text-zinc-900 dark:text-zinc-100">{t("preview.theme") || "Choose Theme"}</h2>
                     </div>
 
                     {/* Horizontal scroll on mobile, grid on desktop */}
@@ -234,7 +242,7 @@ export default function PreviewPage() {
                             className="w-full flex justify-center items-center gap-2 px-4 py-3 text-sm font-medium text-zinc-700 bg-zinc-100 hover:bg-zinc-200 dark:text-zinc-300 dark:bg-zinc-900 dark:hover:bg-zinc-800 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                             {isDownloadingPNG ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
-                            Download PNG
+                            {t("preview.downloadPngFull") || "Download PNG"}
                         </button>
                         <button
                             onClick={handleDownloadPDF}
@@ -242,7 +250,7 @@ export default function PreviewPage() {
                             className="w-full flex justify-center items-center gap-2 px-4 py-3 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors shadow-sm shadow-indigo-500/20 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-indigo-600"
                         >
                             {isDownloadingPDF ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
-                            Download PDF
+                            {t("preview.downloadPdfFull") || "Download PDF"}
                         </button>
                     </div>
                 </div>
