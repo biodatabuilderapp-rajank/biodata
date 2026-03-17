@@ -25,8 +25,8 @@ export const metadata: Metadata = {
     "Create beautiful Indian marriage biodata online for free. Choose from stunning templates, add your details & photo, and instantly download as PDF or PNG. No sign-up required.",
   keywords: [
     "[marriage biodata maker]",
-    "[marriage biodata maker]",
-    "[marriage biodata maker]"
+    "[marriage biodata format]",
+    "[biodata for marriage]"
   ],
   authors: [{ name: "BiodataBuilder" }],
   creator: "BiodataBuilder",
