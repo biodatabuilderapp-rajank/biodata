@@ -1,7 +1,7 @@
 "use client";
 
 import { Biodata } from "@/app/create/page";
-import { Plus, X, ImagePlus, Settings2, Languages, AlertTriangle } from "lucide-react";
+import { Plus, X, ImagePlus, Settings2, Languages } from "lucide-react";
 import { useState } from "react";
 import ImageCropper from "./ImageCropper";
 import GodIconSelector from "./GodIconSelector";
@@ -98,26 +98,19 @@ const Input = ({ section, field, data, updateSection, updateLabel, removeField, 
 export default function BiodataForm({ data, onChange, language, onLanguageChange }: Props) {
     const [imageToCrop, setImageToCrop] = useState<string | null>(null);
     const [showGodIconSelector, setShowGodIconSelector] = useState(false);
-    const [pendingLang, setPendingLang] = useState<string | null>(null);
     const [isSwitching, setIsSwitching] = useState(false);
 
-    const handleLanguageRequest = (lang: string) => {
-        if (lang === language) return;
-        setPendingLang(lang);
-    };
-
-    const confirmLanguageSwitch = async () => {
-        if (!pendingLang) return;
+    const handleLanguageSwitch = async (lang: string) => {
+        if (lang === language || isSwitching) return;
         setIsSwitching(true);
         try {
-            const updated = await translateBiodata(data, language, pendingLang);
+            const updated = await translateBiodata(data, language, lang);
             onChange(updated);
-            onLanguageChange(pendingLang);
+            onLanguageChange(lang);
         } catch (e) {
             console.error("Failed to switch language", e);
         } finally {
             setIsSwitching(false);
-            setPendingLang(null);
         }
     };
 
@@ -309,47 +302,18 @@ export default function BiodataForm({ data, onChange, language, onLanguageChange
                         </div>
                     </div>
                     <select
-                        value={pendingLang ?? language}
-                        onChange={(e) => handleLanguageRequest(e.target.value)}
-                        className="text-sm font-medium text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer transition-colors"
+                        value={language}
+                        onChange={(e) => handleLanguageSwitch(e.target.value)}
+                        disabled={isSwitching}
+                        className="text-sm font-medium text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer transition-colors disabled:opacity-50 disabled:cursor-wait"
                     >
                         {SUPPORTED_LANGUAGES.map((lang) => (
                             <option key={lang.code} value={lang.code}>
-                                {lang.native}
+                                {lang.native}{isSwitching && lang.code === language ? " (translating…)" : ""}
                             </option>
                         ))}
                     </select>
                 </div>
-
-                {/* Confirmation banner */}
-                {pendingLang && (
-                    <div className="mt-4 p-3 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl flex items-start gap-3">
-                        <AlertTriangle className="w-4 h-4 text-amber-600 dark:text-amber-400 mt-0.5 shrink-0" />
-                        <div className="flex-1 min-w-0">
-                            <p className="text-sm text-amber-800 dark:text-amber-300 font-medium">
-                                Switch to {SUPPORTED_LANGUAGES.find(l => l.code === pendingLang)?.native}?
-                            </p>
-                            <p className="text-xs text-amber-700 dark:text-amber-400 mt-0.5">
-                                Default field labels will be translated. Labels you&apos;ve already customized won&apos;t be changed.
-                            </p>
-                        </div>
-                        <div className="flex gap-2 shrink-0">
-                            <button
-                                onClick={() => setPendingLang(null)}
-                                className="text-xs px-2.5 py-1.5 rounded-lg border border-zinc-300 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
-                            >
-                                Cancel
-                            </button>
-                            <button
-                                onClick={confirmLanguageSwitch}
-                                disabled={isSwitching}
-                                className="text-xs px-2.5 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-medium transition-colors disabled:opacity-50"
-                            >
-                                {isSwitching ? "Switching..." : "Switch"}
-                            </button>
-                        </div>
-                    </div>
-                )}
             </div>
 
             {/* Photo & Symbol Configuration Section */}
