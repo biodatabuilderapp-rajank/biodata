@@ -28,21 +28,21 @@ const FEATURE_META = [
   { icon: <Zap className="w-5 h-5" />, key: "feature.download", desc: "Your biodata is generated and downloaded in seconds — no waiting.", color: "text-amber-600 dark:text-amber-400", bg: "bg-amber-50 dark:bg-amber-950/30" },
   { icon: <Smartphone className="w-5 h-5" />, key: "feature.mobile", desc: "Works perfectly on any device — phone, tablet, or desktop.", color: "text-sky-600 dark:text-sky-400", bg: "bg-sky-50 dark:bg-sky-950/30" },
   { icon: <ImageIcon className="w-5 h-5" />, key: "feature.export", desc: "Download as printable PDF or shareable PNG image — your choice.", color: "text-rose-600 dark:text-rose-400", bg: "bg-rose-50 dark:bg-rose-950/30" },
-  { icon: <CheckCircle2 className="w-5 h-5" />, key: "feature.noSignup", desc: "Start creating immediately. No account, no email, no sign-up required.", color: "text-indigo-600 dark:text-indigo-400", bg: "bg-indigo-50 dark:bg-indigo-950/30" },
+  { icon: <CheckCircle2 className="w-5 h-5" />, key: "feature.noSignup", desc: "Start creating immediately. No registration needed to start.", color: "text-indigo-600 dark:text-indigo-400", bg: "bg-indigo-50 dark:bg-indigo-950/30" },
   { icon: <Languages className="w-5 h-5" />, key: "feature.languages", desc: "Create biodata in Hindi, Gujarati, Marathi, Tamil, Telugu, or English — your choice.", color: "text-teal-600 dark:text-teal-400", bg: "bg-teal-50 dark:bg-teal-950/30" },
 ];
 
 const TESTIMONIALS = [
   { name: "Priya Sharma", location: "Mumbai, Maharashtra", text: "Made my biodata in under 10 minutes! The templates are so elegant and the PDF quality is excellent. Highly recommended to everyone looking for a quick, beautiful biodata.", rating: 5 },
   { name: "Rahul Patel", location: "Ahmedabad, Gujarat", text: "Simple to use and completely free. I was looking for something that looks professional and this delivered exactly that. The theme selection is amazing.", rating: 5 },
-  { name: "Anjali Verma", location: "Delhi, NCR", text: "Loved the profile photo feature and the god icon selector. It made our biodata look very traditional and beautiful. Downloaded in PNG and it looks great when shared on WhatsApp!", rating: 5 },
+  { name: "Anjali Verma", location: "Delhi, NCR", text: "Loved the photo feature and the god icon selector. It made our biodata look very traditional and beautiful. Downloaded in PNG and it looks great when shared on WhatsApp!", rating: 5 },
 ];
 
 const FAQS = [
-  { q: "Is this biodata maker completely free?", a: "Yes! Creating, previewing, and downloading your biodata is 100% free with no hidden charges or subscriptions." },
+  { q: "Is this biodata maker completely free?", a: "Yes! Creating, previewing, and downloading your biodata is free to use." },
   { q: "Do I need to create an account?", a: "No. You can start creating your biodata immediately without any registration or sign-up." },
   { q: "What formats can I download my biodata in?", a: "You can download your biodata as a high-quality PDF (ideal for printing) or PNG image (ideal for sharing on WhatsApp)." },
-  { q: "Can I add my profile photo?", a: "Yes! You can upload and crop your profile photo and choose between a circular or square frame." },
+  { q: "Can I add my photo?", a: "Yes! You can upload and crop your photo and choose between a circular or square frame." },
   { q: "Which languages are supported?", a: "You can create your biodata in English, Hindi (हिंदी), Gujarati (ગુજરાતી), Marathi (मराठी), Tamil (தமிழ்), and Telugu (తెలుగు). Simply select your language at the top of the form — field labels and section titles will be translated automatically." },
 ];
 
@@ -90,7 +90,6 @@ function HomeContent() {
     t("hero.trust.noReg") ?? "No registration",
     t("hero.trust.download") ?? "Instant download",
     t("hero.trust.export") ?? "High-quality PDF & PNG",
-    t("hero.trust.free") ?? "Completely free",
     t("hero.trust.languages") ?? "6 Indian languages",
   ];
 
@@ -137,19 +136,20 @@ function HomeContent() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full bg-indigo-50 dark:bg-indigo-950/50 border border-indigo-100 dark:border-indigo-900 text-indigo-700 dark:text-indigo-400 text-sm font-medium">
               <span className="flex h-1.5 w-1.5 rounded-full bg-indigo-600 dark:bg-indigo-400 animate-pulse" />
-              {t("hero.badge") ?? "100% Free · No Sign-up Required"}
+              {t("hero.badge") ?? "Free to use · No registration needed"}
             </div>
 
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-zinc-900 dark:text-white mb-6 leading-[1.1]">
-              {t("hero.h1.line1") ?? "Create your perfect"}
+              {t("hero.h1.line1") ?? "Create your marriage biodata"}
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500">
-                {t("hero.h1.line2") ?? "marriage biodata"}
+                {t("hero.h1.line2") ?? "for arranged marriage"}
               </span>
             </h1>
-
             <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Choose from beautiful Indian biodata templates, fill in your details, and instantly download a stunning biodata in PDF or PNG — completely free, no account needed.
+              This tool is designed for creating marriage biodata for traditional Indian arranged marriages. It is not a dating or matchmaking service.</p>
+            <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+              Choose from beautiful Indian biodata templates, fill in your details, and instantly download a stunning biodata in PDF or PNG — free to use, no registration needed to start.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 sm:px-0">
@@ -157,7 +157,7 @@ function HomeContent() {
                 href="/create"
                 className="group flex h-12 sm:h-14 items-center justify-center gap-2 sm:gap-3 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 px-6 sm:px-8 text-white font-semibold text-sm sm:text-base transition-all hover:shadow-2xl hover:shadow-indigo-500/25 hover:-translate-y-1 shadow-lg shadow-indigo-500/20 w-full sm:w-auto"
               >
-                <span>{t("hero.cta.primary") ?? "Create Biodata Now — It's Free"}</span>
+                <span>{t("hero.cta.primary") ?? "Create Marriage Biodata"}</span>
                 <MoveRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1 shrink-0" />
               </Link>
               <Link
@@ -316,7 +316,7 @@ function HomeContent() {
               <div className="relative z-10">
                 <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">{t("section.cta.title") ?? "Ready to create your biodata?"}</h2>
                 <p className="text-indigo-100 text-lg mb-8 max-w-xl mx-auto">
-                  Join thousands of people who created beautiful biodatas in minutes — completely free.
+                  Used by families across India who created beautiful biodatas in minutes — completely free.
                 </p>
                 <Link
                   href="/create"
@@ -338,7 +338,7 @@ function HomeContent() {
             <div className="md:col-span-2">
               <Logo className="mb-4" />
               <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-xs">
-                Create beautiful Indian marriage biodatas for free. No sign-up, no charges — just a stunning biodata in minutes.
+                Create beautiful Indian marriage biodatas for free. Simple tool for creating marriage biodata for Indian families.
               </p>
             </div>
 

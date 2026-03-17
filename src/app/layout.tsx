@@ -18,22 +18,15 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   title: {
-    default: "Free Marriage Biodata Maker Online | Create & Download PDF",
+    default: "Marriage Biodata Maker Online | Create & Download PDF",
     template: "%s | BiodataBuilder",
   },
   description:
     "Create beautiful Indian marriage biodata online for free. Choose from stunning templates, add your details & photo, and instantly download as PDF or PNG. No sign-up required.",
   keywords: [
-    "marriage biodata maker",
-    "biodata maker online free",
-    "marriage biodata format",
-    "Indian biodata template",
-    "shaadi biodata",
-    "biodata PDF download",
-    "free biodata maker",
-    "vivah biodata",
-    "marriage biodata in Hindi",
-    "biodata for marriage",
+    "[marriage biodata maker]",
+    "[marriage biodata maker]",
+    "[marriage biodata maker]"
   ],
   authors: [{ name: "BiodataBuilder" }],
   creator: "BiodataBuilder",
@@ -53,7 +46,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: "https://biodatabuilder.in",
     siteName: "BiodataBuilder",
-    title: "Free Marriage Biodata Maker Online | Create & Download PDF",
+    title: "Marriage Biodata Maker Online | Create & Download PDF",
     description:
       "Create beautiful Indian marriage biodata online for free. Stunning templates, instant PDF & PNG download. No sign-up needed.",
     images: [
@@ -61,15 +54,15 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "BiodataBuilder — Free Marriage Biodata Maker",
+        alt: "BiodataBuilder — Marriage Biodata Maker",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Free Marriage Biodata Maker Online",
+    title: "Marriage Biodata Maker Online",
     description:
-      "Create beautiful Indian marriage biodata online for free. Instant PDF & PNG download. No account needed.",
+      "Create beautiful Indian marriage biodata online for free. Instant PDF & PNG download. No registration needed to start",
     images: ["/og-image.png"],
   },
 };
@@ -98,7 +91,7 @@ export default function RootLayout({
                 priceCurrency: "INR",
               },
               description:
-                "Free online Indian marriage biodata maker. Create, customize, and download beautiful biodatas as PDF or PNG.",
+                "Online Indian marriage biodata maker. Create, customize, and download beautiful biodatas as PDF or PNG.",
               url: "https://biodatabuilder.in",
               aggregateRating: {
                 "@type": "AggregateRating",

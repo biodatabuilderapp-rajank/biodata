@@ -27,8 +27,8 @@ export default function PrivacyPolicy() {
                     </section>
 
                     <section>
-                        <h2 className="text-xl font-semibold text-zinc-900 dark:text-white mb-3">2. Profile Photos and Images</h2>
-                        <p>If you upload a profile photo or god icon, these images are processed entirely within your browser. They are never uploaded to or stored on our servers.</p>
+                        <h2 className="text-xl font-semibold text-zinc-900 dark:text-white mb-3">2. Photos and Images</h2>
+                        <p>If you upload a photo, it is processed entirely within your browser. It is never uploaded to or stored on our servers.</p>
                     </section>
 
                     <section>

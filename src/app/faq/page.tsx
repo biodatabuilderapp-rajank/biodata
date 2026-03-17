@@ -22,7 +22,7 @@ const FAQS = [
         a: "You can download your biodata as a high-quality PDF (ideal for printing and emailing) or as a PNG image (ideal for sharing on WhatsApp or other messaging apps).",
     },
     {
-        q: "Can I add my profile photo to the biodata?",
+        q: "Can I add my photo to the biodata?",
         a: "Yes! You can upload a photo from your device. Our built-in image cropper lets you trim it perfectly. You can also choose between a circular or square frame.",
     },
     {
@@ -59,7 +59,7 @@ export default function FAQPage() {
                     <Logo />
                 </Link>
                 <Link href="/create" className="flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-600 text-white font-medium text-sm hover:bg-indigo-700 transition-colors">
-                    Create Free <MoveRight className="w-3.5 h-3.5" />
+                    Create <MoveRight className="w-3.5 h-3.5" />
                 </Link>
             </nav>
 
@@ -82,7 +82,7 @@ export default function FAQPage() {
                     <h3 className="font-bold text-zinc-900 dark:text-white mb-2">Still have questions?</h3>
                     <p className="text-zinc-600 dark:text-zinc-400 text-sm mb-5">Ready to create your beautiful biodata? It only takes a few minutes.</p>
                     <Link href="/create" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-indigo-600 text-white font-semibold text-sm hover:bg-indigo-700 transition-colors">
-                        Create My Biodata — Free <MoveRight className="w-4 h-4" />
+                        Create My Biodata <MoveRight className="w-4 h-4" />
                     </Link>
                 </div>
             </main>

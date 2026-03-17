@@ -318,11 +318,11 @@ export default function BiodataForm({ data, onChange, language, onLanguageChange
 
             {/* Photo & Symbol Configuration Section */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                {/* Profile Photo Control */}
+                {/* Photo Control */}
                 <div className="p-5 bg-white dark:bg-black rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col">
                     <div className="flex justify-between items-center mb-4">
                         <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
-                            {t("create.photo.label") || "Profile Photo"}
+                            {t("create.photo.label") || "Photo (optional)"}
                         </h3>
                         <label className="flex items-center gap-2 text-xs text-zinc-600 dark:text-zinc-400 cursor-pointer">
                             <input type="checkbox" checked={data.profilePhoto?.isHidden || false} onChange={togglePhotoHidden} className="rounded border-zinc-300 text-indigo-600 focus:ring-indigo-500" />
