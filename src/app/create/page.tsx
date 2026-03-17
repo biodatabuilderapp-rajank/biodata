@@ -86,9 +86,9 @@ export const initialData: Biodata = {
         address: { label: "Address", value: "" },
     },
 };
-
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { translateBiodata } from "@/lib/translateBiodata";
 
 // Module-level flag: resets to false on every browser refresh (module re-executes),
 // stays true across SPA navigations within the same browser session.
@@ -101,48 +101,76 @@ export default function CreatePage() {
     const router = useRouter();
 
     useEffect(() => {
-        const saved = localStorage.getItem("biodataData");
-        if (saved) {
-            try {
-                const parsed = JSON.parse(saved);
+        const loadInitialData = async () => {
+            // biodataLang = which language the UI / create-form should display
+            // biodataDataLang = the language the form data (labels) was last saved in
+            const savedLang = localStorage.getItem("biodataLang") || "en";
+            const savedDataLang = localStorage.getItem("biodataDataLang") || "en";
+            let finalData = initialData;
 
-                // Migrate professional details to personal details for existing local storage
-                if (!parsed.personalDetails.education) {
-                    parsed.personalDetails.education = parsed.professionalDetails?.education || initialData.personalDetails.education;
-                }
-                if (!parsed.personalDetails.occupation) {
-                    parsed.personalDetails.occupation = parsed.professionalDetails?.occupation || initialData.personalDetails.occupation;
-                }
-                if (!parsed.personalDetails.annualIncome) {
-                    parsed.personalDetails.annualIncome = parsed.professionalDetails?.annualIncome || initialData.personalDetails.annualIncome;
-                }
+            const saved = localStorage.getItem("biodataData");
+            if (saved) {
+                try {
+                    const parsed = JSON.parse(saved);
 
-                // Restore any standard fields that were accidentally deleted,
-                // but ONLY on a hard browser reload — not on client-side navigation.
-                // We combine the PerformanceNavigationTiming "reload" check with a
-                // module-level flag to avoid false-positives when the component
-                // remounts during SPA navigation (where the perf entry stays "reload").
-                const nav = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming | undefined;
-                if (nav?.type === "reload" && !_hasRestoredMissingFields) {
-                    _hasRestoredMissingFields = true;
-                    const sections = ["personalDetails", "familyDetails", "contactDetails"] as const;
-                    for (const section of sections) {
-                        for (const key of Object.keys(initialData[section])) {
-                            if (!(key in parsed[section])) {
-                                (parsed[section] as any)[key] = (initialData[section] as any)[key];
+                    // Migrate professional details to personal details for existing local storage
+                    if (!parsed.personalDetails.education) {
+                        parsed.personalDetails.education = parsed.professionalDetails?.education || initialData.personalDetails.education;
+                    }
+                    if (!parsed.personalDetails.occupation) {
+                        parsed.personalDetails.occupation = parsed.professionalDetails?.occupation || initialData.personalDetails.occupation;
+                    }
+                    if (!parsed.personalDetails.annualIncome) {
+                        parsed.personalDetails.annualIncome = parsed.professionalDetails?.annualIncome || initialData.personalDetails.annualIncome;
+                    }
+
+                    // Restore any standard fields that were accidentally deleted,
+                    // but ONLY on a hard browser reload — not on client-side navigation.
+                    const nav = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming | undefined;
+                    if (nav?.type === "reload" && !_hasRestoredMissingFields) {
+                        _hasRestoredMissingFields = true;
+                        const sections = ["personalDetails", "familyDetails", "contactDetails"] as const;
+                        for (const section of sections) {
+                            for (const key of Object.keys(initialData[section])) {
+                                if (!(key in parsed[section])) {
+                                    (parsed[section] as any)[key] = (initialData[section] as any)[key];
+                                }
                             }
                         }
                     }
-                }
 
-                setData(parsed);
-            } catch (e) {
-                console.error("Failed to parse saved biodata");
+                    // If the UI language changed since data was last saved, auto-translate labels.
+                    // translateBiodata only replaces labels that are still at their default values
+                    // (English or previous-language defaults), so user customizations are preserved.
+                    if (savedDataLang !== savedLang) {
+                        try {
+                            finalData = await translateBiodata(parsed, savedDataLang, savedLang);
+                            localStorage.setItem("biodataDataLang", savedLang);
+                        } catch {
+                            finalData = parsed;
+                        }
+                    } else {
+                        finalData = parsed;
+                    }
+                } catch (e) {
+                    console.error("Failed to parse saved biodata");
+                }
+            } else if (savedLang !== "en") {
+                // Fresh session with no saved data — translate initialData (English defaults) to chosen language.
+                try {
+                    finalData = await translateBiodata(initialData, "en", savedLang);
+                    localStorage.setItem("biodataDataLang", savedLang);
+                } catch {
+                    finalData = initialData;
+                }
             }
-        }
-        setIsLoaded(true);
-        const savedLang = localStorage.getItem("biodataLang");
-        if (savedLang) setLanguage(savedLang);
+
+            setData(finalData);
+            setLanguage(savedLang);
+            setIsLoaded(true);
+        };
+
+        loadInitialData();
     }, []);
 
     const handleDataChange = (newData: Biodata) => {
@@ -153,6 +181,8 @@ export default function CreatePage() {
     const handleLanguageChange = (lang: string) => {
         setLanguage(lang);
         localStorage.setItem("biodataLang", lang);
+        // Track the language the form data (labels) is now in
+        localStorage.setItem("biodataDataLang", lang);
     };
 
     const handlePreview = () => {
