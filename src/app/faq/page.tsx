@@ -5,7 +5,7 @@ import { MoveRight } from "lucide-react";
 
 export const metadata: Metadata = {
     title: "FAQ — Frequently Asked Questions",
-    description: "Answers to common questions about BiodataBuilder — how to create, download, and customise your marriage biodata.",
+    description: "Answers to common questions about BiodataBuilder — how to create, download, and customise your biodata.",
 };
 
 const FAQS = [
@@ -66,7 +66,7 @@ export default function FAQPage() {
             <main className="max-w-3xl mx-auto px-5 py-16">
                 <div className="text-center mb-14">
                     <h1 className="text-3xl sm:text-4xl font-bold text-zinc-900 dark:text-white mb-4">Frequently Asked Questions</h1>
-                    <p className="text-zinc-500 dark:text-zinc-400">Everything you need to know about creating your marriage biodata.</p>
+                    <p className="text-zinc-500 dark:text-zinc-400">Everything you need to know about creating your biodata.</p>
                 </div>
 
                 <div className="space-y-4">

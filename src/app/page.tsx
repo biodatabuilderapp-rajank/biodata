@@ -140,16 +140,17 @@ function HomeContent() {
             </div>
 
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-zinc-900 dark:text-white mb-6 leading-[1.1]">
-              {t("hero.h1.line1") ?? "Create your marriage biodata"}
+              {t("hero.h1.line1") ?? "Create a structured biodata document"}
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500">
-                {t("hero.h1.line2") ?? "for arranged marriage"}
+                {t("hero.h1.line2") ?? "in minutes"}
               </span>
             </h1>
             <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-              This tool is designed for creating marriage biodata for traditional Indian arranged marriages. It is not a dating or matchmaking service.</p>
+              This biodata format is commonly used for family introductions and traditional purposes including marriage.
+            </p>
             <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Choose from beautiful Indian biodata templates, fill in your details, and instantly download a stunning biodata in PDF or PNG — free to use, no registration needed to start.
+              Choose from beautiful traditional Indian biodata templates, fill in your details, and instantly download a stunning biodata in PDF or PNG - free to use, no registration needed to start.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 sm:px-0">
@@ -157,7 +158,7 @@ function HomeContent() {
                 href="/create"
                 className="group flex h-12 sm:h-14 items-center justify-center gap-2 sm:gap-3 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 px-6 sm:px-8 text-white font-semibold text-sm sm:text-base transition-all hover:shadow-2xl hover:shadow-indigo-500/25 hover:-translate-y-1 shadow-lg shadow-indigo-500/20 w-full sm:w-auto"
               >
-                <span>{t("hero.cta.primary") ?? "Create Marriage Biodata"}</span>
+                <span>{t("hero.cta.primary") ?? "Create Biodata"}</span>
                 <MoveRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1 shrink-0" />
               </Link>
               <Link
@@ -338,7 +339,7 @@ function HomeContent() {
             <div className="md:col-span-2">
               <Logo className="mb-4" />
               <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-xs">
-                Create beautiful Indian marriage biodatas for free. Simple tool for creating marriage biodata for Indian families.
+                Create beautiful traditional Indian biodata templates for free. Simple tool for creating biodata for Indian families.
               </p>
             </div>
 

@@ -28,7 +28,7 @@ export default function TermsOfUse() {
 
                     <section>
                         <h2 className="text-xl font-semibold text-zinc-900 dark:text-white mb-3">2. Use of Service</h2>
-                        <p>BiodataBuilder is provided for personal, non-commercial use. You may use this service to create and download marriage biodatas for yourself or on behalf of family members. You agree not to misuse the service for any unlawful or harmful purpose.</p>
+                        <p>BiodataBuilder is provided for personal, non-commercial use. You may use this service to create and download biodatas for yourself or on behalf of family members. You agree not to misuse the service for any unlawful or harmful purpose.</p>
                     </section>
 
                     <section>
