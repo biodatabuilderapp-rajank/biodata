@@ -1,0 +1,18 @@
+{
+    "pageBackgroundColor": "",
+    "containerPadding": "11cqi 11cqi 0",
+    "fontFamily": "'Noto Serif', Georgia, serif",
+    "headingColor": "#563229",
+    "labelColor": "#78463a",
+    "valueColor": "#331e18",
+    "baseFontSize": "2cqi",
+    "sectionTitleFontSize": "2.5cqi",
+    "sectionSpacing": "1.875cqi",
+    "fieldSpacing": "0.75cqi",
+    "godIconTextColor": "#673c31",
+    "godIconFontSize": "2.5cqi",
+    "godIconSpacing": "2cqi",
+    "godIconHideStrategy": "visibility",
+    "profilePhotoTop": "0",
+    "profilePhotoRight": "0"
+}
