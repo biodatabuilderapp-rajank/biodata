@@ -40,6 +40,7 @@ const TESTIMONIALS = [
 
 const FAQS = [
   { q: "Is this biodata maker completely free?", a: "Yes! Creating, previewing, and downloading your biodata is free to use." },
+  { q: "Is this a matchmaking or dating service?", a: "No. BiodataBuilder is purely a free design utility to format and generate PDF documents. We do not provide matrimonial services, we do not connect users, and we do not store your personal data on any servers." },
   { q: "Do I need to create an account?", a: "No. You can start creating your biodata immediately without any registration or sign-up." },
   { q: "What formats can I download my biodata in?", a: "You can download your biodata as a high-quality PDF (ideal for printing) or PNG image (ideal for sharing on WhatsApp)." },
   { q: "Can I add my photo?", a: "Yes! You can upload and crop your photo and choose between a circular or square frame." },
@@ -360,6 +361,12 @@ function HomeContent() {
                 <li><Link href="/terms" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Terms of Use</Link></li>
               </ul>
             </div>
+          </div>
+
+          <div className="border-t border-zinc-100 dark:border-zinc-900 py-6 mb-2">
+            <p className="text-xs text-zinc-500 dark:text-zinc-500 leading-relaxed max-w-4xl text-justify sm:text-left">
+              <strong className="font-semibold text-zinc-600 dark:text-zinc-400">Disclaimer:</strong> {t("footer.disclaimer") ?? "BiodataBuilder is a free design utility for generating PDF documents. We are NOT a matchmaking, matrimonial, or dating service. We do not connect users and we do not store your personal data on our servers. All information entered remains securely on your device."}
+            </p>
           </div>
 
           <div className="border-t border-zinc-100 dark:border-zinc-900 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-zinc-400">
