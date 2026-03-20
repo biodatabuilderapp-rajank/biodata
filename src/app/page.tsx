@@ -148,7 +148,7 @@ function HomeContent() {
               </span>
             </h1>
             <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-              This biodata format is commonly used for family introductions and traditional purposes including marriage.
+              This biodata format is commonly used for family introductions and formal proposals.
             </p>
             <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 mb-10 max-w-2xl mx-auto leading-relaxed">
               Choose from beautiful traditional Indian biodata templates, fill in your details, and instantly download a stunning biodata in PDF or PNG - free to use, no registration needed to start.
