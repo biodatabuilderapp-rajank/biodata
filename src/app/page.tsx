@@ -137,14 +137,14 @@ function HomeContent() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full bg-indigo-50 dark:bg-indigo-950/50 border border-indigo-100 dark:border-indigo-900 text-indigo-700 dark:text-indigo-400 text-sm font-medium">
               <span className="flex h-1.5 w-1.5 rounded-full bg-indigo-600 dark:bg-indigo-400 animate-pulse" />
-              {t("hero.badge") ?? "Free to use · No registration needed"}
+              {t("hero.badge") ?? "100% Free · No Sign-up Required"}
             </div>
 
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-zinc-900 dark:text-white mb-6 leading-[1.1]">
-              {t("hero.h1.line1") ?? "Create a structured biodata document"}
+              {t("hero.h1.line1") ?? "Design your professional"}
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500">
-                {t("hero.h1.line2") ?? "in minutes"}
+                {t("hero.h1.line2") ?? "biodata document"}
               </span>
             </h1>
             <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 mb-10 max-w-2xl mx-auto leading-relaxed">
@@ -159,7 +159,7 @@ function HomeContent() {
                 href="/create"
                 className="group flex h-12 sm:h-14 items-center justify-center gap-2 sm:gap-3 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 px-6 sm:px-8 text-white font-semibold text-sm sm:text-base transition-all hover:shadow-2xl hover:shadow-indigo-500/25 hover:-translate-y-1 shadow-lg shadow-indigo-500/20 w-full sm:w-auto"
               >
-                <span>{t("hero.cta.primary") ?? "Create Biodata"}</span>
+                <span>{t("hero.cta.primary") ?? "Create Biodata Now — It's Free"}</span>
                 <MoveRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1 shrink-0" />
               </Link>
               <Link
@@ -324,7 +324,7 @@ function HomeContent() {
                   href="/create"
                   className="flex sm:inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-white text-indigo-700 font-bold text-sm sm:text-base hover:bg-indigo-50 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 w-full sm:w-auto"
                 >
-                  <span>{t("section.cta.button") ?? "Create My Biodata — Free"}</span>
+                  <span>{t("section.cta.button") ?? "Create Biodata"}</span>
                   <MoveRight className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
                 </Link>
               </div>
