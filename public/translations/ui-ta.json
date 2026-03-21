@@ -34,14 +34,14 @@
   "feature.download": "உடனடி பதிவிறக்கம்",
   "feature.mobile": "மொபைல் நட்பு",
   "feature.export": "PDF & PNG ஏற்றுமதி",
-  "feature.noSignup": "பதிவு தேவையில்லை",
+  "feature.noSignup": "உடனடியாக தொடங்கு",
   "feature.languages": "6 இந்திய மொழிகள்",
 
   "section.faq.badge": "விரைவு பதில்கள்",
   "section.faq.title": "அடிக்கடி கேட்கப்படும் கேள்விகள்",
 
   "section.cta.title": "உங்கள் வாழ்க்கை விவரம் உருவாக்க தயாரா?",
-  "section.cta.button": "என் வாழ்க்கை விவரம் உருவாக்கு — இலவசம்",
+  "section.cta.button": "வாழ்க்கை விவரம் உருவாக்கு",
 
   "footer.quickLinks": "விரைவு இணைப்புகள்",
   "footer.legal": "சட்டம்",
