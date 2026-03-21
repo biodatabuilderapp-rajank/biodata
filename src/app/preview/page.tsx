@@ -9,6 +9,7 @@ import { toPng } from 'html-to-image';
 import jsPDF from "jspdf";
 import { ThemeMeta } from "@/components/BiodataPreview";
 import { useUITranslation } from "@/lib/useUITranslation";
+import LazyThemeImage from "@/components/LazyThemeImage";
 
 
 export default function PreviewPage() {
@@ -230,7 +231,7 @@ export default function PreviewPage() {
                                     }`}
                                 title={`Select ${t}`}
                             >
-                                <img src={`/themes/${t}`} alt={t} className="w-full h-full object-cover" />
+                                <LazyThemeImage src={`/themes/${t}`} alt={t} className="object-cover" />
                             </button>
                         ))}
                     </div>

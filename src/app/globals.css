@@ -78,3 +78,33 @@ body {
     max-width: min(800px, calc((100vh - 128px) * 0.70695));
   }
 }
+
+/* ── Shimmer Skeleton (theme thumbnails loading state) ── */
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+.shimmer-skeleton {
+  background: linear-gradient(
+    90deg,
+    #e2e8f0 25%,
+    #f1f5f9 50%,
+    #e2e8f0 75%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+
+@media (prefers-color-scheme: dark) {
+  .shimmer-skeleton {
+    background: linear-gradient(
+      90deg,
+      #27272a 25%,
+      #3f3f46 50%,
+      #27272a 75%
+    );
+    background-size: 800px 100%;
+    animation: shimmer 1.4s ease-in-out infinite;
+  }
+}
