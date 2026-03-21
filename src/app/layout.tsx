@@ -103,6 +103,9 @@ export default function RootLayout({
         />
         {/* Google AdSense — uncomment when site is live and approved */}
         {/* <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossOrigin="anonymous" /> */}
+        {/* Preconnect to external origins to reduce latency */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       </head>
       <body className={`${geist.variable} font-sans antialiased`}>
         {children}

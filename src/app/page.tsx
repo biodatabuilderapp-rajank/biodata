@@ -345,7 +345,7 @@ function HomeContent() {
             </div>
 
             <div>
-              <h4 className="font-semibold text-zinc-900 dark:text-white text-sm mb-4">{t("footer.quickLinks") ?? "Quick Links"}</h4>
+              <p className="font-semibold text-zinc-900 dark:text-white text-sm mb-4">{t("footer.quickLinks") ?? "Quick Links"}</p>
               <ul className="space-y-2.5 text-sm text-zinc-500 dark:text-zinc-400">
                 <li><Link href="/" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Home</Link></li>
                 <li><Link href="/create" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Create Biodata</Link></li>
@@ -355,7 +355,7 @@ function HomeContent() {
             </div>
 
             <div>
-              <h4 className="font-semibold text-zinc-900 dark:text-white text-sm mb-4">{t("footer.legal") ?? "Legal"}</h4>
+              <p className="font-semibold text-zinc-900 dark:text-white text-sm mb-4">{t("footer.legal") ?? "Legal"}</p>
               <ul className="space-y-2.5 text-sm text-zinc-500 dark:text-zinc-400">
                 <li><Link href="/privacy-policy" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Privacy Policy</Link></li>
                 <li><Link href="/terms" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Terms of Use</Link></li>
