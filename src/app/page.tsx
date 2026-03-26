@@ -141,17 +141,17 @@ function HomeContent() {
             </div>
 
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-zinc-900 dark:text-white mb-6 leading-[1.1]">
-              {t("hero.h1.line1") ?? "Design your professional"}
+              {t("hero.h1.line1") ?? "Free Marriage Biodata Maker"}
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500">
-                {t("hero.h1.line2") ?? "biodata document"}
+                {t("hero.h1.line2") ?? "& Generator Online"}
               </span>
             </h1>
             <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-              This biodata format is commonly used for family introductions and formal proposals.
+              This marriage biodata format is commonly used for family introductions and formal proposals.
             </p>
             <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Choose from beautiful traditional Indian biodata templates, fill in your details, and instantly download a stunning biodata in PDF or PNG - free to use, no registration needed to start.
+              Choose from beautiful traditional Indian marriage biodata templates, fill in your details, and instantly download a stunning biodata in PDF or PNG - best free biodata maker, no registration needed.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 sm:px-0">

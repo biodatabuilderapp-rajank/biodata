@@ -18,15 +18,18 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   title: {
-    default: "Biodata Maker Online | Create & Download PDF",
+    default: "Free Marriage Biodata Maker | Create & Download PDF",
     template: "%s | BiodataBuilder",
   },
   description:
-    "Create beautiful traditional Indian biodata templates online for free. Choose from stunning templates, add your details & photo, and instantly download as PDF or PNG. No sign-up required.",
+    "Create beautiful Indian marriage biodata online for free. Choose from stunning marriage biodata formats, add your details, and instantly download as PDF or PNG. Best free biodata maker.",
   keywords: [
-    "biodata maker",
-    "biodata format",
-    "biodata generator online"
+    "marriage biodata maker",
+    "free biodata maker",
+    "marriage biodata builder",
+    "marriage biodata format",
+    "biodata generator online",
+    "biodata for marriage pdf"
   ],
   authors: [{ name: "BiodataBuilder" }],
   creator: "BiodataBuilder",
@@ -46,9 +49,9 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: "https://biodatabuilder.in",
     siteName: "BiodataBuilder",
-    title: "Biodata Maker Online | Create & Download PDF",
+    title: "Free Marriage Biodata Maker | Create & Download PDF",
     description:
-      "Create beautiful Indian biodata online for free. Stunning templates, instant PDF & PNG download. No sign-up needed.",
+      "Create beautiful Indian marriage biodata online for free. Best free biodata maker with stunning templates. Instant PDF download.",
     images: [
       {
         url: "/og-image.png",
@@ -91,7 +94,7 @@ export default function RootLayout({
                 priceCurrency: "INR",
               },
               description:
-                "Online Indian biodata maker. Create, customize, and download beautiful biodatas as PDF or PNG.",
+                "Online free marriage biodata maker. Create, customize, and download beautiful marriage biodata formats as PDF or PNG.",
               url: "https://biodatabuilder.in",
               aggregateRating: {
                 "@type": "AggregateRating",
