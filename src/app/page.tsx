@@ -159,7 +159,7 @@ function HomeContent() {
                 href="/create"
                 className="group flex h-12 sm:h-14 items-center justify-center gap-2 sm:gap-3 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 px-6 sm:px-8 text-white font-semibold text-sm sm:text-base transition-all hover:shadow-2xl hover:shadow-indigo-500/25 hover:-translate-y-1 shadow-lg shadow-indigo-500/20 w-full sm:w-auto"
               >
-                <span>{t("hero.cta.primary") ?? "Create Biodata Now — It's Free"}</span>
+                <span>{t("hero.cta.primary") ?? "Create Marriage Biodata — It's Free"}</span>
                 <MoveRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1 shrink-0" />
               </Link>
               <Link
@@ -187,7 +187,7 @@ function HomeContent() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-14">
               <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-3">{t("section.howItWorks.badge") ?? "Simple Process"}</p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-zinc-900 dark:text-white">{t("section.howItWorks.title") ?? "Create your biodata in 3 easy steps"}</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-zinc-900 dark:text-white">{t("section.howItWorks.title") ?? "Create your marriage biodata in 3 easy steps"}</h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -224,9 +224,9 @@ function HomeContent() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-14">
               <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-3">{t("section.themes.badge") ?? "Beautiful Themes"}</p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-zinc-900 dark:text-white mb-4">{t("section.themes.title") ?? "Pick a theme that reflects your style"}</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-zinc-900 dark:text-white mb-4">{t("section.themes.title") ?? "Pick a marriage biodata format that reflects your style"}</h2>
               <p className="text-zinc-500 dark:text-zinc-400 max-w-xl mx-auto">
-                From traditional to modern, we have a growing collection of biodata templates crafted with love.
+                From traditional to modern, we have a growing collection of marriage biodata formats crafted with love.
               </p>
             </div>
 
@@ -316,9 +316,9 @@ function HomeContent() {
               <div className="absolute -top-10 -right-10 w-48 h-48 rounded-full bg-white/10 blur-3xl" />
               <div className="absolute -bottom-10 -left-10 w-48 h-48 rounded-full bg-white/10 blur-3xl" />
               <div className="relative z-10">
-                <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">{t("section.cta.title") ?? "Ready to create your biodata?"}</h2>
+                <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">{t("section.cta.title") ?? "Ready to create your marriage biodata?"}</h2>
                 <p className="text-indigo-100 text-lg mb-8 max-w-xl mx-auto">
-                  Used by families across India who created beautiful biodatas in minutes — completely free.
+                  Used by families across India who created beautiful marriage biodata formats in minutes — completely free.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                   <Link
@@ -354,7 +354,7 @@ function HomeContent() {
             <div className="md:col-span-2">
               <Logo className="mb-4" />
               <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-xs">
-                Create beautiful traditional Indian biodata templates for free. Simple tool for creating biodata for Indian families.
+                Create beautiful traditional Indian marriage biodata formats for free. The easiest free biodata maker for Indian families.
               </p>
             </div>
 
@@ -379,7 +379,7 @@ function HomeContent() {
 
           <div className="border-t border-zinc-100 dark:border-zinc-900 py-6 mb-2">
             <p className="text-xs text-zinc-500 dark:text-zinc-500 leading-relaxed max-w-4xl text-justify sm:text-left">
-              <strong className="font-semibold text-zinc-600 dark:text-zinc-400">Disclaimer:</strong> {t("footer.disclaimer") ?? "BiodataBuilder is a free design utility for generating PDF documents. We are NOT a matchmaking, matrimonial, or dating service. We do not connect users and we do not store your personal data on our servers. All information entered remains securely on your device."}
+              <strong className="font-semibold text-zinc-600 dark:text-zinc-400">Disclaimer:</strong> {t("footer.disclaimer") ?? "BiodataBuilder is a free marriage biodata maker and design utility for generating PDF documents. We do not connect users and we do not store your personal data on our servers. All information entered remains securely on your device."}
             </p>
           </div>
 
