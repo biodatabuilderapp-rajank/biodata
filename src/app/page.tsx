@@ -1,13 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import Logo from "@/components/Logo";
-import { MoveRight, FileText, Image as ImageIcon, Download, CheckCircle2, Star, Sparkles, Shield, Smartphone, Zap, Languages } from "lucide-react";
+import { MoveRight, FileText, Image as ImageIcon, CheckCircle2, Star, Sparkles, Shield, Smartphone, Zap, Languages } from "lucide-react";
 import ClientThemeGallery from "@/components/ClientThemeGallery";
 import { useUITranslation } from "@/lib/useUITranslation";
 import { SUPPORTED_LANGUAGES } from "@/components/LanguageSelector";
 import { useSearchParams, useRouter } from "next/navigation";
 import { useState, useEffect, Suspense } from "react";
+import SiteNav from "@/components/SiteNav";
+import SiteFooter from "@/components/SiteFooter";
 
 // ─── Step descriptions (long copy stays in English) ─────────────────────────
 const STEP_DESCRIPTIONS = [
@@ -45,6 +46,10 @@ const FAQS = [
   { q: "What formats can I download my biodata in?", a: "You can download your biodata as a high-quality PDF (ideal for printing) or PNG image (ideal for sharing on WhatsApp)." },
   { q: "Can I add my photo?", a: "Yes! You can upload and crop your photo and choose between a circular or square frame." },
   { q: "Which languages are supported?", a: "You can create your biodata in English, Hindi (हिंदी), Gujarati (ગુજરાતી), Marathi (मराठी), Tamil (தமிழ்), and Telugu (తెలుగు). Simply select your language at the top of the form — field labels and section titles will be translated automatically." },
+  { q: "How to make a marriage biodata format word download?", a: "While many look for a word download, BiodataBuilder provides a much better experience by outputting a perfectly formatted, print-ready PDF. Word documents often lose formatting when opened on different devices, but our PDFs look beautiful and consistent everywhere." },
+  { q: "What is the best simple biodata format in India for free?", a: "The best simple biodata format focuses on clean typography, easy-to-read sections for family background and personal details, and a professional photo. We offer multiple free themes that capture this elegant simplicity." },
+  { q: "How can I find a biodata format for a girl in Marathi PDF?", a: "BiodataBuilder supports Marathi language natively. Simply select 'Marathi (मराठी)' from the language dropdown, and all your section headings and labels will be translated. Your final downloaded PDF will be perfectly formatted in Marathi." },
+  { q: "Is there a specific Shaadi biodata format for a girl?", a: "Yes, our templates are designed to be versatile. You can choose themes with softer color palettes and elegant fonts that are incredibly popular for a girl's Shaadi biodata. You can also easily add your hobbies, expectations, and Kundali details." }
 ];
 
 // ─── Inner component that uses useSearchParams ───────────────────────────────
@@ -96,40 +101,7 @@ function HomeContent() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-zinc-950 font-sans">
-      {/* Navigation */}
-      <nav className="border-b border-zinc-100 dark:border-zinc-900 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md fixed top-0 w-full z-50">
-        <div className="max-w-7xl mx-auto px-5 h-16 flex items-center justify-between">
-          <Logo />
-          <div className="hidden sm:flex items-center gap-6 text-sm font-medium text-zinc-600 dark:text-zinc-400">
-            <Link href="#how-it-works" className="hover:text-zinc-900 dark:hover:text-white transition-colors">{t("nav.howItWorks") ?? "How it Works"}</Link>
-            <Link href="#themes" className="hover:text-zinc-900 dark:hover:text-white transition-colors">{t("nav.themes") ?? "Themes"}</Link>
-            <Link href="#faq" className="hover:text-zinc-900 dark:hover:text-white transition-colors">{t("nav.faq") ?? "FAQ"}</Link>
-          </div>
-          <div className="flex items-center gap-3">
-            {/* Language Selector */}
-            <div className="flex items-center gap-1.5">
-              <Languages className="w-4 h-4 text-zinc-400 shrink-0" />
-              <select
-                value={locale}
-                onChange={(e) => handleLocaleChange(e.target.value)}
-                className="text-xs font-medium text-zinc-600 dark:text-zinc-400 bg-transparent border-0 focus:outline-none focus:ring-0 cursor-pointer pr-1"
-                aria-label="Select language"
-              >
-                {SUPPORTED_LANGUAGES.map((l) => (
-                  <option key={l.code} value={l.code}>{l.native}</option>
-                ))}
-              </select>
-            </div>
-            <Link
-              href="/create"
-              className="flex items-center gap-2 px-5 py-2 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm transition-all shadow-md shadow-indigo-500/25 hover:shadow-lg hover:shadow-indigo-500/30 hover:-translate-y-0.5"
-            >
-              {t("nav.createFree") ?? "Create Free"}
-              <MoveRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <SiteNav locale={locale} onLocaleChange={handleLocaleChange} />
 
       <main>
         {/* ========== HERO ========== */}
@@ -265,6 +237,50 @@ function HomeContent() {
           </div>
         </section>
 
+        {/* ========== SEO CONTENT SECTION ========== */}
+        <section className="py-20 px-5 bg-white dark:bg-zinc-950 border-t border-zinc-100 dark:border-zinc-900">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-bold text-zinc-900 dark:text-white mb-6">Create the Perfect Marriage Biodata</h2>
+            <div className="space-y-6 text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
+              <p>
+                A marriage biodata is a crucial first step in the Indian matchmaking process. Think of it as your matrimonial resume—it introduces your personal details, family background, educational qualifications, and professional life to prospective partners and their families. While you might be searching for a <strong className="font-semibold text-zinc-900 dark:text-white">marriage biodata format word download</strong>, creating one using a dedicated online builder ensures your layout never breaks across different devices and platforms.
+              </p>
+              
+              <h3 className="text-2xl font-bold text-zinc-900 dark:text-white mt-10 mb-4">What Makes a Good Biodata Format?</h3>
+              <p>
+                When looking for a <strong className="font-semibold text-zinc-900 dark:text-white">simple biodata format in India for free</strong>, the key is clarity and presentation. A cluttered document can be hard to read and might leave a poor first impression. Our structured templates allow you to focus on what matters most:
+              </p>
+              <ul className="list-disc pl-6 space-y-2">
+                <li><strong className="font-semibold text-zinc-900 dark:text-white">Personal Information:</strong> Name, Date of Birth, Height, Blood Group, and Complexion.</li>
+                <li><strong className="font-semibold text-zinc-900 dark:text-white">Horoscope / Kundali Details:</strong> Rashi, Gotra, Nakshatra, and Manglik status—essential for many traditional families.</li>
+                <li><strong className="font-semibold text-zinc-900 dark:text-white">Education and Profession:</strong> What you studied, where you work, and your annual income.</li>
+                <li><strong className="font-semibold text-zinc-900 dark:text-white">Family Background:</strong> Details about your father, mother, siblings, and extended family roots.</li>
+                <li><strong className="font-semibold text-zinc-900 dark:text-white">Contact Information:</strong> Phone numbers, email, and current address.</li>
+              </ul>
+              
+              <h3 className="text-2xl font-bold text-zinc-900 dark:text-white mt-10 mb-4">How to Create Your Biodata in 3 Simple Steps</h3>
+              <p>
+                You don&apos;t need complex software or design skills to make a beautiful <strong className="font-semibold text-zinc-900 dark:text-white">Shaadi biodata format for a girl</strong> or boy. Our tool streamlines the entire process:
+              </p>
+              <ol className="list-decimal pl-6 space-y-2">
+                <li><strong className="font-semibold text-zinc-900 dark:text-white">Input your Details:</strong> Use our straightforward, categorized form to enter your information step by step. We have dedicated sections for everything from your Gotra to your hobbies.</li>
+                <li><strong className="font-semibold text-zinc-900 dark:text-white">Upload Your Best Photo:</strong> A picture speaks a thousand words. Our built-in cropping tool helps you perfectly frame your favorite passport-sized photo within elegant circular or soft-square frames.</li>
+                <li><strong className="font-semibold text-zinc-900 dark:text-white">Select a Template and Download:</strong> Choose from our library of traditional and modern themes. Click generate, and you have your high-resolution <strong className="font-semibold text-zinc-900 dark:text-white">biodata for marriage PDF</strong> ready to share on WhatsApp or print.</li>
+              </ol>
+
+              <h3 className="text-2xl font-bold text-zinc-900 dark:text-white mt-10 mb-4">Support for Regional Languages</h3>
+              <p>
+                Often, families prefer exchanging profiles in their native language to maintain a strong cultural connection. If you are searching for a <strong className="font-semibold text-zinc-900 dark:text-white">biodata format for a girl in Marathi PDF</strong>, or perhaps a Gujarati or Hindi design, BiodataBuilder has you covered. By simply selecting your preferred language from our navigation menu before you start, all the headings, fields, and labels are automatically translated. Your final output remains perfectly styled while adhering to your cultural preference.
+              </p>
+              
+              <h3 className="text-2xl font-bold text-zinc-900 dark:text-white mt-10 mb-4">Why Choose PDF over Word Documents?</h3>
+              <p>
+                We highly recommend generating a <strong className="font-semibold text-zinc-900 dark:text-white">biodata for marriage PDF</strong> rather than a Word doc. When you share a Word document via WhatsApp or email, the recipient&apos;s phone might not have the same fonts installed. This causes the text to overlap, images to shift, and the margins to break. A PDF freezes the design exactly as you see it on your screen, guaranteeing that prospective families see a polished, perfectly aligned document every time. Additionally, PNG images are fantastic for quick sharing directly in chat windows. We provide both options absolutely free.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* ========== TESTIMONIALS ========== */}
         <section className="py-20 px-5 bg-zinc-50 dark:bg-zinc-900/50">
           <div className="max-w-6xl mx-auto">
@@ -347,48 +363,7 @@ function HomeContent() {
         </section>
       </main>
 
-      {/* ========== FOOTER ========== */}
-      <footer className="border-t border-zinc-100 dark:border-zinc-900 bg-white dark:bg-zinc-950 py-12 px-5">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
-            <div className="md:col-span-2">
-              <Logo className="mb-4" />
-              <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-xs">
-                Create beautiful traditional Indian marriage biodata formats for free. The easiest free biodata maker for Indian families.
-              </p>
-            </div>
-
-            <div>
-              <p className="font-semibold text-zinc-900 dark:text-white text-sm mb-4">{t("footer.quickLinks") ?? "Quick Links"}</p>
-              <ul className="space-y-2.5 text-sm text-zinc-500 dark:text-zinc-400">
-                <li><Link href="/" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Home</Link></li>
-                <li><Link href="/create" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Create Biodata</Link></li>
-                <li><Link href="#how-it-works" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">{t("nav.howItWorks") ?? "How It Works"}</Link></li>
-                <li><Link href="#faq" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">{t("nav.faq") ?? "FAQ"}</Link></li>
-              </ul>
-            </div>
-
-            <div>
-              <p className="font-semibold text-zinc-900 dark:text-white text-sm mb-4">{t("footer.legal") ?? "Legal"}</p>
-              <ul className="space-y-2.5 text-sm text-zinc-500 dark:text-zinc-400">
-                <li><Link href="/privacy-policy" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Privacy Policy</Link></li>
-                <li><Link href="/terms" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Terms of Use</Link></li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-zinc-100 dark:border-zinc-900 py-6 mb-2">
-            <p className="text-xs text-zinc-500 dark:text-zinc-500 leading-relaxed max-w-4xl text-justify sm:text-left">
-              <strong className="font-semibold text-zinc-600 dark:text-zinc-400">Disclaimer:</strong> {t("footer.disclaimer") ?? "BiodataBuilder is a free marriage biodata maker and design utility for generating PDF documents. We do not connect users and we do not store your personal data on our servers. All information entered remains securely on your device."}
-            </p>
-          </div>
-
-          <div className="border-t border-zinc-100 dark:border-zinc-900 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-zinc-400">
-            <p>© {new Date().getFullYear()} BiodataBuilder. All rights reserved.</p>
-            <p>{t("footer.tagline") ?? "Made with ❤️ for Indian families"}</p>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

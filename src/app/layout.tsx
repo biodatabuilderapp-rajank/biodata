@@ -12,6 +12,9 @@ const geist = Geist({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://biodatabuilder.in"),
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.png",
