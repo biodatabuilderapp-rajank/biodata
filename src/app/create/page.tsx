@@ -104,9 +104,14 @@ export default function CreatePage() {
 
     useEffect(() => {
         const loadInitialData = async () => {
+            const params = new URLSearchParams(window.location.search);
+            const queryLocale = params.get("locale");
+
             // biodataLang = which language the UI / create-form should display
             // biodataDataLang = the language the form data (labels) was last saved in
-            const savedLang = localStorage.getItem("biodataLang") || "en";
+            const savedLang = queryLocale || localStorage.getItem("biodataLang") || "en";
+            if (queryLocale) localStorage.setItem("biodataLang", queryLocale);
+
             const savedDataLang = localStorage.getItem("biodataDataLang") || "en";
             let finalData = initialData;
 

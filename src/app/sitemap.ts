@@ -9,9 +9,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
         // English articles
         { url: `${baseUrl}/articles/best-marriage-biodata-format-for-hindu`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
         { url: `${baseUrl}/articles/marriage-biodata-format-for-muslim`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+        { url: `${baseUrl}/articles/marriage-biodata-format-for-christian`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+        { url: `${baseUrl}/articles/marriage-biodata-for-boy`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
         { url: `${baseUrl}/articles/shaadi-biodata-format-for-girl`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-        { url: `${baseUrl}/articles/biodata-photo-tips`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+        { url: `${baseUrl}/articles/biodata-for-second-marriage`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+        { url: `${baseUrl}/articles/kundali-details-in-biodata`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+        { url: `${baseUrl}/articles/manglik-biodata-format`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+        { url: `${baseUrl}/articles/modern-vs-traditional-biodata`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+        { url: `${baseUrl}/articles/biodata-format-for-whatsapp`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+        { url: `${baseUrl}/articles/how-to-write-biodata-about-me`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
         { url: `${baseUrl}/articles/what-to-write-in-biodata-hobbies`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+        { url: `${baseUrl}/articles/biodata-photo-tips`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+        { url: `${baseUrl}/articles/biodata-mistakes-to-avoid`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
         { url: `${baseUrl}/articles/simple-biodata-format-for-job-pdf`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
         { url: `${baseUrl}/articles/biodata-vs-resume-difference`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
         // Regional language articles
@@ -19,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: `${baseUrl}/articles/lagna-biodata-format-marathi`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
         { url: `${baseUrl}/articles/lagna-biodata-format-gujarati`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
         { url: `${baseUrl}/articles/thirumanam-biodata-format-tamil`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+        { url: `${baseUrl}/articles/vivah-biodata-format-telugu`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
         // Other pages
         { url: `${baseUrl}/faq`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
         { url: `${baseUrl}/privacy-policy`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },

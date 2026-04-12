@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ArticleWrapper from "@/components/ArticleWrapper";
 
 export const metadata = {
   title: "திருமண பயோடேட்டா வடிவம் தமிழில் | Thirumanam Biodata Tamil PDF",
@@ -8,8 +9,7 @@ export const metadata = {
 
 export default function Article() {
   return (
-    <article className="max-w-3xl mx-auto">
-      <Link href="/articles" className="text-indigo-600 dark:text-indigo-400 font-medium hover:underline mb-8 inline-block">&larr; அனைத்து கட்டுரைகளுக்கும் திரும்பு</Link>
+    <ArticleWrapper publishedDate="2024-03-24">
 
       <h1 className="text-3xl sm:text-5xl font-bold text-zinc-900 dark:text-white mb-8 leading-tight">திருமண பயோடேட்டா வடிவம் — தமிழில்</h1>
 
@@ -45,6 +45,6 @@ export default function Article() {
           </Link>
         </div>
       </div>
-    </article>
+    </ArticleWrapper>
   );
 }

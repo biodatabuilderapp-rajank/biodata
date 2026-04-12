@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ArticleWrapper from "@/components/ArticleWrapper";
 
 export const metadata = {
   title: "Biodata vs Resume vs CV | The Real Difference",
@@ -8,8 +9,7 @@ export const metadata = {
 
 export default function Article() {
   return (
-    <article className="max-w-3xl mx-auto">
-      <Link href="/articles" className="text-indigo-600 dark:text-indigo-400 font-medium no-underline hover:underline mb-8 inline-block">&larr; Back to all guides</Link>
+    <ArticleWrapper publishedDate="2024-03-24">
       
       <h1 className="text-3xl sm:text-5xl font-bold text-zinc-900 dark:text-white mb-8 leading-tight">Biodata vs Resume Difference</h1>
       
@@ -46,6 +46,6 @@ export default function Article() {
           <Link href="/create" className="inline-block px-8 py-4 bg-indigo-600 text-white font-bold rounded-full hover:bg-indigo-700 transition shadow-lg hover:shadow-xl hover:-translate-y-1">Create Biodata Now</Link>
         </div>
       </div>
-    </article>
+    </ArticleWrapper>
   );
 }

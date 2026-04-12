@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ArticleWrapper from "@/components/ArticleWrapper";
 
 export const metadata = {
   title: "विवाह बायोडाटा फॉर्मेट हिंदी में | शादी बायोडाटा कैसे बनाएं",
@@ -8,8 +9,7 @@ export const metadata = {
 
 export default function Article() {
   return (
-    <article className="max-w-3xl mx-auto">
-      <Link href="/articles" className="text-indigo-600 dark:text-indigo-400 font-medium hover:underline mb-8 inline-block">&larr; सभी गाइड्स पर वापस जाएं</Link>
+    <ArticleWrapper publishedDate="2024-03-24">
 
       <h1 className="text-3xl sm:text-5xl font-bold text-zinc-900 dark:text-white mb-8 leading-tight">विवाह बायोडाटा फॉर्मेट — हिंदी में</h1>
 
@@ -50,6 +50,6 @@ export default function Article() {
           </Link>
         </div>
       </div>
-    </article>
+    </ArticleWrapper>
   );
 }
