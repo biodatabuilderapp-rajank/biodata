@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { ArrowLeft, Download, Palette, Loader2 } from "lucide-react";
 import BiodataPreview from "@/components/BiodataPreview";
-import { Biodata, initialData } from "@/app/create/page";
+import { Biodata, initialData } from "@/lib/biodata";
 import { toPng } from 'html-to-image';
 import jsPDF from "jspdf";
 import { ThemeMeta } from "@/components/BiodataPreview";

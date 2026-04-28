@@ -5,7 +5,7 @@ import GodIconSelector from "./GodIconSelector";
 import { SUPPORTED_LANGUAGES } from "./LanguageSelector";
 import { translateBiodata } from "@/lib/translateBiodata";
 import { useUITranslation } from "@/lib/useUITranslation";
-import { Biodata } from "@/app/create/page";
+import { Biodata } from "@/lib/biodata";
 
 interface Props {
     data: Biodata;

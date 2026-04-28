@@ -1,6 +1,6 @@
 "use client";
 
-import { Biodata } from "@/app/create/page";
+import { Biodata } from "@/lib/biodata";
 
 export interface ThemeMeta {
     pageBackgroundColor: string;

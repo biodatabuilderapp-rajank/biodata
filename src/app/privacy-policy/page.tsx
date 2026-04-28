@@ -4,7 +4,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Privacy Policy",
-    description: "Privacy Policy for BiodataBuilder — learn how we handle your data.",
+    description: "Read BiodataBuilder's Privacy Policy to learn how we protect your data. All biodata you create stays in your browser — we never store it on our servers.",
+    alternates: { canonical: "https://biodatabuilder.in/privacy-policy" },
 };
 
 export default function PrivacyPolicy() {

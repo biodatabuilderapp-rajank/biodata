@@ -3,8 +3,9 @@ import Logo from "@/components/Logo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Terms of Use",
+    title: "Terms of Use — BiodataBuilder",
     description: "Terms of Use for BiodataBuilder — read our terms before using the service.",
+    alternates: { canonical: "https://biodatabuilder.in/terms" },
 };
 
 export default function TermsOfUse() {

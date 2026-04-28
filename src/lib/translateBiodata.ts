@@ -1,4 +1,4 @@
-import { Biodata } from "@/app/create/page";
+import { Biodata } from "@/lib/biodata";
 import { SUPPORTED_LANGUAGES } from "@/components/LanguageSelector";
 
 // Helper to fully translate a Biodata object from currentLang to targetLang

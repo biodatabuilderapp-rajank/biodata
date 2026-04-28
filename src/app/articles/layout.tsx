@@ -3,10 +3,12 @@ import SiteFooter from "@/components/SiteFooter";
 
 export const metadata = {
   title: {
-    template: "%s | BiodataBuilder Guides",
+    template: "%s — BiodataBuilder",
     default: "Biodata Format Guides & Tips",
   },
   description: "Learn how to create the perfect marriage and job biodata with our expert guides, format examples, and comparisons.",
+  alternates: { canonical: "https://biodatabuilder.in/articles" },
+  openGraph: { url: "https://biodatabuilder.in/articles" },
 };
 
 export default function ArticlesLayout({

@@ -21,8 +21,8 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   title: {
-    default: "Free Marriage Biodata Maker | Create & Download PDF",
-    template: "%s | BiodataBuilder",
+    default: "Free Marriage Biodata Maker — Create & Download PDF",
+    template: "%s — BiodataBuilder",
   },
   description:
     "Create beautiful Indian marriage biodata online for free. Choose from stunning marriage biodata formats, add your details, and instantly download as PDF or PNG. Best free biodata maker.",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: "https://biodatabuilder.in",
     siteName: "BiodataBuilder",
-    title: "Free Marriage Biodata Maker | Create & Download PDF",
+    title: "Free Marriage Biodata Maker — Create & Download PDF",
     description:
       "Create beautiful Indian marriage biodata online for free. Best free biodata maker with stunning templates. Instant PDF download.",
     images: [
@@ -66,9 +66,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Biodata Maker Online",
+    site: "@biodatabuilder",
+    creator: "@biodatabuilder",
+    title: "Free Marriage Biodata Maker — Create & Download PDF",
     description:
-      "Create beautiful Indian biodata online for free. Instant PDF & PNG download. No registration needed to start",
+      "Create beautiful Indian biodata online for free. Instant PDF & PNG download. No registration needed to start.",
     images: ["/og-image.png"],
   },
 };
