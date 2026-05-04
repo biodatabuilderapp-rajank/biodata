@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: `${baseUrl}/create`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
         { url: `${baseUrl}/articles`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
         // Pillar & Special Pages
+        { url: `${baseUrl}/articles/marriage-biodata-statistics-india`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
         { url: `${baseUrl}/articles/biodata-tips`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
         { url: `${baseUrl}/articles/biodata-for-marriage`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
         { url: `${baseUrl}/articles/biodata-format-hindi`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
