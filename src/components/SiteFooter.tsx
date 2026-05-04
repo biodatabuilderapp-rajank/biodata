@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Logo from "@/components/Logo";
-import { Twitter, Instagram, Facebook } from "lucide-react";
+import { Twitter, Instagram, Facebook, Youtube } from "lucide-react";
 
 export default function SiteFooter() {
   return (
@@ -35,13 +35,16 @@ export default function SiteFooter() {
           <div>
             <p className="font-semibold text-zinc-900 dark:text-white text-sm mb-4">Connect With Us</p>
             <div className="flex items-center gap-4 text-zinc-500 dark:text-zinc-400">
-              <a href="https://twitter.com/biodatabuilder" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" aria-label="Twitter">
+              <a href="https://x.com/biodata_builder" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" aria-label="Twitter">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="https://instagram.com/biodatabuilder" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" aria-label="Instagram">
+              <a href="https://www.youtube.com/@BiodataBuilder" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" aria-label="YouTube">
+                <Youtube className="w-5 h-5" />
+              </a>
+              <a href="https://www.instagram.com/biodatabuilder/" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" aria-label="Instagram">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="https://facebook.com/biodatabuilder" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" aria-label="Facebook">
+              <a href="https://www.facebook.com/profile.php?id=61588891516092" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" aria-label="Facebook">
                 <Facebook className="w-5 h-5" />
               </a>
             </div>
