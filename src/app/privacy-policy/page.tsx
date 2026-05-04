@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Logo from "@/components/Logo";
+import SiteFooter from "@/components/SiteFooter";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Privacy Policy",
+    title: "Privacy Policy — BiodataBuilder.in",
     description: "Read BiodataBuilder's Privacy Policy to learn how we protect your data. All biodata you create stays in your browser — we never store it on our servers.",
     alternates: { canonical: "https://biodatabuilder.in/privacy-policy" },
 };
@@ -59,9 +60,7 @@ export default function PrivacyPolicy() {
                 </div>
             </main>
 
-            <footer className="border-t border-zinc-100 dark:border-zinc-900 py-6 px-5 text-center text-sm text-zinc-400">
-                <Link href="/" className="hover:text-indigo-600 transition-colors">← Back to Home</Link>
-            </footer>
+            <SiteFooter />
         </div>
     );
 }

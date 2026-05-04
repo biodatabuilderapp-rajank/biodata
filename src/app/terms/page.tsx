@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Logo from "@/components/Logo";
+import SiteFooter from "@/components/SiteFooter";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -54,9 +55,7 @@ export default function TermsOfUse() {
                 </div>
             </main>
 
-            <footer className="border-t border-zinc-100 dark:border-zinc-900 py-6 px-5 text-center text-sm text-zinc-400">
-                <Link href="/" className="hover:text-indigo-600 transition-colors">← Back to Home</Link>
-            </footer>
+            <SiteFooter />
         </div>
     );
 }

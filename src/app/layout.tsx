@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s — BiodataBuilder",
   },
   description:
-    "Create beautiful Indian marriage biodata online for free. Choose from stunning marriage biodata formats, add your details, and instantly download as PDF or PNG. Best free biodata maker.",
+    "Create beautiful Indian marriage biodata online for free. Choose stunning formats, add your details, and download as PDF or PNG to share on WhatsApp.",
   keywords: [
     "marriage biodata maker",
     "free biodata maker",
