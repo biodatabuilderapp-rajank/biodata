@@ -12,6 +12,9 @@ export const metadata = {
 };
 
 const ENGLISH_ARTICLES = [
+  { title: "Biodata for Marriage: The Ultimate Guide", slug: "biodata-for-marriage", desc: "The ultimate 2026 guide covering formats, templates, what details to include, and examples." },
+  { title: "Biodata Tips: Mistakes to Avoid, Photos & Hobbies", slug: "biodata-tips", desc: "Avoid common mistakes, pick the right profile photo, and write engaging hobbies. Master guide with examples." },
+  { title: "Marriage Biodata Statistics in India (2026)", slug: "marriage-biodata-statistics-india", desc: "Discover the latest statistics on Indian arranged marriages, biodata usage, formatting, and digital trends." },
   { title: "Best Marriage Biodata Format for Hindu Families", slug: "best-marriage-biodata-format-for-hindu", desc: "Essential elements every traditional Hindu biodata should contain — from Gotra to Kundali details." },
   { title: "Marriage Biodata Format for Muslim Families", slug: "marriage-biodata-format-for-muslim", desc: "Covers Mehr, Wali, Biraderi, religious education, and Nikah biodata etiquette." },
   { title: "Marriage Biodata Format for Christian Families", slug: "marriage-biodata-format-for-christian", desc: "Denomination, church, community-specific tips for Keralite, Goan, Tamil Christian families." },
@@ -23,15 +26,13 @@ const ENGLISH_ARTICLES = [
   { title: "Modern vs Traditional Biodata Format", slug: "modern-vs-traditional-biodata", desc: "When to use a modern layout vs a traditional ornate design, with a side-by-side comparison." },
   { title: "How to Share Biodata on WhatsApp", slug: "biodata-format-for-whatsapp", desc: "PDF vs image, file size tips, what to write in the message, and privacy guidance." },
   { title: "How to Write Your Biodata About Me Section", slug: "how-to-write-biodata-about-me", desc: "Expert tips and ready-to-use sample examples for boys, girls, and second marriages." },
-  { title: "What to Write in Biodata Hobbies & Interests", slug: "what-to-write-in-biodata-hobbies", desc: "Strong hobby examples by category and tips to make this section stand out." },
-  { title: "Biodata Photo Tips: Choosing the Right Picture", slug: "biodata-photo-tips", desc: "Attire, background, framing, and cropping tips for the perfect biodata photo." },
-  { title: "10 Common Biodata Mistakes to Avoid", slug: "biodata-mistakes-to-avoid", desc: "Real before/after examples of the most common biodata errors and how to fix them." },
   { title: "Simple Biodata Format for Job PDF", slug: "simple-biodata-format-for-job-pdf", desc: "How to format a simple, professional biodata for job applications." },
   { title: "Biodata vs Resume vs CV — The Real Difference", slug: "biodata-vs-resume-difference", desc: "When to use a biodata, a resume, or a CV — and what each document contains." },
 ];
 
 const REGIONAL_ARTICLES = [
-  { title: "विवाह बायोडाटा फॉर्मेट हिंदी में", slug: "vivah-biodata-format-hindi", desc: "हिंदी में शादी का बायोडाटा कैसे बनाएं? सही जानकारी, फॉर्मेट और PDF डाउनलोड।", lang: "हिंदी" },
+  { title: "विवाह बायोडाटा फॉर्मेट हिंदी में", slug: "biodata-format-hindi", desc: "हिंदी में शादी का बायोडाटा कैसे बनाएं? सही जानकारी, फॉर्मेट और PDF डाउनलोड।", lang: "हिंदी" },
+  { title: "How to Write a Marriage Biodata in Hindi", slug: "vivah-biodata-format-hindi", desc: "A detailed breakdown of writing a format specifically geared for Hindi speaking families.", lang: "हिंदी" },
   { title: "लग्न बायोडाटा फॉर्मेट मराठी", slug: "lagna-biodata-format-marathi", desc: "मराठी मध्ये लग्न बायोडाटा कसा तयार करायचा? योग्य माहिती व विनामूल्य PDF.", lang: "मराठी" },
   { title: "લગ્ન બાયોડેટા ફોર્મેટ ગુજરાતી", slug: "lagna-biodata-format-gujarati", desc: "ગુજરાતીમાં લગ્ન બાયોડેટા કેવી રીતે બનાવવો? સાચી માહિતી અને મફ્ત PDF.", lang: "ગુજરાતી" },
   { title: "வி வாஹ பயோடேட்டா வடிவம் தமிழில்", slug: "thirumanam-biodata-format-tamil", desc: "தமிழில் திருமண பயோடேட்டா எப்படி தயாரிப்பது? சரியான வடிவம் மற்றும் இலவச PDF.", lang: "தமிழ்" },
