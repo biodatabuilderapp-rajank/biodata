@@ -5,6 +5,11 @@ export const metadata = {
   title: "Marriage Biodata Format for Christian | Wedding Biodata Guide",
   description: "Learn how to create a marriage biodata for Christian families in India. Covers denomination, church details, family background and sample format.",
   alternates: { canonical: "https://biodatabuilder.in/articles/marriage-biodata-format-for-christian" },
+  openGraph: {
+    title: "Marriage Biodata Format for Christian | Wedding Biodata Guide",
+    description: "Learn how to create a marriage biodata for Christian families in India. Covers denomination, church details, family background and sample format.",
+    url: "https://biodatabuilder.in/articles/marriage-biodata-format-for-christian",
+  },
 };
 
 export default function Article() {

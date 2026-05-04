@@ -8,7 +8,6 @@ export const metadata = {
   },
   description: "Learn how to create the perfect marriage and job biodata with our expert guides, format examples, and comparisons.",
   alternates: { canonical: "https://biodatabuilder.in/articles" },
-  openGraph: { url: "https://biodatabuilder.in/articles" },
 };
 
 export default function ArticlesLayout({

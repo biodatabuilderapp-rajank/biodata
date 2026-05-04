@@ -8,6 +8,11 @@ export const metadata: Metadata = {
     title: "FAQ — Frequently Asked Questions",
     description: "Answers to common questions about BiodataBuilder — how to create, download, and customise your biodata.",
     alternates: { canonical: "https://biodatabuilder.in/faq" },
+  openGraph: {
+    title: "FAQ — Frequently Asked Questions",
+    description: "Answers to common questions about BiodataBuilder — how to create, download, and customise your biodata.",
+    url: "https://biodatabuilder.in/faq",
+  },
 };
 
 const FAQS = [

@@ -5,6 +5,11 @@ export const metadata = {
   title: "How to Share Biodata on WhatsApp | Best Format for Sharing",
   description: "Learn the best way to share your marriage biodata on WhatsApp. PDF vs image, file size, privacy tips, and what to include in the message.",
   alternates: { canonical: "https://biodatabuilder.in/articles/biodata-format-for-whatsapp" },
+  openGraph: {
+    title: "How to Share Biodata on WhatsApp | Best Format for Sharing",
+    description: "Learn the best way to share your marriage biodata on WhatsApp. PDF vs image, file size, privacy tips, and what to include in the message.",
+    url: "https://biodatabuilder.in/articles/biodata-format-for-whatsapp",
+  },
 };
 
 export default function Article() {

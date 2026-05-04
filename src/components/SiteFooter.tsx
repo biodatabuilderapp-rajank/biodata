@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Logo from "@/components/Logo";
+import { Twitter, Instagram, Facebook } from "lucide-react";
 
 export default function SiteFooter() {
   return (
@@ -30,6 +31,20 @@ export default function SiteFooter() {
               <li><Link href="/privacy-policy" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Privacy Policy</Link></li>
               <li><Link href="/terms" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Terms of Use</Link></li>
             </ul>
+          </div>
+          <div>
+            <p className="font-semibold text-zinc-900 dark:text-white text-sm mb-4">Connect With Us</p>
+            <div className="flex items-center gap-4 text-zinc-500 dark:text-zinc-400">
+              <a href="https://twitter.com/biodatabuilder" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" aria-label="Twitter">
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a href="https://instagram.com/biodatabuilder" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" aria-label="Instagram">
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href="https://facebook.com/biodatabuilder" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" aria-label="Facebook">
+                <Facebook className="w-5 h-5" />
+              </a>
+            </div>
           </div>
         </div>
 

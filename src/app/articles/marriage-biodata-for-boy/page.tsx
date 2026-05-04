@@ -5,6 +5,11 @@ export const metadata = {
   title: "Marriage Biodata for Boy | Complete Groom Biodata Format Guide",
   description: "Complete guide to creating a marriage biodata for a boy (groom). What sections to include, sample text, income tips, and free download.",
   alternates: { canonical: "https://biodatabuilder.in/articles/marriage-biodata-for-boy" },
+  openGraph: {
+    title: "Marriage Biodata for Boy | Complete Groom Biodata Format Guide",
+    description: "Complete guide to creating a marriage biodata for a boy (groom). What sections to include, sample text, income tips, and free download.",
+    url: "https://biodatabuilder.in/articles/marriage-biodata-for-boy",
+  },
 };
 
 export default function Article() {

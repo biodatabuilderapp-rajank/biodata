@@ -5,6 +5,11 @@ export const metadata = {
   title: "Biodata for Second Marriage | Divorced & Widowed Biodata Format",
   description: "Guide to creating an honest, dignified marriage biodata after divorce or the loss of a spouse. Includes sample text, tips, and cultural guidance.",
   alternates: { canonical: "https://biodatabuilder.in/articles/biodata-for-second-marriage" },
+  openGraph: {
+    title: "Biodata for Second Marriage | Divorced & Widowed Biodata Format",
+    description: "Guide to creating an honest, dignified marriage biodata after divorce or the loss of a spouse. Includes sample text, tips, and cultural guidance.",
+    url: "https://biodatabuilder.in/articles/biodata-for-second-marriage",
+  },
 };
 
 export default function Article() {

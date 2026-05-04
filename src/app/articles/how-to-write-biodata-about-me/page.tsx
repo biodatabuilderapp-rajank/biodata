@@ -5,6 +5,11 @@ export const metadata = {
   title: "How to Write Biodata About Me Section | Examples & Tips",
   description: "Not sure what to write in your marriage biodata's About Me section? Get expert tips and ready-to-use sample examples for boys and girls.",
   alternates: { canonical: "https://biodatabuilder.in/articles/how-to-write-biodata-about-me" },
+  openGraph: {
+    title: "How to Write Biodata About Me Section | Examples & Tips",
+    description: "Not sure what to write in your marriage biodata's About Me section? Get expert tips and ready-to-use sample examples for boys and girls.",
+    url: "https://biodatabuilder.in/articles/how-to-write-biodata-about-me",
+  },
 };
 
 export default function Article() {

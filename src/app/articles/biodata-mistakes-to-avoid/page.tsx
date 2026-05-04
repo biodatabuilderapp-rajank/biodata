@@ -5,6 +5,11 @@ export const metadata = {
   title: "Biodata Mistakes to Avoid | Common Errors in Marriage Biodata",
   description: "Making a marriage biodata? Avoid these 10 common mistakes that can ruin your first impression. Expert tips with real examples.",
   alternates: { canonical: "https://biodatabuilder.in/articles/biodata-mistakes-to-avoid" },
+  openGraph: {
+    title: "Biodata Mistakes to Avoid | Common Errors in Marriage Biodata",
+    description: "Making a marriage biodata? Avoid these 10 common mistakes that can ruin your first impression. Expert tips with real examples.",
+    url: "https://biodatabuilder.in/articles/biodata-mistakes-to-avoid",
+  },
 };
 
 export default function Article() {

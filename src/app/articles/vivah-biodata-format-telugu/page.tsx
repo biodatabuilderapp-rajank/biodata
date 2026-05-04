@@ -5,6 +5,11 @@ export const metadata = {
   title: "వివాహ బయోడేటా ఫార్మాట్ తెలుగులో | Telugu Marriage Biodata PDF",
   description: "తెలుగులో వివాహ బయోడేటా ఎలా తయారు చేయాలి? సరైన ఫార్మాట్, సమాచారం మరియు ఉచిత PDF డౌన్‌లోడ్.",
   alternates: { canonical: "https://biodatabuilder.in/articles/vivah-biodata-format-telugu" },
+  openGraph: {
+    title: "వివాహ బయోడేటా ఫార్మాట్ తెలుగులో | Telugu Marriage Biodata PDF",
+    description: "తెలుగులో వివాహ బయోడేటా ఎలా తయారు చేయాలి? సరైన ఫార్మాట్, సమాచారం మరియు ఉచిత PDF డౌన్‌లోడ్.",
+    url: "https://biodatabuilder.in/articles/vivah-biodata-format-telugu",
+  },
 };
 
 export default function Article() {

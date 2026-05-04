@@ -5,6 +5,11 @@ export const metadata = {
   title: "Manglik Biodata Format | Marriage Biodata for Manglik Boy & Girl",
   description: "A complete guide to creating a marriage biodata when you are Manglik. Learn what to mention, how to handle concerns, and match with compatible partners.",
   alternates: { canonical: "https://biodatabuilder.in/articles/manglik-biodata-format" },
+  openGraph: {
+    title: "Manglik Biodata Format | Marriage Biodata for Manglik Boy & Girl",
+    description: "A complete guide to creating a marriage biodata when you are Manglik. Learn what to mention, how to handle concerns, and match with compatible partners.",
+    url: "https://biodatabuilder.in/articles/manglik-biodata-format",
+  },
 };
 
 export default function Article() {

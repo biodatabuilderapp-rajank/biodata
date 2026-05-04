@@ -7,6 +7,11 @@ export const metadata: Metadata = {
     title: "Terms of Use — BiodataBuilder",
     description: "Terms of Use for BiodataBuilder — read our terms before using the service.",
     alternates: { canonical: "https://biodatabuilder.in/terms" },
+  openGraph: {
+    title: "Terms of Use — BiodataBuilder",
+    description: "Terms of Use for BiodataBuilder — read our terms before using the service.",
+    url: "https://biodatabuilder.in/terms",
+  },
 };
 
 export default function TermsOfUse() {

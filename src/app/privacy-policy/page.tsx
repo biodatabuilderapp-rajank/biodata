@@ -7,6 +7,11 @@ export const metadata: Metadata = {
     title: "Privacy Policy — BiodataBuilder.in",
     description: "Read BiodataBuilder's Privacy Policy to learn how we protect your data. All biodata you create stays in your browser — we never store it on our servers.",
     alternates: { canonical: "https://biodatabuilder.in/privacy-policy" },
+  openGraph: {
+    title: "Privacy Policy — BiodataBuilder.in",
+    description: "Read BiodataBuilder's Privacy Policy to learn how we protect your data. All biodata you create stays in your browser — we never store it on our servers.",
+    url: "https://biodatabuilder.in/privacy-policy",
+  },
 };
 
 export default function PrivacyPolicy() {
