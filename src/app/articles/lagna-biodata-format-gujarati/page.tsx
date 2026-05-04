@@ -1,5 +1,7 @@
 import Link from "next/link";
 import ArticleWrapper from "@/components/ArticleWrapper";
+import ArticleCTA from "@/components/ArticleCTA";
+import ArticleLanguageNav from "@/components/ArticleLanguageNav";
 
 export const metadata = {
   title: "લગ્ન બાયોડેટા ફોર્મેટ ગુજરાતી | Lagna Biodata Gujarati PDF",
@@ -45,6 +47,19 @@ export default function Article() {
           </Link>
         </div>
       </div>
-    </ArticleWrapper>
+    
+        <div className="mt-12 bg-white dark:bg-zinc-900/50 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800">
+          <h3 className="font-bold text-xl mb-3 text-zinc-900 dark:text-white">What's Next?</h3>
+          <p className="text-zinc-600 dark:text-zinc-400 mb-4">
+            If you found this guide helpful, you might also want to read our <Link href="/articles/biodata-tips" className="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">master guide on biodata photo tips and mistakes to avoid</Link>. Or, if you're exploring styles, check out the <Link href="/articles/modern-vs-traditional-biodata" className="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">differences between modern and traditional formats</Link>.
+          </p>
+          <p className="text-zinc-600 dark:text-zinc-400">
+            Once you're ready, you can use our <strong>biodata builder to create your profile instantly</strong> without any design skills.
+          </p>
+        </div>
+
+        <ArticleLanguageNav />
+        <ArticleCTA />
+      </ArticleWrapper>
   );
 }

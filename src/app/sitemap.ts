@@ -6,6 +6,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: "https://biodatabuilder.in/", lastModified: new Date(), changeFrequency: "weekly", priority: 1 },
         { url: `${baseUrl}/create`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
         { url: `${baseUrl}/articles`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
+        // Pillar & Special Pages
+        { url: `${baseUrl}/articles/biodata-tips`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
+        { url: `${baseUrl}/articles/biodata-for-marriage`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
+        { url: `${baseUrl}/articles/biodata-format-hindi`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
         // English articles
         { url: `${baseUrl}/articles/best-marriage-biodata-format-for-hindu`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
         { url: `${baseUrl}/articles/marriage-biodata-format-for-muslim`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
@@ -18,9 +22,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: `${baseUrl}/articles/modern-vs-traditional-biodata`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
         { url: `${baseUrl}/articles/biodata-format-for-whatsapp`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
         { url: `${baseUrl}/articles/how-to-write-biodata-about-me`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
-        { url: `${baseUrl}/articles/what-to-write-in-biodata-hobbies`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
-        { url: `${baseUrl}/articles/biodata-photo-tips`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
-        { url: `${baseUrl}/articles/biodata-mistakes-to-avoid`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
         { url: `${baseUrl}/articles/simple-biodata-format-for-job-pdf`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
         { url: `${baseUrl}/articles/biodata-vs-resume-difference`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
         // Regional language articles

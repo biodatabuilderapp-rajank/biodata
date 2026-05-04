@@ -24,6 +24,25 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/articles/biodata-photo-tips",
+        destination: "/articles/biodata-tips",
+        permanent: true,
+      },
+      {
+        source: "/articles/biodata-mistakes-to-avoid",
+        destination: "/articles/biodata-tips",
+        permanent: true,
+      },
+      {
+        source: "/articles/what-to-write-in-biodata-hobbies",
+        destination: "/articles/biodata-tips",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
