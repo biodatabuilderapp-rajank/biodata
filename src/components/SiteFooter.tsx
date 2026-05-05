@@ -21,7 +21,7 @@ export default function SiteFooter() {
               <li><Link href="/create" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Create Biodata</Link></li>
               <li><Link href="/articles" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Articles &amp; Guides</Link></li>
               <li><Link href="/#how-it-works" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">How It Works</Link></li>
-              <li><Link href="/#faq" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">FAQ</Link></li>
+              <li><Link href="/faq" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">FAQ</Link></li>
             </ul>
           </div>
 
