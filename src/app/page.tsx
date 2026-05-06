@@ -120,10 +120,10 @@ function HomeContent() {
               </span>
             </h1>
             <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-              This marriage biodata format is commonly used for family introductions and formal proposals.
+              Whether you call it a <strong className="font-semibold text-zinc-900 dark:text-white">bio data for marriage</strong> or a marriage biodata, this format is the essential first step for family introductions and formal proposals across India.
             </p>
             <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Choose from beautiful traditional Indian marriage biodata templates, fill in your details, and instantly download a stunning biodata in PDF or PNG - best free biodata maker, no registration needed.
+              Choose from beautiful traditional Indian marriage biodata templates, fill in your details, and instantly download a stunning <strong className="font-semibold text-zinc-900 dark:text-white">bio data format</strong> in PDF or PNG — best free biodata maker, no registration needed.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 sm:px-0">
@@ -243,7 +243,7 @@ function HomeContent() {
             <h2 className="text-3xl sm:text-4xl font-bold text-zinc-900 dark:text-white mb-6">Create the Perfect Marriage Biodata</h2>
             <div className="space-y-6 text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
               <p>
-                A marriage biodata is a crucial first step in the Indian matchmaking process. Think of it as your matrimonial resume—it introduces your personal details, family background, educational qualifications, and professional life to prospective partners and their families. While you might be searching for a <strong className="font-semibold text-zinc-900 dark:text-white">marriage biodata format word download</strong>, creating one using a dedicated online builder ensures your layout never breaks across different devices and platforms.
+                A <strong className="font-semibold text-zinc-900 dark:text-white">bio data for marriage</strong> — also written as marriage biodata — is the essential first step in the Indian matchmaking process. Think of it as your matrimonial resume: it introduces your personal details, family background, educational qualifications, and professional life to prospective partners and their families. While you might be searching for a <strong className="font-semibold text-zinc-900 dark:text-white">marriage biodata format word download</strong>, creating one using a dedicated online builder ensures your layout never breaks across different devices and platforms.
               </p>
               
               <h3 className="text-2xl font-bold text-zinc-900 dark:text-white mt-10 mb-4">What Makes a Good Biodata Format?</h3>
@@ -270,12 +270,12 @@ function HomeContent() {
 
               <h3 className="text-2xl font-bold text-zinc-900 dark:text-white mt-10 mb-4">Support for Regional Languages</h3>
               <p>
-                Often, families prefer exchanging profiles in their native language to maintain a strong cultural connection. If you are searching for a <strong className="font-semibold text-zinc-900 dark:text-white">biodata format for a girl in Marathi PDF</strong>, or perhaps a Gujarati or Hindi design, BiodataBuilder has you covered. By simply selecting your preferred language from our navigation menu before you start, all the headings, fields, and labels are automatically translated. Your final output remains perfectly styled while adhering to your cultural preference.
+                Often, families prefer exchanging profiles in their native language to maintain a strong cultural connection. If you are searching for a <strong className="font-semibold text-zinc-900 dark:text-white">bio data format free download</strong> in Marathi, Gujarati or Hindi, BiodataBuilder has you covered. By simply selecting your preferred language from our navigation menu before you start, all the headings, fields, and labels are automatically translated. Your final output remains perfectly styled while adhering to your cultural preference.
               </p>
               
               <h3 className="text-2xl font-bold text-zinc-900 dark:text-white mt-10 mb-4">Why Choose PDF over Word Documents?</h3>
               <p>
-                We highly recommend generating a <strong className="font-semibold text-zinc-900 dark:text-white">biodata for marriage PDF</strong> rather than a Word doc. When you share a Word document via WhatsApp or email, the recipient&apos;s phone might not have the same fonts installed. This causes the text to overlap, images to shift, and the margins to break. A PDF freezes the design exactly as you see it on your screen, guaranteeing that prospective families see a polished, perfectly aligned document every time. Additionally, PNG images are fantastic for quick sharing directly in chat windows. We provide both options absolutely free.
+                We highly recommend generating a <strong className="font-semibold text-zinc-900 dark:text-white">bio data format</strong> as a PDF rather than a Word doc. When you share a Word document via WhatsApp or email, the recipient&apos;s phone might not have the same fonts installed. This causes the text to overlap, images to shift, and the margins to break. A PDF freezes the design exactly as you see it on your screen, guaranteeing that prospective families see a polished, perfectly aligned document every time. Additionally, PNG images are fantastic for quick sharing directly in chat windows. We provide both options absolutely free.
               </p>
             </div>
           </div>

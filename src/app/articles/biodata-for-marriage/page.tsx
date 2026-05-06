@@ -23,10 +23,10 @@ export default function BiodataForMarriagePillarPage() {
 
       <div className="space-y-8 text-zinc-700 dark:text-zinc-300 leading-relaxed text-lg">
         <p>
-          Whether you are just starting your search through matrimony sites, getting help from community matchmakers, or relying on family networking, one document sits at the very center of the arranged marriage process: the <strong className="font-semibold text-zinc-900 dark:text-white">biodata for marriage</strong>.
+          Whether you are just starting your search through matrimony sites, getting help from community matchmakers, or relying on family networking, one document sits at the very center of the arranged marriage process: the <strong className="font-semibold text-zinc-900 dark:text-white">bio data for marriage</strong> — also commonly spelled as a single word &quot;biodata.&quot;
         </p>
         <p>
-          Unlike a traditional resume used for finding a job, a marriage biodata captures your personal life, family background, physical attributes, astrological details, and lifestyle choices. A well-crafted biodata is essentially your &quot;elevator pitch&quot; to a prospective life partner and their family.
+          Unlike a traditional resume used for finding a job, a marriage biodata captures your personal life, family background, physical attributes, astrological details, and lifestyle choices. A well-crafted <strong className="font-semibold text-zinc-900 dark:text-white">bio data format</strong> is essentially your &quot;elevator pitch&quot; to a prospective life partner and their family.
         </p>
 
         {/* SECTION 1 */}
@@ -73,7 +73,7 @@ export default function BiodataForMarriagePillarPage() {
           One of the <strong>biggest mistakes</strong> you can make is sharing your biodata as a Microsoft Word (`.docx`) file. When parents forward a Word file on WhatsApp, fonts break, margins shift, and images disappear depending on the phone model. 
         </p>
         <p>
-          Always use a <strong>PDF format</strong>. A PDF freezes the design perfectly. When you <Link href="/create" className="text-indigo-600 dark:text-indigo-400 font-medium hover:underline">create a biodata using BiodataBuilder</Link>, it instantly generates a crisp, mobile-friendly PDF that reads beautifully on any device.
+          Always use a <strong>PDF format</strong>. A PDF freezes the design perfectly. When you <Link href="/create" className="text-indigo-600 dark:text-indigo-400 font-medium hover:underline">create a bio data using BiodataBuilder</Link>, it instantly generates a crisp, mobile-friendly PDF that reads beautifully on any device.
         </p>
 
 

@@ -23,10 +23,10 @@ export default function BiodataFormatHindiPillarPage() {
 
       <div className="space-y-8 text-zinc-700 dark:text-zinc-300 leading-relaxed text-lg">
         <p>
-          शादी के लिए बायोडाटा (Marriage Biodata) बनाना हर भारतीय अरेंज मैरिज (Arranged Marriage) का पहला और सबसे अहम कदम होता है। जब आप अपना बायोडाटा हिंदी (<strong className="font-semibold text-zinc-900 dark:text-white">Biodata Format in Hindi</strong>) में बनाते हैं, तो वह पारंपरिक परिवारों को आपकी जड़ों और संस्कृति के प्रति आपके जुड़ाव का संदेश देता है।
+          शादी के लिए बायोडाटा (Marriage Biodata) बनाना हर भारतीय अरेंज मैरिज (Arranged Marriage) का पहला और सबसे अहम कदम होता है। जब आप अपना <strong className="font-semibold text-zinc-900 dark:text-white">bio data for marriage</strong> हिंदी (<strong className="font-semibold text-zinc-900 dark:text-white">Biodata Format in Hindi</strong>) में बनाते हैं, तो वह पारंपरिक परिवारों को आपकी जड़ों और संस्कृति के प्रति आपके जुड़ाव का संदेश देता है।
         </p>
         <p>
-          इस गाइड में, हम आपको बताएंगे कि एक प्रभावशाली और सुंदर हिंदी विवाह बायोडाटा कैसे बनाया जाता है, उसमें कौन-कौन सी जानकारियाँ शामिल करनी चाहिए, और आप इसे हमारे मुफ़्त टूल (Free Tool) का उपयोग करके तुरंत कैसे बना सकते हैं।
+          इस गाइड में, हम आपको बताएंगे कि एक प्रभावशाली और सुंदर हिंदी विवाह बायोडाटा कैसे बनाया जाता है, उसमें कौन-कौन सी जानकारियाँ शामिल करनी चाहिए, और आप इसे हमारे मुफ़्त <strong className="font-semibold text-zinc-900 dark:text-white">bio data format</strong> टूल (Free Tool) का उपयोग करके तुरंत कैसे बना सकते हैं।
         </p>
 
         {/* SECTION 1 */}
