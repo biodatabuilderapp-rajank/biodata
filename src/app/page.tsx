@@ -243,7 +243,7 @@ function HomeContent() {
             <h2 className="text-3xl sm:text-4xl font-bold text-zinc-900 dark:text-white mb-6">Create the Perfect Marriage Biodata</h2>
             <div className="space-y-6 text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
               <p>
-                A <strong className="font-semibold text-zinc-900 dark:text-white">bio data for marriage</strong> — also written as marriage biodata — is the essential first step in the Indian matchmaking process. Think of it as your matrimonial resume: it introduces your personal details, family background, educational qualifications, and professional life to prospective partners and their families. While you might be searching for a <strong className="font-semibold text-zinc-900 dark:text-white">marriage biodata format word download</strong>, creating one using a dedicated online builder ensures your layout never breaks across different devices and platforms.
+                A <strong className="font-semibold text-zinc-900 dark:text-white">bio data for marriage</strong> — also known as a <strong className="font-semibold text-zinc-900 dark:text-white">matrimonial biodata format</strong> or wedding biodata — is the essential first step in the Indian matchmaking process. Think of it as your matrimonial resume: it introduces your personal details, family background, educational qualifications, and professional life to prospective partners and their families. While you might be searching for a <strong className="font-semibold text-zinc-900 dark:text-white">marriage biodata format word download</strong>, creating one using a dedicated online builder ensures your layout never breaks across different devices and platforms.
               </p>
               
               <h3 className="text-2xl font-bold text-zinc-900 dark:text-white mt-10 mb-4">What Makes a Good Biodata Format?</h3>
@@ -260,11 +260,11 @@ function HomeContent() {
               
               <h3 className="text-2xl font-bold text-zinc-900 dark:text-white mt-10 mb-4">How to Create Your Biodata in 3 Simple Steps</h3>
               <p>
-                You don&apos;t need complex software or design skills to make a beautiful <strong className="font-semibold text-zinc-900 dark:text-white">Shaadi biodata format for a girl</strong> or boy. Our tool streamlines the entire process:
+                You don&apos;t need complex software or design skills to make a beautiful <strong className="font-semibold text-zinc-900 dark:text-white">wedding biodata format</strong> for a girl or boy. Our tool streamlines the entire process:
               </p>
               <ol className="list-decimal pl-6 space-y-2">
                 <li><strong className="font-semibold text-zinc-900 dark:text-white">Input your Details:</strong> Use our straightforward, categorized form to enter your information step by step. We have dedicated sections for everything from your Gotra to your hobbies.</li>
-                <li><strong className="font-semibold text-zinc-900 dark:text-white">Upload Your Best Photo:</strong> A picture speaks a thousand words. Our built-in cropping tool helps you perfectly frame your favorite passport-sized photo within elegant circular or soft-square frames.</li>
+                <li><strong className="font-semibold text-zinc-900 dark:text-white">Upload Your Best Photo:</strong> A picture speaks a thousand words. Our built-in cropping tool helps you perfectly frame your favorite passport-sized photo. A <strong className="font-semibold text-zinc-900 dark:text-white">matrimonial biodata with photo</strong> receives significantly more responses than one without — choose between circular or soft-square frames.</li>
                 <li><strong className="font-semibold text-zinc-900 dark:text-white">Select a Template and Download:</strong> Choose from our library of traditional and modern themes. Click generate, and you have your high-resolution <strong className="font-semibold text-zinc-900 dark:text-white">biodata for marriage PDF</strong> ready to share on WhatsApp or print.</li>
               </ol>
 
@@ -275,7 +275,7 @@ function HomeContent() {
               
               <h3 className="text-2xl font-bold text-zinc-900 dark:text-white mt-10 mb-4">Why Choose PDF over Word Documents?</h3>
               <p>
-                We highly recommend generating a <strong className="font-semibold text-zinc-900 dark:text-white">bio data format</strong> as a PDF rather than a Word doc. When you share a Word document via WhatsApp or email, the recipient&apos;s phone might not have the same fonts installed. This causes the text to overlap, images to shift, and the margins to break. A PDF freezes the design exactly as you see it on your screen, guaranteeing that prospective families see a polished, perfectly aligned document every time. Additionally, PNG images are fantastic for quick sharing directly in chat windows. We provide both options absolutely free.
+                We highly recommend generating a <strong className="font-semibold text-zinc-900 dark:text-white">bio data format</strong> as a PDF rather than a Word doc. When you share a Word document via WhatsApp or email, the recipient&apos;s phone might not have the same fonts installed. This causes the text to overlap, images to shift, and the margins to break. A PDF freezes the design exactly as you see it on your screen, guaranteeing that prospective families see a polished, perfectly aligned <strong className="font-semibold text-zinc-900 dark:text-white">matrimonial biodata format</strong> every time. Additionally, PNG images are fantastic for quick sharing directly in chat windows. We provide both options absolutely free — no Word document limitations.
               </p>
             </div>
           </div>

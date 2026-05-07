@@ -15,6 +15,7 @@ const ENGLISH_ARTICLES = [
   { title: "Biodata for Marriage: The Ultimate Guide", slug: "biodata-for-marriage", desc: "The ultimate 2026 guide covering formats, templates, what details to include, and examples." },
   { title: "Biodata Tips: Mistakes to Avoid, Photos & Hobbies", slug: "biodata-tips", desc: "Avoid common mistakes, pick the right profile photo, and write engaging hobbies. Master guide with examples." },
   { title: "Marriage Biodata Statistics in India (2026)", slug: "marriage-biodata-statistics-india", desc: "Discover the latest statistics on Indian arranged marriages, biodata usage, formatting, and digital trends." },
+  { title: "Biodata Format in Word for Marriage — And a Better Alternative", slug: "biodata-format-word-download", desc: "Looking for a Word download? Find out why PDF is better and create a beautiful biodata for free in minutes." },
   { title: "Best Marriage Biodata Format for Hindu Families", slug: "best-marriage-biodata-format-for-hindu", desc: "Essential elements every traditional Hindu biodata should contain — from Gotra to Kundali details." },
   { title: "Marriage Biodata Format for Muslim Families", slug: "marriage-biodata-format-for-muslim", desc: "Covers Mehr, Wali, Biraderi, religious education, and Nikah biodata etiquette." },
   { title: "Marriage Biodata Format for Christian Families", slug: "marriage-biodata-format-for-christian", desc: "Denomination, church, community-specific tips for Keralite, Goan, Tamil Christian families." },

@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: `${baseUrl}/articles/biodata-tips`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
         { url: `${baseUrl}/articles/biodata-for-marriage`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
         { url: `${baseUrl}/articles/biodata-format-hindi`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
+        { url: `${baseUrl}/articles/biodata-format-word-download`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
         // English articles
         { url: `${baseUrl}/articles/best-marriage-biodata-format-for-hindu`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
         { url: `${baseUrl}/articles/marriage-biodata-format-for-muslim`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
