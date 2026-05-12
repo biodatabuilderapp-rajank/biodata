@@ -72,6 +72,9 @@ export const metadata: Metadata = {
       "Create beautiful Indian biodata online for free. Instant PDF & PNG download. No registration needed to start.",
     images: ["/og-image.png"],
   },
+  other: {
+    "p:domain_verify": "9e12e72c914c7cd9e6bffa8d71d2ebb0",
+  },
 };
 
 export default function RootLayout({
