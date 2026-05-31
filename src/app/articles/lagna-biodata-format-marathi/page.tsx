@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     description:
       "सुंदर मराठी लग्न बायोडाटा ऑनलाइन मोफत तयार करा. आधुनिक टेम्पलेट निवडा आणि PDF डाउनलोड करा.",
     url: "https://biodatabuilder.in/articles/lagna-biodata-format-marathi",
-    images: [{ url: "/examples/Hero composite.png", width: 1200, height: 630, alt: "Marathi Lagna Biodata Format Templates" }],
+    images: [{ url: "/examples/Hero-composite.png", width: 1200, height: 630, alt: "Marathi Lagna Biodata Format Templates" }],
   },
 };
 
@@ -80,7 +80,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "Lagna Biodata Format Marathi | लग्न बायोडाटा PDF",
   description: "सुंदर मराठी लग्न बायोडाटा ऑनलाइन मोफत तयार करा. आधुनिक टेम्पलेट निवडा आणि PDF डाउनलोड करा.",
-  image: "https://biodatabuilder.in/examples/Hero composite.png",
+  image: "https://biodatabuilder.in/examples/Hero-composite.png",
   datePublished: "2026-05-04",
   dateModified: "2026-05-29",
   author: { "@type": "Organization", name: "BiodataBuilder" },
@@ -105,7 +105,7 @@ export default function LagnaBiodataFormatMarathiPage() {
         {/* ── HERO IMAGE ── */}
         <div className="my-8 rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-lg">
           <Image
-            src="/examples/Hero composite.png"
+            src="/examples/Hero-composite.png"
             alt="Marathi Biodata Format Templates — सुंदर मराठी लग्न बायोडाटा"
             width={1200}
             height={630}
@@ -201,7 +201,7 @@ export default function LagnaBiodataFormatMarathiPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             <div className="rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-md">
               <Image
-                src="/examples/Boy biodata example Marathi.png"
+                src="/examples/Boy-biodata-example-Marathi.png"
                 alt="मुलाचा लग्न बायोडाटा — Boy marriage biodata format in Marathi"
                 width={600}
                 height={800}
@@ -243,7 +243,7 @@ export default function LagnaBiodataFormatMarathiPage() {
             </div>
             <div className="rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-md md:order-1">
               <Image
-                src="/examples/Girl biodata example Marathi.png"
+                src="/examples/Girl-biodata-example-Marathi.png"
                 alt="मुलीचा लग्न बायोडाटा — Girl marriage biodata format in Marathi"
                 width={600}
                 height={800}
@@ -288,7 +288,7 @@ export default function LagnaBiodataFormatMarathiPage() {
           {/* ── WHATSAPP IMAGE ── */}
           <div className="my-8 rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-md">
             <Image
-              src="/examples/WhatsApp preview.jpg"
+              src="/examples/WhatsApp-preview.jpg"
               alt="WhatsApp वर लग्न बायोडाटा PDF — marriage biodata pdf on WhatsApp"
               width={1200}
               height={600}
