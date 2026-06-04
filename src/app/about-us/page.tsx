@@ -86,7 +86,7 @@ export default function AboutUs() {
                     <section>
                         <h2 className="text-xl font-semibold text-zinc-900 dark:text-white mb-3">Contact Us</h2>
                         <p>If you have questions, suggestions, feedback, or encounter any issues while using the website, we would love to hear from you.</p>
-                        <p className="mt-2 text-zinc-900 dark:text-white"><strong>Email:</strong> <a href="mailto:support@biodatabuilder.in" className="text-indigo-600 hover:underline">support@biodatabuilder.in</a></p>
+                        <p className="mt-2 text-zinc-900 dark:text-white"><strong>Email:</strong> <a href="mailto:biodatabuilderapp@gmail.com" className="text-indigo-600 hover:underline">biodatabuilderapp@gmail.com</a></p>
                         <p className="mt-2 text-zinc-900 dark:text-white"><strong>Website:</strong> <Link href="/" className="text-indigo-600 hover:underline">https://biodatabuilder.in</Link></p>
                         <p className="mt-4">We typically respond to inquiries within 2–5 business days.</p>
                     </section>

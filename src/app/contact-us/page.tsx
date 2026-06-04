@@ -33,8 +33,8 @@ export default function ContactUs() {
                 <div className="prose prose-zinc dark:prose-invert max-w-none space-y-8 text-zinc-700 dark:text-zinc-300 leading-relaxed">
                     <section className="bg-zinc-50 dark:bg-zinc-900/50 p-6 rounded-xl border border-zinc-100 dark:border-zinc-800">
                         <h2 className="text-xl font-semibold text-zinc-900 dark:text-white mt-0 mb-3">Email Support</h2>
-                        <a href="mailto:support@biodatabuilder.in" className="text-indigo-600 dark:text-indigo-400 font-medium text-lg hover:underline">
-                            support@biodatabuilder.in
+                        <a href="mailto:biodatabuilderapp@gmail.com" className="text-indigo-600 dark:text-indigo-400 font-medium text-lg hover:underline">
+                            biodatabuilderapp@gmail.com
                         </a>
                     </section>
 
