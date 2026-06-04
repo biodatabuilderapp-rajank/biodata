@@ -18,10 +18,12 @@ export default function SiteFooter() {
             <p className="font-semibold text-zinc-900 dark:text-white text-sm mb-4">Quick Links</p>
             <ul className="space-y-2.5 text-sm text-zinc-500 dark:text-zinc-400">
               <li><Link href="/" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Home</Link></li>
+              <li><Link href="/about-us" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About Us</Link></li>
               <li><Link href="/create" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Create Biodata</Link></li>
               <li><Link href="/articles" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Articles &amp; Guides</Link></li>
               <li><Link href="/#how-it-works" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">How It Works</Link></li>
               <li><Link href="/faq" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">FAQ</Link></li>
+              <li><Link href="/contact-us" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact Us</Link></li>
             </ul>
           </div>
 
