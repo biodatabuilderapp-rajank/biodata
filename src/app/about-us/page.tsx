@@ -1,101 +1,168 @@
 import Link from "next/link";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
+import { FileText, Heart, Zap, Shield, Users, MoveRight } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "About Us — BiodataBuilder.in",
-    description: "Learn more about Biodata Builder, a free online tool designed to help individuals and families create professional biodata documents quickly and easily.",
-    alternates: { canonical: "https://biodatabuilder.in/about-us" },
+  title: "About Us — BiodataBuilder.in",
+  description: "Learn more about BiodataBuilder — a free online tool designed to help Indian families create beautiful, professional marriage biodata PDFs in minutes.",
+  alternates: { canonical: "https://biodatabuilder.in/about-us" },
   openGraph: {
     title: "About Us — BiodataBuilder.in",
-    description: "Learn more about Biodata Builder, a free online tool designed to help individuals and families create professional biodata documents quickly and easily.",
+    description: "Learn more about BiodataBuilder — a free online tool for creating beautiful marriage biodata PDFs in minutes.",
     url: "https://biodatabuilder.in/about-us",
   },
 };
 
+const stats = [
+  { value: "100%", label: "Free to use" },
+  { value: "0", label: "Registration required" },
+  { value: "10+", label: "Beautiful templates" },
+  { value: "2 min", label: "Avg. creation time" },
+];
+
+const values = [
+  {
+    icon: Zap,
+    title: "Simple & Fast",
+    desc: "No design skills needed. Fill in your details, pick a template, and download a perfect PDF — in under 5 minutes.",
+  },
+  {
+    icon: Heart,
+    title: "Built for Indian Families",
+    desc: "Every field, every section, every template is designed specifically for the Indian matrimonial biodata — with Kundali, Gotra, and community fields built in.",
+  },
+  {
+    icon: Shield,
+    title: "Private by Design",
+    desc: "We don't store your personal data on our servers. Your biodata is generated in your browser and downloaded directly to your device.",
+  },
+  {
+    icon: Users,
+    title: "For Everyone",
+    desc: "Whether your family is Hindu, Muslim, Christian, Jain — whether you speak Hindi, Marathi, Gujarati, Tamil or Telugu — BiodataBuilder is made for you.",
+  },
+];
+
 export default function AboutUs() {
-    return (
-        <div className="min-h-screen bg-white dark:bg-zinc-950 font-sans">
-            <SiteNav />
+  return (
+    <div className="min-h-screen bg-white dark:bg-zinc-950 font-sans">
+      <SiteNav />
 
-            <main className="max-w-3xl mx-auto px-5 py-16">
-                <h1 className="text-3xl font-bold text-zinc-900 dark:text-white mb-8">About Biodata Builder</h1>
+      <main>
+        {/* HERO */}
+        <section className="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 text-white py-20 px-5 overflow-hidden">
+          <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 20%, white 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
+          <div className="max-w-3xl mx-auto text-center relative">
+            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur px-4 py-1.5 rounded-full text-sm font-medium mb-6">
+              <FileText className="w-4 h-4" /> Free · No Sign-up · No Watermark
+            </div>
+            <h1 className="text-4xl sm:text-5xl font-black mb-5 leading-tight">
+              Making Biodata Creation Simple<br />for Every Indian Family
+            </h1>
+            <p className="text-lg sm:text-xl text-white/85 leading-relaxed max-w-2xl mx-auto">
+              BiodataBuilder is a free online tool that helps you create a beautiful, professional marriage biodata PDF in minutes — no design skills, no software, no hassle.
+            </p>
+          </div>
+        </section>
 
-                <div className="prose prose-zinc dark:prose-invert max-w-none space-y-8 text-zinc-700 dark:text-zinc-300 leading-relaxed">
-                    <section>
-                        <p className="font-semibold text-lg text-zinc-900 dark:text-white mb-4">Welcome to Biodata Builder.</p>
-                        <p>Biodata Builder is a free online tool designed to help individuals and families create professional, well-structured biodata documents quickly and easily.</p>
-                        <p className="mt-4">In many parts of India, a biodata is commonly used for family introductions, marriage discussions, and sharing personal information in a clear and organized format. However, creating a biodata from scratch in a word processor can be time-consuming and often results in inconsistent formatting.</p>
-                        <p className="mt-4">Biodata Builder was created to simplify this process.</p>
-                        <p className="mt-4">Our goal is straightforward: provide an easy-to-use platform where anyone can create a clean, attractive biodata without needing design skills, software expertise, or expensive services.</p>
-                    </section>
+        {/* STATS */}
+        <section className="border-b border-zinc-100 dark:border-zinc-800">
+          <div className="max-w-3xl mx-auto px-5 py-10 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+            {stats.map((s) => (
+              <div key={s.label}>
+                <p className="text-3xl font-black text-indigo-600 dark:text-indigo-400 mb-1">{s.value}</p>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400">{s.label}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-                    <section>
-                        <h2 className="text-xl font-semibold text-zinc-900 dark:text-white mb-3">Why We Built Biodata Builder</h2>
-                        <p>We noticed that many people spend hours creating biodata documents manually using tools such as Microsoft Word, Google Docs, or graphic design software. Formatting issues, layout inconsistencies, and difficulties generating PDF files often make the process frustrating.</p>
-                        <p className="mt-4">Biodata Builder was developed to solve these challenges by offering:</p>
-                        <ul className="list-disc pl-5 mt-2 space-y-1">
-                            <li>Ready-to-use biodata templates</li>
-                            <li>Structured data entry forms</li>
-                            <li>Instant PDF generation</li>
-                            <li>Mobile-friendly experience</li>
-                            <li>No registration requirement</li>
-                            <li>Free access to core features</li>
-                        </ul>
-                        <p className="mt-4">Our focus is on simplicity, accessibility, and ease of use.</p>
-                    </section>
+        {/* OUR STORY */}
+        <section className="max-w-3xl mx-auto px-5 py-16">
+          <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-6">Why We Built BiodataBuilder</h2>
+          <div className="space-y-4 text-zinc-600 dark:text-zinc-300 leading-relaxed text-lg">
+            <p>
+              Every year, millions of Indian families go through the same frustrating process — opening Microsoft Word, trying to format a biodata from scratch, battling broken layouts, struggling to add a photo, and finally ending up with something that looks nothing like what they imagined.
+            </p>
+            <p>
+              We built BiodataBuilder because we believed the process of creating a beautiful, professional marriage biodata should take <strong className="text-zinc-900 dark:text-white">minutes, not hours</strong> — and it should be completely free.
+            </p>
+            <p>
+              Today, BiodataBuilder supports all major Indian communities and languages — with dedicated fields for Kundali details, Gotra, Manglik status, and community-specific sections that Word templates simply cannot provide.
+            </p>
+          </div>
+        </section>
 
-                    <section>
-                        <h2 className="text-xl font-semibold text-zinc-900 dark:text-white mb-3">What We Offer</h2>
-                        <p>Biodata Builder provides tools and resources to help users create biodata documents efficiently.</p>
-                        <ul className="list-disc pl-5 mt-2 space-y-1">
-                            <li><Link href="/create" className="text-indigo-600 hover:underline">Multiple biodata templates and themes</Link></li>
-                            <li>PDF export functionality</li>
-                            <li>Support for traditional Indian biodata formats</li>
-                            <li><Link href="/articles" className="text-indigo-600 hover:underline">Guidance articles and educational content</Link></li>
-                            <li><Link href="/faq" className="text-indigo-600 hover:underline">Frequently asked questions and formatting tips</Link></li>
-                        </ul>
-                        <p className="mt-4">We continuously improve the platform based on user feedback and evolving requirements.</p>
-                    </section>
-
-                    <section>
-                        <h2 className="text-xl font-semibold text-zinc-900 dark:text-white mb-3">Privacy and User Data</h2>
-                        <p>We understand that biodata documents often contain personal information.</p>
-                        <p className="mt-2">We strive to minimize data collection wherever possible and are committed to protecting user privacy. For detailed information about how information is handled, please review our <Link href="/privacy-policy" className="text-indigo-600 hover:underline">Privacy Policy</Link>.</p>
-                    </section>
-
-                    <section>
-                        <h2 className="text-xl font-semibold text-zinc-900 dark:text-white mb-3">Independent Platform</h2>
-                        <p>Biodata Builder is an independent document-generation platform.</p>
-                        <p className="mt-2">We do not operate a matrimonial service, matchmaking platform, dating service, or marriage bureau.</p>
-                        <p className="mt-2">We do not arrange marriages, facilitate introductions, verify user identities, or participate in any matchmaking activities.</p>
-                        <p className="mt-2">The platform is solely intended to help users create biodata documents for personal use.</p>
-                    </section>
-
-                    <section>
-                        <h2 className="text-xl font-semibold text-zinc-900 dark:text-white mb-3">Our Mission</h2>
-                        <p>Our mission is to make biodata creation simple, accessible, and professional for everyone.</p>
-                        <p className="mt-2">Whether you are preparing a biodata for marriage discussions, family introductions, or personal documentation, we aim to provide a fast and reliable solution that saves time and effort.</p>
-                    </section>
-
-                    <section>
-                        <h2 className="text-xl font-semibold text-zinc-900 dark:text-white mb-3">Contact Us</h2>
-                        <p>If you have questions, suggestions, feedback, or encounter any issues while using the website, we would love to hear from you. Visit our <Link href="/contact-us" className="text-indigo-600 hover:underline">Contact Us page</Link> for more details.</p>
-                        <p className="mt-2 text-zinc-900 dark:text-white"><strong>Email:</strong> <a href="mailto:biodatabuilderapp@gmail.com" className="text-indigo-600 hover:underline">biodatabuilderapp@gmail.com</a></p>
-                        <p className="mt-4">We typically respond to inquiries within 2–5 business days.</p>
-                    </section>
-                    
-                    <section>
-                        <h2 className="text-xl font-semibold text-zinc-900 dark:text-white mb-3">Disclaimer</h2>
-                        <p>While we make every effort to ensure the platform functions correctly, users are responsible for reviewing and verifying all information before sharing or printing their biodata documents.</p>
-                        <p className="mt-2">Biodata Builder is provided on an "as is" basis without guarantees regarding suitability for any specific purpose.</p>
-                        <p className="mt-4 font-semibold text-zinc-900 dark:text-white">Thank you for using Biodata Builder.</p>
-                    </section>
+        {/* VALUES */}
+        <section className="bg-zinc-50 dark:bg-zinc-900/50 border-y border-zinc-100 dark:border-zinc-800 py-16 px-5">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-10 text-center">What We Stand For</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {values.map((v) => (
+                <div key={v.title} className="bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-100 dark:border-zinc-800 flex gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 flex items-center justify-center">
+                    <v.icon className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-zinc-900 dark:text-white mb-1">{v.title}</h3>
+                    <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">{v.desc}</p>
+                  </div>
                 </div>
-            </main>
+              ))}
+            </div>
+          </div>
+        </section>
 
-            <SiteFooter />
-        </div>
-    );
+        {/* WHAT WE ARE NOT */}
+        <section className="max-w-3xl mx-auto px-5 py-16">
+          <div className="bg-amber-50 dark:bg-amber-950/20 border border-amber-100 dark:border-amber-900/40 rounded-2xl p-6 sm:p-8">
+            <h2 className="text-xl font-bold text-amber-900 dark:text-amber-100 mb-3">We Are a Document Tool — Not a Matrimonial Service</h2>
+            <p className="text-amber-800 dark:text-amber-200 leading-relaxed">
+              BiodataBuilder is purely a document-generation platform. We do not operate a matrimonial service, matchmaking platform, dating service, or marriage bureau. We do not arrange marriages, facilitate introductions, verify user identities, or participate in any matchmaking activities. The platform is solely intended to help users create biodata documents for personal use.
+            </p>
+          </div>
+        </section>
+
+        {/* PRIVACY */}
+        <section className="bg-zinc-50 dark:bg-zinc-900/50 border-t border-zinc-100 dark:border-zinc-800 py-16 px-5">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-4">Privacy & Your Data</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed text-lg mb-4">
+              We understand that a marriage biodata contains highly personal information. BiodataBuilder is designed to minimise data collection — your biodata is generated in your browser and downloaded directly to your device. We do not sell or share your information with third parties.
+            </p>
+            <Link href="/privacy-policy" className="text-indigo-600 dark:text-indigo-400 font-medium hover:underline">
+              Read our full Privacy Policy →
+            </Link>
+          </div>
+        </section>
+
+        {/* CONTACT + CTA */}
+        <section className="max-w-3xl mx-auto px-5 py-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-200 dark:border-zinc-800">
+              <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-2">Get in Touch</h2>
+              <p className="text-zinc-500 dark:text-zinc-400 text-sm mb-4">Have feedback, a suggestion, or found a bug? We&apos;d love to hear from you.</p>
+              <a href="mailto:biodatabuilderapp@gmail.com" className="text-indigo-600 dark:text-indigo-400 font-medium hover:underline break-all">
+                biodatabuilderapp@gmail.com
+              </a>
+              <p className="text-xs text-zinc-400 mt-2">We respond within 2–5 business days.</p>
+            </div>
+            <div className="bg-gradient-to-br from-indigo-600 to-purple-600 rounded-2xl p-6 text-white flex flex-col justify-between">
+              <div>
+                <h2 className="text-lg font-bold mb-2">Ready to create your biodata?</h2>
+                <p className="text-white/80 text-sm mb-6">Free, no sign-up, beautiful PDF in minutes.</p>
+              </div>
+              <Link href="/create" className="inline-flex items-center gap-2 bg-white text-indigo-700 font-bold px-5 py-2.5 rounded-full hover:bg-indigo-50 transition self-start text-sm">
+                Create Biodata <MoveRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <SiteFooter />
+    </div>
+  );
 }
