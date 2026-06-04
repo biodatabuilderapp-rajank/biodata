@@ -74,6 +74,7 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
   },
   other: {
+    "google-adsense-account": "ca-pub-3646851872285015",
     "p:domain_verify": "9e12e72c914c7cd9e6bffa8d71d2ebb0",
   },
 };
