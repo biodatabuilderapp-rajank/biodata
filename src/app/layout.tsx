@@ -3,6 +3,7 @@ import { Geist } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleAnalytics } from '@next/third-parties/google';
+import Script from "next/script";
 import "./globals.css";
 
 const geist = Geist({
@@ -112,7 +113,11 @@ export default function RootLayout({
           }}
         />
         {/* Google AdSense Verification & Auto Ads Script */}
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3646851872285015" crossOrigin="anonymous" />
+        <Script 
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3646851872285015" 
+          crossOrigin="anonymous" 
+          strategy="afterInteractive"
+        />
         {/* Preconnect to external origins to reduce latency */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
