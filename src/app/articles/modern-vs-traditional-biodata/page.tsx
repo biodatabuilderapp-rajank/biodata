@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import ArticleWrapper from "@/components/ArticleWrapper";
 import ArticleCTA from "@/components/ArticleCTA";
 import ArticleLanguageNav from "@/components/ArticleLanguageNav";
@@ -69,6 +70,11 @@ export default function Article() {
           <p>
             The <strong className="font-semibold text-zinc-900 dark:text-white">design and structure of your marriage biodata</strong> say as much about you as the content. A jarring mismatch between your template and your audience can create the wrong impression before a single word is read. Here is a complete breakdown of the differences and how to choose.
           </p>
+
+          <div className="my-8 rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-lg">
+            <Image src="/examples/Modern-vs-traditional-biodata.png" alt="Side by side comparison — traditional ornate biodata vs modern minimal biodata" width={1200} height={600} className="w-full h-auto" />
+            <p className="text-center text-xs text-zinc-400 py-2 bg-zinc-50 dark:bg-zinc-900">Left: traditional ornate template. Right: modern minimal template. Same information — dramatically different impression.</p>
+          </div>
 
           <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mt-12 mb-6">What Is a Traditional Biodata Format?</h2>
           <p>

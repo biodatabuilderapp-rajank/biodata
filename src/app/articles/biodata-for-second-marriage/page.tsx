@@ -1,32 +1,68 @@
 import Link from "next/link";
+import Image from "next/image";
 import ArticleWrapper from "@/components/ArticleWrapper";
 import ArticleCTA from "@/components/ArticleCTA";
 import ArticleLanguageNav from "@/components/ArticleLanguageNav";
 
 export const metadata = {
-  title: "Biodata for Second Marriage | Divorced & Widowed Biodata Format",
+  title: "Biodata for Second Marriage | Divorced & Widowed Biodata Guide",
   description: "Guide to creating an honest, dignified marriage biodata after divorce or the loss of a spouse. Includes sample text, tips, and cultural guidance.",
   alternates: { canonical: "https://biodatabuilder.in/articles/biodata-for-second-marriage" },
   openGraph: {
-    title: "Biodata for Second Marriage | Divorced & Widowed Biodata Format",
+    title: "Biodata for Second Marriage | Divorced & Widowed Biodata Guide",
     description: "Guide to creating an honest, dignified marriage biodata after divorce or the loss of a spouse. Includes sample text, tips, and cultural guidance.",
     url: "https://biodatabuilder.in/articles/biodata-for-second-marriage",
+    images: [{ url: "https://biodatabuilder.in/examples/Second-marriage-biodata-example.png" }],
   },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Should I mention a previous marriage in my biodata?",
+      acceptedAnswer: { "@type": "Answer", text: "Yes — always. Transparency builds trust and filters for compatible families from day one. Families open to second marriages will not be deterred; those who are not would not have been a good match anyway. Hiding a previous marriage almost always backfires when families exchange Kundali or references." },
+    },
+    {
+      "@type": "Question",
+      name: "What should a second marriage biodata say about marital status?",
+      acceptedAnswer: { "@type": "Answer", text: "State clearly: 'Divorced' or 'Widowed'. If possible, add how long ago — e.g. 'Divorced 3 years ago'. If you have children, mention their age and who they live with. Do NOT explain the reason for divorce in the biodata — save that for when there is genuine mutual interest." },
+    },
+    {
+      "@type": "Question",
+      name: "Can I find a good match with a second marriage biodata?",
+      acceptedAnswer: { "@type": "Answer", text: "Absolutely. A well-written, honest biodata that clearly states your situation — including children if applicable — and focuses on who you are today and what you are looking for, consistently attracts the right responses. Many families are very open to second marriages, especially when the biodata communicates maturity and clarity." },
+    },
+    {
+      "@type": "Question",
+      name: "Is it okay to look for someone who has also been married before?",
+      acceptedAnswer: { "@type": "Answer", text: "Yes — and many people find this to be their best match. You can note in the Expectations section: 'Open to both first and second marriages'. This signals openness and often results in more compatible inquiries." },
+    },
+  ],
 };
 
 export default function Article() {
   return (
-    <ArticleWrapper
-      publishedDate="2024-04-12"
-      related={[
-        { title: "How to Write Your Biodata About Me Section", slug: "how-to-write-biodata-about-me" },
-        { title: "10 Common Biodata Mistakes to Avoid", slug: "biodata-mistakes-to-avoid" },
-        { title: "Shaadi Biodata Format for Girl", slug: "shaadi-biodata-format-for-girl" },
-      ]}
-    >
-      <h1 className="text-3xl sm:text-5xl font-bold text-zinc-900 dark:text-white mb-8 leading-tight">
-        Biodata for Second Marriage: A Dignified, Honest Guide
-      </h1>
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <ArticleWrapper
+        publishedDate="2024-04-12"
+        related={[
+          { title: "How to Write Your Biodata About Me Section", slug: "how-to-write-biodata-about-me" },
+          { title: "10 Common Biodata Mistakes to Avoid", slug: "biodata-tips" },
+          { title: "Shaadi Biodata Format for Girl", slug: "shaadi-biodata-format-for-girl" },
+        ]}
+      >
+        <h1 className="text-3xl sm:text-5xl font-bold text-zinc-900 dark:text-white mb-8 leading-tight">
+          Biodata for Second Marriage: A Dignified, Honest Guide
+        </h1>
+
+        <div className="my-8 rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-lg">
+          <Image src="/examples/Second-marriage-biodata-example.png" alt="Marriage biodata example for second marriage showing Divorced/Widowed marital status" width={1200} height={700} className="w-full h-auto" priority />
+          <p className="text-center text-xs text-zinc-400 py-2 bg-zinc-50 dark:bg-zinc-900">A dignified second marriage biodata — honest, clean, and compassionate</p>
+        </div>
 
       <div className="space-y-8 text-zinc-700 dark:text-zinc-300 leading-relaxed text-lg">
         <p>
@@ -93,5 +129,6 @@ export default function Article() {
         <ArticleLanguageNav />
         <ArticleCTA />
       </ArticleWrapper>
+    </>
   );
 }

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import ArticleWrapper from "@/components/ArticleWrapper";
 import ArticleCTA from "@/components/ArticleCTA";
 import ArticleLanguageNav from "@/components/ArticleLanguageNav";
@@ -69,6 +70,11 @@ export default function Article() {
           <p>
             The arranged marriage system in India is undergoing a massive digital transformation. While the core concept of matchmaking remains strong, the methods of connection, the criteria for selection, and the role of the <strong className="font-semibold text-zinc-900 dark:text-white">marriage biodata</strong> are changing rapidly. Based on demographic data and matrimonial platform trends, here is a statistical look at how India gets married today.
           </p>
+
+          <div className="my-8 rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow">
+            <Image src="/examples/India-marriage-biodata-statistics.png" alt="India marriage biodata statistics infographic — key numbers on arranged marriage trends" width={1200} height={500} className="w-full h-auto" />
+            <p className="text-center text-xs text-zinc-400 py-2 bg-zinc-50 dark:bg-zinc-900">Key statistics on arranged marriage and biodata trends in India (2024)</p>
+          </div>
 
           <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mt-12 mb-6">Key Statistics & Trends</h2>
 

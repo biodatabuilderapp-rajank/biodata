@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import ArticleWrapper from "@/components/ArticleWrapper";
 import ArticleCTA from "@/components/ArticleCTA";
 import ArticleLanguageNav from "@/components/ArticleLanguageNav";
@@ -110,6 +111,11 @@ export default function Article() {
                 ))}
               </tbody>
             </table>
+          </div>
+
+          <div className="my-8 rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow">
+            <Image src="/examples/Kundali-section-biodata.png" alt="Zoomed-in Kundali section in a marriage biodata showing Rashi, Nakshatra, Gotra, and Manglik fields" width={1200} height={500} className="w-full h-auto" />
+            <p className="text-center text-xs text-zinc-400 py-2 bg-zinc-50 dark:bg-zinc-900">A complete Kundali section in a BiodataBuilder biodata — all fields clearly filled</p>
           </div>
 
           <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mt-12 mb-6">Essential Kundali Information to Include</h2>

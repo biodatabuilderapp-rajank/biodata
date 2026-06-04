@@ -1,109 +1,166 @@
 import Link from "next/link";
+import Image from "next/image";
 import ArticleWrapper from "@/components/ArticleWrapper";
 import ArticleCTA from "@/components/ArticleCTA";
 import ArticleLanguageNav from "@/components/ArticleLanguageNav";
+import { MoveRight } from "lucide-react";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Manglik Biodata Format | Marriage Biodata for Manglik Boy & Girl",
-  description: "A complete guide to creating a marriage biodata when you are Manglik. Learn what to mention, how to handle concerns, and match with compatible partners.",
+  description: "Complete guide to creating a marriage biodata when you are Manglik. How to state Manglik status, what to write, how to match, and how to address concerns honestly.",
   alternates: { canonical: "https://biodatabuilder.in/articles/manglik-biodata-format" },
   openGraph: {
     title: "Manglik Biodata Format | Marriage Biodata for Manglik Boy & Girl",
-    description: "A complete guide to creating a marriage biodata when you are Manglik. Learn what to mention, how to handle concerns, and match with compatible partners.",
+    description: "Complete guide to creating a marriage biodata when you are Manglik — what to write, how to match, and common concerns addressed.",
     url: "https://biodatabuilder.in/articles/manglik-biodata-format",
+    images: [{ url: "https://biodatabuilder.in/examples/Manglik-biodata-sample.png" }],
   },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is Manglik Dosha and should I mention it in my biodata?",
+      acceptedAnswer: { "@type": "Answer", text: "Mangal Dosha (Manglik) occurs when Mars is placed in the 1st, 2nd, 4th, 7th, 8th, or 12th house of the birth chart. Yes — always mention it clearly in your biodata. Hiding or omitting it causes trust issues later. Families match Mangliks with other Mangliks, so stating it upfront helps you find the right match faster." },
+    },
+    {
+      "@type": "Question",
+      name: "What is the difference between Manglik and Anshik Manglik?",
+      acceptedAnswer: { "@type": "Answer", text: "Manglik (Full Mangal Dosha) means Mars occupies the core inauspicious houses (1, 4, 7, 8, 12). Anshik Manglik (Partial Dosha) usually means Mars is in a position where certain cancellation factors apply — often through specific Navamsa placements. Always consult your family priest or astrologer to determine which category you fall in." },
+    },
+    {
+      "@type": "Question",
+      name: "Can a Manglik marry a non-Manglik?",
+      acceptedAnswer: { "@type": "Answer", text: "Traditional guidance strongly advises against it, though many modern families are open to it after consulting a priest who can assess cancellation factors. Certain Rashi placements and planetary aspects can cancel or reduce the Dosha. Always discuss with a qualified Jyotishi before proceeding." },
+    },
+    {
+      "@type": "Question",
+      name: "What should I write in my biodata if I am Anshik Manglik?",
+      acceptedAnswer: { "@type": "Answer", text: "Write 'Anshik Manglik' (Partial Mangal Dosha) clearly. Some families also add a brief note like 'Astrologer consulted — match recommended for Anshik Manglik or Non-Manglik'. This shows transparency and proactive communication." },
+    },
+  ],
 };
 
 export default function Article() {
   return (
-    <ArticleWrapper
-      publishedDate="2024-04-12"
-      related={[
-        { title: "Kundali Details in Biodata: What to Include", slug: "kundali-details-in-biodata" },
-        { title: "Best Marriage Biodata Format for Hindu Families", slug: "best-marriage-biodata-format-for-hindu" },
-        { title: "10 Common Biodata Mistakes to Avoid", slug: "biodata-mistakes-to-avoid" },
-      ]}
-    >
-      <h1 className="text-3xl sm:text-5xl font-bold text-zinc-900 dark:text-white mb-8 leading-tight">
-        Manglik Biodata Format: A Complete Guide
-      </h1>
-
-      <div className="space-y-8 text-zinc-700 dark:text-zinc-300 leading-relaxed text-lg">
-        <p>
-          Being <strong className="font-semibold text-zinc-900 dark:text-white">Manglik</strong> — having Mars placed in the 1st, 2nd, 4th, 7th, 8th, or 12th house of your birth chart — is one of the most misunderstood aspects of Vedic astrology in the context of marriage. This guide helps you create an honest, effective biodata and navigate the matchmaking process confidently.
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <ArticleWrapper publishedDate="2024-04-12">
+        <h1 className="text-3xl sm:text-5xl font-bold text-zinc-900 dark:text-white mb-6 leading-tight">
+          Manglik Biodata Format: A Complete Guide for Manglik Boy & Girl
+        </h1>
+        <p className="text-xl text-zinc-500 dark:text-zinc-400 mb-8 leading-relaxed">
+          If you are Manglik, this guide explains exactly what to write in your biodata, how to communicate your status clearly, and how to navigate common concerns — with transparency and confidence.
         </p>
 
-        <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mt-12 mb-6">Should You Mention Manglik Status in Your Biodata?</h2>
-        <p>
-          <strong className="font-semibold text-zinc-900 dark:text-white">Yes — always.</strong> Not mentioning your Manglik status only delays the issue. Families will discover it during Kundali matching anyway. Disclosing it upfront signals honesty and saves everyone time. It also helps you connect directly with families that are open to Manglik matches or are themselves Manglik.
-        </p>
-
-        <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mt-12 mb-6">Types of Manglik Status to Mention</h2>
-        <ul className="list-disc pl-6 space-y-3">
-          <li>
-            <strong className="font-semibold text-zinc-900 dark:text-white">Full Manglik (Poorna Manglik):</strong> Mars is in one of the classic Mangal Dosha houses. Traditional remedy: match with another Manglik.
-          </li>
-          <li>
-            <strong className="font-semibold text-zinc-900 dark:text-white">Anshik Manglik (Partial):</strong> Mars is in a house that creates partial Dosha. Anshik Mangliks can often match with Non-Mangliks after consulting a priest.
-          </li>
-          <li>
-            <strong className="font-semibold text-zinc-900 dark:text-white">Non-Manglik:</strong> No Mangal Dosha. Still mention this explicitly so families do not wonder.
-          </li>
-        </ul>
-
-        <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mt-12 mb-6">Sample Kundali Section for a Manglik Biodata</h2>
-        <div className="bg-zinc-100 dark:bg-zinc-800 rounded-xl p-5 space-y-2 text-sm font-mono text-zinc-700 dark:text-zinc-300">
-          <p><strong>Date of Birth:</strong> 08 November 1995</p>
-          <p><strong>Time of Birth:</strong> 06:45 AM</p>
-          <p><strong>Place of Birth:</strong> Indore, Madhya Pradesh</p>
-          <p><strong>Rashi:</strong> Tula (Libra)</p>
-          <p><strong>Nakshatra:</strong> Swati, 3rd Pada</p>
-          <p><strong>Gotra:</strong> Bharadwaj</p>
-          <p><strong>Manglik Status:</strong> Manglik (Full)</p>
+        <div className="my-8 rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-lg">
+          <Image src="/examples/Manglik-biodata-sample.png" alt="Marriage biodata with Kundali section showing Manglik status clearly" width={1200} height={700} className="w-full h-auto" priority />
+          <p className="text-center text-xs text-zinc-400 py-2 bg-zinc-50 dark:bg-zinc-900">A biodata with the Kundali section showing Manglik status clearly — the right way to present this information</p>
         </div>
 
-        <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mt-12 mb-6">How to Handle the "Manglik Concern" in the Biodata</h2>
-        <p>
-          Some families leave an optional note in the expectations section. For example:
-        </p>
-        <div className="bg-indigo-50 dark:bg-indigo-950/30 border border-indigo-200 dark:border-indigo-800 rounded-2xl p-5 italic text-indigo-900 dark:text-indigo-100">
-          "We are open to matches from Manglik boys/girls. Families comfortable with Manglik matches are welcome to reach out."
-        </div>
-        <p>
-          This filters in compatible families and signals maturity and openness.
-        </p>
-
-        <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mt-12 mb-6">Remedies Often Mentioned</h2>
-        <p>
-          If your family has already done remedial measures (like Kumbh Vivah, prayers at Mangal temples, or consulting a Jyotishi who has cleared the Dosha), you can mention: <em>"Manglik — remedies performed as advised by family priest."</em> This reassures families who might otherwise be hesitant.
-        </p>
-
-        <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mt-12 mb-6">Modern Perspective</h2>
-        <p>
-          Many astrologers and matrimonial advisors now consider Mangal Dosha to be less significant than traditionally believed — especially Anshik Manglik cases. A growing number of educated urban families do not filter on Manglik status at all. The key is to find families aligned with your outlook. State the fact, and let the right families respond.
-        </p>
-
-        <div className="mt-16 p-8 sm:p-10 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950/30 dark:to-purple-950/30 rounded-3xl border border-indigo-100 dark:border-indigo-900/50 text-center shadow-sm">
-          <h3 className="text-2xl font-bold text-indigo-900 dark:text-indigo-100 mb-3">Create Your Biodata with Full Kundali Details</h3>
-          <p className="text-indigo-700 dark:text-indigo-300 mb-8">Our form includes clear fields for Manglik status, Rashi, Nakshatra, and Gotra. Download as PDF — free, no sign-up.</p>
-          <Link href="/create" className="inline-block px-8 py-4 bg-indigo-600 text-white font-bold rounded-full hover:bg-indigo-700 transition shadow-lg hover:shadow-xl hover:-translate-y-1">
-            Create Biodata Free
-          </Link>
-        </div>
-      </div>
-    
-        <div className="mt-12 bg-white dark:bg-zinc-900/50 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800">
-          <h3 className="font-bold text-xl mb-3 text-zinc-900 dark:text-white">What's Next?</h3>
-          <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-            If you found this guide helpful, you might also want to read our <Link href="/articles/biodata-tips" className="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">master guide on biodata photo tips and mistakes to avoid</Link>. Or, if you're exploring styles, check out the <Link href="/articles/modern-vs-traditional-biodata" className="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">differences between modern and traditional formats</Link>.
+        <div className="space-y-8 text-zinc-700 dark:text-zinc-300 leading-relaxed text-lg">
+          <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mt-8 mb-4">What Is Mangal Dosha?</h2>
+          <p>
+            <strong className="font-semibold text-zinc-900 dark:text-white">Mangal Dosha</strong> (also called Kuja Dosha, Chevvai Dosham, or simply being &quot;Manglik&quot;) occurs in Vedic astrology when the planet Mars is placed in the 1st, 2nd, 4th, 7th, 8th, or 12th house of the birth chart. It is a purely astrological designation — not a moral judgement or character flaw.
           </p>
-          <p className="text-zinc-600 dark:text-zinc-400">
-            Once you're ready, you can use our <strong>biodata builder to create your profile instantly</strong> without any design skills.
+          <p>
+            Statistically, approximately 40–50% of people are born Manglik. This is not rare. The tradition of matching Mangliks with other Mangliks arose precisely because it is so common.
           </p>
+
+          <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mt-12 mb-4">What to Write in Your Biodata</h2>
+          <p>Always state your Manglik status clearly in the Kundali/Astrological section. Here are the three possible states:</p>
+          <div className="overflow-x-auto rounded-2xl border border-zinc-200 dark:border-zinc-700 my-4">
+            <table className="w-full text-sm text-left">
+              <thead className="bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-semibold">
+                <tr>
+                  <th className="px-5 py-3">Status</th>
+                  <th className="px-5 py-3">What to Write</th>
+                  <th className="px-5 py-3">Match With</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800">
+                {[
+                  ["Full Manglik", "Manglik", "Manglik or Anshik Manglik (with priest consultation)"],
+                  ["Partial Manglik", "Anshik Manglik", "Non-Manglik or Anshik Manglik (priest to confirm)"],
+                  ["No Dosha", "Non-Manglik", "Non-Manglik preferred; Anshik Manglik may be acceptable"],
+                ].map(([status, write, match]) => (
+                  <tr key={status} className="bg-white dark:bg-zinc-900 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors">
+                    <td className="px-5 py-3 font-medium text-zinc-800 dark:text-zinc-200">{status}</td>
+                    <td className="px-5 py-3 text-zinc-600 dark:text-zinc-400 font-mono text-xs">{write}</td>
+                    <td className="px-5 py-3 text-zinc-500 dark:text-zinc-500 text-xs">{match}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mt-12 mb-4">The Full Kundali Section in Your Biodata</h2>
+          <p>The Kundali section of your biodata should always include more than just Manglik status. Here is the complete section with a sample:</p>
+          <div className="bg-zinc-100 dark:bg-zinc-800 rounded-xl p-5 space-y-2 text-sm font-mono text-zinc-700 dark:text-zinc-300">
+            <p><strong>Date of Birth:</strong> 14 March 1996</p>
+            <p><strong>Time of Birth:</strong> 11:32 AM</p>
+            <p><strong>Place of Birth:</strong> Pune, Maharashtra</p>
+            <p><strong>Rashi:</strong> Vrishchik (Scorpio)</p>
+            <p><strong>Nakshatra:</strong> Anuradha, 3rd Pada</p>
+            <p><strong>Gotra:</strong> Kashyap</p>
+            <p><strong>Gana:</strong> Deva</p>
+            <p><strong>Manglik Status:</strong> <span className="text-rose-600 dark:text-rose-400 font-bold">Manglik</span></p>
+          </div>
+          <p className="text-sm text-zinc-500 dark:text-zinc-400">
+            For a complete list of all Kundali fields and what each means, see our <Link href="/articles/kundali-details-in-biodata" className="text-indigo-600 dark:text-indigo-400 hover:underline">Kundali details in biodata guide</Link>.
+          </p>
+
+          <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mt-12 mb-4">Why You Should Never Hide Manglik Status</h2>
+          <p>Some people are tempted to leave Manglik status blank or write &quot;Non-Manglik&quot; to avoid rejection. This is a serious mistake:</p>
+          <ul className="list-disc pl-6 space-y-3">
+            <li>Families almost always ask a priest to verify Kundali — the discrepancy will surface during chart comparison.</li>
+            <li>Discovery of hidden Manglik status after engagement or marriage causes severe trust breakdown.</li>
+            <li>Being Manglik is <em>not</em> rare — approximately 40–50% of the population has some form of Mangal Dosha. It is a normal astrological characteristic.</li>
+            <li>Transparency upfront filters for exactly the families who are open to your match — saving everyone time and emotions.</li>
+          </ul>
+
+          <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mt-12 mb-4">Manglik Dosha Cancellation Factors</h2>
+          <p>In many cases, the effects of Mangal Dosha are considered reduced or cancelled by specific planetary configurations. These include:</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Mars in its own sign (Aries or Scorpio)</li>
+            <li>Mars in a sign owned by Jupiter (Sagittarius or Pisces)</li>
+            <li>Mars in Capricorn (exaltation)</li>
+            <li>Mars in the 2nd house in Gemini or Virgo</li>
+            <li>Jupiter in the Lagna (ascendant)</li>
+          </ul>
+          <p>Always consult a qualified Jyotishi to determine whether cancellation factors apply in your specific chart before deciding how to categorise your status.</p>
+
+          <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mt-12 mb-4">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            {[
+              { q: "What is Manglik Dosha and should I mention it in my biodata?", a: "Mangal Dosha (Manglik) is Mars in certain houses of the birth chart. Always mention it clearly — hiding it causes trust issues later. Families match Mangliks together, so transparency helps you find the right match faster." },
+              { q: "What is the difference between Manglik and Anshik Manglik?", a: "Manglik (Full) means Mars is in core inauspicious houses. Anshik Manglik (Partial) means cancellation factors may reduce the Dosha. Consult an astrologer to determine which applies to you." },
+              { q: "Can a Manglik marry a non-Manglik?", a: "Traditional guidance advises against it, though many modern families are open to it after consulting a priest who assesses cancellation factors. Always discuss with a qualified Jyotishi." },
+              { q: "What should I write if I am Anshik Manglik?", a: "Write 'Anshik Manglik' clearly. You can optionally add: 'Astrologer consulted — match recommended for Anshik Manglik or Non-Manglik'. This demonstrates transparency." },
+            ].map((faq, i) => (
+              <div key={i} className="p-6 rounded-2xl border border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-900">
+                <h3 className="font-bold text-zinc-900 dark:text-white mb-2">{faq.q}</h3>
+                <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-16 p-8 sm:p-10 bg-gradient-to-br from-rose-50 to-pink-50 dark:from-rose-950/20 dark:to-pink-950/20 rounded-3xl border border-rose-100 dark:border-rose-900/50 text-center">
+            <h3 className="text-2xl font-bold text-rose-900 dark:text-rose-100 mb-3">Create Your Biodata with Complete Kundali Section</h3>
+            <p className="text-rose-700 dark:text-rose-300 mb-8">BiodataBuilder includes dedicated fields for Rashi, Nakshatra, Gotra, Gana, and Manglik status — presented cleanly and professionally. Free PDF download.</p>
+            <Link href="/create" className="inline-flex items-center gap-2 px-8 py-4 bg-rose-600 text-white font-bold rounded-full hover:bg-rose-700 transition shadow-lg hover:shadow-xl hover:-translate-y-1">
+              Create Biodata Free <MoveRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
 
         <ArticleLanguageNav />
         <ArticleCTA />
       </ArticleWrapper>
+    </>
   );
 }
