@@ -60,7 +60,7 @@ export default function PrivacyPolicy() {
 
                     <section>
                         <h2 className="text-xl font-semibold text-zinc-900 dark:text-white mb-3">7. Contact Us</h2>
-                        <p>If you have any questions about this Privacy Policy, please email us at <a href="mailto:biodatabuilderapp@gmail.com" className="text-indigo-600 hover:underline">biodatabuilderapp@gmail.com</a>.</p>
+                        <p>If you have any questions about this Privacy Policy, please visit our <Link href="/contact-us" className="text-indigo-600 hover:underline">Contact Us page</Link> or email us at <a href="mailto:biodatabuilderapp@gmail.com" className="text-indigo-600 hover:underline">biodatabuilderapp@gmail.com</a>.</p>
                     </section>
                 </div>
             </main>

@@ -87,10 +87,15 @@ export default function FAQPage() {
 
                 <div className="mt-12 p-8 rounded-2xl bg-indigo-50 dark:bg-indigo-950/30 border border-indigo-100 dark:border-indigo-900 text-center">
                     <h3 className="font-bold text-zinc-900 dark:text-white mb-2">Still have questions?</h3>
-                    <p className="text-zinc-600 dark:text-zinc-400 text-sm mb-5">Ready to create your beautiful biodata? It only takes a few minutes.</p>
-                    <Link href="/create" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-indigo-600 text-white font-semibold text-sm hover:bg-indigo-700 transition-colors">
-                        Create My Biodata <MoveRight className="w-4 h-4" />
-                    </Link>
+                    <p className="text-zinc-600 dark:text-zinc-400 text-sm mb-5">Can&apos;t find your answer here? Contact us and we&apos;ll be happy to help.</p>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                        <Link href="/contact-us" className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-indigo-600 text-indigo-600 dark:text-indigo-400 dark:border-indigo-400 font-semibold text-sm hover:bg-indigo-50 dark:hover:bg-indigo-950/30 transition-colors">
+                            Contact Us
+                        </Link>
+                        <Link href="/create" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-indigo-600 text-white font-semibold text-sm hover:bg-indigo-700 transition-colors">
+                            Create My Biodata <MoveRight className="w-4 h-4" />
+                        </Link>
+                    </div>
                 </div>
             </main>
 

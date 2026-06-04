@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Logo from "@/components/Logo";
+import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import type { Metadata } from "next";
 
@@ -17,11 +17,7 @@ export const metadata: Metadata = {
 export default function AboutUs() {
     return (
         <div className="min-h-screen bg-white dark:bg-zinc-950 font-sans">
-            <nav className="border-b border-zinc-100 dark:border-zinc-900 bg-white dark:bg-zinc-950 px-5 h-16 flex items-center">
-                <Link href="/" className="flex items-center gap-2">
-                    <Logo />
-                </Link>
-            </nav>
+            <SiteNav />
 
             <main className="max-w-3xl mx-auto px-5 py-16">
                 <h1 className="text-3xl font-bold text-zinc-900 dark:text-white mb-8">About Biodata Builder</h1>
@@ -54,11 +50,11 @@ export default function AboutUs() {
                         <h2 className="text-xl font-semibold text-zinc-900 dark:text-white mb-3">What We Offer</h2>
                         <p>Biodata Builder provides tools and resources to help users create biodata documents efficiently.</p>
                         <ul className="list-disc pl-5 mt-2 space-y-1">
-                            <li>Multiple biodata templates and themes</li>
+                            <li><Link href="/create" className="text-indigo-600 hover:underline">Multiple biodata templates and themes</Link></li>
                             <li>PDF export functionality</li>
                             <li>Support for traditional Indian biodata formats</li>
-                            <li>Guidance articles and educational content</li>
-                            <li>Frequently asked questions and formatting tips</li>
+                            <li><Link href="/articles" className="text-indigo-600 hover:underline">Guidance articles and educational content</Link></li>
+                            <li><Link href="/faq" className="text-indigo-600 hover:underline">Frequently asked questions and formatting tips</Link></li>
                         </ul>
                         <p className="mt-4">We continuously improve the platform based on user feedback and evolving requirements.</p>
                     </section>
@@ -85,9 +81,8 @@ export default function AboutUs() {
 
                     <section>
                         <h2 className="text-xl font-semibold text-zinc-900 dark:text-white mb-3">Contact Us</h2>
-                        <p>If you have questions, suggestions, feedback, or encounter any issues while using the website, we would love to hear from you.</p>
+                        <p>If you have questions, suggestions, feedback, or encounter any issues while using the website, we would love to hear from you. Visit our <Link href="/contact-us" className="text-indigo-600 hover:underline">Contact Us page</Link> for more details.</p>
                         <p className="mt-2 text-zinc-900 dark:text-white"><strong>Email:</strong> <a href="mailto:biodatabuilderapp@gmail.com" className="text-indigo-600 hover:underline">biodatabuilderapp@gmail.com</a></p>
-                        <p className="mt-2 text-zinc-900 dark:text-white"><strong>Website:</strong> <Link href="/" className="text-indigo-600 hover:underline">https://biodatabuilder.in</Link></p>
                         <p className="mt-4">We typically respond to inquiries within 2–5 business days.</p>
                     </section>
                     

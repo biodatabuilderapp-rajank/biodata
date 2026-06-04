@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Logo from "@/components/Logo";
+import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import type { Metadata } from "next";
 
@@ -17,11 +17,7 @@ export const metadata: Metadata = {
 export default function ContactUs() {
     return (
         <div className="min-h-screen bg-white dark:bg-zinc-950 font-sans">
-            <nav className="border-b border-zinc-100 dark:border-zinc-900 bg-white dark:bg-zinc-950 px-5 h-16 flex items-center">
-                <Link href="/" className="flex items-center gap-2">
-                    <Logo />
-                </Link>
-            </nav>
+            <SiteNav />
 
             <main className="max-w-3xl mx-auto px-5 py-16">
                 <h1 className="text-3xl font-bold text-zinc-900 dark:text-white mb-4">Contact Us</h1>

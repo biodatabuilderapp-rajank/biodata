@@ -57,6 +57,11 @@ export default function TermsOfUse() {
                         <h2 className="text-xl font-semibold text-zinc-900 dark:text-white mb-3">6. Amendments</h2>
                         <p>We reserve the right to modify these Terms at any time. Continued use of the service after changes constitutes acceptance of the updated Terms.</p>
                     </section>
+
+                    <section>
+                        <h2 className="text-xl font-semibold text-zinc-900 dark:text-white mb-3">7. Contact</h2>
+                        <p>If you have any questions about these Terms of Use, please visit our <Link href="/contact-us" className="text-indigo-600 hover:underline">Contact Us page</Link> or review our <Link href="/privacy-policy" className="text-indigo-600 hover:underline">Privacy Policy</Link> for more information on how we handle your data.</p>
+                    </section>
                 </div>
             </main>
 
