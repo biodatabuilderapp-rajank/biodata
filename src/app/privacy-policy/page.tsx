@@ -24,6 +24,17 @@ export default function PrivacyPolicy() {
             </nav>
 
             <main className="max-w-3xl mx-auto px-5 py-16">
+                <script
+                  type="application/ld+json"
+                  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "BreadcrumbList",
+                    itemListElement: [
+                      { "@type": "ListItem", position: 1, name: "Home", item: "https://biodatabuilder.in" },
+                      { "@type": "ListItem", position: 2, name: "Privacy Policy", item: "https://biodatabuilder.in/privacy-policy" },
+                    ],
+                  }) }}
+                />
                 <h1 className="text-3xl font-bold text-zinc-900 dark:text-white mb-2">Privacy Policy</h1>
                 <p className="text-sm text-zinc-500 mb-10">Last updated: March 2025</p>
 

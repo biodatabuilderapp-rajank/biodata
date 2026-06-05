@@ -71,6 +71,17 @@ export default function FAQPage() {
             </nav>
 
             <main className="max-w-3xl mx-auto px-5 py-16">
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "BreadcrumbList",
+                  itemListElement: [
+                    { "@type": "ListItem", position: 1, name: "Home", item: "https://biodatabuilder.in" },
+                    { "@type": "ListItem", position: 2, name: "FAQ", item: "https://biodatabuilder.in/faq" },
+                  ],
+                }) }}
+              />
                 <div className="text-center mb-14">
                     <h1 className="text-3xl sm:text-4xl font-bold text-zinc-900 dark:text-white mb-4">Frequently Asked Questions</h1>
                     <p className="text-zinc-500 dark:text-zinc-400">Everything you need to know about creating your biodata.</p>

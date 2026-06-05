@@ -1,4 +1,6 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface RelatedArticle {
   title: string;
@@ -11,6 +13,8 @@ interface ArticleWrapperProps {
   publishedDate?: string;
   /** Related articles to show at the bottom */
   related?: RelatedArticle[];
+  /** Article title — used for breadcrumb schema. Falls back to URL slug if omitted. */
+  title?: string;
 }
 
 const AUTHOR = {
@@ -26,13 +30,43 @@ function formatDate(iso: string) {
   });
 }
 
+function slugToTitle(slug: string) {
+  return slug
+    .split("-")
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
+}
+
 export default function ArticleWrapper({
   children,
   publishedDate,
   related = [],
+  title,
 }: ArticleWrapperProps) {
+  const pathname = usePathname();
+  // pathname = /articles/biodata-for-marriage → slug = biodata-for-marriage
+  const slug = pathname?.split("/").pop() ?? "";
+  const articleTitle = title ?? slugToTitle(slug);
+  const canonical = `https://biodatabuilder.in${pathname}`;
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://biodatabuilder.in" },
+      { "@type": "ListItem", position: 2, name: "Articles", item: "https://biodatabuilder.in/articles" },
+      { "@type": "ListItem", position: 3, name: articleTitle, item: canonical },
+    ],
+  };
+
   return (
     <article className="max-w-3xl mx-auto">
+      {/* Breadcrumb JSON-LD — injected on every article automatically */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       {/* Back link */}
       <Link
         href="/articles"
