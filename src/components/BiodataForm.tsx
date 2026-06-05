@@ -1,4 +1,4 @@
-import { Plus, X, ImagePlus, Settings2, Languages } from "lucide-react";
+import { Plus, X, ImagePlus, Settings2, Languages, ChevronUp, ChevronDown, AlignJustify } from "lucide-react";
 import { useState } from "react";
 import ImageCropper from "./ImageCropper";
 import GodIconSelector from "./GodIconSelector";
@@ -48,9 +48,28 @@ const Section = ({ titleInput, onAddCustomField, children }: { titleInput: React
     </div>
 );
 
-const Input = ({ section, field, data, updateSection, updateLabel, removeField, type = "text", placeholder = "" }: { section: Exclude<keyof Biodata, 'profilePhoto' | 'godIcon'>, field: string, data: Biodata, updateSection: (section: Exclude<keyof Biodata, 'profilePhoto' | 'godIcon'>, field: string, value: string) => void, updateLabel: (section: Exclude<keyof Biodata, 'profilePhoto' | 'godIcon'>, field: string, value: string) => void, removeField: (section: Exclude<keyof Biodata, 'profilePhoto' | 'godIcon'>, field: string) => void, type?: string, placeholder?: string }) => {
-    const fieldData = (data[section] as any)[field] as { label: string, value: string };
-    if (!fieldData) return null; // Safety check in case of mid-render deletion
+interface InputProps {
+    section: Exclude<keyof Biodata, 'profilePhoto' | 'godIcon'>;
+    field: string;
+    data: Biodata;
+    updateSection: (section: Exclude<keyof Biodata, 'profilePhoto' | 'godIcon'>, field: string, value: string) => void;
+    updateLabel: (section: Exclude<keyof Biodata, 'profilePhoto' | 'godIcon'>, field: string, value: string) => void;
+    removeField: (section: Exclude<keyof Biodata, 'profilePhoto' | 'godIcon'>, field: string) => void;
+    onToggleMultiline?: () => void;
+    onMoveUp?: () => void;
+    onMoveDown?: () => void;
+    isFirst?: boolean;
+    isLast?: boolean;
+    type?: string;
+    placeholder?: string;
+}
+
+const Input = ({ section, field, data, updateSection, updateLabel, removeField, onToggleMultiline, onMoveUp, onMoveDown, isFirst = true, isLast = true, type = "text", placeholder = "" }: InputProps) => {
+    const fieldData = (data[section] as any)[field] as { label: string; value: string; multiline?: boolean };
+    if (!fieldData) return null;
+    const isMultiline = type === "textarea" || !!fieldData.multiline;
+    const canToggle = type !== "textarea" && !!onToggleMultiline;
+    const canMove = !!onMoveUp || !!onMoveDown;
 
     return (
         <div className="group/field relative">
@@ -63,18 +82,38 @@ const Input = ({ section, field, data, updateSection, updateLabel, removeField, 
                     title="Edit Field Label"
                     tabIndex={-1}
                 />
-                {removeField && (
-                    <button
-                        onClick={() => removeField(section, field)}
-                        className="text-zinc-400 hover:text-red-500 p-0.5 rounded transition-colors shrink-0"
-                        title="Remove field"
-                        tabIndex={-1}
-                    >
-                        <X className="w-3.5 h-3.5" />
-                    </button>
-                )}
+                <div className="flex items-center gap-1 shrink-0">
+                    {/* Move up/down — always visible for custom fields so they're easy to click */}
+                    {onMoveUp && (
+                        <button onClick={onMoveUp} disabled={isFirst} tabIndex={-1} title="Move up"
+                            className="p-0.5 rounded text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200 disabled:opacity-25 disabled:cursor-not-allowed transition-colors">
+                            <ChevronUp className="w-3.5 h-3.5" />
+                        </button>
+                    )}
+                    {onMoveDown && (
+                        <button onClick={onMoveDown} disabled={isLast} tabIndex={-1} title="Move down"
+                            className="p-0.5 rounded text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200 disabled:opacity-25 disabled:cursor-not-allowed transition-colors">
+                            <ChevronDown className="w-3.5 h-3.5" />
+                        </button>
+                    )}
+                    {canToggle && (
+                        <button onClick={onToggleMultiline} tabIndex={-1}
+                            title={isMultiline ? "Switch to single line" : "Switch to multi-line"}
+                            className={`p-0.5 rounded transition-colors opacity-0 group-hover/field:opacity-100 ${
+                                isMultiline ? "text-indigo-500" : "text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300"
+                            }`}>
+                            <AlignJustify className="w-3.5 h-3.5" />
+                        </button>
+                    )}
+                    {removeField && (
+                        <button onClick={() => removeField(section, field)} tabIndex={-1} title="Remove field"
+                            className="text-zinc-400 hover:text-red-500 p-0.5 rounded transition-colors shrink-0 opacity-0 group-hover/field:opacity-100">
+                            <X className="w-3.5 h-3.5" />
+                        </button>
+                    )}
+                </div>
             </div>
-            {type === "textarea" ? (
+            {isMultiline ? (
                 <textarea
                     placeholder={placeholder}
                     className="w-full px-4 py-2.5 bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all text-zinc-900 dark:text-zinc-100 min-h-[100px] resize-y"
@@ -223,66 +262,86 @@ export default function BiodataForm({ data, onChange, language, onLanguageChange
     const removeField = (section: Exclude<keyof Biodata, 'profilePhoto' | 'godIcon'>, field: string) => {
         const updatedSection = { ...data[section] } as any;
         delete updatedSection[field];
+        onChange({ ...data, [section]: updatedSection });
+    };
+
+    const toggleMultiline = (section: Exclude<keyof Biodata, 'profilePhoto' | 'godIcon'>, field: string) => {
+        const fieldData = (data[section] as any)[field];
+        const turningOff = !!fieldData.multiline;
+        // When switching back to single-line, collapse any newlines into spaces so the
+        // preview doesn't show stale multi-line formatting.
+        const newValue = turningOff
+            ? fieldData.value.replace(/\n+/g, ' ').trim()
+            : fieldData.value;
         onChange({
             ...data,
-            [section]: updatedSection
+            [section]: { ...data[section], [field]: { ...fieldData, multiline: !fieldData.multiline, value: newValue } }
         });
     };
 
-    const renderSectionInputs = (section: Exclude<keyof Biodata, 'profilePhoto' | 'godIcon'>, standardFields: string[]) => {
+    const STANDARD_FIELDS: Record<string, string[]> = {
+        personalDetails: ["fullName", "dateOfBirth", "height", "bloodGroup", "complexion", "maritalStatus", "education", "occupation", "annualIncome"],
+        familyDetails: ["fatherName", "fatherOccupation", "motherName", "motherOccupation", "siblings"],
+        contactDetails: ["contactNumber", "email", "address"],
+    };
+
+    const moveField = (section: Exclude<keyof Biodata, 'profilePhoto' | 'godIcon'>, field: string, direction: 'up' | 'down') => {
+        const sectionData = { ...data[section] } as any;
+        // ALL fields in the section (not just custom) — so every field is reorderable
+        const allFields = Object.keys(sectionData).filter(k => k !== 'title');
+        const idx = allFields.indexOf(field);
+        if (direction === 'up' && idx > 0) {
+            [allFields[idx - 1], allFields[idx]] = [allFields[idx], allFields[idx - 1]];
+        } else if (direction === 'down' && idx < allFields.length - 1) {
+            [allFields[idx], allFields[idx + 1]] = [allFields[idx + 1], allFields[idx]];
+        } else return;
+        // Rebuild section with new key order (title first, then fields in new order)
+        const newSection: any = { title: sectionData.title };
+        for (const k of allFields) { newSection[k] = sectionData[k]; }
+        onChange({ ...data, [section]: newSection });
+    };
+
+    // Field type and placeholder lookup maps
+    const FIELD_TYPES: Record<string, string> = {
+        contactNumber: "tel",
+        email: "email",
+        address: "textarea",
+    };
+    const FIELD_PLACEHOLDERS: Record<string, string> = {
+        fullName: "e.g. Rahul Sharma",
+        dateOfBirth: "e.g. 14 Oct 1995, 10:30 AM",
+        height: "e.g. 5' 8\"",
+        bloodGroup: "e.g. O+",
+        complexion: "e.g. Fair",
+        maritalStatus: "e.g. Never Married",
+        education: "e.g. B.Tech in Computer Science",
+        occupation: "e.g. Software Engineer at Google",
+        annualIncome: "e.g. 15 LPA / $120,000",
+        siblings: "e.g. 1 Brother, 1 Sister",
+        address: "e.g. Andheri West, Mumbai",
+    };
+
+    const renderSectionInputs = (section: Exclude<keyof Biodata, 'profilePhoto' | 'godIcon'>) => {
         const allFields = Object.keys(data[section] as any).filter(key => key !== 'title');
-        const customFields = allFields.filter(key => !standardFields.includes(key));
 
         return (
             <>
-                {/* Render standard fields exactly as requested originally */}
-                {section === "personalDetails" && (
-                    <>
-                        <Input data={data} updateSection={updateSection} updateLabel={updateLabel} removeField={removeField} section="personalDetails" field="fullName" placeholder="e.g. Rahul Sharma" />
-                        <Input data={data} updateSection={updateSection} updateLabel={updateLabel} removeField={removeField} section="personalDetails" field="dateOfBirth" placeholder="e.g. 14 Oct 1995, 10:30 AM" />
-                        <div className="grid grid-cols-2 gap-4">
-                            <Input data={data} updateSection={updateSection} updateLabel={updateLabel} removeField={removeField} section="personalDetails" field="height" placeholder="e.g. 5' 8&quot;" />
-                            <Input data={data} updateSection={updateSection} updateLabel={updateLabel} removeField={removeField} section="personalDetails" field="bloodGroup" placeholder="e.g. O+" />
-                        </div>
-                        <div className="grid grid-cols-2 gap-4">
-                            <Input data={data} updateSection={updateSection} updateLabel={updateLabel} removeField={removeField} section="personalDetails" field="complexion" placeholder="e.g. Fair" />
-                            <Input data={data} updateSection={updateSection} updateLabel={updateLabel} removeField={removeField} section="personalDetails" field="maritalStatus" placeholder="e.g. Never Married" />
-                        </div>
-                        <Input data={data} updateSection={updateSection} updateLabel={updateLabel} removeField={removeField} section="personalDetails" field="education" placeholder="e.g. B.Tech in Computer Science" />
-                        <div className="grid grid-cols-2 gap-4">
-                            <Input data={data} updateSection={updateSection} updateLabel={updateLabel} removeField={removeField} section="personalDetails" field="occupation" placeholder="e.g. Software Engineer at Google" />
-                            <Input data={data} updateSection={updateSection} updateLabel={updateLabel} removeField={removeField} section="personalDetails" field="annualIncome" placeholder="e.g. 15 LPA / $120,000" />
-                        </div>
-                    </>
-                )}
-                {section === "familyDetails" && (
-                    <>
-                        <Input data={data} updateSection={updateSection} updateLabel={updateLabel} removeField={removeField} section="familyDetails" field="fatherName" />
-                        <Input data={data} updateSection={updateSection} updateLabel={updateLabel} removeField={removeField} section="familyDetails" field="fatherOccupation" />
-                        <Input data={data} updateSection={updateSection} updateLabel={updateLabel} removeField={removeField} section="familyDetails" field="motherName" />
-                        <Input data={data} updateSection={updateSection} updateLabel={updateLabel} removeField={removeField} section="familyDetails" field="motherOccupation" />
-                        <Input data={data} updateSection={updateSection} updateLabel={updateLabel} removeField={removeField} section="familyDetails" field="siblings" placeholder="e.g. 1 Brother, 1 Sister" />
-                    </>
-                )}
-                {section === "contactDetails" && (
-                    <>
-                        <Input data={data} updateSection={updateSection} updateLabel={updateLabel} removeField={removeField} section="contactDetails" field="contactNumber" type="tel" />
-                        <Input data={data} updateSection={updateSection} updateLabel={updateLabel} removeField={removeField} section="contactDetails" field="email" type="email" />
-                        <Input data={data} updateSection={updateSection} updateLabel={updateLabel} removeField={removeField} section="contactDetails" field="address" placeholder="e.g. Andheri West, Mumbai" type="textarea" />
-                    </>
-                )}
-
-                {/* Render dynamically added custom fields below the standard ones */}
-                {customFields.map((field) => (
+                {allFields.map((field, idx) => (
                     <Input
                         key={field}
                         data={data}
                         updateSection={updateSection}
                         updateLabel={updateLabel}
                         removeField={removeField}
+                        onToggleMultiline={() => toggleMultiline(section, field)}
+                        onMoveUp={() => moveField(section, field, 'up')}
+                        onMoveDown={() => moveField(section, field, 'down')}
+                        isFirst={idx === 0}
+                        isLast={idx === allFields.length - 1}
                         section={section}
                         field={field}
-                        placeholder="Type value..."
+                        type={FIELD_TYPES[field] || "text"}
+                        placeholder={FIELD_PLACEHOLDERS[field] || ""}
                     />
                 ))}
             </>
@@ -403,15 +462,15 @@ export default function BiodataForm({ data, onChange, language, onLanguageChange
             </div>
 
             <Section titleInput={<SectionTitleInput section="personalDetails" data={data} updateSectionTitle={updateSectionTitle} />} onAddCustomField={() => addCustomField('personalDetails')}>
-                {renderSectionInputs("personalDetails", ["fullName", "dateOfBirth", "height", "bloodGroup", "complexion", "maritalStatus", "education", "occupation", "annualIncome"])}
+                {renderSectionInputs("personalDetails")}
             </Section>
 
             <Section titleInput={<SectionTitleInput section="familyDetails" data={data} updateSectionTitle={updateSectionTitle} />} onAddCustomField={() => addCustomField('familyDetails')}>
-                {renderSectionInputs("familyDetails", ["fatherName", "fatherOccupation", "motherName", "motherOccupation", "siblings"])}
+                {renderSectionInputs("familyDetails")}
             </Section>
 
             <Section titleInput={<SectionTitleInput section="contactDetails" data={data} updateSectionTitle={updateSectionTitle} />} onAddCustomField={() => addCustomField('contactDetails')}>
-                {renderSectionInputs("contactDetails", ["contactNumber", "email", "address"])}
+                {renderSectionInputs("contactDetails")}
             </Section>
 
             {/* Modals outside flow */}

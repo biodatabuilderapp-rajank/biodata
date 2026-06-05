@@ -113,13 +113,6 @@ export default function RootLayout({
             }),
           }}
         />
-        {/* Google AdSense — plain script tag required, Next.js Script component adds data-nscript which AdSense rejects */}
-        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3646851872285015"
-          crossOrigin="anonymous"
-        />
         {/* Preconnect to external origins to reduce latency */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
@@ -129,6 +122,13 @@ export default function RootLayout({
         <Analytics />
         <SpeedInsights />
         <GoogleAnalytics gaId="G-WBWV3Z1Z1E" />
+        {/* Google AdSense — in body to avoid SSR hydration mismatch */}
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3646851872285015"
+          crossOrigin="anonymous"
+        />
       </body>
     </html>
   );

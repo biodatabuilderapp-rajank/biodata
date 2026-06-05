@@ -71,19 +71,14 @@ export default function BiodataPreview({ data, template, themeMeta }: Props) {
         return Object.keys(sectionData).some(key => key !== 'title' && sectionData[key].value.trim() !== "");
     };
 
-    const renderSectionRows = (sectionKey: Exclude<keyof Biodata, 'profilePhoto' | 'godIcon'>, standardFields: string[]) => {
+    const renderSectionRows = (sectionKey: Exclude<keyof Biodata, 'profilePhoto' | 'godIcon'>) => {
         const sectionData = data[sectionKey] as any;
+        // Render in Object.keys() order — this reflects any reordering the user did in the form
         const allKeys = Object.keys(sectionData).filter(k => k !== 'title');
-        const customKeys = allKeys.filter(k => !standardFields.includes(k));
 
         return (
             <div className="grid grid-cols-1">
-                {standardFields.map(field => {
-                    const rowData = sectionData[field];
-                    if (!rowData) return null;
-                    return <DetailRow key={field} label={rowData.label} value={rowData.value} />;
-                })}
-                {customKeys.map(field => {
+                {allKeys.map(field => {
                     const rowData = sectionData[field];
                     if (!rowData) return null;
                     return <DetailRow key={field} label={rowData.label} value={rowData.value} />;
@@ -99,7 +94,7 @@ export default function BiodataPreview({ data, template, themeMeta }: Props) {
                     <h2 className="font-bold tracking-wider" style={{ color: meta.headingColor, fontSize: meta.sectionTitleFontSize, fontFamily: meta.fontFamily, paddingBottom: meta.fieldSpacing }}>
                         {data.personalDetails.title}
                     </h2>
-                    {renderSectionRows("personalDetails", ["fullName", "dateOfBirth", "height", "bloodGroup", "complexion", "maritalStatus", "education", "occupation", "annualIncome"])}
+                    {renderSectionRows("personalDetails")}
                 </section>
             )}
 
@@ -108,7 +103,7 @@ export default function BiodataPreview({ data, template, themeMeta }: Props) {
                     <h2 className="font-bold tracking-wider" style={{ color: meta.headingColor, fontSize: meta.sectionTitleFontSize, fontFamily: meta.fontFamily, paddingBottom: meta.fieldSpacing }}>
                         {data.familyDetails.title}
                     </h2>
-                    {renderSectionRows("familyDetails", ["fatherName", "fatherOccupation", "motherName", "motherOccupation", "siblings"])}
+                    {renderSectionRows("familyDetails")}
                 </section>
             )}
 
@@ -117,7 +112,7 @@ export default function BiodataPreview({ data, template, themeMeta }: Props) {
                     <h2 className="font-bold tracking-wider" style={{ color: meta.headingColor, fontSize: meta.sectionTitleFontSize, fontFamily: meta.fontFamily, paddingBottom: meta.fieldSpacing }}>
                         {data.contactDetails.title}
                     </h2>
-                    {renderSectionRows("contactDetails", ["contactNumber", "email", "address"])}
+                    {renderSectionRows("contactDetails")}
                 </section>
             )}
         </>
