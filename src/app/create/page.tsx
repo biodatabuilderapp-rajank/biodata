@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CreatePageClient from "./_CreatePage";
+import SiteFooter from "@/components/SiteFooter";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -330,6 +331,7 @@ export default function CreatePage() {
         </section>
 
       </div>
+      <SiteFooter />
     </>
   );
 }
