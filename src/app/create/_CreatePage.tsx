@@ -21,13 +21,14 @@ function HelpSection() {
             <button 
                 onClick={() => setIsOpen(!isOpen)}
                 className="w-full flex items-center justify-between text-left group"
+                aria-expanded={isOpen}
             >
                 <div className="flex items-center gap-3">
                     <div className="p-2 bg-indigo-50 dark:bg-indigo-900/20 rounded-lg text-indigo-600 dark:text-indigo-400">
                         <HelpCircle className="w-5 h-5" />
                     </div>
                     <div>
-                        <h2 className="text-zinc-900 dark:text-zinc-100 font-semibold text-base md:text-lg">Help & Tips for Filling Biodata</h2>
+                        <h2 className="text-zinc-900 dark:text-zinc-100 font-semibold text-base md:text-lg">Help &amp; Tips for Filling Biodata</h2>
                         <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-0.5">Not sure what to write? Click for guidance</p>
                     </div>
                 </div>
@@ -36,26 +37,25 @@ function HelpSection() {
                 </div>
             </button>
             
-            {isOpen && (
-                <div className="mt-6 pt-6 border-t border-zinc-100 dark:border-zinc-800 space-y-6 text-sm text-zinc-600 dark:text-zinc-400">
-                    <div>
-                        <h3 className="font-medium text-zinc-900 dark:text-white mb-2">Personal Details</h3>
-                        <p className="leading-relaxed">Use your full formal name. For Date of Birth, include the time and place of birth if you use Kundali matching. State your exact height (e.g., 5&apos; 8&quot;) and your current clear occupation and annual income.</p>
-                    </div>
-                    <div>
-                        <h3 className="font-medium text-zinc-900 dark:text-white mb-2">Family Details</h3>
-                        <p className="leading-relaxed">Provide your father&apos;s and mother&apos;s names along with their occupations (e.g., &quot;Businessman&quot;, &quot;Homemaker&quot;). For siblings, clearly state how many brothers/sisters and whether they are married.</p>
-                    </div>
-                    <div>
-                        <h3 className="font-medium text-zinc-900 dark:text-white mb-2">Contact Info</h3>
-                        <p className="leading-relaxed">Provide a valid mobile number, preferably one active on WhatsApp for easy communication. Include a professional email address and a complete residential address.</p>
-                    </div>
-                    <div>
-                        <h3 className="font-medium text-zinc-900 dark:text-white mb-2">Photo Tips</h3>
-                        <p className="leading-relaxed">Choose a clear, recent, front-facing profile photo with a decent background. Avoid sunglasses or heavy casual filters. <a href="/articles/biodata-photo-tips" target="_blank" className="text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300 font-medium hover:underline">Read more photo tips</a>.</p>
-                    </div>
+            {/* Content always in DOM for SEO — only visually hidden when collapsed */}
+            <div className={`mt-6 pt-6 border-t border-zinc-100 dark:border-zinc-800 space-y-6 text-sm text-zinc-600 dark:text-zinc-400 ${isOpen ? "block" : "hidden"}`}>
+                <div>
+                    <h3 className="font-medium text-zinc-900 dark:text-white mb-2">Personal Details</h3>
+                    <p className="leading-relaxed">Use your full formal name. For Date of Birth, include the time and place of birth if you use Kundali matching. State your exact height (e.g., 5&apos; 8&quot;) and your current clear occupation and annual income.</p>
                 </div>
-            )}
+                <div>
+                    <h3 className="font-medium text-zinc-900 dark:text-white mb-2">Family Details</h3>
+                    <p className="leading-relaxed">Provide your father&apos;s and mother&apos;s names along with their occupations (e.g., &quot;Businessman&quot;, &quot;Homemaker&quot;). For siblings, clearly state how many brothers/sisters and whether they are married.</p>
+                </div>
+                <div>
+                    <h3 className="font-medium text-zinc-900 dark:text-white mb-2">Contact Info</h3>
+                    <p className="leading-relaxed">Provide a valid mobile number, preferably one active on WhatsApp for easy communication. Include a professional email address and a complete residential address.</p>
+                </div>
+                <div>
+                    <h3 className="font-medium text-zinc-900 dark:text-white mb-2">Photo Tips</h3>
+                    <p className="leading-relaxed">Choose a clear, recent, front-facing profile photo with a decent background. Avoid sunglasses or heavy casual filters. <a href="/articles/biodata-tips" className="text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300 font-medium hover:underline">Read more photo tips</a>.</p>
+                </div>
+            </div>
         </div>
     );
 }
