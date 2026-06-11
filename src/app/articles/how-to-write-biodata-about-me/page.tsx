@@ -5,14 +5,14 @@ import ArticleCTA from "@/components/ArticleCTA";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "How to Write About Me in Biodata for Marriage | Examples & Tips",
+  title: "How to Write About Me in Marriage Biodata | Examples & Tips",
   description:
-    "Learn how to write a compelling About Me section for your marriage biodata. Includes step-by-step guide, 6 ready-to-use examples for boys & girls, and common mistakes to avoid.",
+    "Not sure what to write in your marriage biodata About Me section? Step-by-step guide, 6 real examples for boys & girls, cultural tips and mistakes to avoid.",
   alternates: { canonical: "https://biodatabuilder.in/articles/how-to-write-biodata-about-me" },
   openGraph: {
-    title: "How to Write About Me in Biodata for Marriage | Examples & Tips",
+    title: "How to Write About Me in Marriage Biodata | Examples & Tips",
     description:
-      "Learn how to write a compelling About Me section for your marriage biodata. Includes step-by-step guide, 6 ready-to-use examples for boys & girls, and common mistakes to avoid.",
+      "Not sure what to write in your marriage biodata About Me section? Step-by-step guide, 6 real examples for boys & girls, cultural tips and mistakes to avoid.",
     url: "https://biodatabuilder.in/articles/how-to-write-biodata-about-me",
     images: [{ url: "/examples/About-me-biodata-samples.png", width: 1173, height: 1341, alt: "About Me section examples in Indian marriage biodata" }],
   },
@@ -308,7 +308,6 @@ export default function Article() {
             <h3 className="font-bold text-xl mb-3 text-zinc-900 dark:text-white">What to Read Next</h3>
             <ul className="space-y-2 text-base">
               <li>📄 <Link href="/articles/biodata-tips" className="text-indigo-600 dark:text-indigo-400 hover:underline">Complete Biodata Writing Tips — Master Guide</Link></li>
-              <li>📸 <Link href="/articles/biodata-tips" className="text-indigo-600 dark:text-indigo-400 hover:underline">Biodata Photo Tips: Choosing the Right Picture</Link></li>
               <li>⚖️ <Link href="/articles/modern-vs-traditional-biodata" className="text-indigo-600 dark:text-indigo-400 hover:underline">Modern vs Traditional Biodata — Which Style Suits You?</Link></li>
               <li>👨 <Link href="/articles/marriage-biodata-for-boy" className="text-indigo-600 dark:text-indigo-400 hover:underline">Marriage Biodata for Boy — Format & Samples</Link></li>
               <li>👩 <Link href="/articles/shaadi-biodata-format-for-girl" className="text-indigo-600 dark:text-indigo-400 hover:underline">Shaadi Biodata Format for Girl</Link></li>
