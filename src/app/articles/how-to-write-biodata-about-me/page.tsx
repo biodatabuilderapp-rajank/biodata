@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import ArticleWrapper from "@/components/ArticleWrapper";
 import ArticleCTA from "@/components/ArticleCTA";
 import type { Metadata } from "next";
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
     description:
       "Learn how to write a compelling About Me section for your marriage biodata. Includes step-by-step guide, 6 ready-to-use examples for boys & girls, and common mistakes to avoid.",
     url: "https://biodatabuilder.in/articles/how-to-write-biodata-about-me",
+    images: [{ url: "/examples/About-me-biodata-samples.png", width: 1173, height: 1341, alt: "About Me section examples in Indian marriage biodata" }],
   },
 };
 
@@ -72,6 +74,11 @@ export default function Article() {
           <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-2xl p-6 mb-8">
             <p className="font-semibold text-amber-900 dark:text-amber-100 mb-2">TL;DR</p>
             <p className="text-amber-800 dark:text-amber-200">Write 4–6 sentences covering <strong>who you are</strong>, <strong>what you do and love</strong>, and <strong>what you are looking for</strong>. Be specific, skip clichés like &ldquo;simple and homely&rdquo;, and add one cultural or personal detail that makes you memorable. Use our <Link href="/create" className="text-indigo-600 dark:text-indigo-400 hover:underline font-semibold">free biodata builder</Link> which has a dedicated About Me field.</p>
+          </div>
+
+          {/* Hero Image */}
+          <div className="my-8 rounded-2xl overflow-hidden shadow-md">
+            <Image src="/examples/About-me-biodata-samples.png" alt="About Me section examples in Indian marriage biodata" width={1173} height={1341} className="w-full h-auto" priority />
           </div>
 
           {/* Table of Contents */}
@@ -154,10 +161,18 @@ export default function Article() {
             </div>
           </div>
 
+          {/* Infographic after step guide */}
+          <div className="my-8 rounded-2xl overflow-hidden shadow-md">
+            <Image src="/examples/About-me-5steps-infographic.png" alt="Infographic: 5 steps to write About Me section in marriage biodata" width={1024} height={1024} className="w-full h-auto" />
+          </div>
+
           {/* Examples */}
           <h2 id="examples" className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mt-12 mb-6">6 Ready-to-Use About Me Examples</h2>
 
           <h3 className="text-xl font-bold text-zinc-900 dark:text-white mt-8 mb-4">For Girls</h3>
+          <div className="my-4 rounded-2xl overflow-hidden shadow-sm">
+            <Image src="/examples/Girl-biodata-about-me-examples.png" alt="Sample About Me section in marriage biodata for girls" width={3998} height={2827} className="w-full h-auto" />
+          </div>
           <div className="space-y-4">
             <div className="bg-indigo-50 dark:bg-indigo-950/30 border border-indigo-200 dark:border-indigo-800 rounded-2xl p-6">
               <p className="text-sm font-medium text-indigo-600 dark:text-indigo-400 mb-2">Example 1 — Working Professional (Gujarati)</p>
@@ -170,6 +185,9 @@ export default function Article() {
           </div>
 
           <h3 className="text-xl font-bold text-zinc-900 dark:text-white mt-8 mb-4">For Boys</h3>
+          <div className="my-4 rounded-2xl overflow-hidden shadow-sm">
+            <Image src="/examples/Boy-biodata-about-me-sample.png" alt="Sample About Me section in marriage biodata for boys" width={2000} height={2826} className="w-full h-auto" />
+          </div>
           <div className="space-y-4">
             <div className="bg-indigo-50 dark:bg-indigo-950/30 border border-indigo-200 dark:border-indigo-800 rounded-2xl p-6">
               <p className="text-sm font-medium text-indigo-600 dark:text-indigo-400 mb-2">Example 3 — IT Professional (Marathi)</p>
