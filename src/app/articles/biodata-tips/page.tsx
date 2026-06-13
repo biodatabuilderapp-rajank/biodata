@@ -7,12 +7,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Biodata Tips: Photo, Hobbies & Mistakes to Avoid",
   description:
-    "Master guide to writing a perfect marriage biodata. Learn how to choose the right photo, write genuine hobbies, craft a strong About Me, and avoid the 8 fatal mistakes families notice instantly.",
+    "Master guide to a perfect marriage biodata. Right photo, genuine hobbies, strong About Me, and the 8 fatal mistakes families notice instantly.",
   alternates: { canonical: "https://biodatabuilder.in/articles/biodata-tips" },
   openGraph: {
     title: "Biodata Tips: Photo, Hobbies & Mistakes to Avoid",
     description:
-      "Master guide to writing a perfect marriage biodata. Learn how to choose the right photo, write genuine hobbies, craft a strong About Me, and avoid the 8 fatal mistakes families notice instantly.",
+      "Master guide to a perfect marriage biodata. Right photo, genuine hobbies, strong About Me, and the 8 fatal mistakes families notice instantly.",
     url: "https://biodatabuilder.in/articles/biodata-tips",
     images: [{ url: "/biodata-photo-tips.png", width: 800, height: 600, alt: "Tips for the perfect marriage biodata photo" }],
   },
