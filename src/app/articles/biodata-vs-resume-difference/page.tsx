@@ -178,8 +178,14 @@ export default function Article() {
             </p>
 
             <h3 className="text-xl font-bold text-zinc-900 dark:text-white mt-8 mb-4">A. The Marriage Biodata</h3>
+            <figure className="my-8 float-right ml-6 mb-4 w-1/2 max-w-sm hidden sm:block">
+              <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-md">
+                <Image src="/examples/Boy-biodata-example.png" alt="Sample Marriage Biodata" fill className="object-cover" />
+              </div>
+              <figcaption className="text-xs text-center mt-2 text-zinc-500 dark:text-zinc-400">A typical modern marriage biodata format.</figcaption>
+            </figure>
             <p>
-              A marriage biodata is a structured, 1-page profile that serves as the "first impression" in the arranged marriage matchmaking process. Before two families agree to meet, they exchange biodatas to ensure basic compatibility regarding religion, social status, and astrology.
+              A marriage biodata is a structured, 1-page profile that serves as the "first impression" in the arranged marriage matchmaking process. Before two families agree to meet, they exchange biodatas to ensure basic compatibility regarding religion, social status, and astrology. If you want to learn more, check out our guide on <Link href="/articles/how-to-write-biodata-about-me" className="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">how to write a biodata about me</Link>.
             </p>
             <p className="mt-4 font-semibold">What a standard marriage biodata contains:</p>
             <ul className="list-disc pl-6 space-y-2 mt-4">
@@ -193,7 +199,7 @@ export default function Article() {
 
             <h3 className="text-xl font-bold text-zinc-900 dark:text-white mt-8 mb-4">B. The "Job Biodata" (Outdated Term)</h3>
             <p>
-              Decades ago, before the terms "resume" and "CV" became standardized in India, applying for government jobs or clerical positions required a "biodata." This was basically a simple form that included date of birth, gender, marital status, and a list of degrees. 
+              Decades ago, before the terms "resume" and "CV" became standardized in India, applying for government jobs or clerical positions required a "biodata." This was basically a simple form that included date of birth, gender, marital status, and a list of degrees. Some regional areas still ask for a <Link href="/articles/biodata-format-hindi" className="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">biodata format in Hindi</Link> for basic jobs, but this is increasingly rare.
             </p>
             <p className="mt-4">
               <strong className="text-red-600 dark:text-red-400">Important:</strong> If a modern corporate employer asks you for your "biodata," they actually mean your <strong>Resume</strong>. Do not send them a document detailing your caste, religion, or parents' occupations. This is highly unprofessional. Send a standard 1-2 page resume instead.
@@ -213,8 +219,14 @@ export default function Article() {
           {/* BLOCK: RESUME_SECTION */}
           <section id="what-is-resume" className="scroll-mt-24 mt-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-6">4. What is a Resume?</h2>
+            <figure className="my-8 float-left mr-6 mb-4 w-1/2 max-w-sm hidden sm:block">
+              <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-md bg-white">
+                <Image src="/examples/Job-biodata-structure.png" alt="Standard Resume Format" fill className="object-contain" />
+              </div>
+              <figcaption className="text-xs text-center mt-2 text-zinc-500 dark:text-zinc-400">A clean, professional 1-page resume.</figcaption>
+            </figure>
             <p>
-              A <strong>Resume</strong> is a concise document, typically 1 to 2 pages long, used specifically for job applications. The word comes from the French word <em>"résumé,"</em> meaning "summary." It is meant to be a quick, scannable overview of your skills, education, and work experience relevant to the specific job you are applying for.
+              A <strong>Resume</strong> is a concise document, typically 1 to 2 pages long, used specifically for job applications. The word comes from the French word <em>"résumé,"</em> meaning "summary." It is meant to be a quick, scannable overview of your skills, education, and work experience relevant to the specific job you are applying for. When building one, it's helpful to review <Link href="/articles/biodata-tips" className="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">general formatting tips</Link> to stand out.
             </p>
             <p className="mt-4">
               Unlike a CV, a resume is not a comprehensive history. It should be tailored for every single job application. If you are applying for a graphic design role, you emphasize your design experience and remove the cashier job you had 5 years ago.
@@ -236,10 +248,10 @@ export default function Article() {
           <section id="what-is-cv" className="scroll-mt-24 mt-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-6">5. What is a CV (Curriculum Vitae)?</h2>
             <p>
-              <strong>Curriculum Vitae (CV)</strong> is Latin for <em>"course of life."</em> As the name suggests, it is a highly detailed, comprehensive document detailing your entire academic and professional career. 
+              <strong>Curriculum Vitae (CV)</strong> is Latin for <em>"course of life."</em> As the name suggests, it is a highly detailed, comprehensive document detailing your entire academic and professional career. You can read more about its history on <a href="https://en.wikipedia.org/wiki/Curriculum_vitae" target="_blank" rel="noopener noreferrer" className="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">Wikipedia</a>.
             </p>
             <p className="mt-4">
-              A CV does not have a page limit. While a junior researcher might have a 2-page CV, a senior university professor might have a 20+ page CV detailing every paper they have ever published. CVs are primarily used in academia, science, research, and medicine.
+              A CV does not have a page limit. While a junior researcher might have a 2-page CV, a senior university professor might have a 20+ page CV detailing every paper they have ever published. CVs are primarily used in academia, science, research, and medicine. It is completely different from a <Link href="/articles/modern-vs-traditional-biodata" className="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">traditional biodata</Link>.
             </p>
             <p className="mt-4 font-semibold">What a standard CV contains (in addition to resume details):</p>
             <ul className="list-disc pl-6 space-y-2 mt-4">
@@ -270,7 +282,7 @@ export default function Article() {
           <section id="examples" className="scroll-mt-24 mt-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-6">6. Format Examples & Differences</h2>
             <p className="mb-6">
-              To make it crystal clear, let's look at how the exact same person would introduce themselves differently on a Biodata versus a Resume.
+              To make it crystal clear, let's look at how the exact same person would introduce themselves differently on a Biodata versus a Resume. This is especially true for specific religious formats, like the <Link href="/articles/best-marriage-biodata-format-for-hindu" className="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">best marriage biodata format for a Hindu</Link>.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="p-6 bg-pink-50 dark:bg-pink-950/20 border border-pink-200 dark:border-pink-900/50 rounded-2xl">
