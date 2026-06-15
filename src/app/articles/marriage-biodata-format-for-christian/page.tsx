@@ -158,6 +158,19 @@ export default function Article() {
                 </tbody>
               </table>
             </div>
+
+            <div className="mt-12 rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-700 shadow-lg">
+              <Image 
+                src="/examples/Christian-biodata-example.png" 
+                alt="A professional Christian marriage biodata example highlighting the Cross icon and denomination fields" 
+                width={1200} 
+                height={700} 
+                className="w-full h-auto" 
+              />
+              <p className="text-center text-xs text-zinc-500 py-3 bg-white dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-700">
+                A classic Christian biodata format featuring the "By God's Grace" header and clear religious details—built with BiodataBuilder.
+              </p>
+            </div>
           </section>
           {/* BLOCK: DENOMINATION_MATTERS */}
           <section id="denomination-matters" className="scroll-mt-24 mt-16">
@@ -259,6 +272,34 @@ export default function Article() {
             
             <p className="mt-6 text-sm text-zinc-500 dark:text-zinc-400">
               Note: If you are preparing a <Link href="/articles/biodata-for-second-marriage" className="text-sky-600 dark:text-sky-400 hover:underline font-medium">second marriage biodata</Link>, you should also briefly mention your marital status (Divorced/Widowed) respectfully in this section, alongside your faith.
+            </p>
+          </section>
+
+          {/* BLOCK: EXPECTATIONS_DEEP_DIVE */}
+          <section id="expectations-deep-dive" className="scroll-mt-24 mt-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-6">6. Deep Dive: Writing Partner Expectations</h2>
+            <p>
+              In a Christian context, the "Partner Expectations" section often acts as a theological and cultural filter. While secular profiles might focus purely on salary, height, and location, Christian families frequently use this section to establish spiritual baselines.
+            </p>
+            <p className="mt-4">
+              Here are the three levels of specificity you can use:
+            </p>
+            <ul className="list-disc pl-6 space-y-4 mt-6 text-zinc-700 dark:text-zinc-300">
+              <li>
+                <strong className="text-zinc-900 dark:text-white">Strict Endogamy (Same Denomination Only):</strong> 
+                <br/>"Seeking a God-fearing, professionally stable partner strictly from the Mar Thoma Syrian Church. Must be willing to settle in the Middle East or Kerala."
+              </li>
+              <li>
+                <strong className="text-zinc-900 dark:text-white">Broad Compatibility (Open to Similar Traditions):</strong> 
+                <br/>"Looking for a supportive, family-oriented partner. We are Roman Catholics, but open to matches from CSI and CNI backgrounds provided the partner respects our traditions."
+              </li>
+              <li>
+                <strong className="text-zinc-900 dark:text-white">Faith-First (Denomination Agnostic):</strong> 
+                <br/>"Seeking a born-again, Spirit-filled believer who prioritizes Christ above all. Denomination does not matter as long as the partner has a personal relationship with Jesus."
+              </li>
+            </ul>
+            <p className="mt-6">
+              Being explicit here saves immense amounts of time. If your parents will absolutely not agree to a cross-denominational marriage, state it clearly in the expectations to prevent uncomfortable conversations later down the line.
             </p>
           </section>
           {/* BLOCK: DO_AND_DONT */}
