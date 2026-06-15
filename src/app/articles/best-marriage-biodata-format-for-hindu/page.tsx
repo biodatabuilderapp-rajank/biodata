@@ -160,6 +160,16 @@ export default function Article() {
             <p className="mb-6">
               For a Hindu family, the <strong className="font-semibold text-zinc-900 dark:text-white">astrological section</strong> is often checked before reading anything else. Many families will stop reading entirely if Gotra is blank or Manglik status is missing. Here is what each crucial field means:
             </p>
+
+            <figure className="my-8">
+              <div className="relative w-full aspect-square sm:aspect-[4/3] rounded-2xl overflow-hidden shadow border border-zinc-100 dark:border-zinc-800">
+                <Image src="/examples/Kundali-section-biodata.png" alt="A well-formatted Kundali and Astrology section for a Hindu marriage biodata" fill className="object-cover" />
+              </div>
+              <figcaption className="text-center text-sm text-zinc-500 mt-3 italic">
+                A clean, modern layout highlighting the essential astrological fields.
+              </figcaption>
+            </figure>
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               {[
                 { 
@@ -246,6 +256,15 @@ export default function Article() {
             <p className="mb-6">
               When building your biodata, you will have to choose between a <Link href="/articles/modern-vs-traditional-biodata" className="text-amber-600 dark:text-amber-400 hover:underline font-medium">traditional or modern format</Link>. Neither is wrong, but you should choose based on the type of family you are sending it to.
             </p>
+
+            <figure className="my-10">
+              <div className="relative w-full aspect-[4/3] md:aspect-[16/9] rounded-2xl overflow-hidden shadow-lg border border-zinc-100 dark:border-zinc-800">
+                <Image src="/examples/Hindu-biodata-example.png" alt="Traditional vs Modern Hindu biodata template examples" fill className="object-contain" />
+              </div>
+              <figcaption className="text-center text-sm text-zinc-500 mt-3 italic">
+                Premium Hindu biodata templates showcasing both traditional and modern design philosophies.
+              </figcaption>
+            </figure>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="border border-zinc-200 dark:border-zinc-700 rounded-2xl p-6 bg-white dark:bg-zinc-900">

@@ -305,6 +305,16 @@ export default function Article() {
           {/* BLOCK: DO_AND_DONT */}
           <section id="do-and-dont" className="scroll-mt-24 mt-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-6">6. Formatting Do's and Don'ts</h2>
+
+            <figure className="my-8">
+              <div className="relative w-full aspect-[4/3] md:aspect-[16/9] rounded-2xl overflow-hidden shadow-lg border border-zinc-100 dark:border-zinc-800 bg-white">
+                <Image src="/examples/word_vs_pdf_biodata_infographic.png" alt="A visual comparison showing why PDF is superior to Word for marriage biodatas" fill className="object-contain" />
+              </div>
+              <figcaption className="text-center text-sm text-zinc-500 mt-3 italic">
+                Always share your Christian biodata as a PDF to ensure the formatting does not break on the recipient's phone.
+              </figcaption>
+            </figure>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
               <div className="bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900/50 rounded-2xl p-6">
                 <h3 className="font-bold text-emerald-900 dark:text-emerald-400 mb-4 flex items-center gap-2">

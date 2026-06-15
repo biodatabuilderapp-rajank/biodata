@@ -139,10 +139,20 @@ export default function BiodataFormatWordPage() {
                 <div>
                   <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-2">Failure 1: Layouts Break on Other Phones</h3>
                   <p className="text-zinc-600 dark:text-zinc-400">
-                    When you share a Word <strong className="font-semibold text-zinc-900 dark:text-white">wedding biodata format</strong> as a `.docx` on WhatsApp, the person who opens it on a different device sees a completely different document. Their phone might lack the fonts you used, causing text to spill onto a second page. Borders break, and tables collapse.
+                    When you share a Word <strong className="font-semibold text-zinc-900 dark:text-white">wedding biodata format</strong> as a `.docx` on WhatsApp, the person who opens it on a different device sees a completely different document. Their phone might lack the fonts you used, causing text to spill onto a second page. Borders break, and tables collapse. This is especially true if you are comparing a <Link href="/articles/modern-vs-traditional-biodata" className="text-indigo-600 dark:text-indigo-400 hover:underline">modern vs traditional biodata</Link> design with complex column structures.
                   </p>
                 </div>
               </div>
+
+              {/* IMAGE 1 */}
+              <figure className="my-8">
+                <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-md">
+                  <Image src="/examples/mobile_word_vs_pdf.png" alt="Mobile view of a broken Word document vs perfectly formatted PDF" fill className="object-contain" />
+                </div>
+                <figcaption className="text-center text-sm text-zinc-500 mt-3 italic">
+                  Even if it looks perfect on your laptop, a Word document will likely break when a family opens it on their smartphone.
+                </figcaption>
+              </figure>
 
               <div className="flex flex-col md:flex-row gap-6 items-start bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 sm:p-8">
                 <div className="shrink-0 w-12 h-12 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center">
@@ -175,11 +185,25 @@ export default function BiodataFormatWordPage() {
                 <div>
                   <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-2">Failure 4: It Looks Generic and Cheap</h3>
                   <p className="text-zinc-600 dark:text-zinc-400">
-                    Free Word biodata templates all look the same — default fonts like Times New Roman and plain black borders. In matrimonial matchmaking, first impressions matter enormously. A dull biodata signals that you haven&apos;t put effort into the process.
+                    Free Word biodata templates all look the same — default fonts like Times New Roman and plain black borders. In matrimonial matchmaking, first impressions matter enormously. A dull biodata signals that you haven&apos;t put effort into the process. Compare this to a premium <Link href="/articles/best-marriage-biodata-format-for-hindu" className="text-indigo-600 dark:text-indigo-400 hover:underline">Hindu marriage biodata</Link> or a beautifully designed <Link href="/articles/shaadi-biodata-format-for-girl" className="text-indigo-600 dark:text-indigo-400 hover:underline">girl&apos;s biodata profile</Link> which immediately communicates status and care.
                   </p>
                 </div>
               </div>
             </div>
+          </section>
+
+          {/* NEW SECTION: PRIVACY */}
+          <section className="scroll-mt-24 mt-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-6">The Hidden Danger: Privacy Risks with Word Documents</h2>
+            <p className="mb-4">
+              Aside from formatting issues, sending a `.docx` file introduces a significant privacy risk. A Word document is, by definition, <strong>editable by anyone</strong>.
+            </p>
+            <p className="mb-4">
+              When you send your biodata to a matchmaker or a distant relative, they can easily alter your information before forwarding it. They could accidentally (or intentionally) change your stated income, your height, or your expectations to push forward a match you wouldn&apos;t otherwise accept.
+            </p>
+            <p>
+              A PDF, on the other hand, is a read-only snapshot. It acts as a digital seal of authenticity. What you export is exactly what the final recipient will read, ensuring your details are communicated exactly as you intended. To learn more about what to include securely, read our <Link href="/articles/biodata-for-marriage" className="text-indigo-600 dark:text-indigo-400 hover:underline">comprehensive guide to marriage biodata</Link>.
+            </p>
           </section>
 
           {/* BLOCK: THE_SOLUTION_PDF */}
@@ -202,7 +226,34 @@ export default function BiodataFormatWordPage() {
                 </div>
               ))}
             </div>
+
+            {/* IMAGE 2 */}
+            <figure className="my-10">
+              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-zinc-100 dark:border-zinc-800">
+                <Image src="/examples/pdf_biodata_features.png" alt="Key features of a PDF biodata maker including instant export, auto cropper, and free tools" fill className="object-cover" />
+              </div>
+            </figure>
           </section>
+
+          {/* NEW SECTION: UPGRADING OLD */}
+          <section className="scroll-mt-24 mt-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-6">How to Convert Your Old Word Biodata to a Modern PDF</h2>
+            <p className="mb-4">
+              If you already have a basic biodata typed out in Microsoft Word, you do not need to start entirely from scratch. Upgrading your profile is incredibly simple.
+            </p>
+            <ol className="list-decimal pl-6 space-y-4 text-zinc-700 dark:text-zinc-300">
+              <li>Open your old `.docx` file on your computer or phone.</li>
+              <li>Open the <Link href="/create" className="text-indigo-600 dark:text-indigo-400 font-bold hover:underline">BiodataBuilder app</Link> in a new browser tab.</li>
+              <li>Simply copy and paste your details from the Word document directly into the form fields. This takes less than two minutes.</li>
+              <li>Select one of our premium themes. Remember, a marriage profile is not a job application—avoid confusing it with a <Link href="/articles/biodata-vs-resume-difference" className="text-indigo-600 dark:text-indigo-400 hover:underline">resume or CV format</Link>. Choose a design with warm colors or religious iconography.</li>
+              <li>Upload your photo. Our tool will automatically crop it into a perfect circle.</li>
+              <li>Export your final, locked PDF.</li>
+            </ol>
+            <p className="mt-6 p-4 bg-zinc-50 dark:bg-zinc-900/50 rounded-xl border border-zinc-200 dark:border-zinc-700 italic">
+              <strong>Pro Tip:</strong> When saving your new PDF, name the file clearly before sharing it on WhatsApp (e.g., <code>Ravi_Sharma_Biodata_2026.pdf</code>). A clear filename demonstrates professionalism.
+            </p>
+          </section>
+
           {/* BLOCK: HOW_TO_CREATE */}
           <section id="how-to-create" className="scroll-mt-24 mt-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-6">4. How to Generate a Free PDF Biodata Instantly</h2>

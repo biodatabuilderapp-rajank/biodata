@@ -131,9 +131,20 @@ export default function Article() {
             </p>
           </section>
 
-          {/* BLOCK: TABLE */}
-          <section id="quick-reference" className="scroll-mt-24 mt-16">
+          {/* BLOCK: SECTIONS_TABLE */}
+          <section id="sections" className="scroll-mt-24 mt-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-6">2. Quick Reference: Essential vs Optional Fields</h2>
+
+            {/* IMAGE 1 */}
+            <figure className="my-8">
+              <div className="relative w-full aspect-square sm:aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-zinc-100 dark:border-zinc-800">
+                <Image src="/examples/kundali_components_infographic.png" alt="Infographic detailing the key components of Kundali including Rashi, Nakshatra, Gotra, and Manglik Dosha" fill className="object-cover" />
+              </div>
+              <figcaption className="text-center text-sm text-zinc-500 mt-3 italic">
+                A visual breakdown of the most critical astrological components required for matchmaking.
+              </figcaption>
+            </figure>
+
             <p className="mb-6">
               Not all astrological details carry the same weight. Here is a breakdown of what you <em>must</em> include versus what is merely helpful.
             </p>

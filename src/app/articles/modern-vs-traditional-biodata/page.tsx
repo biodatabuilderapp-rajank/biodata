@@ -147,7 +147,17 @@ export default function Article() {
                   <li><strong>Modest Language:</strong> Uses highly formal language; avoids &quot;I&quot; statements in favor of third-person or purely factual listings.</li>
                 </ul>
               </div>
+              </div>
             </div>
+
+            <figure className="my-10">
+              <div className="relative w-full aspect-square sm:aspect-[4/3] rounded-2xl overflow-hidden shadow border border-zinc-100 dark:border-zinc-800">
+                <Image src="/examples/whatsapp_biodata_infographic.png" alt="A traditional biodata being shared on WhatsApp" fill className="object-cover" />
+              </div>
+              <figcaption className="text-center text-sm text-zinc-500 mt-3 italic">
+                Traditional biodatas are frequently shared via WhatsApp between parents and matchmakers.
+              </figcaption>
+            </figure>
 
             <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-6 rounded-xl mt-6 shadow-sm">
               <h4 className="font-bold text-zinc-900 dark:text-white mb-2">When should you use this?</h4>
@@ -236,6 +246,20 @@ export default function Article() {
             <p className="mt-4">
               <strong>Why does the hybrid format work?</strong> Because it appeals to both generations. It shows the parents that you respect their need for cultural filters (like checking <Link href="/articles/manglik-biodata-format" className="text-sky-600 dark:text-sky-400 hover:underline font-medium">Manglik status</Link> or Gothram), while simultaneously showing the prospective partner that you have modern aesthetic sensibilities and a distinct personality.
             </p>
+
+            <h3 className="text-xl font-bold text-zinc-900 dark:text-white mt-8 mb-4">The Secret: Typography and Whitespace</h3>
+            <p className="mb-6">
+              The primary visual distinction in a hybrid format lies in the use of modern typography and whitespace. Instead of using ancient, difficult-to-read fonts like Times New Roman in a dense block of text, a hybrid approach utilizes crisp sans-serif fonts (like Inter or Roboto) to ensure maximum readability on mobile devices. Furthermore, by increasing line height and adding generous padding between sections, the document feels premium and sophisticated rather than cramped and chaotic. This small change in design philosophy signals a high-status profile without needing to delete any of the traditional family background information that elders expect.
+            </p>
+
+            <figure className="my-10">
+              <div className="relative w-full aspect-[4/3] md:aspect-[16/9] rounded-2xl overflow-hidden shadow-lg border border-zinc-100 dark:border-zinc-800">
+                <Image src="/examples/Before-after.png" alt="Before and after transforming a Word document into a modern hybrid biodata PDF" fill className="object-contain" />
+              </div>
+              <figcaption className="text-center text-sm text-zinc-500 mt-3 italic">
+                A classic example of moving from a cramped, traditional Word document to a clean, hybrid PDF design.
+              </figcaption>
+            </figure>
             
             <div className="bg-gradient-to-r from-sky-50 to-indigo-50 dark:from-sky-950/20 dark:to-indigo-950/20 border border-sky-100 dark:border-sky-900/50 rounded-2xl p-6 mt-6">
               <h3 className="font-bold text-sky-900 dark:text-sky-200 mb-3 flex items-center gap-2">

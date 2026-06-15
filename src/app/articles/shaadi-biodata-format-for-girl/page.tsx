@@ -199,6 +199,16 @@ export default function Article() {
             <p className="mt-6 text-sm text-zinc-500 dark:text-zinc-400">
               Need more inspiration? See 10+ specific examples in our full <Link href="/articles/how-to-write-biodata-about-me" className="text-pink-600 dark:text-pink-400 hover:underline font-bold">About Me writing guide</Link>.
             </p>
+
+            {/* IMAGE 3 (Hobbies) */}
+            <figure className="my-10">
+              <div className="relative w-full aspect-square sm:aspect-[4/3] rounded-2xl overflow-hidden shadow border border-zinc-100 dark:border-zinc-800">
+                <Image src="/examples/girl_biodata_hobbies.png" alt="Best hobbies to include in a girl's marriage biodata like Reading, Yoga, Traveling, and Culinary Arts" fill className="object-cover" />
+              </div>
+              <figcaption className="text-center text-sm text-zinc-500 mt-3 italic">
+                A well-chosen set of hobbies reveals your personality and lifestyle without needing a long paragraph.
+              </figcaption>
+            </figure>
           </section>
 
           {/* BLOCK: EXPECTATIONS_SECTION */}
@@ -236,14 +246,14 @@ export default function Article() {
                   <div className="shrink-0 w-8 h-8 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-600 dark:text-red-400 font-bold">2</div>
                   <div>
                     <strong className="text-zinc-900 dark:text-white block mb-1">Using Poor Photography</strong>
-                    <span className="text-zinc-600 dark:text-zinc-400 text-sm">Do not use group selfies, heavily filtered Snapchat/Instagram photos, or pictures where you are wearing sunglasses. A clean, well-lit portrait in traditional or smart-casual attire works best.</span>
+                    <span className="text-zinc-600 dark:text-zinc-400 text-sm">Do not use group selfies, heavily filtered Snapchat/Instagram photos, or pictures where you are wearing sunglasses. A clean, well-lit portrait in traditional or smart-casual attire works best, especially for <Link href="/articles/modern-vs-traditional-biodata" className="text-pink-600 dark:text-pink-400 hover:underline">modern biodatas</Link>.</span>
                   </div>
                 </li>
                 <li className="flex gap-4">
                   <div className="shrink-0 w-8 h-8 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-600 dark:text-red-400 font-bold">3</div>
                   <div>
                     <strong className="text-zinc-900 dark:text-white block mb-1">Skipping Manglik Status</strong>
-                    <span className="text-zinc-600 dark:text-zinc-400 text-sm">If you belong to a Hindu family, many grooms&apos; families will not proceed without knowing this. State it clearly (Manglik, Non-Manglik, or Anshik) to save everyone time.</span>
+                    <span className="text-zinc-600 dark:text-zinc-400 text-sm">If you belong to a Hindu family, many grooms&apos; families will not proceed without knowing this. State it clearly (Manglik, Non-Manglik, or Anshik) to save everyone time. Read our <Link href="/articles/manglik-biodata-format" className="text-pink-600 dark:text-pink-400 hover:underline">Manglik format guide</Link> for details.</span>
                   </div>
                 </li>
                 <li className="flex gap-4">
@@ -257,7 +267,7 @@ export default function Article() {
                   <div className="shrink-0 w-8 h-8 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-600 dark:text-red-400 font-bold">5</div>
                   <div>
                     <strong className="text-zinc-900 dark:text-white block mb-1">Sharing as a Word Document</strong>
-                    <span className="text-zinc-600 dark:text-zinc-400 text-sm">Word formatting breaks depending on the device opening it. Always use a tool to generate and download a proper PDF file before sharing on WhatsApp.</span>
+                    <span className="text-zinc-600 dark:text-zinc-400 text-sm">Word formatting breaks depending on the device opening it, as explained in our <Link href="/articles/biodata-format-word-download" className="text-pink-600 dark:text-pink-400 hover:underline">Word vs PDF guide</Link>. Always use a tool to generate and download a proper PDF file before sharing on WhatsApp.</span>
                   </div>
                 </li>
               </ul>

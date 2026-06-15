@@ -260,9 +260,19 @@ export default function Article() {
                 </li>
                 <li className="pl-2">
                   <strong className="text-indigo-950 dark:text-indigo-100">Export to PDF:</strong> Click download to generate a perfectly formatted PDF ready to be shared directly with brokers, relatives, or on matrimonial WhatsApp groups.
-                </li>
               </ol>
             </div>
+            
+            <h3 className="text-xl font-bold text-zinc-900 dark:text-white mt-8 mb-4">Why You Should Always Export as PDF</h3>
+            <p className="mb-4 text-zinc-700 dark:text-zinc-300 leading-relaxed">
+              Once you have created your profile, the format in which you share it is just as important as the content itself. Never send a raw Microsoft Word document (.docx) to a prospective match or a matchmaker. Word documents often experience formatting issues when opened on different devices, meaning your carefully crafted tables and inserted photos might appear completely broken on someone else&apos;s phone. This gives a highly unprofessional first impression.
+            </p>
+            <p className="mb-4 text-zinc-700 dark:text-zinc-300 leading-relaxed">
+              Instead, you must export your profile as a locked PDF. A PDF acts like a digital photograph of your document; it ensures that your fonts, colors, spacing, and images remain perfectly intact exactly as you designed them, regardless of whether the recipient opens it on an Android phone, an iPhone, or a laptop. Furthermore, a PDF cannot be easily accidentally edited or altered, providing an extra layer of privacy and security for your personal information.
+            </p>
+            <p className="mb-4 text-zinc-700 dark:text-zinc-300 leading-relaxed">
+              For more tips on the etiquette of forwarding your profile through messaging apps, please refer to our dedicated guide on the <Link href="/articles/biodata-format-for-whatsapp" className="text-indigo-600 dark:text-indigo-400 hover:underline">WhatsApp biodata format</Link>.
+            </p>
           </section>
 
           {/* BLOCK: FAQ */}

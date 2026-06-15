@@ -178,6 +178,15 @@ export default function Article() {
             <p className="mt-4 text-sm text-zinc-500 dark:text-zinc-400 italic">
               Note: A Full Manglik is almost never recommended to marry a strictly Non-Manglik individual without significant astrological remedies (Pujas) being performed prior to the wedding.
             </p>
+
+            <figure className="my-8">
+              <div className="relative w-full aspect-square sm:aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-zinc-100 dark:border-zinc-800">
+                <Image src="/examples/manglik_biodata_infographic_v2.png" alt="A visual guide showing which Manglik states match safely with each other" fill className="object-cover" />
+              </div>
+              <figcaption className="text-center text-sm text-zinc-500 mt-3 italic">
+                A quick-reference guide to Manglik matchmaking compatibility.
+              </figcaption>
+            </figure>
           </section>
 
           {/* BLOCK: COMPLETE_KUNDALI */}

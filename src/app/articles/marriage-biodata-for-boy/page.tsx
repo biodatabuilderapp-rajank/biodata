@@ -176,8 +176,18 @@ export default function Article() {
               In the Indian arranged marriage system, a boy&apos;s financial stability is heavily scrutinised. The biggest mistake grooms make is being vague about their income.
             </p>
             <p className="mt-4 mb-6">
-              When a family reads &quot;Good Income&quot; or &quot;As per industry standards,&quot; they often assume you are either hiding a low salary or are insecure about it. <strong className="font-semibold text-zinc-900 dark:text-white">Transparency builds trust immediately.</strong>
+              When a family reads &quot;Good Income&quot; or &quot;As per industry standards,&quot; they often assume you are either hiding a low salary or are insecure about it. <strong className="font-semibold text-zinc-900 dark:text-white">Transparency builds trust immediately.</strong> This is especially crucial for modern <Link href="/articles/biodata-vs-resume-difference" className="text-indigo-600 dark:text-indigo-400 hover:underline">marriage biodatas</Link>.
             </p>
+
+            {/* IMAGE 1 */}
+            <figure className="my-8">
+              <div className="relative w-full max-w-2xl mx-auto aspect-square sm:aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-zinc-100 dark:border-zinc-800">
+                <Image src="/examples/groom_salary_transparency.png" alt="Infographic showing why stating exact salary is better than vague terms in a groom's biodata" fill className="object-cover" />
+              </div>
+              <figcaption className="text-center text-sm text-zinc-500 mt-3 italic">
+                Always state a specific range rather than vague descriptions like &quot;Good Income.&quot;
+              </figcaption>
+            </figure>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm">
@@ -209,7 +219,7 @@ export default function Article() {
           <section id="about-me" className="scroll-mt-24 mt-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-4">4. Sample &quot;About Me&quot; Paragraphs</h2>
             <p className="mb-6">
-              The <Link href="/articles/how-to-write-biodata-about-me" className="text-indigo-600 dark:text-indigo-400 hover:underline">About Me section</Link> is your chance to show the bride that you are a human being, not just a paycheck. Use 4–6 sentences to convey your personality, your lifestyle, and your values.
+              The <Link href="/articles/how-to-write-biodata-about-me" className="text-indigo-600 dark:text-indigo-400 hover:underline">About Me section</Link> is your chance to show the bride that you are a human being, not just a paycheck. Just like in a <Link href="/articles/shaadi-biodata-format-for-girl" className="text-indigo-600 dark:text-indigo-400 hover:underline">girl&apos;s biodata</Link>, use 4–6 sentences to convey your personality, your lifestyle, and your values.
             </p>
 
             <div className="space-y-6">
@@ -251,37 +261,59 @@ export default function Article() {
           {/* BLOCK: COMMON_MISTAKES */}
           <section id="mistakes" className="scroll-mt-24 mt-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-4">6. Top Mistakes Boys Make</h2>
-            <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 sm:p-8">
-              <ul className="space-y-6">
-                <li className="flex gap-4">
-                  <div className="shrink-0 w-8 h-8 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-600 dark:text-red-400 font-bold">1</div>
-                  <div>
-                    <strong className="text-zinc-900 dark:text-white block mb-1">Using a Casual Selfie or Group Photo</strong>
-                    <span className="text-zinc-600 dark:text-zinc-400 text-sm">A poorly chosen photo signals a lack of seriousness. Do not use photos with sunglasses, wedding guest group shots, or bathroom selfies. Invest in a proper headshot.</span>
-                  </div>
-                </li>
-                <li className="flex gap-4">
-                  <div className="shrink-0 w-8 h-8 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-600 dark:text-red-400 font-bold">2</div>
-                  <div>
-                    <strong className="text-zinc-900 dark:text-white block mb-1">Hiding or Exaggerating Income</strong>
-                    <span className="text-zinc-600 dark:text-zinc-400 text-sm">Families will discover the truth during background checks. Exaggerating causes marriages to break, and hiding it causes your profile to be rejected upfront.</span>
-                  </div>
-                </li>
-                <li className="flex gap-4">
-                  <div className="shrink-0 w-8 h-8 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-600 dark:text-red-400 font-bold">3</div>
-                  <div>
-                    <strong className="text-zinc-900 dark:text-white block mb-1">Omitting Manglik Status</strong>
-                    <span className="text-zinc-600 dark:text-zinc-400 text-sm">If you are a Hindu, leave it blank and the family will assume the worst. Always state it clearly (Manglik, Non-Manglik, or Anshik).</span>
-                  </div>
-                </li>
-                <li className="flex gap-4">
-                  <div className="shrink-0 w-8 h-8 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-600 dark:text-red-400 font-bold">4</div>
-                  <div>
-                    <strong className="text-zinc-900 dark:text-white block mb-1">A Three-Page Resume-Style Biodata</strong>
-                    <span className="text-zinc-600 dark:text-zinc-400 text-sm">A <Link href="/articles/biodata-vs-resume-difference" className="text-indigo-600 dark:text-indigo-400 hover:underline">marriage biodata is not a job resume</Link>. No one wants to read about your college internship from 8 years ago. Keep it to exactly one structured page.</span>
-                  </div>
-                </li>
-              </ul>
+            <div className="space-y-6">
+              <div className="flex flex-col md:flex-row gap-6 items-start bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 sm:p-8">
+                <div className="shrink-0 w-12 h-12 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center">
+                  <span className="text-xl font-bold text-red-600 dark:text-red-400">1</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-2">Mistake 1: Using a Casual Selfie or Group Photo</h3>
+                  <p className="text-zinc-600 dark:text-zinc-400 mb-4">
+                    If the bride&apos;s family has to guess which boy in the photo is you, you have already failed. A poorly chosen photo signals a lack of seriousness. Do not use photos with sunglasses, wedding guest group shots, or bathroom selfies. Compare your photo quality to top <Link href="/articles/best-marriage-biodata-format-for-hindu" className="text-indigo-600 dark:text-indigo-400 hover:underline">Hindu marriage profiles</Link> to ensure it meets the standard.
+                  </p>
+                  
+                  {/* IMAGE 2 */}
+                  <figure className="my-6">
+                    <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-md">
+                      <Image src="/examples/groom_biodata_photo_tips.png" alt="Do's and Don'ts of groom biodata photos" fill className="object-contain" />
+                    </div>
+                  </figure>
+
+                  <p className="text-zinc-600 dark:text-zinc-400 font-semibold mt-2">
+                    ✅ The Fix: Use a clear, well-lit, waist-up portrait taken by a professional or with a good portrait mode on a phone. Wear a crisp shirt or suit.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-col md:flex-row gap-6 items-start bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 sm:p-8">
+                <div className="shrink-0 w-12 h-12 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center">
+                  <span className="text-xl font-bold text-red-600 dark:text-red-400">2</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-2">Mistake 2: Hiding Your Manglik Status</h3>
+                  <p className="text-zinc-600 dark:text-zinc-400 mb-4">
+                    Some families hide negative astrological details hoping the other family will fall in love with the boy first. This never works. If a family requires a non-Manglik match, they will find out eventually. It is better to declare it clearly; learn more in our <Link href="/articles/manglik-biodata-format" className="text-indigo-600 dark:text-indigo-400 hover:underline">guide to Manglik biodatas</Link>.
+                  </p>
+                  <p className="text-zinc-600 dark:text-zinc-400 font-semibold">
+                    ✅ The Fix: Be absolutely clear about your Manglik/Kuja Dosha status, Rashi, and Nakshatra upfront.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-col md:flex-row gap-6 items-start bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 sm:p-8">
+                <div className="shrink-0 w-12 h-12 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center">
+                  <span className="text-xl font-bold text-red-600 dark:text-red-400">3</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-2">Mistake 3: Sending a Messy Word Document</h3>
+                  <p className="text-zinc-600 dark:text-zinc-400 mb-4">
+                    Sending a `.docx` file on WhatsApp is a disaster waiting to happen. The fonts will break, the photo will move, and it looks like a cheap draft rather than a final proposal. You can read why in our breakdown of <Link href="/articles/biodata-format-word-download" className="text-indigo-600 dark:text-indigo-400 hover:underline">Word vs PDF biodatas</Link>. Also, avoid simple text messages; see our guide on the <Link href="/articles/biodata-format-for-whatsapp" className="text-indigo-600 dark:text-indigo-400 hover:underline">WhatsApp biodata format</Link>.
+                  </p>
+                  <p className="text-zinc-600 dark:text-zinc-400 font-semibold">
+                    ✅ The Fix: Always export your biodata as a locked PDF. It looks premium and guarantees the design stays intact.
+                  </p>
+                </div>
+              </div>
             </div>
           </section>
           {/* BLOCK: FAQ */}

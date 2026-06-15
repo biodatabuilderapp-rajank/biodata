@@ -157,6 +157,16 @@ export default function Article() {
             <p>
               The answer is absolute: <strong className="font-semibold text-zinc-900 dark:text-white">Always send a PDF.</strong> Here is exactly why sending an image or a <Link href="/articles/biodata-format-word-download" className="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">Word document (.docx)</Link> is a mistake that could cost you a good match.
             </p>
+
+            <figure className="my-8">
+              <div className="relative w-full aspect-square sm:aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-zinc-100 dark:border-zinc-800 bg-white">
+                <Image src="/examples/mobile_word_vs_pdf.png" alt="Comparison showing why PDF is superior to Word when sharing biodata on mobile" fill className="object-contain" />
+              </div>
+              <figcaption className="text-center text-sm text-zinc-500 mt-3 italic">
+                A visual demonstration of how Word formatting breaks on mobile, compared to a flawless PDF.
+              </figcaption>
+            </figure>
+
             <div className="mt-6 overflow-x-auto rounded-2xl border border-zinc-200 dark:border-zinc-700">
               <table className="w-full text-sm text-left">
                 <thead className="bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-semibold">
