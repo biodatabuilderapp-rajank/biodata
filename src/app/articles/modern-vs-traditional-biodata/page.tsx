@@ -67,6 +67,7 @@ export default function Article() {
           Modern vs Traditional Biodata Format: Which Is Right for You?
         </h1>
 
+        <div className="space-y-8 text-zinc-700 dark:text-zinc-300 leading-relaxed text-lg">
           {/* BLOCK: TLDR */}
           <div className="bg-emerald-50 dark:bg-emerald-950/30 p-6 rounded-2xl border border-emerald-100 dark:border-emerald-900/50 my-8">
             <h2 className="text-xl font-bold text-emerald-900 dark:text-emerald-200 mb-4 flex items-center gap-2">
@@ -113,7 +114,7 @@ export default function Article() {
           <section id="intro" className="scroll-mt-24">
             <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-4">1. The Psychology of Biodata Design</h2>
             <p>
-              When a family receives a <Link href="/articles/biodata-for-marriage" className="text-sky-600 dark:text-sky-400 hover:underline font-medium">biodata for marriage</Link> on WhatsApp, they make their first impression before they even read the name. The design, colors, and layout immediately signal your cultural background, your family's values, and your approach to the marriage process.
+              When a family receives a <Link href="/articles/biodata-for-marriage" className="text-sky-600 dark:text-sky-400 hover:underline font-medium">biodata for marriage</Link> on WhatsApp, they make their first impression before they even read the name. The design, colors, and layout immediately signal your cultural background, your family&apos;s values, and your approach to the marriage process.
             </p>
             <p className="mt-4">
               According to recent <Link href="/articles/marriage-biodata-statistics-india" className="text-sky-600 dark:text-sky-400 hover:underline font-medium">biodata statistics</Link>, profiles that mismatch their target audience (e.g., sending a highly informal, modern profile to a deeply conservative family) have a 60% higher rejection rate at the initial screening phase. A traditional layout signals respect for elders and heritage. A modern layout signals education, urban sophistication, and independence. Choosing the right one is critical.
@@ -131,7 +132,7 @@ export default function Article() {
               <div className="bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-900/50 rounded-2xl p-6">
                 <h3 className="font-bold text-amber-900 dark:text-amber-400 mb-4 text-lg">Visual Signifiers</h3>
                 <ul className="space-y-3 text-sm text-amber-800 dark:text-amber-200">
-                  <li><strong>Auspicious Headers:</strong> "Shree Ganeshay Namah", "786", or a Cross icon at the absolute top.</li>
+                  <li><strong>Auspicious Headers:</strong> &quot;Shree Ganeshay Namah&quot;, &quot;786&quot;, or a Cross icon at the absolute top.</li>
                   <li><strong>Color Palette:</strong> Deep reds, maroons, saffron, and gold.</li>
                   <li><strong>Borders:</strong> Floral, mandala, or temple-architecture inspired borders.</li>
                   <li><strong>Photography:</strong> Formal studio portraits; women often in sarees or traditional wear, men in formal shirts or ethnic wear.</li>
@@ -143,7 +144,7 @@ export default function Article() {
                 <ul className="space-y-3 text-sm text-zinc-700 dark:text-zinc-300">
                   <li><strong>Astrology First:</strong> <Link href="/articles/kundali-details-in-biodata" className="text-amber-600 dark:text-amber-400 hover:underline">Kundali details</Link> (Rashi, Nakshatra, Gotra, Time of Birth) are placed prominently near the top.</li>
                   <li><strong>Extended Family:</strong> Includes names and occupations of grandfathers, maternal uncles (Mama), and native village (Mool).</li>
-                  <li><strong>Modest Language:</strong> Uses highly formal language; avoids "I" statements in favor of third-person or purely factual listings.</li>
+                  <li><strong>Modest Language:</strong> Uses highly formal language; avoids &quot;I&quot; statements in favor of third-person or purely factual listings.</li>
                 </ul>
               </div>
             </div>
@@ -166,7 +167,7 @@ export default function Article() {
               <div className="bg-sky-50 dark:bg-sky-950/20 border border-sky-200 dark:border-sky-900/50 rounded-2xl p-6">
                 <h3 className="font-bold text-sky-900 dark:text-sky-400 mb-4 text-lg">Visual Signifiers</h3>
                 <ul className="space-y-3 text-sm text-sky-800 dark:text-sky-200">
-                  <li><strong>Clean Headlines:</strong> Replaces religious icons with a bold, clean headline featuring the candidate's name.</li>
+                  <li><strong>Clean Headlines:</strong> Replaces religious icons with a bold, clean headline featuring the candidate&apos;s name.</li>
                   <li><strong>Color Palette:</strong> Neutral tones—whites, grays, navy blues, and muted pastels.</li>
                   <li><strong>Borders:</strong> Geometric, minimalist borders, or no borders at all (relying on white space).</li>
                   <li><strong>Photography:</strong> Smart casual or professional lifestyle photos; often taken in a cafe or modern outdoor setting rather than a stiff studio.</li>
@@ -176,7 +177,7 @@ export default function Article() {
               <div className="bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 rounded-2xl p-6">
                 <h3 className="font-bold text-zinc-900 dark:text-white mb-4 text-lg">Content Priorities</h3>
                 <ul className="space-y-3 text-sm text-zinc-700 dark:text-zinc-300">
-                  <li><strong>Personality First:</strong> Heavily features an <Link href="/articles/how-to-write-biodata-about-me" className="text-sky-600 dark:text-sky-400 hover:underline">"About Me"</Link> paragraph that details hobbies, lifestyle, and direct partner expectations.</li>
+                  <li><strong>Personality First:</strong> Heavily features an <Link href="/articles/how-to-write-biodata-about-me" className="text-sky-600 dark:text-sky-400 hover:underline">&quot;About Me&quot;</Link> paragraph that details hobbies, lifestyle, and direct partner expectations.</li>
                   <li><strong>Career Focus:</strong> Highlights educational pedigree and professional trajectory prominently.</li>
                   <li><strong>Core Family Only:</strong> Mentions immediate parents and siblings, skipping the extended ancestral village details.</li>
                 </ul>
@@ -230,7 +231,7 @@ export default function Article() {
           <section id="hybrid-approach" className="scroll-mt-24 mt-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-6">5. The Hybrid Approach: Best of Both Worlds</h2>
             <p>
-              The most successful biodata strategy in today's Indian matchmaking market is a <strong className="font-semibold text-zinc-900 dark:text-white">hybrid format</strong>. A hybrid biodata utilizes a sleek, modern visual design but actively retains all the critical traditional information that families need to make decisions.
+              The most successful biodata strategy in today&apos;s Indian matchmaking market is a <strong className="font-semibold text-zinc-900 dark:text-white">hybrid format</strong>. A hybrid biodata utilizes a sleek, modern visual design but actively retains all the critical traditional information that families need to make decisions.
             </p>
             <p className="mt-4">
               <strong>Why does the hybrid format work?</strong> Because it appeals to both generations. It shows the parents that you respect their need for cultural filters (like checking <Link href="/articles/manglik-biodata-format" className="text-sky-600 dark:text-sky-400 hover:underline font-medium">Manglik status</Link> or Gothram), while simultaneously showing the prospective partner that you have modern aesthetic sensibilities and a distinct personality.
@@ -243,7 +244,7 @@ export default function Article() {
               <ul className="space-y-2 text-sky-800 dark:text-sky-300 text-sm">
                 <li>Choose a clean, minimalist template with lots of white space.</li>
                 <li>Ensure there is still a dedicated block for Kundali/Astrology details.</li>
-                <li>Include a well-written "About Me" paragraph.</li>
+                <li>Include a well-written &quot;About Me&quot; paragraph.</li>
                 <li>Export it as a high-quality PDF, avoiding messy <Link href="/articles/biodata-format-word-download" className="text-sky-600 dark:text-sky-400 hover:underline font-medium">Word document downloads</Link> that lose their formatting on mobile phones.</li>
               </ul>
               <p className="mt-4 text-sm text-sky-700 dark:text-sky-400 italic">
@@ -273,9 +274,20 @@ export default function Article() {
             </div>
           </section>
 
+          {/* BLOCK: CONCLUSION */}
+          <section id="conclusion" className="scroll-mt-24 mt-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-6">Conclusion</h2>
+            <p>
+              The debate between a modern and traditional biodata format is not about which design is "better"—it is entirely about matching your presentation to your audience. Traditional families expect to see respect for heritage and astrology upfront, while modern professionals appreciate a clean, direct approach that focuses on personality and career.
+            </p>
+            <p className="mt-4">
+              By adopting a <strong>hybrid approach</strong>, you can create a beautiful, modern document that still respects cultural expectations. Take the time to understand who will be reading your biodata, and choose a layout that speaks their language.
+            </p>
+          </section>
+
           {/* BLOCK: CTA_BOTTOM */}
           <div className="mt-16 p-8 sm:p-10 bg-gradient-to-br from-sky-50 to-indigo-50 dark:from-sky-950/20 dark:to-indigo-950/20 rounded-3xl border border-sky-100 dark:border-sky-900/50 text-center">
-            <h3 className="text-2xl font-bold text-sky-900 dark:text-sky-100 mb-3">Browse Traditional & Modern Templates</h3>
+            <h3 className="text-2xl font-bold text-sky-900 dark:text-sky-100 mb-3">Browse Traditional &amp; Modern Templates</h3>
             <p className="text-sky-700 dark:text-sky-300 mb-8 max-w-2xl mx-auto">
               Preview every template live before committing. Whether you want a clean modern layout or an ornate traditional one, find the one that fits your context perfectly — free.
             </p>
