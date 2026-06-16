@@ -260,6 +260,7 @@ export default function Article() {
                 </li>
                 <li className="pl-2">
                   <strong className="text-indigo-950 dark:text-indigo-100">Export to PDF:</strong> Click download to generate a perfectly formatted PDF ready to be shared directly with brokers, relatives, or on matrimonial WhatsApp groups.
+                </li>
               </ol>
             </div>
             

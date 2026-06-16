@@ -147,7 +147,6 @@ export default function Article() {
                   <li><strong>Modest Language:</strong> Uses highly formal language; avoids &quot;I&quot; statements in favor of third-person or purely factual listings.</li>
                 </ul>
               </div>
-              </div>
             </div>
 
             <figure className="my-10">
