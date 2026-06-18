@@ -89,7 +89,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "Marriage Biodata Maker Online Free | Create Biodata PDF",
   description: "Create beautiful Indian marriage biodata online for free. Choose modern biodata templates, add your details, and instantly download PDF for WhatsApp sharing.",
-  image: "https://biodatabuilder.in/examples/Hero-composite.png",
+  image: "/examples/Hero-composite.png",
   datePublished: "2026-05-04",
   dateModified: "2026-05-27",
   author: { "@type": "Organization", name: "BiodataBuilder" },

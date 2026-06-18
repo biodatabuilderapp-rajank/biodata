@@ -80,7 +80,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "Vivah Biodata Format in Hindi | शादी बायोडाटा PDF",
   description: "सुंदर हिंदी शादी बायोडाटा ऑनलाइन मुफ्त में बनाएं। आधुनिक टेम्पलेट चुनें और तुरंत PDF डाउनलोड करें।",
-  image: "https://biodatabuilder.in/examples/Hero-composite.png",
+  image: "/examples/Hero-composite.png",
   datePublished: "2026-05-04",
   dateModified: "2026-05-27",
   author: { "@type": "Organization", name: "BiodataBuilder" },

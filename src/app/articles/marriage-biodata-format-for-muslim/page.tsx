@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import ArticleWrapper from "@/components/ArticleWrapper";
 import ArticleCTA from "@/components/ArticleCTA";
-import ArticleLanguageNav from "@/components/ArticleLanguageNav";
 import { MoveRight, CheckCircle2, AlertTriangle } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -55,7 +54,7 @@ export default function Article() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <ArticleWrapper publishedDate="2024-04-12">
+      <ArticleWrapper publishedDate="2026-06-18">
         <h1 className="text-3xl sm:text-5xl font-bold text-zinc-900 dark:text-white mb-6 leading-tight">
           Muslim Marriage Biodata Format: The Complete Rishta Guide
         </h1>
@@ -353,7 +352,6 @@ export default function Article() {
           </div>
         </div>
 
-        <ArticleLanguageNav />
         <ArticleCTA />
       </ArticleWrapper>
     </>

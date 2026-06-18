@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import ArticleWrapper from "@/components/ArticleWrapper";
 import ArticleCTA from "@/components/ArticleCTA";
-import ArticleLanguageNav from "@/components/ArticleLanguageNav";
 import { MoveRight, CheckCircle2, AlertCircle } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -14,7 +13,7 @@ export const metadata: Metadata = {
     title: "Kundali Details in Biodata | What Horoscope Info to Include",
     description: "What kundali and horoscope details should you include in a marriage biodata? A complete guide to Rashi, Nakshatra, Gotra, Manglik status and more.",
     url: "https://biodatabuilder.in/articles/kundali-details-in-biodata",
-    images: [{ url: "https://biodatabuilder.in/examples/kundali-biodata-infographic.png", width: 1200, height: 630, alt: "Essential Kundali Details" }],
+    images: [{ url: "/examples/kundali-biodata-infographic.png", width: 1200, height: 630, alt: "Essential Kundali Details" }],
   },
 };
 
@@ -70,7 +69,7 @@ export default function Article() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <ArticleWrapper publishedDate="2024-04-12">
+      <ArticleWrapper publishedDate="2026-06-18">
         <h1 className="text-3xl sm:text-5xl font-bold text-indigo-900 dark:text-indigo-100 mb-8 leading-tight">
           Kundali Details in Marriage Biodata: What to Include
         </h1>
@@ -414,7 +413,6 @@ export default function Article() {
           </div>
         </div>
 
-        <ArticleLanguageNav />
         <ArticleCTA />
       </ArticleWrapper>
     </>

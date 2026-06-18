@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import ArticleWrapper from "@/components/ArticleWrapper";
 import ArticleCTA from "@/components/ArticleCTA";
-import ArticleLanguageNav from "@/components/ArticleLanguageNav";
 import { MoveRight, CheckCircle2, AlertCircle } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -14,7 +13,7 @@ export const metadata: Metadata = {
     title: "Thirumanam Biodata Format Tamil | திருமண பயோடேட்டா",
     description: "Tamil marriage biodata with Jathagam details, Rasi, Natchathiram, community fields — free PDF.",
     url: "https://biodatabuilder.in/articles/thirumanam-biodata-format-tamil",
-    images: [{ url: "https://biodatabuilder.in/examples/Boy-biodata-example-Tamil.png", width: 1200, height: 630, alt: "Tamil Thirumanam Biodata Example" }],
+    images: [{ url: "/examples/Boy-biodata-example-Tamil.png", width: 1200, height: 630, alt: "Tamil Thirumanam Biodata Example" }],
   },
 };
 
@@ -49,7 +48,7 @@ export default function Article() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <ArticleWrapper publishedDate="2024-04-12">
+      <ArticleWrapper publishedDate="2026-06-18">
         <h1 className="text-3xl sm:text-5xl font-bold text-zinc-900 dark:text-white mb-6 leading-tight">
           Thirumanam Biodata Format Tamil<br />
           <span className="text-indigo-600 dark:text-indigo-400 text-3xl">திருமண பயோடேட்டா ஃபார்மேட் – PDF Free</span>
@@ -385,7 +384,6 @@ export default function Article() {
           </div>
         </div>
 
-        <ArticleLanguageNav />
         <ArticleCTA />
       </ArticleWrapper>
     </>

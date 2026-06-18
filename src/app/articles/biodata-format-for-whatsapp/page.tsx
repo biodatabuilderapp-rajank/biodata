@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import ArticleWrapper from "@/components/ArticleWrapper";
 import ArticleCTA from "@/components/ArticleCTA";
-import ArticleLanguageNav from "@/components/ArticleLanguageNav";
 import { MoveRight, CheckCircle2, AlertCircle } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -14,7 +13,7 @@ export const metadata: Metadata = {
     title: "How to Share Biodata on WhatsApp | Best Format for Sharing",
     description: "Learn the best way to share your marriage biodata on WhatsApp. PDF vs image vs Word, how to send as document, file size tips, and what to write in the message.",
     url: "https://biodatabuilder.in/articles/biodata-format-for-whatsapp",
-    images: [{ url: "https://biodatabuilder.in/examples/whatsapp-biodata-infographic.png", width: 1200, height: 630, alt: "How to Share Biodata on WhatsApp" }],
+    images: [{ url: "/examples/whatsapp-biodata-infographic.png", width: 1200, height: 630, alt: "How to Share Biodata on WhatsApp" }],
   },
 };
 
@@ -70,7 +69,7 @@ export default function Article() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <ArticleWrapper publishedDate="2024-04-12">
+      <ArticleWrapper publishedDate="2026-06-18">
         <h1 className="text-3xl sm:text-5xl font-bold text-zinc-900 dark:text-white mb-8 leading-tight">
           How to Share Your Biodata on WhatsApp: Tips & Best Practices
         </h1>
@@ -407,7 +406,6 @@ export default function Article() {
           </div>
         </div>
 
-        <ArticleLanguageNav />
         <ArticleCTA />
       </ArticleWrapper>
     </>

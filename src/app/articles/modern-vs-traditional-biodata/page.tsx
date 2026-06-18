@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import ArticleWrapper from "@/components/ArticleWrapper";
 import ArticleCTA from "@/components/ArticleCTA";
-import ArticleLanguageNav from "@/components/ArticleLanguageNav";
 import { MoveRight, CheckCircle2, AlertCircle } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -14,7 +13,7 @@ export const metadata: Metadata = {
     title: "Modern vs Traditional Biodata Format | Which One Should You Use?",
     description: "Should you use a modern or traditional biodata format? Compare layouts, content styles, and learn which works best for your family and matchmaking context.",
     url: "https://biodatabuilder.in/articles/modern-vs-traditional-biodata",
-    images: [{ url: "https://biodatabuilder.in/examples/modern_vs_traditional_infographic.png", width: 1200, height: 630, alt: "Modern vs Traditional Biodata Infographic" }],
+    images: [{ url: "/examples/modern_vs_traditional_infographic.png", width: 1200, height: 630, alt: "Modern vs Traditional Biodata Infographic" }],
   },
 };
 
@@ -62,7 +61,7 @@ export default function Article() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <ArticleWrapper publishedDate="2024-04-12">
+      <ArticleWrapper publishedDate="2026-06-18">
         <h1 className="text-3xl sm:text-5xl font-bold text-zinc-900 dark:text-white mb-8 leading-tight">
           Modern vs Traditional Biodata Format: Which Is Right for You?
         </h1>
@@ -335,7 +334,6 @@ export default function Article() {
           </div>
         </div>
 
-        <ArticleLanguageNav />
         <ArticleCTA />
       </ArticleWrapper>
     </>

@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import ArticleWrapper from "@/components/ArticleWrapper";
 import ArticleCTA from "@/components/ArticleCTA";
-import ArticleLanguageNav from "@/components/ArticleLanguageNav";
 import { MoveRight, CheckCircle2, AlertCircle } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -14,7 +13,7 @@ export const metadata: Metadata = {
     title: "Christian Marriage Biodata Format | Free PDF Template",
     description: "Complete Christian marriage biodata format — denomination, church, family, and contact details. Free PDF download.",
     url: "https://biodatabuilder.in/articles/marriage-biodata-format-for-christian",
-    images: [{ url: "https://biodatabuilder.in/examples/christian-biodata-infographic.png", width: 1200, height: 630, alt: "Christian Marriage Biodata Format Infographic" }],
+    images: [{ url: "/examples/christian-biodata-infographic.png", width: 1200, height: 630, alt: "Christian Marriage Biodata Format Infographic" }],
   },
 };
 
@@ -49,7 +48,7 @@ export default function Article() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <ArticleWrapper publishedDate="2024-04-12">
+      <ArticleWrapper publishedDate="2026-06-18">
         <h1 className="text-3xl sm:text-5xl font-bold text-sky-900 dark:text-sky-100 mb-6 leading-tight">
           Christian Marriage Biodata Format: The Complete Guide
         </h1>
@@ -401,7 +400,6 @@ export default function Article() {
           </div>
         </div>
 
-        <ArticleLanguageNav />
         <ArticleCTA />
       </ArticleWrapper>
     </>

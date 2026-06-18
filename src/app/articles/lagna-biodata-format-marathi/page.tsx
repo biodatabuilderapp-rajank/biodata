@@ -80,7 +80,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "Lagna Biodata Format Marathi | लग्न बायोडाटा PDF",
   description: "सुंदर मराठी लग्न बायोडाटा ऑनलाइन मोफत तयार करा. आधुनिक टेम्पलेट निवडा आणि PDF डाउनलोड करा.",
-  image: "https://biodatabuilder.in/examples/Hero-composite.png",
+  image: "/examples/Hero-composite.png",
   datePublished: "2026-05-04",
   dateModified: "2026-05-29",
   author: { "@type": "Organization", name: "BiodataBuilder" },

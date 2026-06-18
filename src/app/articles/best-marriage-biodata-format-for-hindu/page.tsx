@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import ArticleWrapper from "@/components/ArticleWrapper";
 import ArticleCTA from "@/components/ArticleCTA";
-import ArticleLanguageNav from "@/components/ArticleLanguageNav";
 import { MoveRight, CheckCircle2, AlertCircle } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -14,7 +13,7 @@ export const metadata: Metadata = {
     title: "Best Marriage Biodata Format for Hindu | Complete Guide",
     description: "Complete guide to the best marriage biodata format for Hindu families — structure, design, regional variations, and free PDF template.",
     url: "https://biodatabuilder.in/articles/best-marriage-biodata-format-for-hindu",
-    images: [{ url: "https://biodatabuilder.in/examples/hindu_biodata_infographic.png", width: 1200, height: 630, alt: "Hindu Biodata Format Infographic" }],
+    images: [{ url: "/examples/hindu_biodata_infographic.png", width: 1200, height: 630, alt: "Hindu Biodata Format Infographic" }],
   },
 };
 
@@ -49,7 +48,7 @@ export default function Article() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <ArticleWrapper publishedDate="2024-03-24">
+      <ArticleWrapper publishedDate="2026-06-18">
         <h1 className="text-3xl sm:text-5xl font-bold text-zinc-900 dark:text-white mb-6 leading-tight">
           Best Marriage Biodata Format for Hindu Families
         </h1>
@@ -378,7 +377,6 @@ export default function Article() {
           </div>
         </div>
 
-        <ArticleLanguageNav />
         <ArticleCTA />
       </ArticleWrapper>
     </>

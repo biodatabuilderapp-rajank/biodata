@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import ArticleWrapper from "@/components/ArticleWrapper";
 import ArticleCTA from "@/components/ArticleCTA";
-import ArticleLanguageNav from "@/components/ArticleLanguageNav";
 import { MoveRight, CheckCircle2 } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -70,7 +69,14 @@ export default function Article() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <ArticleWrapper publishedDate="2024-03-24">
+      <ArticleWrapper
+        publishedDate="2026-06-18"
+        related={[
+          { title: "Simple Biodata Format for Job PDF", slug: "simple-biodata-format-for-job-pdf" },
+          { title: "How to Write About Me in Marriage Biodata", slug: "how-to-write-biodata-about-me" },
+          { title: "Biodata Tips: Photos, Hobbies & Mistakes", slug: "biodata-tips" },
+        ]}
+      >
         <h1 className="text-3xl sm:text-5xl font-bold text-zinc-900 dark:text-white mb-8 leading-tight">
           Biodata vs Resume vs CV — The Real Difference Explained
         </h1>
@@ -386,19 +392,34 @@ export default function Article() {
           <section className="mt-16 pt-10 border-t border-zinc-200 dark:border-zinc-800">
             <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-6">What to Read Next</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Link href="/articles/how-to-write-biodata-for-marriage" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
-                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">How to Write a Biodata for Marriage</h4>
-                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">A step-by-step guide to filling out every section correctly.</p>
-              </Link>
               <Link href="/articles/simple-biodata-format-for-job-pdf" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
-                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Simple Biodata Format</h4>
-                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">Downloadable PDF templates and formats for your reference.</p>
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Simple Biodata Format for Job (PDF)</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">What to include in a professional job biodata — 6 sections explained.</p>
+              </Link>
+              <Link href="/articles/how-to-write-biodata-about-me" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">How to Write &quot;About Me&quot; in a Marriage Biodata</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">6 sample texts and a step-by-step writing guide.</p>
+              </Link>
+              <Link href="/articles/biodata-tips" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Biodata Tips: Photos, Hobbies &amp; Mistakes</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">Common mistakes that get biodatas rejected and how to avoid them.</p>
+              </Link>
+              <Link href="/articles/shaadi-biodata-format-for-girl" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Shaadi Biodata Format for Girl</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">Complete guide to creating a woman&apos;s marriage biodata.</p>
+              </Link>
+              <Link href="/articles/marriage-biodata-for-boy" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Marriage Biodata for Boy (Groom Guide)</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">What families look for in a groom&apos;s biodata.</p>
+              </Link>
+              <Link href="/articles/modern-vs-traditional-biodata" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Modern vs Traditional Biodata</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">How marriage biodata design has evolved in India.</p>
               </Link>
             </div>
           </section>
         </div>
 
-        <ArticleLanguageNav />
         <ArticleCTA />
       </ArticleWrapper>
     </>

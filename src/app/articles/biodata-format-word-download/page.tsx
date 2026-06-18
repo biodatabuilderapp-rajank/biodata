@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import ArticleWrapper from "@/components/ArticleWrapper";
 import ArticleCTA from "@/components/ArticleCTA";
-import ArticleLanguageNav from "@/components/ArticleLanguageNav";
 import { MoveRight, AlertTriangle, CheckCircle2, Download, Smartphone, SmartphoneNfc } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -14,7 +13,7 @@ export const metadata: Metadata = {
     title: "Biodata Format in Word for Marriage: Free Download Alternative",
     description: "Looking for a marriage biodata format in Word? Discover why a PDF builder creates better results than Word, and how to get a beautiful biodata for free in seconds.",
     url: "https://biodatabuilder.in/articles/biodata-format-word-download",
-    images: [{ url: "https://biodatabuilder.in/examples/word_vs_pdf_biodata_infographic.png", width: 1200, height: 630, alt: "Word vs PDF Biodata Comparison" }],
+    images: [{ url: "/examples/word_vs_pdf_biodata_infographic.png", width: 1200, height: 630, alt: "Word vs PDF Biodata Comparison" }],
   },
 };
 
@@ -313,6 +312,38 @@ export default function BiodataFormatWordPage() {
             </p>
           </section>
 
+
+          {/* BLOCK: WHAT_TO_READ_NEXT */}
+          <section className="mt-16 pt-10 border-t border-zinc-200 dark:border-zinc-800">
+            <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-6">What to Read Next</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href="/articles/biodata-format-for-whatsapp" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Biodata Format for WhatsApp</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">How to share your biodata perfectly on WhatsApp — PDF tips included.</p>
+              </Link>
+              <Link href="/articles/how-to-write-biodata-about-me" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">How to Write &quot;About Me&quot; in a Biodata</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">6 sample texts and a complete writing guide.</p>
+              </Link>
+              <Link href="/articles/marriage-biodata-for-boy" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Marriage Biodata for Boy</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">Complete guide to creating a groom&apos;s biodata with sample text.</p>
+              </Link>
+              <Link href="/articles/shaadi-biodata-format-for-girl" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Shaadi Biodata Format for Girl</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">Everything a bride&apos;s biodata needs to stand out.</p>
+              </Link>
+              <Link href="/articles/modern-vs-traditional-biodata" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Modern vs Traditional Biodata</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">How design trends in marriage biodata have evolved.</p>
+              </Link>
+              <Link href="/articles/biodata-tips" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Biodata Tips: Photos, Hobbies &amp; Mistakes</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">The most common biodata mistakes and how to fix them.</p>
+              </Link>
+            </div>
+          </section>
+
           {/* BLOCK: CTA_BOTTOM */}
           <div className="mt-16 p-8 sm:p-10 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950/30 dark:to-purple-950/30 rounded-3xl border border-indigo-100 dark:border-indigo-900/50 text-center">
             <h3 className="text-2xl font-bold text-indigo-900 dark:text-indigo-100 mb-3">Ditch the Word Doc. Get a Perfect PDF.</h3>
@@ -325,7 +356,6 @@ export default function BiodataFormatWordPage() {
           </div>
         </div>
 
-        <ArticleLanguageNav />
         <ArticleCTA />
       </ArticleWrapper>
     </>

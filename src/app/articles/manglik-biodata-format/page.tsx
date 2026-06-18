@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import ArticleWrapper from "@/components/ArticleWrapper";
 import ArticleCTA from "@/components/ArticleCTA";
-import ArticleLanguageNav from "@/components/ArticleLanguageNav";
 import { MoveRight, CheckCircle2, AlertCircle } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -14,7 +13,7 @@ export const metadata: Metadata = {
     title: "Manglik Biodata Format | Marriage Biodata for Manglik Boy & Girl",
     description: "Complete guide to creating a marriage biodata when you are Manglik — what to write, how to match, and common concerns addressed.",
     url: "https://biodatabuilder.in/articles/manglik-biodata-format",
-    images: [{ url: "https://biodatabuilder.in/examples/manglik-biodata-infographic.png", width: 1200, height: 630, alt: "Mangal Dosha in Matchmaking" }],
+    images: [{ url: "/examples/manglik-biodata-infographic.png", width: 1200, height: 630, alt: "Mangal Dosha in Matchmaking" }],
   },
 };
 
@@ -49,7 +48,7 @@ export default function Article() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <ArticleWrapper publishedDate="2024-04-12">
+      <ArticleWrapper publishedDate="2026-06-18">
         <h1 className="text-3xl sm:text-5xl font-bold text-rose-900 dark:text-rose-100 mb-6 leading-tight">
           Manglik Biodata Format: A Complete Guide for Manglik Boy & Girl
         </h1>
@@ -372,7 +371,6 @@ export default function Article() {
           </div>
         </div>
 
-        <ArticleLanguageNav />
         <ArticleCTA />
       </ArticleWrapper>
     </>

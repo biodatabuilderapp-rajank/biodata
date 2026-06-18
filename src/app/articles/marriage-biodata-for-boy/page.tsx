@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import ArticleWrapper from "@/components/ArticleWrapper";
 import ArticleCTA from "@/components/ArticleCTA";
-import ArticleLanguageNav from "@/components/ArticleLanguageNav";
 import { MoveRight, CheckCircle2, AlertCircle, TrendingUp } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -14,7 +13,7 @@ export const metadata: Metadata = {
     title: "Marriage Biodata for Boy | Complete Groom Biodata Format Guide",
     description: "Complete guide to creating a marriage biodata for a boy (groom). What sections to include, sample text, income tips, common mistakes, and free PDF download.",
     url: "https://biodatabuilder.in/articles/marriage-biodata-for-boy",
-    images: [{ url: "https://biodatabuilder.in/examples/boy_biodata_infographic.png", width: 1200, height: 630, alt: "Marriage Biodata Format For Boy" }],
+    images: [{ url: "/examples/boy_biodata_infographic.png", width: 1200, height: 630, alt: "Marriage Biodata Format For Boy" }],
   },
 };
 
@@ -70,7 +69,7 @@ export default function Article() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <ArticleWrapper publishedDate="2024-04-12">
+      <ArticleWrapper publishedDate="2026-06-18">
         <h1 className="text-3xl sm:text-5xl font-bold text-zinc-900 dark:text-white mb-8 leading-tight">
           Marriage Biodata for Boy: The Complete Groom Format Guide
         </h1>
@@ -358,6 +357,30 @@ export default function Article() {
             </p>
           </section>
 
+
+          {/* BLOCK: WHAT_TO_READ_NEXT */}
+          <section className="mt-16 pt-10 border-t border-zinc-200 dark:border-zinc-800">
+            <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-6">What to Read Next</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href="/articles/shaadi-biodata-format-for-girl" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Shaadi Biodata Format for Girl</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">What the bride&apos;s family looks for — understand the other side.</p>
+              </Link>
+              <Link href="/articles/how-to-write-biodata-about-me" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">How to Write &quot;About Me&quot; in a Biodata</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">6 sample texts to inspire a genuine About Me paragraph.</p>
+              </Link>
+              <Link href="/articles/kundali-details-in-biodata" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Kundali Details in Biodata</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">Which horoscope fields are required and how to fill them correctly.</p>
+              </Link>
+              <Link href="/articles/biodata-tips" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Biodata Tips: Photos, Hobbies &amp; Mistakes</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">The most common biodata mistakes and how to fix them.</p>
+              </Link>
+            </div>
+          </section>
+
           {/* BLOCK: CTA_BOTTOM */}
           <div className="mt-16 p-8 sm:p-10 bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-indigo-950/30 dark:to-blue-950/30 rounded-3xl border border-indigo-100 dark:border-indigo-900/50 text-center">
             <h3 className="text-2xl font-bold text-indigo-900 dark:text-indigo-100 mb-3">Create Your Groom Biodata Today</h3>
@@ -370,7 +393,6 @@ export default function Article() {
           </div>
         </div>
 
-        <ArticleLanguageNav />
         <ArticleCTA />
       </ArticleWrapper>
     </>

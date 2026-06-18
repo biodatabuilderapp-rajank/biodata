@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import ArticleWrapper from "@/components/ArticleWrapper";
 import ArticleCTA from "@/components/ArticleCTA";
-import ArticleLanguageNav from "@/components/ArticleLanguageNav";
 import { MoveRight, CheckCircle2, AlertCircle, Sparkles } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -14,7 +13,7 @@ export const metadata: Metadata = {
     title: "Shaadi Biodata for Girl | Complete Marriage Biodata Guide",
     description: "Create the perfect marriage biodata for a girl. Sections to include, sample About Me text, expectations wording, template tips, and free PDF download.",
     url: "https://biodatabuilder.in/articles/shaadi-biodata-format-for-girl",
-    images: [{ url: "https://biodatabuilder.in/examples/girl_biodata_infographic.png", width: 1200, height: 630, alt: "Shaadi Biodata Format For Girl" }],
+    images: [{ url: "/examples/girl_biodata_infographic.png", width: 1200, height: 630, alt: "Shaadi Biodata Format For Girl" }],
   },
 };
 
@@ -54,7 +53,7 @@ export default function Article() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <ArticleWrapper publishedDate="2024-04-12">
+      <ArticleWrapper publishedDate="2026-06-18">
         <h1 className="text-3xl sm:text-5xl font-bold text-zinc-900 dark:text-white mb-6 leading-tight">
           Shaadi Biodata for Girl: Complete Marriage Biodata Guide
         </h1>
@@ -366,7 +365,6 @@ export default function Article() {
           </div>
         </div>
 
-        <ArticleLanguageNav />
         <ArticleCTA />
       </ArticleWrapper>
     </>
