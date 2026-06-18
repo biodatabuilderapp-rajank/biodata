@@ -146,6 +146,102 @@ All SEO settings live in `src/app/layout.tsx`:
 
 ---
 
+## Maintenance Scripts
+
+Utility scripts live in `scripts/`. Run them from the **project root**.
+
+### Prerequisites
+
+The scripts require the `sharp` image processing library (already in `devDependencies`):
+
+```bash
+npm install
+```
+
+---
+
+### 1. Image Optimisation — `scripts/optimise-images.mjs`
+
+Converts all PNG and JPG images in `/public/examples/` to WebP format.
+
+**What it does:**
+- Converts every `.png` / `.jpg` / `.jpeg` to `.webp` (quality 82)
+- Downscales images wider than **1200px** (never upscales)
+- Backs up all originals to `/public/examples/originals/` before overwriting
+- Prints a per-file report and total savings summary
+
+**When to run:** Whenever you add new images to `/public/examples/`.
+
+```bash
+node scripts/optimise-images.mjs
+```
+
+**Example output:**
+```
+🖼  Found 52 images to process
+
+  ✅ Hero-composite.png          3656KB →   87KB  (-97.6%) [resized 4150→1200px]
+  ✅ Boy-biodata-example.png     1886KB →   62KB  (-96.7%) [resized 2000→1200px]
+  ...
+
+📦  TOTAL BEFORE : 93.0 MB
+📦  TOTAL AFTER  : 5.8 MB
+💾  SAVED        : 87.1 MB  (93.7% reduction)
+```
+
+> **Note:** After running this script, always run `update-image-refs.mjs` next to update the code.
+
+---
+
+### 2. Update Image References — `scripts/update-image-refs.mjs`
+
+Updates all `<Image src="...png">` references in `/src` to point to the new `.webp` files.
+
+**What it does:**
+- Scans every `.tsx` and `.ts` file in `/src`
+- Replaces `/examples/filename.png` (and `.jpg`) → `/examples/filename.webp`
+- Only replaces references where a `.webp` version actually exists (safe)
+- Idempotent — safe to run multiple times
+
+**When to run:** Immediately after running `optimise-images.mjs`.
+
+```bash
+node scripts/update-image-refs.mjs
+```
+
+**Example output:**
+```
+  ✅ Updated: src/app/articles/biodata-for-marriage/page.tsx
+  ✅ Updated: src/app/articles/marriage-biodata-for-boy/page.tsx
+  ...
+
+✅  Files updated : 23
+✅  All /examples/*.png and .jpg → .webp references updated
+```
+
+---
+
+### Full Workflow (Adding New Images)
+
+```bash
+# 1. Drop new image(s) into /public/examples/
+
+# 2. Convert to WebP + resize
+node scripts/optimise-images.mjs
+
+# 3. Update all code references
+node scripts/update-image-refs.mjs
+
+# 4. Verify the build passes
+npm run build
+
+# 5. Commit
+git add public/examples/ src/
+git commit -m "perf: add and optimise new images"
+```
+
+---
+
 ## Deployment
 
 Recommended: **[Vercel](https://vercel.com)** (one-click Next.js deploy)
