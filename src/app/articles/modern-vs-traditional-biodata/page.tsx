@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Modern vs Traditional Biodata Format | Which One Should You Use?",
     description: "Should you use a modern or traditional biodata format? Compare layouts, content styles, and learn which works best for your family and matchmaking context.",
     url: "https://biodatabuilder.in/articles/modern-vs-traditional-biodata",
-    images: [{ url: "/examples/modern_vs_traditional_infographic.png", width: 1200, height: 630, alt: "Modern vs Traditional Biodata Infographic" }],
+    images: [{ url: "/examples/modern_vs_traditional_infographic.webp", width: 1200, height: 630, alt: "Modern vs Traditional Biodata Infographic" }],
   },
 };
 
@@ -84,7 +84,7 @@ export default function Article() {
           <figure className="my-10">
             <div className="relative w-full aspect-[4/3] md:aspect-[16/9] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-lg bg-zinc-50 dark:bg-zinc-950/20">
               <Image 
-                src="/examples/modern_vs_traditional_infographic.png" 
+                src="/examples/modern_vs_traditional_infographic.webp" 
                 alt="Modern vs Traditional Biodata Format comparison showing a clean minimal layout alongside an ornate traditional layout" 
                 fill 
                 className="object-contain"
@@ -252,7 +252,7 @@ export default function Article() {
 
             <figure className="my-10">
               <div className="relative w-full aspect-[4/3] md:aspect-[16/9] rounded-2xl overflow-hidden shadow-lg border border-zinc-100 dark:border-zinc-800">
-                <Image src="/examples/Before-after.png" alt="Before and after transforming a Word document into a modern hybrid biodata PDF" fill className="object-contain" />
+                <Image src="/examples/Before-after.webp" alt="Before and after transforming a Word document into a modern hybrid biodata PDF" fill className="object-contain" />
               </div>
               <figcaption className="text-center text-sm text-zinc-500 mt-3 italic">
                 A classic example of moving from a cramped, traditional Word document to a clean, hybrid PDF design.

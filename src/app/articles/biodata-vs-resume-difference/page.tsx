@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Biodata vs Resume vs CV | The Real Difference Explained",
     description: "Confused between a biodata, resume, and CV? Learn the key differences, when to use each, and how to create the perfect document for jobs or marriage.",
     url: "https://biodatabuilder.in/articles/biodata-vs-resume-difference",
-    images: [{ url: "/examples/biodata-vs-resume-infographic.png", width: 1024, height: 1024, alt: "Biodata vs Resume vs CV Infographic" }],
+    images: [{ url: "/examples/biodata-vs-resume-infographic.webp", width: 1024, height: 1024, alt: "Biodata vs Resume vs CV Infographic" }],
   },
 };
 
@@ -99,7 +99,7 @@ export default function Article() {
           <figure className="my-10">
             <div className="relative w-full aspect-[4/3] md:aspect-[16/9] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-lg bg-zinc-100 dark:bg-zinc-800">
               <Image 
-                src="/examples/biodata-vs-resume-infographic.png" 
+                src="/examples/biodata-vs-resume-infographic.webp" 
                 alt="Biodata vs Resume vs CV Comparison Infographic" 
                 fill 
                 className="object-contain"
@@ -186,7 +186,7 @@ export default function Article() {
             <h3 className="text-xl font-bold text-zinc-900 dark:text-white mt-8 mb-4">A. The Marriage Biodata</h3>
             <figure className="my-8 float-right ml-6 mb-4 w-1/2 max-w-sm hidden sm:block">
               <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-md">
-                <Image src="/examples/Boy-biodata-example.png" alt="Sample Marriage Biodata" fill className="object-cover" />
+                <Image src="/examples/Boy-biodata-example.webp" alt="Sample Marriage Biodata" fill className="object-cover" />
               </div>
               <figcaption className="text-xs text-center mt-2 text-zinc-500 dark:text-zinc-400">A typical modern marriage biodata format.</figcaption>
             </figure>
@@ -227,7 +227,7 @@ export default function Article() {
             <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-6">4. What is a Resume?</h2>
             <figure className="my-8 float-left mr-6 mb-4 w-1/2 max-w-sm hidden sm:block">
               <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-md bg-white">
-                <Image src="/examples/Job-biodata-structure.png" alt="Standard Resume Format" fill className="object-contain" />
+                <Image src="/examples/Job-biodata-structure.webp" alt="Standard Resume Format" fill className="object-contain" />
               </div>
               <figcaption className="text-xs text-center mt-2 text-zinc-500 dark:text-zinc-400">A clean, professional 1-page resume.</figcaption>
             </figure>

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Thirumanam Biodata Format Tamil | திருமண பயோடேட்டா",
     description: "Tamil marriage biodata with Jathagam details, Rasi, Natchathiram, community fields — free PDF.",
     url: "https://biodatabuilder.in/articles/thirumanam-biodata-format-tamil",
-    images: [{ url: "/examples/Boy-biodata-example-Tamil.png", width: 1200, height: 630, alt: "Tamil Thirumanam Biodata Example" }],
+    images: [{ url: "/examples/Boy-biodata-example-Tamil.webp", width: 1200, height: 630, alt: "Tamil Thirumanam Biodata Example" }],
   },
 };
 
@@ -75,7 +75,7 @@ export default function Article() {
           <figure className="my-10">
             <div className="relative w-full aspect-[4/3] md:aspect-[16/9] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-lg bg-indigo-50 dark:bg-indigo-950/20">
               <Image 
-                src="/examples/tamil-biodata-infographic.png" 
+                src="/examples/tamil-biodata-infographic.webp" 
                 alt="Tamil Thirumanam Biodata 10-Porutham Infographic: Jathagam, Kudumbam, Thirumanam" 
                 fill 
                 className="object-contain"
@@ -196,7 +196,7 @@ export default function Article() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
               <div className="rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-sm bg-white dark:bg-zinc-900">
-                <Image src="/examples/Boy-biodata-example-Tamil.png" alt="Tamil thirumanam biodata example for boy" width={600} height={800} className="w-full h-auto" />
+                <Image src="/examples/Boy-biodata-example-Tamil.webp" alt="Tamil thirumanam biodata example for boy" width={600} height={800} className="w-full h-auto" />
                 <div className="p-4 border-t border-zinc-100 dark:border-zinc-800">
                   <h3 className="font-bold text-zinc-900 dark:text-white mb-1">Boy Biodata Format</h3>
                   <p className="text-xs text-zinc-500 dark:text-zinc-400">Notice the clear separation of the Jathagam block from the professional details. Professional achievements (salary, company) are highlighted.</p>
@@ -204,7 +204,7 @@ export default function Article() {
               </div>
               
               <div className="rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-sm bg-white dark:bg-zinc-900">
-                <Image src="/examples/Girl-biodata-example-Tamil.png" alt="Tamil thirumanam biodata example for girl" width={600} height={800} className="w-full h-auto" />
+                <Image src="/examples/Girl-biodata-example-Tamil.webp" alt="Tamil thirumanam biodata example for girl" width={600} height={800} className="w-full h-auto" />
                 <div className="p-4 border-t border-zinc-100 dark:border-zinc-800">
                   <h3 className="font-bold text-zinc-900 dark:text-white mb-1">Girl Biodata Format</h3>
                   <p className="text-xs text-zinc-500 dark:text-zinc-400">Features a softer color palette. The family background (Kudumbam) and Gothram are placed prominently alongside the Rasi details.</p>

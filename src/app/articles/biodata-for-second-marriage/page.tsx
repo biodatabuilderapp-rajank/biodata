@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Biodata for Second Marriage | Divorced & Widowed Guide",
     description: "Write an honest, dignified biodata for second marriage. Includes 4 sample texts, comparison table, cultural tips for Hindu/Muslim/Christian, and checklist.",
     url: "https://biodatabuilder.in/articles/biodata-for-second-marriage",
-    images: [{ url: "/examples/Second-marriage-biodata-example.png", width: 1200, height: 700, alt: "Second marriage biodata example" }],
+    images: [{ url: "/examples/Second-marriage-biodata-example.webp", width: 1200, height: 700, alt: "Second marriage biodata example" }],
   },
 };
 
@@ -82,7 +82,7 @@ export default function Article() {
 
           {/* Hero Image */}
           <div className="my-8 rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-lg">
-            <Image src="/examples/Second-marriage-biodata-example.png" alt="Marriage biodata example for second marriage showing Divorced or Widowed marital status" width={1200} height={700} className="w-full h-auto" priority />
+            <Image src="/examples/Second-marriage-biodata-example.webp" alt="Marriage biodata example for second marriage showing Divorced or Widowed marital status" width={1200} height={700} className="w-full h-auto" priority />
             <p className="text-center text-xs text-zinc-400 py-2 bg-zinc-50 dark:bg-zinc-900">A dignified second marriage biodata — honest, clean, and compassionate</p>
           </div>
 
@@ -136,7 +136,7 @@ export default function Article() {
 
           {/* Infographic */}
           <div className="my-6 rounded-2xl overflow-hidden shadow-md">
-            <Image src="/examples/Second-marriage-biodata-guide.png" alt="Second marriage biodata: what to include vs what to skip infographic" width={1024} height={1024} className="w-full h-auto" />
+            <Image src="/examples/Second-marriage-biodata-guide.webp" alt="Second marriage biodata: what to include vs what to skip infographic" width={1024} height={1024} className="w-full h-auto" />
           </div>
 
           {/* Samples */}

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Muslim Marriage Biodata Format | Rishta Biodata Guide",
     description: "Muslim Rishta biodata format — Sect, Biraderi, Mehr, Wali details — free PDF download.",
     url: "https://biodatabuilder.in/articles/marriage-biodata-format-for-muslim",
-    images: [{ url: "/examples/Muslim-biodata-example.png", width: 1200, height: 630, alt: "Muslim Marriage Biodata Example" }],
+    images: [{ url: "/examples/Muslim-biodata-example.webp", width: 1200, height: 630, alt: "Muslim Marriage Biodata Example" }],
   },
 };
 
@@ -77,7 +77,7 @@ export default function Article() {
           <figure className="my-10">
             <div className="relative w-full aspect-[4/3] md:aspect-[16/9] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-lg bg-emerald-50 dark:bg-emerald-900">
               <Image 
-                src="/examples/muslim-biodata-infographic.png" 
+                src="/examples/muslim-biodata-infographic.webp" 
                 alt="Muslim Marriage Biodata Structure Infographic" 
                 fill 
                 className="object-contain"
@@ -157,7 +157,7 @@ export default function Article() {
             <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-6">3. Stating Your Sect & Practicing Level</h2>
             <figure className="my-8 float-right ml-6 mb-4 w-1/2 max-w-sm hidden sm:block">
               <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-md">
-                <Image src="/examples/Muslim-biodata-example.png" alt="Sample Muslim Marriage Biodata" fill className="object-cover" />
+                <Image src="/examples/Muslim-biodata-example.webp" alt="Sample Muslim Marriage Biodata" fill className="object-cover" />
               </div>
               <figcaption className="text-xs text-center mt-2 text-zinc-500 dark:text-zinc-400">A typical Muslim Rishta biodata format.</figcaption>
             </figure>
@@ -204,7 +204,7 @@ export default function Article() {
             <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-6">5. Writing the Perfect "About Me"</h2>
             <figure className="my-8 float-left mr-6 mb-4 w-1/2 max-w-sm hidden sm:block">
               <div className="relative aspect-[4/3] rounded-xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-md bg-white">
-                <Image src="/examples/About-me-biodata-samples.png" alt="About Me Section Examples" fill className="object-contain" />
+                <Image src="/examples/About-me-biodata-samples.webp" alt="About Me Section Examples" fill className="object-contain" />
               </div>
               <figcaption className="text-xs text-center mt-2 text-zinc-500 dark:text-zinc-400">Include a short, genuine About Me paragraph.</figcaption>
             </figure>

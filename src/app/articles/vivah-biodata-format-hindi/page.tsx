@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     description:
       "सुंदर हिंदी शादी बायोडाटा ऑनलाइन मुफ्त में बनाएं। आधुनिक टेम्पलेट चुनें और तुरंत PDF डाउनलोड करें।",
     url: "https://biodatabuilder.in/articles/vivah-biodata-format-hindi",
-    images: [{ url: "/examples/Hero-composite.png", width: 1200, height: 630, alt: "Hindi Vivah Biodata Format Templates" }],
+    images: [{ url: "/examples/Hero-composite.webp", width: 1200, height: 630, alt: "Hindi Vivah Biodata Format Templates" }],
   },
 };
 
@@ -81,7 +81,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "Vivah Biodata Format in Hindi | शादी बायोडाटा PDF",
   description: "सुंदर हिंदी शादी बायोडाटा ऑनलाइन मुफ्त में बनाएं। आधुनिक टेम्पलेट चुनें और तुरंत PDF डाउनलोड करें।",
-  image: "/examples/Hero-composite.png",
+  image: "/examples/Hero-composite.webp",
   datePublished: "2026-05-04",
   dateModified: "2026-05-27",
   author: { "@type": "Organization", name: "BiodataBuilder" },
@@ -106,7 +106,7 @@ export default function VivahBiodataFormatHindiPage() {
         {/* ── HERO IMAGE ── */}
         <div className="my-8 rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-lg">
           <Image
-            src="/examples/Hero-composite.png"
+            src="/examples/Hero-composite.webp"
             alt="हिंदी विवाह बायोडाटा टेम्पलेट — शादी के लिए सुंदर बायोडाटा फॉर्मेट"
             width={1200}
             height={630}
@@ -204,7 +204,7 @@ export default function VivahBiodataFormatHindiPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             <div className="rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-md">
               <Image
-                src="/examples/Boy-biodata-example.png"
+                src="/examples/Boy-biodata-example.webp"
                 alt="लड़के के लिए शादी बायोडाटा उदाहरण — marriage biodata format for boy in Hindi"
                 width={600}
                 height={800}
@@ -247,7 +247,7 @@ export default function VivahBiodataFormatHindiPage() {
             </div>
             <div className="rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-md md:order-1">
               <Image
-                src="/examples/Girl-biodata-example.png"
+                src="/examples/Girl-biodata-example.webp"
                 alt="लड़की के लिए विवाह बायोडाटा उदाहरण — marriage biodata format for girl in Hindi"
                 width={600}
                 height={800}
@@ -292,7 +292,7 @@ export default function VivahBiodataFormatHindiPage() {
           {/* ── WHATSAPP IMAGE ── */}
           <div className="my-8 rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-md">
             <Image
-              src="/examples/WhatsApp-preview.jpg"
+              src="/examples/WhatsApp-preview.webp"
               alt="WhatsApp पर शादी बायोडाटा PDF — marriage biodata shared on WhatsApp"
               width={1200}
               height={600}

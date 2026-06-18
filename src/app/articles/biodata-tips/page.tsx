@@ -115,7 +115,7 @@ export default function Article() {
           <p>Choose a <strong className="font-semibold text-zinc-900 dark:text-white">plain, uncluttered background</strong> — a white wall, a soft outdoor setting, or a studio backdrop. Wear something you would wear to a formal family gathering: traditional or smart-casual attire. Avoid busy prints that distract from your face.</p>
 
           <div className="my-6 rounded-2xl overflow-hidden shadow-sm">
-            <Image src="/examples/Before-after.png" alt="Good vs bad biodata photo example" width={1200} height={600} className="w-full h-auto" />
+            <Image src="/examples/Before-after.webp" alt="Good vs bad biodata photo example" width={1200} height={600} className="w-full h-auto" />
           </div>
 
           <h3 className="text-xl font-bold text-zinc-900 dark:text-white mt-8 mb-4">C. Photo Do&apos;s and Don&apos;ts</h3>
@@ -141,7 +141,7 @@ export default function Article() {
           <p>Phrases like &quot;listening to music,&quot; &quot;watching TV,&quot; and &quot;spending time with family&quot; are listed by nearly every person. They tell the reader absolutely nothing unique about you. Worse, they signal a lack of effort — and families notice.</p>
 
           <div className="my-6 rounded-2xl overflow-hidden shadow-md">
-            <Image src="/examples/Biodata-hobbies-good-bad.png" alt="Good vs bad hobbies to write in marriage biodata" width={1024} height={1024} className="w-full h-auto" />
+            <Image src="/examples/Biodata-hobbies-good-bad.webp" alt="Good vs bad hobbies to write in marriage biodata" width={1024} height={1024} className="w-full h-auto" />
           </div>
 
           <h3 className="text-xl font-bold text-zinc-900 dark:text-white mt-8 mb-4">Hobby Examples by Category</h3>

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "How to Share Biodata on WhatsApp | Best Format for Sharing",
     description: "Learn the best way to share your marriage biodata on WhatsApp. PDF vs image vs Word, how to send as document, file size tips, and what to write in the message.",
     url: "https://biodatabuilder.in/articles/biodata-format-for-whatsapp",
-    images: [{ url: "/examples/whatsapp-biodata-infographic.png", width: 1200, height: 630, alt: "How to Share Biodata on WhatsApp" }],
+    images: [{ url: "/examples/whatsapp-biodata-infographic.webp", width: 1200, height: 630, alt: "How to Share Biodata on WhatsApp" }],
   },
 };
 
@@ -92,7 +92,7 @@ export default function Article() {
           <figure className="my-10">
             <div className="relative w-full aspect-[4/3] md:aspect-[16/9] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-lg bg-zinc-50 dark:bg-zinc-900">
               <Image 
-                src="/examples/whatsapp-biodata-infographic.png" 
+                src="/examples/whatsapp-biodata-infographic.webp" 
                 alt="How to Share Biodata on WhatsApp: PDF vs Image Comparison" 
                 fill 
                 className="object-contain"
@@ -136,7 +136,7 @@ export default function Article() {
             <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-6">2. Why WhatsApp is the New Matrimonial Hub</h2>
             <figure className="my-8 float-left mr-6 mb-4 w-1/2 max-w-sm hidden sm:block">
               <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-md">
-                <Image src="/examples/WhatsApp-preview.jpg" alt="WhatsApp PDF Preview of Biodata" fill className="object-cover" />
+                <Image src="/examples/WhatsApp-preview.webp" alt="WhatsApp PDF Preview of Biodata" fill className="object-cover" />
               </div>
               <figcaption className="text-xs text-center mt-2 text-zinc-500 dark:text-zinc-400">PDFs render a clean preview card in WhatsApp.</figcaption>
             </figure>
@@ -159,7 +159,7 @@ export default function Article() {
 
             <figure className="my-8">
               <div className="relative w-full aspect-square sm:aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-zinc-100 dark:border-zinc-800 bg-white">
-                <Image src="/examples/mobile_word_vs_pdf.png" alt="Comparison showing why PDF is superior to Word when sharing biodata on mobile" fill className="object-contain" />
+                <Image src="/examples/mobile_word_vs_pdf.webp" alt="Comparison showing why PDF is superior to Word when sharing biodata on mobile" fill className="object-contain" />
               </div>
               <figcaption className="text-center text-sm text-zinc-500 mt-3 italic">
                 A visual demonstration of how Word formatting breaks on mobile, compared to a flawless PDF.

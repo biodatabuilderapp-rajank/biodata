@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Lagna Biodata Format Gujarati | લગ્ન બાયોડેટા PDF",
     description: "Complete Gujarati lagna biodata format with Jati, Gotra, Gana, Rashi — free PDF download.",
     url: "https://biodatabuilder.in/articles/lagna-biodata-format-gujarati",
-    images: [{ url: "/examples/gujarati-biodata-infographic.png", width: 1200, height: 630, alt: "Gujarati Lagna Biodata Details" }],
+    images: [{ url: "/examples/gujarati-biodata-infographic.webp", width: 1200, height: 630, alt: "Gujarati Lagna Biodata Details" }],
   },
 };
 
@@ -75,7 +75,7 @@ export default function Article() {
           <figure className="my-10">
             <div className="relative w-full aspect-[4/3] md:aspect-[16/9] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-lg bg-indigo-50 dark:bg-indigo-900">
               <Image 
-                src="/examples/gujarati-biodata-infographic.png" 
+                src="/examples/gujarati-biodata-infographic.webp" 
                 alt="Anatomy of a Gujarati Lagna Biodata Details Infographic" 
                 fill 
                 className="object-contain"
@@ -224,7 +224,7 @@ export default function Article() {
             <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-6">6. Gujarati Boy Biodata Example</h2>
             <figure className="my-8 float-left mr-6 mb-4 w-1/2 max-w-sm hidden sm:block">
               <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-md">
-                <Image src="/examples/Boy-biodata-example-Gujarati.png" alt="Gujarati boy lagna biodata example" fill className="object-cover" />
+                <Image src="/examples/Boy-biodata-example-Gujarati.webp" alt="Gujarati boy lagna biodata example" fill className="object-cover" />
               </div>
               <figcaption className="text-xs text-center mt-2 text-zinc-500 dark:text-zinc-400">Gujarati boy lagna biodata template.</figcaption>
             </figure>
@@ -241,7 +241,7 @@ export default function Article() {
             <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-6">7. Gujarati Girl Biodata Example</h2>
             <figure className="my-8 float-right ml-6 mb-4 w-1/2 max-w-sm hidden sm:block">
               <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-md">
-                <Image src="/examples/Girl-biodata-example-Gujarati.png" alt="Gujarati girl lagna biodata example" fill className="object-cover" />
+                <Image src="/examples/Girl-biodata-example-Gujarati.webp" alt="Gujarati girl lagna biodata example" fill className="object-cover" />
               </div>
               <figcaption className="text-xs text-center mt-2 text-zinc-500 dark:text-zinc-400">Gujarati girl lagna biodata template.</figcaption>
             </figure>

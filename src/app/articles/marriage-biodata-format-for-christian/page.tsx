@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Christian Marriage Biodata Format | Free PDF Template",
     description: "Complete Christian marriage biodata format — denomination, church, family, and contact details. Free PDF download.",
     url: "https://biodatabuilder.in/articles/marriage-biodata-format-for-christian",
-    images: [{ url: "/examples/christian-biodata-infographic.png", width: 1200, height: 630, alt: "Christian Marriage Biodata Format Infographic" }],
+    images: [{ url: "/examples/christian-biodata-infographic.webp", width: 1200, height: 630, alt: "Christian Marriage Biodata Format Infographic" }],
   },
 };
 
@@ -71,7 +71,7 @@ export default function Article() {
           <figure className="my-10">
             <div className="relative w-full aspect-[4/3] md:aspect-[16/9] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-lg bg-sky-50 dark:bg-sky-950/20">
               <Image 
-                src="/examples/christian-biodata-infographic.png" 
+                src="/examples/christian-biodata-infographic.webp" 
                 alt="Christian Marriage Biodata Format Infographic: Faith, Background, Expectations" 
                 fill 
                 className="object-contain"
@@ -160,7 +160,7 @@ export default function Article() {
 
             <div className="mt-12 rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-700 shadow-lg">
               <Image 
-                src="/examples/Christian-biodata-example.png" 
+                src="/examples/Christian-biodata-example.webp" 
                 alt="A professional Christian marriage biodata example highlighting the Cross icon and denomination fields" 
                 width={1200} 
                 height={700} 
@@ -307,7 +307,7 @@ export default function Article() {
 
             <figure className="my-8">
               <div className="relative w-full aspect-[4/3] md:aspect-[16/9] rounded-2xl overflow-hidden shadow-lg border border-zinc-100 dark:border-zinc-800 bg-white">
-                <Image src="/examples/word_vs_pdf_biodata_infographic.png" alt="A visual comparison showing why PDF is superior to Word for marriage biodatas" fill className="object-contain" />
+                <Image src="/examples/word_vs_pdf_biodata_infographic.webp" alt="A visual comparison showing why PDF is superior to Word for marriage biodatas" fill className="object-contain" />
               </div>
               <figcaption className="text-center text-sm text-zinc-500 mt-3 italic">
                 Always share your Christian biodata as a PDF to ensure the formatting does not break on the recipient's phone.

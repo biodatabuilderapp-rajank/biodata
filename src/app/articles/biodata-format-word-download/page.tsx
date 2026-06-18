@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Biodata Format in Word for Marriage: Free Download Alternative",
     description: "Looking for a marriage biodata format in Word? Discover why a PDF builder creates better results than Word, and how to get a beautiful biodata for free in seconds.",
     url: "https://biodatabuilder.in/articles/biodata-format-word-download",
-    images: [{ url: "/examples/word_vs_pdf_biodata_infographic.png", width: 1200, height: 630, alt: "Word vs PDF Biodata Comparison" }],
+    images: [{ url: "/examples/word_vs_pdf_biodata_infographic.webp", width: 1200, height: 630, alt: "Word vs PDF Biodata Comparison" }],
   },
 };
 
@@ -87,7 +87,7 @@ export default function BiodataFormatWordPage() {
           <figure className="my-10">
             <div className="relative w-full aspect-[4/3] md:aspect-[16/9] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-lg bg-zinc-50 dark:bg-zinc-950/20">
               <Image 
-                src="/examples/word_vs_pdf_biodata_infographic.png" 
+                src="/examples/word_vs_pdf_biodata_infographic.webp" 
                 alt="Split screen comparing a broken Word document biodata with formatting errors against a perfect PDF biodata builder output" 
                 fill 
                 className="object-contain"
@@ -146,7 +146,7 @@ export default function BiodataFormatWordPage() {
               {/* IMAGE 1 */}
               <figure className="my-8">
                 <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-md">
-                  <Image src="/examples/mobile_word_vs_pdf.png" alt="Mobile view of a broken Word document vs perfectly formatted PDF" fill className="object-contain" />
+                  <Image src="/examples/mobile_word_vs_pdf.webp" alt="Mobile view of a broken Word document vs perfectly formatted PDF" fill className="object-contain" />
                 </div>
                 <figcaption className="text-center text-sm text-zinc-500 mt-3 italic">
                   Even if it looks perfect on your laptop, a Word document will likely break when a family opens it on their smartphone.
@@ -229,7 +229,7 @@ export default function BiodataFormatWordPage() {
             {/* IMAGE 2 */}
             <figure className="my-10">
               <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-zinc-100 dark:border-zinc-800">
-                <Image src="/examples/pdf_biodata_features.png" alt="Key features of a PDF biodata maker including instant export, auto cropper, and free tools" fill className="object-cover" />
+                <Image src="/examples/pdf_biodata_features.webp" alt="Key features of a PDF biodata maker including instant export, auto cropper, and free tools" fill className="object-cover" />
               </div>
             </figure>
           </section>

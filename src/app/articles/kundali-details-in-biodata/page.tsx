@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Kundali Details in Biodata | What Horoscope Info to Include",
     description: "What kundali and horoscope details should you include in a marriage biodata? A complete guide to Rashi, Nakshatra, Gotra, Manglik status and more.",
     url: "https://biodatabuilder.in/articles/kundali-details-in-biodata",
-    images: [{ url: "/examples/kundali-biodata-infographic.png", width: 1200, height: 630, alt: "Essential Kundali Details" }],
+    images: [{ url: "/examples/kundali-biodata-infographic.webp", width: 1200, height: 630, alt: "Essential Kundali Details" }],
   },
 };
 
@@ -92,7 +92,7 @@ export default function Article() {
           <figure className="my-10">
             <div className="relative w-full aspect-[4/3] md:aspect-[16/9] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-lg bg-indigo-50 dark:bg-indigo-900">
               <Image 
-                src="/examples/kundali-biodata-infographic.png" 
+                src="/examples/kundali-biodata-infographic.webp" 
                 alt="Essential Kundali Details for Marriage Biodata Infographic" 
                 fill 
                 className="object-contain"
@@ -137,7 +137,7 @@ export default function Article() {
             {/* IMAGE 1 */}
             <figure className="my-8">
               <div className="relative w-full aspect-square sm:aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-zinc-100 dark:border-zinc-800">
-                <Image src="/examples/kundali_components_infographic.png" alt="Infographic detailing the key components of Kundali including Rashi, Nakshatra, Gotra, and Manglik Dosha" fill className="object-cover" />
+                <Image src="/examples/kundali_components_infographic.webp" alt="Infographic detailing the key components of Kundali including Rashi, Nakshatra, Gotra, and Manglik Dosha" fill className="object-cover" />
               </div>
               <figcaption className="text-center text-sm text-zinc-500 mt-3 italic">
                 A visual breakdown of the most critical astrological components required for matchmaking.
@@ -334,7 +334,7 @@ export default function Article() {
             
             <div className="mt-8 rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-700 shadow-lg">
               <Image 
-                src="/examples/Kundali-section-biodata.png" 
+                src="/examples/Kundali-section-biodata.webp" 
                 alt="Zoomed-in Kundali section in a modern marriage biodata" 
                 width={1200} 
                 height={500} 

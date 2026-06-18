@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Shaadi Biodata for Girl | Complete Marriage Biodata Guide",
     description: "Create the perfect marriage biodata for a girl. Sections to include, sample About Me text, expectations wording, template tips, and free PDF download.",
     url: "https://biodatabuilder.in/articles/shaadi-biodata-format-for-girl",
-    images: [{ url: "/examples/girl_biodata_infographic.png", width: 1200, height: 630, alt: "Shaadi Biodata Format For Girl" }],
+    images: [{ url: "/examples/girl_biodata_infographic.webp", width: 1200, height: 630, alt: "Shaadi Biodata Format For Girl" }],
   },
 };
 
@@ -79,7 +79,7 @@ export default function Article() {
           <figure className="my-10">
             <div className="relative w-full aspect-[4/3] md:aspect-[16/9] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-lg bg-zinc-50 dark:bg-zinc-950/20">
               <Image 
-                src="/examples/girl_biodata_infographic.png" 
+                src="/examples/girl_biodata_infographic.webp" 
                 alt="Perfect Shaadi Biodata Format for a Girl showing layout, colors, and required sections" 
                 fill 
                 className="object-contain"
@@ -169,7 +169,7 @@ export default function Article() {
             </p>
 
             <div className="my-6 rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow bg-white dark:bg-zinc-900">
-              <Image src="/examples/Girl-biodata-about-me-examples.png" alt="Sample About Me sections for a girl's marriage biodata" width={1200} height={600} className="w-full h-auto" />
+              <Image src="/examples/Girl-biodata-about-me-examples.webp" alt="Sample About Me sections for a girl's marriage biodata" width={1200} height={600} className="w-full h-auto" />
               <p className="text-center text-xs text-zinc-500 py-2 border-t border-zinc-100 dark:border-zinc-800">Two highly effective sample &quot;About Me&quot; sections</p>
             </div>
 
@@ -202,7 +202,7 @@ export default function Article() {
             {/* IMAGE 3 (Hobbies) */}
             <figure className="my-10">
               <div className="relative w-full aspect-square sm:aspect-[4/3] rounded-2xl overflow-hidden shadow border border-zinc-100 dark:border-zinc-800">
-                <Image src="/examples/girl_biodata_hobbies.png" alt="Best hobbies to include in a girl's marriage biodata like Reading, Yoga, Traveling, and Culinary Arts" fill className="object-cover" />
+                <Image src="/examples/girl_biodata_hobbies.webp" alt="Best hobbies to include in a girl's marriage biodata like Reading, Yoga, Traveling, and Culinary Arts" fill className="object-cover" />
               </div>
               <figcaption className="text-center text-sm text-zinc-500 mt-3 italic">
                 A well-chosen set of hobbies reveals your personality and lifestyle without needing a long paragraph.

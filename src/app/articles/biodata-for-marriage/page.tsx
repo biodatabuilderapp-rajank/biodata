@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     description:
       "Create beautiful Indian marriage biodata online for free. Choose modern biodata templates, add your details, and instantly download PDF for WhatsApp sharing.",
     url: "https://biodatabuilder.in/articles/biodata-for-marriage",
-    images: [{ url: "/examples/Hero-composite.png", width: 1200, height: 630, alt: "Marriage Biodata Templates" }],
+    images: [{ url: "/examples/Hero-composite.webp", width: 1200, height: 630, alt: "Marriage Biodata Templates" }],
   },
 };
 
@@ -89,7 +89,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "Marriage Biodata Maker Online Free | Create Biodata PDF",
   description: "Create beautiful Indian marriage biodata online for free. Choose modern biodata templates, add your details, and instantly download PDF for WhatsApp sharing.",
-  image: "/examples/Hero-composite.png",
+  image: "/examples/Hero-composite.webp",
   datePublished: "2026-05-04",
   dateModified: "2026-05-27",
   author: { "@type": "Organization", name: "BiodataBuilder" },
@@ -112,7 +112,7 @@ export default function BiodataForMarriagePillarPage() {
         {/* ── HERO IMAGE ── */}
         <div className="my-8 rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-lg">
           <Image
-            src="/examples/Hero-composite.png"
+            src="/examples/Hero-composite.webp"
             alt="Beautiful Indian marriage biodata templates — traditional and modern designs"
             width={1200}
             height={630}
@@ -209,7 +209,7 @@ export default function BiodataForMarriagePillarPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             <div className="rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-md">
               <Image
-                src="/examples/Boy-biodata-example.png"
+                src="/examples/Boy-biodata-example.webp"
                 alt="Marriage biodata example for boy — traditional Indian format with photo"
                 width={600}
                 height={800}
@@ -252,7 +252,7 @@ export default function BiodataForMarriagePillarPage() {
             </div>
             <div className="rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-md md:order-1">
               <Image
-                src="/examples/Girl-biodata-example.png"
+                src="/examples/Girl-biodata-example.webp"
                 alt="Marriage biodata example for girl — traditional Indian floral template"
                 width={600}
                 height={800}
@@ -296,7 +296,7 @@ export default function BiodataForMarriagePillarPage() {
           {/* ── WHATSAPP PREVIEW ── */}
           <div className="my-8 rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-md">
             <Image
-              src="/examples/WhatsApp-preview.jpg"
+              src="/examples/WhatsApp-preview.webp"
               alt="Marriage biodata PDF shared on WhatsApp — how it looks on mobile"
               width={1200}
               height={600}
@@ -323,7 +323,7 @@ export default function BiodataForMarriagePillarPage() {
           {/* ── BEFORE/AFTER ── */}
           <div className="my-8 rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-md">
             <Image
-              src="/examples/Before-after.png"
+              src="/examples/Before-after.webp"
               alt="Before and after comparison — plain Word biodata vs professionally designed BiodataBuilder PDF"
               width={1200}
               height={600}

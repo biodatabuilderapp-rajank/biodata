@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Marriage Biodata for Boy | Complete Groom Biodata Format Guide",
     description: "Complete guide to creating a marriage biodata for a boy (groom). What sections to include, sample text, income tips, common mistakes, and free PDF download.",
     url: "https://biodatabuilder.in/articles/marriage-biodata-for-boy",
-    images: [{ url: "/examples/boy_biodata_infographic.png", width: 1200, height: 630, alt: "Marriage Biodata Format For Boy" }],
+    images: [{ url: "/examples/boy_biodata_infographic.webp", width: 1200, height: 630, alt: "Marriage Biodata Format For Boy" }],
   },
 };
 
@@ -95,7 +95,7 @@ export default function Article() {
           <figure className="my-10">
             <div className="relative w-full aspect-[4/3] md:aspect-[16/9] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-lg bg-zinc-50 dark:bg-zinc-950/20">
               <Image 
-                src="/examples/boy_biodata_infographic.png" 
+                src="/examples/boy_biodata_infographic.webp" 
                 alt="Marriage Biodata Format for Boy (Groom) showing structured layout and premium design" 
                 fill 
                 className="object-contain"
@@ -181,7 +181,7 @@ export default function Article() {
             {/* IMAGE 1 */}
             <figure className="my-8">
               <div className="relative w-full max-w-2xl mx-auto aspect-square sm:aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-zinc-100 dark:border-zinc-800">
-                <Image src="/examples/groom_salary_transparency.png" alt="Infographic showing why stating exact salary is better than vague terms in a groom's biodata" fill className="object-cover" />
+                <Image src="/examples/groom_salary_transparency.webp" alt="Infographic showing why stating exact salary is better than vague terms in a groom's biodata" fill className="object-cover" />
               </div>
               <figcaption className="text-center text-sm text-zinc-500 mt-3 italic">
                 Always state a specific range rather than vague descriptions like &quot;Good Income.&quot;
@@ -274,7 +274,7 @@ export default function Article() {
                   {/* IMAGE 2 */}
                   <figure className="my-6">
                     <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-md">
-                      <Image src="/examples/groom_biodata_photo_tips.png" alt="Do's and Don'ts of groom biodata photos" fill className="object-contain" />
+                      <Image src="/examples/groom_biodata_photo_tips.webp" alt="Do's and Don'ts of groom biodata photos" fill className="object-contain" />
                     </div>
                   </figure>
 

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     description:
       "हिंदी में शादी का बायोडाटा कैसे बनाएं? Step-by-step guide, sample Hindi biodata format, fields checklist, and free PDF maker. Perfect for UP, MP, Rajasthan & Bihar families.",
     url: "https://biodatabuilder.in/articles/biodata-format-hindi",
-    images: [{ url: "/examples/Hero-composite.png", width: 1200, height: 630, alt: "Hindi marriage biodata format example" }],
+    images: [{ url: "/examples/Hero-composite.webp", width: 1200, height: 630, alt: "Hindi marriage biodata format example" }],
   },
 };
 
@@ -77,7 +77,7 @@ export default function Article() {
 
           {/* Hero Image */}
           <div className="my-8 rounded-2xl overflow-hidden shadow-md">
-            <Image src="/examples/Hero-composite.png" alt="Hindi marriage biodata format examples" width={1200} height={630} className="w-full h-auto" priority />
+            <Image src="/examples/Hero-composite.webp" alt="Hindi marriage biodata format examples" width={1200} height={630} className="w-full h-auto" priority />
           </div>
 
           {/* TOC */}
@@ -122,7 +122,7 @@ export default function Article() {
           <h2 id="what-to-include" className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mt-12 mb-6">हिंदी बायोडाटा में क्या-क्या शामिल करें?</h2>
 
           <div className="my-6 rounded-2xl overflow-hidden shadow-md">
-            <Image src="/examples/Hindi-biodata-fields-infographic.png" alt="हिंदी बायोडाटा में क्या-क्या लिखें — Hindi biodata fields infographic" width={1024} height={1024} className="w-full h-auto" />
+            <Image src="/examples/Hindi-biodata-fields-infographic.webp" alt="हिंदी बायोडाटा में क्या-क्या लिखें — Hindi biodata fields infographic" width={1024} height={1024} className="w-full h-auto" />
           </div>
 
           <p>नीचे दी गई तालिका में सभी fields की संपूर्ण सूची है और साथ में उनकी अंग्रेज़ी परिभाषा भी दी गई है:</p>
@@ -187,7 +187,7 @@ export default function Article() {
           <p className="text-sm text-zinc-500 dark:text-zinc-400">नोट: यह एक काल्पनिक नमूना है। असली नाम और नंबर का उपयोग न करें।</p>
 
           <div className="my-6 rounded-2xl overflow-hidden shadow-md">
-            <Image src="/examples/Boy-biodata-example.png" alt="Sample Indian marriage biodata example for boy" width={1200} height={800} className="w-full h-auto" />
+            <Image src="/examples/Boy-biodata-example.webp" alt="Sample Indian marriage biodata example for boy" width={1200} height={800} className="w-full h-auto" />
           </div>
 
           {/* CTA Middle */}

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Marriage Biodata Statistics in India (2024 Trends)",
     description: "Fascinating data and statistics on arranged marriage and biodata trends in India. What do men and women look for? At what age are biodatas created?",
     url: "https://biodatabuilder.in/articles/marriage-biodata-statistics-india",
-    images: [{ url: "/examples/india-marriage-statistics-infographic-2024.png", width: 1200, height: 630, alt: "India Marriage Biodata Statistics" }],
+    images: [{ url: "/examples/india-marriage-statistics-infographic-2024.webp", width: 1200, height: 630, alt: "India Marriage Biodata Statistics" }],
   },
 };
 
@@ -84,7 +84,7 @@ export default function Article() {
           <figure className="my-10">
             <div className="relative w-full aspect-[4/3] md:aspect-[16/9] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-lg bg-indigo-50 dark:bg-indigo-900">
               <Image 
-                src="/examples/india-marriage-statistics-infographic-2024.png" 
+                src="/examples/india-marriage-statistics-infographic-2024.webp" 
                 alt="Arranged Marriage and Biodata Trends in India 2024 Infographic" 
                 fill 
                 className="object-contain"
@@ -171,7 +171,7 @@ export default function Article() {
             <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-6">4. Peak Age for Biodata Creation</h2>
             <figure className="my-8 float-right ml-6 mb-4 w-1/2 max-w-sm hidden sm:block">
               <div className="relative aspect-square rounded-xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-md">
-                <Image src="/examples/India-marriage-biodata-statistics.png" alt="Age demographics in arranged marriage" fill className="object-cover" />
+                <Image src="/examples/India-marriage-biodata-statistics.webp" alt="Age demographics in arranged marriage" fill className="object-cover" />
               </div>
               <figcaption className="text-xs text-center mt-2 text-zinc-500 dark:text-zinc-400">The demographic shift in marriage ages.</figcaption>
             </figure>
@@ -215,7 +215,7 @@ export default function Article() {
             <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-6">6. Why PDF Rules Over Word Docs</h2>
             <figure className="my-8 float-left mr-6 mb-4 w-1/2 max-w-sm hidden sm:block">
               <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-md">
-                <Image src="/examples/WhatsApp-preview.jpg" alt="WhatsApp PDF Preview of Biodata" fill className="object-cover" />
+                <Image src="/examples/WhatsApp-preview.webp" alt="WhatsApp PDF Preview of Biodata" fill className="object-cover" />
               </div>
               <figcaption className="text-xs text-center mt-2 text-zinc-500 dark:text-zinc-400">PDFs look professional and render perfectly on mobile.</figcaption>
             </figure>
@@ -261,7 +261,7 @@ export default function Article() {
             <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-6">8. What This Means For Your Biodata</h2>
             <figure className="my-8 float-right ml-6 mb-4 w-1/2 max-w-sm hidden sm:block">
               <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-md">
-                <Image src="/examples/Before-after.png" alt="Biodata Before and After Comparison" fill className="object-cover" />
+                <Image src="/examples/Before-after.webp" alt="Biodata Before and After Comparison" fill className="object-cover" />
               </div>
               <figcaption className="text-xs text-center mt-2 text-zinc-500 dark:text-zinc-400">A clean layout significantly boosts response rates.</figcaption>
             </figure>

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Vivah Biodata Format Telugu | వివాహ బయోడేటా PDF",
     description: "Telugu marriage biodata with Rasi, Nakshatra, Gotra, Cheyvvai details — free PDF download.",
     url: "https://biodatabuilder.in/articles/vivah-biodata-format-telugu",
-    images: [{ url: "/examples/telugu_biodata_infographic.png", width: 1200, height: 630, alt: "Telugu Vivah Biodata Format Infographic" }],
+    images: [{ url: "/examples/telugu_biodata_infographic.webp", width: 1200, height: 630, alt: "Telugu Vivah Biodata Format Infographic" }],
   },
 };
 
@@ -75,7 +75,7 @@ export default function Article() {
           <figure className="my-10">
             <div className="relative w-full aspect-[4/3] md:aspect-[16/9] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-lg bg-zinc-50 dark:bg-zinc-950/20">
               <Image 
-                src="/examples/telugu_biodata_infographic.png" 
+                src="/examples/telugu_biodata_infographic.webp" 
                 alt="Telugu Vivah Biodata Format infographic showing English and Telugu field translations" 
                 fill 
                 className="object-contain"
@@ -170,7 +170,7 @@ export default function Article() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
               <div className="rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-sm bg-white dark:bg-zinc-900">
-                <Image src="/examples/Boy-biodata-example-Telugu.png" alt="Telugu vivah biodata example for boy" width={600} height={800} className="w-full h-auto" />
+                <Image src="/examples/Boy-biodata-example-Telugu.webp" alt="Telugu vivah biodata example for boy" width={600} height={800} className="w-full h-auto" />
                 <div className="p-4 border-t border-zinc-100 dark:border-zinc-800">
                   <h3 className="font-bold text-zinc-900 dark:text-white mb-1">Boy Biodata Format</h3>
                   <p className="text-xs text-zinc-500 dark:text-zinc-400">Notice the prominent display of Income and Professional details, balanced with a clear astrological block detailing Gotram and Nakshatram.</p>
@@ -178,7 +178,7 @@ export default function Article() {
               </div>
               
               <div className="rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-sm bg-white dark:bg-zinc-900">
-                <Image src="/examples/Girl-biodata-example-Telugu.png" alt="Telugu vivah biodata example for girl" width={600} height={800} className="w-full h-auto" />
+                <Image src="/examples/Girl-biodata-example-Telugu.webp" alt="Telugu vivah biodata example for girl" width={600} height={800} className="w-full h-auto" />
                 <div className="p-4 border-t border-zinc-100 dark:border-zinc-800">
                   <h3 className="font-bold text-zinc-900 dark:text-white mb-1">Girl Biodata Format</h3>
                   <p className="text-xs text-zinc-500 dark:text-zinc-400">Features a softer layout. Family background (parents&apos; occupations) and Gotram are highlighted alongside educational qualifications.</p>

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Simple Biodata Format for Job PDF | Tips & Guide",
     description: "Simple biodata format for a job PDF — what to include, how it differs from a marriage biodata, sample text, formatting tips, and common mistakes.",
     url: "https://biodatabuilder.in/articles/simple-biodata-format-for-job-pdf",
-    images: [{ url: "/examples/Job-biodata-structure.png", width: 1024, height: 1024, alt: "Simple job biodata format section by section" }],
+    images: [{ url: "/examples/Job-biodata-structure.webp", width: 1024, height: 1024, alt: "Simple job biodata format section by section" }],
   },
 };
 
@@ -97,7 +97,7 @@ export default function Article() {
 
           {/* Hero Image */}
           <div className="my-8 rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-lg">
-            <Image src="/examples/Job-biodata-structure.png" alt="Simple job biodata format showing all 6 sections" width={1024} height={1024} className="w-full h-auto" priority />
+            <Image src="/examples/Job-biodata-structure.webp" alt="Simple job biodata format showing all 6 sections" width={1024} height={1024} className="w-full h-auto" priority />
             <p className="text-center text-xs text-zinc-400 py-2 bg-zinc-50 dark:bg-zinc-900">The 6 standard sections of a professional job biodata</p>
           </div>
 

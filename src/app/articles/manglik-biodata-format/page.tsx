@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Manglik Biodata Format | Marriage Biodata for Manglik Boy & Girl",
     description: "Complete guide to creating a marriage biodata when you are Manglik — what to write, how to match, and common concerns addressed.",
     url: "https://biodatabuilder.in/articles/manglik-biodata-format",
-    images: [{ url: "/examples/manglik-biodata-infographic.png", width: 1200, height: 630, alt: "Mangal Dosha in Matchmaking" }],
+    images: [{ url: "/examples/manglik-biodata-infographic.webp", width: 1200, height: 630, alt: "Mangal Dosha in Matchmaking" }],
   },
 };
 
@@ -71,7 +71,7 @@ export default function Article() {
           <figure className="my-10">
             <div className="relative w-full aspect-[4/3] md:aspect-[16/9] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-lg bg-rose-50 dark:bg-rose-950/20">
               <Image 
-                src="/examples/manglik-biodata-infographic.png" 
+                src="/examples/manglik-biodata-infographic.webp" 
                 alt="Mangal Dosha in Matchmaking: Manglik, Anshik Manglik, and Non-Manglik" 
                 fill 
                 className="object-contain"
@@ -180,7 +180,7 @@ export default function Article() {
 
             <figure className="my-8">
               <div className="relative w-full aspect-square sm:aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-zinc-100 dark:border-zinc-800">
-                <Image src="/examples/manglik_biodata_infographic_v2.png" alt="A visual guide showing which Manglik states match safely with each other" fill className="object-cover" />
+                <Image src="/examples/manglik_biodata_infographic_v2.webp" alt="A visual guide showing which Manglik states match safely with each other" fill className="object-cover" />
               </div>
               <figcaption className="text-center text-sm text-zinc-500 mt-3 italic">
                 A quick-reference guide to Manglik matchmaking compatibility.
@@ -209,7 +209,7 @@ export default function Article() {
             </div>
             
             <div className="mt-8 rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-700 shadow-lg">
-              <Image src="/examples/Manglik-biodata-sample.png" alt="A professional marriage biodata highlighting the Manglik status field" width={1200} height={500} className="w-full h-auto" />
+              <Image src="/examples/Manglik-biodata-sample.webp" alt="A professional marriage biodata highlighting the Manglik status field" width={1200} height={500} className="w-full h-auto" />
               <p className="text-center text-xs text-zinc-500 py-3 bg-white dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-700">
                 BiodataBuilder automatically structures your Kundali section so you don't have to fight with MS Word formatting.
               </p>

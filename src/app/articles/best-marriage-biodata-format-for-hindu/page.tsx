@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Best Marriage Biodata Format for Hindu | Complete Guide",
     description: "Complete guide to the best marriage biodata format for Hindu families — structure, design, regional variations, and free PDF template.",
     url: "https://biodatabuilder.in/articles/best-marriage-biodata-format-for-hindu",
-    images: [{ url: "/examples/hindu_biodata_infographic.png", width: 1200, height: 630, alt: "Hindu Biodata Format Infographic" }],
+    images: [{ url: "/examples/hindu_biodata_infographic.webp", width: 1200, height: 630, alt: "Hindu Biodata Format Infographic" }],
   },
 };
 
@@ -74,7 +74,7 @@ export default function Article() {
           <figure className="my-10">
             <div className="relative w-full aspect-[4/3] md:aspect-[16/9] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-lg bg-zinc-50 dark:bg-zinc-950/20">
               <Image 
-                src="/examples/hindu_biodata_infographic.png" 
+                src="/examples/hindu_biodata_infographic.webp" 
                 alt="Structure of a traditional Hindu Marriage Biodata with Ganesha icon and clear astrological sections" 
                 fill 
                 className="object-contain"
@@ -162,7 +162,7 @@ export default function Article() {
 
             <figure className="my-8">
               <div className="relative w-full aspect-square sm:aspect-[4/3] rounded-2xl overflow-hidden shadow border border-zinc-100 dark:border-zinc-800">
-                <Image src="/examples/Kundali-section-biodata.png" alt="A well-formatted Kundali and Astrology section for a Hindu marriage biodata" fill className="object-cover" />
+                <Image src="/examples/Kundali-section-biodata.webp" alt="A well-formatted Kundali and Astrology section for a Hindu marriage biodata" fill className="object-cover" />
               </div>
               <figcaption className="text-center text-sm text-zinc-500 mt-3 italic">
                 A clean, modern layout highlighting the essential astrological fields.
@@ -258,7 +258,7 @@ export default function Article() {
 
             <figure className="my-10">
               <div className="relative w-full aspect-[4/3] md:aspect-[16/9] rounded-2xl overflow-hidden shadow-lg border border-zinc-100 dark:border-zinc-800">
-                <Image src="/examples/Hindu-biodata-example.png" alt="Traditional vs Modern Hindu biodata template examples" fill className="object-contain" />
+                <Image src="/examples/Hindu-biodata-example.webp" alt="Traditional vs Modern Hindu biodata template examples" fill className="object-contain" />
               </div>
               <figcaption className="text-center text-sm text-zinc-500 mt-3 italic">
                 Premium Hindu biodata templates showcasing both traditional and modern design philosophies.
