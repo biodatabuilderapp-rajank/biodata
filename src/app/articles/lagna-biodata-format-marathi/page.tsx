@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import ArticleWrapper from "@/components/ArticleWrapper";
+import ArticleCTA from "@/components/ArticleCTA";
 import { MoveRight } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -369,16 +370,36 @@ export default function LagnaBiodataFormatMarathiPage() {
             ))}
           </div>
 
-          {/* ── INTERNAL LINKS ── */}
-          <div className="mt-12 p-6 rounded-2xl bg-white dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800">
-            <h3 className="font-bold text-xl mb-3 text-zinc-900 dark:text-white">अधिक माहिती (Read More)</h3>
-            <ul className="space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
-              <li>→ <Link href="/articles/biodata-for-marriage" className="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">Marriage Biodata — Complete Guide (English)</Link></li>
-              <li>→ <Link href="/articles/marriage-biodata-for-boy" className="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">मुलासाठी बायोडाटा डिझाईन आणि माहिती</Link></li>
-              <li>→ <Link href="/articles/shaadi-biodata-format-for-girl" className="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">मुलीसाठी बायोडाटा कसा तयार करावा?</Link></li>
-              <li>→ <Link href="/articles/biodata-tips" className="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">बायोडाटामधील चुका कशा टाळाव्यात?</Link></li>
-            </ul>
-          </div>
+          {/* ── WHAT TO READ NEXT ── */}
+          <section className="mt-16 pt-10 border-t border-zinc-200 dark:border-zinc-800">
+            <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-6">अधिक वाचा (What to Read Next)</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href="/articles/biodata-for-marriage" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Marriage Biodata — Complete Guide</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">संपूर्ण मार्गदर्शन — लग्न बायोडाटा कसा बनवावा (इंग्रजी)</p>
+              </Link>
+              <Link href="/articles/marriage-biodata-for-boy" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">मुलासाठी (Groom) बायोडाटा गाईड</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">मुलाचा बायोडाटा — काय लिहावे, कसे लिहावे</p>
+              </Link>
+              <Link href="/articles/shaadi-biodata-format-for-girl" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">मुलीसाठी बायोडाटा फॉर्मेट</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">मुलीचा लग्न बायोडाटा तयार करण्याचे संपूर्ण मार्गदर्शन</p>
+              </Link>
+              <Link href="/articles/biodata-tips" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">बायोडाटा टिप्स — चुका आणि उपाय</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">फोटो, छंद आणि चुका — या गोष्टी बायोडाटामध्ये नेहमी टाळा</p>
+              </Link>
+              <Link href="/articles/manglik-biodata-format" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">मांगलिक बायोडाटा फॉर्मेट</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">मांगलिक स्थिती बायोडाटामध्ये कशी लिहावी?</p>
+              </Link>
+              <Link href="/articles/biodata-format-for-whatsapp" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">WhatsApp साठी बायोडाटा</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">WhatsApp वर परफेक्ट PDF कशी शेअर करावी</p>
+              </Link>
+            </div>
+          </section>
 
           {/* ── FINAL CTA ── */}
           <div className="mt-16 p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/30 dark:to-orange-950/30 border border-amber-100 dark:border-amber-900 text-center">
@@ -403,6 +424,8 @@ export default function LagnaBiodataFormatMarathiPage() {
           </div>
 
         </div>
+
+        <ArticleCTA />
       </ArticleWrapper>
     </>
   );

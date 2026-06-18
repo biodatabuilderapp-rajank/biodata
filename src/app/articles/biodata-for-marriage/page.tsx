@@ -158,7 +158,7 @@ export default function BiodataForMarriagePillarPage() {
             Traditionally, these profiles were handwritten or typed on plain paper and passed between relatives and community matchmakers. Today, they are shared digitally as polished PDFs on WhatsApp, uploaded to matrimony websites, or sent via email.
           </p>
           <p>
-            Unlike a Western dating profile, an Indian marriage biodata includes not just personal details, but family background, astrological information, and community roots — because in arranged marriages, a family is choosing for a family, not just one person choosing for themselves.
+            Unlike a Western dating profile, an Indian marriage biodata includes not just personal details, but family background, astrological information, and community roots — because in arranged marriages, a family is choosing for a family, not just one person choosing for themselves. Read our dedicated guide on <Link href="/articles/biodata-vs-resume-difference" className="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">the difference between a biodata and a resume</Link> to understand this more clearly.
           </p>
 
           {/* ── SECTION 2 — WHAT TO INCLUDE ── */}
@@ -408,6 +408,45 @@ export default function BiodataForMarriagePillarPage() {
               </div>
             ))}
           </div>
+
+          {/* ── WHAT TO READ NEXT ── */}
+          <section className="mt-16 pt-10 border-t border-zinc-200 dark:border-zinc-800">
+            <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-6">What to Read Next</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href="/articles/marriage-biodata-for-boy" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Marriage Biodata for Boy (Groom Guide)</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">What families scrutinise in a groom&apos;s biodata — and how to nail every section.</p>
+              </Link>
+              <Link href="/articles/shaadi-biodata-format-for-girl" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Shaadi Biodata Format for Girl</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">A bride&apos;s biodata guide — sections, sample text, and design tips.</p>
+              </Link>
+              <Link href="/articles/how-to-write-biodata-about-me" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">How to Write &quot;About Me&quot; in a Biodata</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">6 real sample paragraphs and a step-by-step writing formula.</p>
+              </Link>
+              <Link href="/articles/biodata-tips" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Biodata Tips: Photos, Hobbies &amp; Mistakes</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">The 7 most common biodata mistakes and exactly how to fix them.</p>
+              </Link>
+              <Link href="/articles/kundali-details-in-biodata" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Kundali Details in Biodata</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">Rashi, Nakshatra, Gotra, Manglik — what to include and why it matters.</p>
+              </Link>
+              <Link href="/articles/biodata-format-for-whatsapp" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Biodata Format for WhatsApp</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">How to share your biodata perfectly on WhatsApp as a PDF.</p>
+              </Link>
+              <Link href="/articles/marriage-biodata-statistics-india" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Marriage Biodata Statistics in India</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">Data and trends on arranged marriages and biodata usage in India.</p>
+              </Link>
+              <Link href="/articles/biodata-vs-resume-difference" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Biodata vs Resume vs CV</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">The complete breakdown of what makes each document different.</p>
+              </Link>
+            </div>
+          </section>
 
           {/* ── FINAL CTA ── */}
           <div className="mt-16 p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950/30 dark:to-purple-950/30 border border-indigo-100 dark:border-indigo-900 text-center">
