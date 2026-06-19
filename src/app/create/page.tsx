@@ -2,6 +2,13 @@ import type { Metadata } from "next";
 import CreatePageClient from "./_CreatePage";
 import SiteFooter from "@/components/SiteFooter";
 import Link from "next/link";
+import Image from "next/image";
+import {
+  FileText, Camera, Palette, Download,
+  CheckCircle2, Star, Globe, Shield,
+  RefreshCw, Heart, Users, PenLine,
+  MapPin, ChevronDown,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Free Marriage Biodata Maker — Create & Download PDF Instantly",
@@ -191,45 +198,95 @@ export default function CreatePage() {
 
         {/* How it works */}
         <section className="max-w-5xl mx-auto px-5 py-20">
+          <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-3 text-center">Simple Process</p>
           <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-3 text-center">
             How to Create a Marriage Biodata Online — In 4 Simple Steps
           </h2>
           <p className="text-center text-zinc-500 dark:text-zinc-400 mb-12 max-w-xl mx-auto">
-            No design skills needed. No registration. Your beautiful PDF biodata is ready in under 5 minutes.
+            No design skills needed. No registration. Your beautiful matrimonial biodata PDF is ready in under 5 minutes — completely free, no watermarks.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { step: "1", title: "Choose a Template", desc: "Pick from traditional, modern, or community-specific designs — Hindu, Muslim, Christian, and more." },
-              { step: "2", title: "Fill In Your Details", desc: "Personal info, family background, education, career, Kundali details, hobbies, and partner expectations." },
-              { step: "3", title: "Upload Your Photo", desc: "Add a recent photo and preview exactly how it looks in the template before downloading." },
-              { step: "4", title: "Download Free PDF", desc: "One click. Instant download. Ready to share on WhatsApp, email, or print at home." },
-            ].map((s) => (
-              <div key={s.step} className="bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-100 dark:border-zinc-800">
-                <div className="w-10 h-10 rounded-full bg-indigo-600 text-white font-black flex items-center justify-center mb-4 text-lg">
-                  {s.step}
+            {([
+              { step: "1", title: "Fill In Your Details", icon: <FileText className="w-5 h-5" />, desc: "Enter your personal info, family background, education, career, Kundali details, hobbies, and partner expectations in our simple guided form.", color: "from-violet-500 to-purple-600", bg: "bg-violet-50 dark:bg-violet-950/30", border: "border-violet-100 dark:border-violet-900/50", iconBg: "bg-violet-100 dark:bg-violet-900/40 text-violet-600 dark:text-violet-400" },
+              { step: "2", title: "Upload Your Photo", icon: <Camera className="w-5 h-5" />, desc: "Add a recent clear photo and preview exactly how your matrimonial biodata looks. Use our built-in crop tool for a perfect circular or square frame.", color: "from-rose-500 to-pink-600", bg: "bg-rose-50 dark:bg-rose-950/30", border: "border-rose-100 dark:border-rose-900/50", iconBg: "bg-rose-100 dark:bg-rose-900/40 text-rose-600 dark:text-rose-400" },
+              { step: "3", title: "Choose a Template", icon: <Palette className="w-5 h-5" />, desc: "Pick from traditional, modern, or community-specific biodata designs — Hindu, Muslim, Christian, and more. Preview live before you download.", color: "from-amber-500 to-orange-500", bg: "bg-amber-50 dark:bg-amber-950/30", border: "border-amber-100 dark:border-amber-900/50", iconBg: "bg-amber-100 dark:bg-amber-900/40 text-amber-600 dark:text-amber-400" },
+              { step: "4", title: "Download Free PDF", icon: <Download className="w-5 h-5" />, desc: "One click. Instant download. Your high-quality marriage biodata PDF is ready to share on WhatsApp, email, or print at home — always 100% free.", color: "from-emerald-500 to-teal-600", bg: "bg-emerald-50 dark:bg-emerald-950/30", border: "border-emerald-100 dark:border-emerald-900/50", iconBg: "bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400" },
+            ] as const).map((s, i) => (
+              <div key={s.step} className={`relative rounded-2xl p-6 border ${s.border} ${s.bg}`}>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${s.iconBg}`}>
+                    {s.icon}
+                  </div>
+                  <div className={`w-7 h-7 rounded-full bg-gradient-to-br ${s.color} text-white font-black flex items-center justify-center text-xs shadow-md shrink-0`}>
+                    {s.step}
+                  </div>
                 </div>
                 <h3 className="font-bold text-zinc-900 dark:text-white mb-2">{s.title}</h3>
                 <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">{s.desc}</p>
+                {i < 3 && (
+                  <div className="hidden lg:flex absolute top-10 -right-3 z-10 text-zinc-300 dark:text-zinc-600 items-center">
+                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                  </div>
+                )}
               </div>
             ))}
           </div>
         </section>
 
+
         {/* ── SEO PROSE: What is a Marriage Biodata? ── */}
         <section className="max-w-5xl mx-auto px-5 py-16 border-t border-zinc-100 dark:border-zinc-900">
-          <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-6 text-center">What is a Marriage Biodata?</h2>
-          <div className="space-y-5 text-zinc-600 dark:text-zinc-400 leading-relaxed text-base max-w-3xl mx-auto">
-            <p>
-              A <strong className="text-zinc-900 dark:text-white">marriage biodata</strong> — also called a <strong className="text-zinc-900 dark:text-white">matrimonial biodata</strong>, <em>vivah biodata</em>, or <em>bio data for marriage</em> — is a one-page document that introduces a person to prospective families during the Indian arranged marriage process. It is the matrimonial equivalent of a professional resume: your first impression before families meet in person.
-            </p>
-            <p>
-              Unlike a standard resume (which focuses on career history), a <strong className="text-zinc-900 dark:text-white">biodata for marriage</strong> covers the whole person — personal details, family background, religious and astrological information, hobbies, values, and expectations from a life partner. It is typically shared as a <strong className="text-zinc-900 dark:text-white">marriage biodata PDF</strong> on WhatsApp, via matrimony websites, and through community and family networks.
-            </p>
-            <p>
-              Many families search for a <strong className="text-zinc-900 dark:text-white">marriage biodata format Word download</strong> — but Word documents frequently break formatting on different phones, making the <strong className="text-zinc-900 dark:text-white">wedding biodata format</strong> look unprofessional. A PDF generated with BiodataBuilder looks pixel-perfect on every device. Our free <strong className="text-zinc-900 dark:text-white">biodata maker</strong> supports all major Indian communities — you can create a <strong className="text-zinc-900 dark:text-white">Hindu matrimonial biodata</strong>, <strong className="text-zinc-900 dark:text-white">Muslim rishta biodata</strong>, <strong className="text-zinc-900 dark:text-white">Christian marriage biodata</strong>, or a regional language biodata in Hindi, Marathi, Gujarati, Tamil, or Telugu — all completely free.
-            </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left: prose + Q&A cards */}
+            <div>
+              <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-3">What Is It?</p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-6">What is a Marriage Biodata?</h2>
+              <div className="space-y-4 text-zinc-600 dark:text-zinc-400 leading-relaxed text-base">
+                <p>
+                  A <strong className="text-zinc-900 dark:text-white">marriage biodata</strong> — also called a <strong className="text-zinc-900 dark:text-white">matrimonial biodata</strong>, <em>vivah biodata</em>, <em>lagna biodata</em>, <em>rishta biodata</em>, or <em>bio data for marriage</em> — is a one-page document that introduces a person to prospective families during the Indian arranged marriage process. It is the matrimonial equivalent of a professional resume: your first impression before families meet in person.
+                </p>
+                <p>
+                  Unlike a standard resume (which focuses on career history), a <strong className="text-zinc-900 dark:text-white">biodata for marriage</strong> covers the whole person — personal details, family background, religious and astrological information, hobbies, values, and expectations from a life partner. It is typically shared as a <strong className="text-zinc-900 dark:text-white">marriage biodata PDF</strong> on WhatsApp, via matrimony websites, and through family and community networks.
+                </p>
+                <p>
+                  Many families search for a <strong className="text-zinc-900 dark:text-white">marriage biodata format Word download</strong> — but Word documents frequently break formatting across different phones and devices, making the <strong className="text-zinc-900 dark:text-white">wedding biodata format</strong> look unprofessional. A PDF generated with BiodataBuilder looks pixel-perfect on every device. Our free <strong className="text-zinc-900 dark:text-white">biodata maker</strong> supports all major Indian communities — create a <strong className="text-zinc-900 dark:text-white">Hindu matrimonial biodata</strong>, <strong className="text-zinc-900 dark:text-white">Muslim rishta biodata</strong>, <strong className="text-zinc-900 dark:text-white">Christian marriage biodata</strong>, a <strong className="text-zinc-900 dark:text-white">shaadi biodata format for a girl</strong>, or a regional language biodata in Hindi, Marathi, Gujarati, Tamil, or Telugu — all completely free, no sign-up required.
+                </p>
+              </div>
+              {/* Q&A mini-cards */}
+              <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {[
+                  { q: "Who needs a marriage biodata?", a: "Anyone entering the arranged marriage process in India — Hindu, Muslim, Christian, Sikh, or any community." },
+                  { q: "How long should it be?", a: "Always 1 page. Families review many profiles — a focused single page is far more effective than multiple pages." },
+                  { q: "PDF or Word document?", a: "Always PDF. Word documents break formatting on different phones. A PDF looks identical on every device." },
+                  { q: "Is BiodataBuilder really free?", a: "Yes — 100% free, no watermarks, no registration, no hidden fees. Create and download as many times as you like." },
+                ].map((item, i) => (
+                  <div key={i} className="p-4 rounded-xl border border-zinc-100 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900">
+                    <p className="font-semibold text-zinc-900 dark:text-white text-sm mb-1">{item.q}</p>
+                    <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-snug">{item.a}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Right: biodata example image */}
+            <div className="relative hidden lg:block">
+              <div className="rounded-3xl overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-2xl">
+                <Image
+                  src="/examples/Boy-biodata-example.webp"
+                  alt="Sample marriage biodata format generated by BiodataBuilder"
+                  width={600}
+                  height={800}
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="absolute -bottom-4 -left-4 bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800 shadow-xl p-4">
+                <p className="text-xs text-zinc-500 mb-0.5">Generated with</p>
+                <p className="font-bold text-zinc-900 dark:text-white text-sm">BiodataBuilder.in</p>
+                <p className="text-xs text-emerald-600 font-medium">100% Free · No Watermark</p>
+              </div>
+            </div>
           </div>
         </section>
+
 
         {/* What to include */}
         <section className="bg-zinc-50 dark:bg-zinc-900/50 border-y border-zinc-100 dark:border-zinc-800 py-20 px-5">
@@ -270,20 +327,42 @@ export default function CreatePage() {
           </div>
         </section>
 
+        {/* ── STATS STRIP ── */}
+        <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 py-6 px-5">
+          <div className="max-w-5xl mx-auto flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-white text-sm font-semibold">
+            {[
+              { icon: <CheckCircle2 className="w-4 h-4" />, label: "100% Free — Always" },
+              { icon: <Star className="w-4 h-4" />, label: "No Watermarks" },
+              { icon: <Download className="w-4 h-4" />, label: "Instant PDF Download" },
+              { icon: <Globe className="w-4 h-4" />, label: "6 Indian Languages" },
+              { icon: <Shield className="w-4 h-4" />, label: "Private — Data Stays on Your Device" },
+            ].map((item) => (
+              <div key={item.label} className="flex items-center gap-2 opacity-95">
+                {item.icon}
+                <span>{item.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* ── WHO IS THIS FOR? ── */}
         <section className="max-w-5xl mx-auto px-5 py-16">
+          <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-3 text-center">Made For Everyone</p>
           <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-3 text-center">Who is This Biodata Maker For?</h2>
-          <p className="text-center text-zinc-500 dark:text-zinc-400 mb-10 max-w-xl mx-auto">BiodataBuilder is built for every Indian family entering the matrimonial process.</p>
+          <p className="text-center text-zinc-500 dark:text-zinc-400 mb-10 max-w-xl mx-auto">BiodataBuilder is built for every Indian family entering the matrimonial process — any community, any language, any background.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
-              { who: "Groom (Boy)", desc: "Create a complete marriage biodata for a boy — with education, career, income, family background, and Kundali details all structured professionally.", link: "/articles/marriage-biodata-for-boy" },
-              { who: "Bride (Girl)", desc: "Create a shaadi biodata format for a girl — with personal interests, family values, hobbies, and expectations presented elegantly.", link: "/articles/shaadi-biodata-format-for-girl" },
-              { who: "Hindu Families", desc: "Include Gotra, Rashi, Nakshatra, Manglik status, and community-specific fields in a beautiful Hindu matrimonial biodata format.", link: "/articles/best-marriage-biodata-format-for-hindu" },
-              { who: "Muslim Families", desc: "Create a Muslim rishta biodata with appropriate community fields, religious background, and a professional layout suited for Islamic matrimonial introductions.", link: "/articles/marriage-biodata-format-for-muslim" },
-              { who: "Second Marriage", desc: "Create a biodata for second marriage or divorce with honest, clear presentation — covering your current status, background, and expectations confidently.", link: "/articles/biodata-for-second-marriage" },
-              { who: "Regional Languages", desc: "Create a vivah biodata in Hindi, lagna biodata in Marathi or Gujarati, thirumanam biodata in Tamil, or vivah biodata in Telugu — all fully supported.", link: "/articles/biodata-for-marriage" },
+              { who: "Groom (Boy)", icon: <Users className="w-5 h-5" />, iconBg: "bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400", desc: "Create a complete marriage biodata for a boy — with education, career, income, family background, and Kundali details structured professionally.", link: "/articles/marriage-biodata-for-boy" },
+              { who: "Bride (Girl)", icon: <Heart className="w-5 h-5" />, iconBg: "bg-rose-50 dark:bg-rose-950/40 text-rose-600 dark:text-rose-400", desc: "Create a shaadi biodata format for a girl — personal interests, family values, hobbies, and expectations for a life partner presented elegantly.", link: "/articles/shaadi-biodata-format-for-girl" },
+              { who: "Hindu Families", icon: <Star className="w-5 h-5" />, iconBg: "bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400", desc: "Include Gotra, Rashi, Nakshatra, Manglik status, and community-specific fields in a beautiful Hindu matrimonial biodata format.", link: "/articles/best-marriage-biodata-format-for-hindu" },
+              { who: "Muslim Families", icon: <Globe className="w-5 h-5" />, iconBg: "bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400", desc: "Create a Muslim rishta biodata with appropriate community fields, religious background, and a professional layout for Islamic matrimonial introductions.", link: "/articles/marriage-biodata-format-for-muslim" },
+              { who: "Second Marriage", icon: <RefreshCw className="w-5 h-5" />, iconBg: "bg-violet-50 dark:bg-violet-950/40 text-violet-600 dark:text-violet-400", desc: "Create a biodata for second marriage or divorce with honest, clear presentation — covering your current status, background, and expectations confidently.", link: "/articles/biodata-for-second-marriage" },
+              { who: "Regional Languages", icon: <MapPin className="w-5 h-5" />, iconBg: "bg-teal-50 dark:bg-teal-950/40 text-teal-600 dark:text-teal-400", desc: "Create a vivah biodata in Hindi, lagna biodata in Marathi or Gujarati, thirumanam biodata in Tamil, or vivah biodata in Telugu — all fully supported.", link: "/articles/biodata-for-marriage" },
             ].map((item) => (
               <Link key={item.who} href={item.link} className="block p-5 rounded-2xl border border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:border-indigo-300 dark:hover:border-indigo-700 hover:-translate-y-1 hover:shadow-md transition-all group">
+                <div className={`inline-flex w-10 h-10 rounded-xl items-center justify-center mb-3 ${item.iconBg}`}>
+                  {item.icon}
+                </div>
                 <h3 className="font-bold text-zinc-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">{item.who}</h3>
                 <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">{item.desc}</p>
               </Link>
@@ -300,15 +379,17 @@ export default function CreatePage() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {[
-              { title: "Be honest and specific", desc: "State your actual income, height, and status clearly. Families that discover inaccuracies early will not proceed — save everyone time." },
-              { title: "Write a genuine About Me", desc: "3–5 lines that feel like you. Mention what you do on weekends, your values, and what kind of partner you're hoping for. Avoid generic phrases like 'simple and humble'." },
-              { title: "Use a recent, clear photo", desc: "A smiling, well-lit, front-facing photo dramatically increases genuine responses. Avoid cropped group photos or blurry images." },
-              { title: "Keep it to one page", desc: "A tight, well-structured biodata is far more readable than a two-page document. Use tables and clear sections to organise information." },
-              { title: "Include Kundali details if relevant", desc: "For Hindu families, including Rashi, Nakshatra, Gotra, and Manglik status upfront avoids delays and shows preparedness." },
-              { title: "State expectations kindly", desc: "2–3 sentences on partner preferences is enough. Keep the tone open and positive — hard requirements can feel off-putting." },
+              { title: "Be honest and specific", icon: <Shield className="w-5 h-5" />, iconBg: "bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400", desc: "State your actual income, height, and marital status clearly in your matrimonial biodata. Families that discover inaccuracies early will not proceed — honesty saves everyone time and builds trust from the start." },
+              { title: "Write a genuine About Me", icon: <PenLine className="w-5 h-5" />, iconBg: "bg-violet-50 dark:bg-violet-950/40 text-violet-600 dark:text-violet-400", desc: "3–5 lines that feel like you. Mention what you do on weekends, your values, and what kind of partner you are hoping for. Avoid generic phrases like 'simple and humble' — be specific and authentic." },
+              { title: "Use a recent, clear photo", icon: <Camera className="w-5 h-5" />, iconBg: "bg-rose-50 dark:bg-rose-950/40 text-rose-600 dark:text-rose-400", desc: "A smiling, well-lit, front-facing photo dramatically increases genuine responses to your marriage biodata. Avoid cropped group photos or blurry images — a clear photo builds confidence in families." },
+              { title: "Keep it to one page", icon: <FileText className="w-5 h-5" />, iconBg: "bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400", desc: "A tight, well-structured biodata for marriage is far more readable than a two-page document. Use tables and clear sections — families review many profiles, so a focused single page is far more effective." },
+              { title: "Include Kundali details if relevant", icon: <Star className="w-5 h-5" />, iconBg: "bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400", desc: "For Hindu families, including Rashi, Nakshatra, Gotra, and Manglik status upfront in your Hindu matrimonial biodata avoids delays, shows preparedness, and speeds up the matching process." },
+              { title: "State expectations kindly", icon: <Heart className="w-5 h-5" />, iconBg: "bg-pink-50 dark:bg-pink-950/40 text-pink-600 dark:text-pink-400", desc: "2–3 sentences on partner preferences is enough. Keep the tone open and positive in your biodata for marriage — hard requirements listed bluntly can feel off-putting to prospective families." },
             ].map((tip) => (
               <div key={tip.title} className="flex gap-4 p-5 rounded-2xl border border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-900">
-                <div className="flex-shrink-0 w-2 h-2 rounded-full bg-indigo-500 mt-2.5" />
+                <div className={`flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center ${tip.iconBg}`}>
+                  {tip.icon}
+                </div>
                 <div>
                   <h3 className="font-bold text-zinc-900 dark:text-white mb-1">{tip.title}</h3>
                   <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">{tip.desc}</p>
@@ -361,23 +442,52 @@ export default function CreatePage() {
           </div>
         </section>
 
+
         {/* FAQ */}
         <section className="max-w-3xl mx-auto px-5 py-20">
+          <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-3 text-center">FAQ</p>
           <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-3 text-center">
             Frequently Asked Questions
           </h2>
           <p className="text-center text-zinc-500 dark:text-zinc-400 mb-12">
-            Everything you need to know about creating your marriage biodata online.
+            Everything you need to know about creating your marriage biodata online — free, private, and instant.
           </p>
-          <div className="space-y-4">
+          <div className="space-y-3">
             {faqs.map((faq, i) => (
-              <div key={i} className="p-6 rounded-2xl border border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-900">
-                <h3 className="font-bold text-zinc-900 dark:text-white mb-2">{faq.q}</h3>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">{faq.a}</p>
-              </div>
+              <details key={i} className="group rounded-2xl border border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none">
+                  <h3 className="font-semibold text-zinc-900 dark:text-white text-sm sm:text-base leading-snug">{faq.q}</h3>
+                  <ChevronDown className="w-5 h-5 text-zinc-400 shrink-0 transition-transform duration-200 group-open:rotate-180" />
+                </summary>
+                <div className="px-6 pb-5 border-t border-zinc-100 dark:border-zinc-800 pt-4">
+                  <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">{faq.a}</p>
+                </div>
+              </details>
             ))}
           </div>
         </section>
+
+        {/* CTA Banner */}
+        <section className="max-w-5xl mx-auto px-5 pb-20">
+          <div className="relative rounded-3xl bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 p-10 md:p-14 text-center overflow-hidden">
+            <div className="absolute -top-10 -right-10 w-48 h-48 rounded-full bg-white/10 blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-10 -left-10 w-48 h-48 rounded-full bg-white/10 blur-3xl pointer-events-none" />
+            <div className="relative z-10">
+              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">Ready to create your marriage biodata?</h2>
+              <p className="text-indigo-100 mb-8 max-w-md mx-auto text-sm sm:text-base">
+                Join thousands of Indian families who created beautiful matrimonial biodatas in minutes — completely free, no registration required.
+              </p>
+              <Link
+                href="/create"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-indigo-700 font-bold text-sm hover:bg-indigo-50 transition-all shadow-xl hover:-translate-y-0.5"
+              >
+                <FileText className="w-4 h-4" />
+                Create Free Biodata Now
+              </Link>
+            </div>
+          </div>
+        </section>
+
 
       </div>
       <SiteFooter />
