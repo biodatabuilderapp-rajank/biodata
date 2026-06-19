@@ -48,9 +48,34 @@ const faqSchema = {
   ],
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://biodatabuilder.in/" },
+    { "@type": "ListItem", position: 2, name: "Articles", item: "https://biodatabuilder.in/articles" },
+    { "@type": "ListItem", position: 3, name: "Biodata for Second Marriage", item: "https://biodatabuilder.in/articles/biodata-for-second-marriage" },
+  ],
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Biodata for Second Marriage — Complete Guide",
+  description: "How to create a biodata for second marriage in India. What to include, what to omit, and how to present your profile confidently.",
+  image: "/examples/Second-marriage-biodata-example.webp",
+  datePublished: "2026-06-14",
+  dateModified: "2026-06-18",
+  author: { "@type": "Organization", name: "BiodataBuilder" },
+  publisher: { "@type": "Organization", name: "BiodataBuilder", logo: { "@type": "ImageObject", url: "https://biodatabuilder.in/favicon.png" } },
+};
+
 export default function Article() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <ArticleWrapper

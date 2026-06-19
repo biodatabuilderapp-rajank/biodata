@@ -44,9 +44,34 @@ const faqSchema = {
   ],
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://biodatabuilder.in/" },
+    { "@type": "ListItem", position: 2, name: "Articles", item: "https://biodatabuilder.in/articles" },
+    { "@type": "ListItem", position: 3, name: "Lagna Biodata Format Gujarati", item: "https://biodatabuilder.in/articles/lagna-biodata-format-gujarati" },
+  ],
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Lagna Biodata Format in Gujarati — Free Download",
+  description: "Create a beautiful Gujarati lagna biodata format online for free. Download your vivah biodata in Gujarati as a PDF instantly.",
+  image: "/examples/Girl-biodata-example-Gujarati.webp",
+  datePublished: "2026-06-15",
+  dateModified: "2026-06-18",
+  author: { "@type": "Organization", name: "BiodataBuilder" },
+  publisher: { "@type": "Organization", name: "BiodataBuilder", logo: { "@type": "ImageObject", url: "https://biodatabuilder.in/favicon.png" } },
+};
+
 export default function Article() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <ArticleWrapper publishedDate="2026-06-18">
         <h1 className="text-3xl sm:text-5xl font-bold text-zinc-900 dark:text-white mb-6 leading-tight">

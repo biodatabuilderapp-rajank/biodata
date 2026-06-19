@@ -50,9 +50,34 @@ const faqSchema = {
   ],
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://biodatabuilder.in/" },
+    { "@type": "ListItem", position: 2, name: "Articles", item: "https://biodatabuilder.in/articles" },
+    { "@type": "ListItem", position: 3, name: "Biodata Format in Hindi", item: "https://biodatabuilder.in/articles/biodata-format-hindi" },
+  ],
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Biodata Format in Hindi — Vivah Biodata (विवाह बायोडाटा)",
+  description: "Create a beautiful marriage biodata format in Hindi online for free. Download vivah biodata PDF in Hindi with all essential fields.",
+  image: "/examples/Hindi-biodata-fields-infographic.webp",
+  datePublished: "2026-06-12",
+  dateModified: "2026-06-18",
+  author: { "@type": "Organization", name: "BiodataBuilder" },
+  publisher: { "@type": "Organization", name: "BiodataBuilder", logo: { "@type": "ImageObject", url: "https://biodatabuilder.in/favicon.png" } },
+};
+
 export default function Article() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <ArticleWrapper

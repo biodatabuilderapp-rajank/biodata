@@ -63,9 +63,34 @@ const faqSchema = {
   ],
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://biodatabuilder.in/" },
+    { "@type": "ListItem", position: 2, name: "Articles", item: "https://biodatabuilder.in/articles" },
+    { "@type": "ListItem", position: 3, name: "Simple Biodata Format for Job", item: "https://biodatabuilder.in/articles/simple-biodata-format-for-job-pdf" },
+  ],
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Simple Biodata Format for Job — PDF Download Free",
+  description: "Create a simple biodata format for job applications in India. Download a clean, professional job biodata as PDF for free.",
+  image: "/examples/Job-biodata-structure.webp",
+  datePublished: "2026-06-15",
+  dateModified: "2026-06-18",
+  author: { "@type": "Organization", name: "BiodataBuilder" },
+  publisher: { "@type": "Organization", name: "BiodataBuilder", logo: { "@type": "ImageObject", url: "https://biodatabuilder.in/favicon.png" } },
+};
+
 export default function Article() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <ArticleWrapper

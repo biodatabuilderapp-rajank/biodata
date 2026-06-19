@@ -44,9 +44,34 @@ const faqSchema = {
   ],
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://biodatabuilder.in/" },
+    { "@type": "ListItem", position: 2, name: "Articles", item: "https://biodatabuilder.in/articles" },
+    { "@type": "ListItem", position: 3, name: "Christian Marriage Biodata Format", item: "https://biodatabuilder.in/articles/marriage-biodata-format-for-christian" },
+  ],
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Marriage Biodata Format for Christian — Free Template",
+  description: "Create a beautiful Christian marriage biodata format online for free. Includes all essential fields for Christian matrimonial profiles.",
+  image: "/examples/christian-biodata-infographic.webp",
+  datePublished: "2026-06-15",
+  dateModified: "2026-06-18",
+  author: { "@type": "Organization", name: "BiodataBuilder" },
+  publisher: { "@type": "Organization", name: "BiodataBuilder", logo: { "@type": "ImageObject", url: "https://biodatabuilder.in/favicon.png" } },
+};
+
 export default function Article() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <ArticleWrapper publishedDate="2026-06-18">
         <h1 className="text-3xl sm:text-5xl font-bold text-sky-900 dark:text-sky-100 mb-6 leading-tight">

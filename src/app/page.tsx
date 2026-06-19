@@ -104,6 +104,31 @@ function HomeContent() {
     <div className="min-h-screen bg-white dark:bg-zinc-950 font-sans">
       <SiteNav locale={locale} onLocaleChange={handleLocaleChange} />
 
+      {/* FAQPage JSON-LD — preserves keyword-rich Q&As for Google rich results
+          without cluttering the visible UI. These Q&As were previously rendered
+          as visible FAQ cards; now they live as structured data only. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              { "@type": "Question", name: "Is this biodata maker completely free?", acceptedAnswer: { "@type": "Answer", text: "Yes! Creating, previewing, and downloading your biodata is free to use. No hidden charges, no subscriptions." } },
+              { "@type": "Question", name: "Is this a matchmaking or dating service?", acceptedAnswer: { "@type": "Answer", text: "No. BiodataBuilder is purely a free design utility to format and generate PDF documents. We do not provide matrimonial services, we do not connect users, and we do not store your personal data on any servers." } },
+              { "@type": "Question", name: "Do I need to create an account to use BiodataBuilder?", acceptedAnswer: { "@type": "Answer", text: "No. You can start creating your biodata immediately without any registration or sign-up required." } },
+              { "@type": "Question", name: "What formats can I download my biodata in?", acceptedAnswer: { "@type": "Answer", text: "You can download your biodata as a high-quality PDF (ideal for printing) or PNG image (ideal for sharing on WhatsApp)." } },
+              { "@type": "Question", name: "How to make a marriage biodata format word download?", acceptedAnswer: { "@type": "Answer", text: "While many look for a Word download, BiodataBuilder provides a much better experience by outputting a perfectly formatted, print-ready PDF. Word documents often lose formatting when opened on different devices, but our PDFs look beautiful and consistent everywhere." } },
+              { "@type": "Question", name: "What is the best simple biodata format in India for free?", acceptedAnswer: { "@type": "Answer", text: "The best simple biodata format focuses on clean typography, easy-to-read sections for family background and personal details, and a professional photo. BiodataBuilder offers multiple free themes that capture this elegant simplicity." } },
+              { "@type": "Question", name: "How can I find a biodata format for a girl in Marathi PDF?", acceptedAnswer: { "@type": "Answer", text: "BiodataBuilder supports Marathi language natively. Simply select Marathi from the language dropdown, and all your section headings and labels will be translated. Your final downloaded PDF will be perfectly formatted in Marathi." } },
+              { "@type": "Question", name: "Is there a specific Shaadi biodata format for a girl?", acceptedAnswer: { "@type": "Answer", text: "Yes, our templates are designed to be versatile for a girl's shaadi biodata. You can choose themes with softer color palettes and elegant fonts. You can also easily add your hobbies, expectations, and Kundali details." } },
+              { "@type": "Question", name: "Which languages are supported for marriage biodata?", acceptedAnswer: { "@type": "Answer", text: "You can create your biodata in English, Hindi, Gujarati, Marathi, Tamil, and Telugu. Simply select your language at the top of the form — all field labels and section titles are automatically translated." } },
+              { "@type": "Question", name: "Can I add my photo to the marriage biodata?", acceptedAnswer: { "@type": "Answer", text: "Yes! You can upload and crop your photo with our built-in cropping tool and choose between a circular or square frame for your matrimonial biodata." } },
+            ],
+          }),
+        }}
+      />
+
       <main>
         {/* ========== HERO ========== */}
         <section className="pt-32 pb-20 px-5 bg-gradient-to-b from-indigo-50/60 via-white to-white dark:from-indigo-950/20 dark:via-zinc-950 dark:to-zinc-950">
