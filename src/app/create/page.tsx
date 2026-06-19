@@ -6,14 +6,23 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Free Marriage Biodata Maker — Create & Download PDF Instantly",
   description:
-    "Create a beautiful Indian marriage biodata online in minutes. Choose from stunning templates, fill in your details, and download as PDF — completely free, no sign-up required.",
+    "Create a beautiful Indian marriage biodata online in minutes. Choose from stunning matrimonial biodata templates for Hindu, Muslim, Christian, and regional formats. Fill in your details and download as PDF or PNG — completely free, no sign-up required. The best free biodata maker in India.",
   alternates: { canonical: "https://biodatabuilder.in/create" },
   openGraph: {
     url: "https://biodatabuilder.in/create",
     title: "Free Marriage Biodata Maker — Create & Download PDF",
     description:
-      "Build a beautiful Indian marriage biodata online in minutes. Free templates, instant PDF download, no registration needed.",
+      "Build a beautiful Indian marriage biodata online in minutes. Free matrimonial biodata templates, instant PDF download, no registration needed.",
   },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://biodatabuilder.in/" },
+    { "@type": "ListItem", position: 2, name: "Create Biodata", item: "https://biodatabuilder.in/create" },
+  ],
 };
 
 const faqSchema = {
@@ -173,10 +182,8 @@ const faqs = [
 export default function CreatePage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <CreatePageClient />
 
       {/* ── Below-the-fold SEO content ── */}
@@ -205,6 +212,22 @@ export default function CreatePage() {
                 <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">{s.desc}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* ── SEO PROSE: What is a Marriage Biodata? ── */}
+        <section className="max-w-5xl mx-auto px-5 py-16 border-t border-zinc-100 dark:border-zinc-900">
+          <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-6 text-center">What is a Marriage Biodata?</h2>
+          <div className="space-y-5 text-zinc-600 dark:text-zinc-400 leading-relaxed text-base max-w-3xl mx-auto">
+            <p>
+              A <strong className="text-zinc-900 dark:text-white">marriage biodata</strong> — also called a <strong className="text-zinc-900 dark:text-white">matrimonial biodata</strong>, <em>vivah biodata</em>, or <em>bio data for marriage</em> — is a one-page document that introduces a person to prospective families during the Indian arranged marriage process. It is the matrimonial equivalent of a professional resume: your first impression before families meet in person.
+            </p>
+            <p>
+              Unlike a standard resume (which focuses on career history), a <strong className="text-zinc-900 dark:text-white">biodata for marriage</strong> covers the whole person — personal details, family background, religious and astrological information, hobbies, values, and expectations from a life partner. It is typically shared as a <strong className="text-zinc-900 dark:text-white">marriage biodata PDF</strong> on WhatsApp, via matrimony websites, and through community and family networks.
+            </p>
+            <p>
+              Many families search for a <strong className="text-zinc-900 dark:text-white">marriage biodata format Word download</strong> — but Word documents frequently break formatting on different phones, making the <strong className="text-zinc-900 dark:text-white">wedding biodata format</strong> look unprofessional. A PDF generated with BiodataBuilder looks pixel-perfect on every device. Our free <strong className="text-zinc-900 dark:text-white">biodata maker</strong> supports all major Indian communities — you can create a <strong className="text-zinc-900 dark:text-white">Hindu matrimonial biodata</strong>, <strong className="text-zinc-900 dark:text-white">Muslim rishta biodata</strong>, <strong className="text-zinc-900 dark:text-white">Christian marriage biodata</strong>, or a regional language biodata in Hindi, Marathi, Gujarati, Tamil, or Telugu — all completely free.
+            </p>
           </div>
         </section>
 
@@ -247,7 +270,27 @@ export default function CreatePage() {
           </div>
         </section>
 
-        {/* Tips */}
+        {/* ── WHO IS THIS FOR? ── */}
+        <section className="max-w-5xl mx-auto px-5 py-16">
+          <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-3 text-center">Who is This Biodata Maker For?</h2>
+          <p className="text-center text-zinc-500 dark:text-zinc-400 mb-10 max-w-xl mx-auto">BiodataBuilder is built for every Indian family entering the matrimonial process.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              { who: "Groom (Boy)", desc: "Create a complete marriage biodata for a boy — with education, career, income, family background, and Kundali details all structured professionally.", link: "/articles/marriage-biodata-for-boy" },
+              { who: "Bride (Girl)", desc: "Create a shaadi biodata format for a girl — with personal interests, family values, hobbies, and expectations presented elegantly.", link: "/articles/shaadi-biodata-format-for-girl" },
+              { who: "Hindu Families", desc: "Include Gotra, Rashi, Nakshatra, Manglik status, and community-specific fields in a beautiful Hindu matrimonial biodata format.", link: "/articles/best-marriage-biodata-format-for-hindu" },
+              { who: "Muslim Families", desc: "Create a Muslim rishta biodata with appropriate community fields, religious background, and a professional layout suited for Islamic matrimonial introductions.", link: "/articles/marriage-biodata-format-for-muslim" },
+              { who: "Second Marriage", desc: "Create a biodata for second marriage or divorce with honest, clear presentation — covering your current status, background, and expectations confidently.", link: "/articles/biodata-for-second-marriage" },
+              { who: "Regional Languages", desc: "Create a vivah biodata in Hindi, lagna biodata in Marathi or Gujarati, thirumanam biodata in Tamil, or vivah biodata in Telugu — all fully supported.", link: "/articles/biodata-for-marriage" },
+            ].map((item) => (
+              <Link key={item.who} href={item.link} className="block p-5 rounded-2xl border border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:border-indigo-300 dark:hover:border-indigo-700 hover:-translate-y-1 hover:shadow-md transition-all group">
+                <h3 className="font-bold text-zinc-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">{item.who}</h3>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">{item.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
+
         <section className="max-w-5xl mx-auto px-5 py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-3 text-center">
             Tips for Writing an Effective Marriage Biodata
@@ -298,6 +341,12 @@ export default function CreatePage() {
                 { title: "Biodata for Second Marriage", slug: "biodata-for-second-marriage" },
                 { title: "Shaadi Biodata for Girl", slug: "shaadi-biodata-format-for-girl" },
                 { title: "Marriage Biodata for Boy", slug: "marriage-biodata-for-boy" },
+                { title: "Biodata for Marriage — Pillar Guide", slug: "biodata-for-marriage" },
+                { title: "Kundali Details in Biodata", slug: "kundali-details-in-biodata" },
+                { title: "How to Write About Me", slug: "how-to-write-biodata-about-me" },
+                { title: "Biodata Tips & Mistakes", slug: "biodata-tips" },
+                { title: "Biodata vs Resume Difference", slug: "biodata-vs-resume-difference" },
+                { title: "Modern vs Traditional Biodata", slug: "modern-vs-traditional-biodata" },
               ].map((guide) => (
                 <Link
                   key={guide.slug}
