@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { GoogleAnalytics } from '@next/third-parties/google';
 
 import "./globals.css";
 
@@ -116,17 +116,32 @@ export default function RootLayout({
         {/* Preconnect to external origins to reduce latency */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
+        <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
+        <link rel="preconnect" href="https://googleads.g.doubleclick.net" />
+        <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net" />
       </head>
       <body className={`${geist.variable} font-sans antialiased`}>
         {children}
         <Analytics />
         <SpeedInsights />
-        <GoogleAnalytics gaId="G-WBWV3Z1Z1E" />
-        {/* Google AdSense — in body to avoid SSR hydration mismatch */}
-        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-        <script
-          async
+        {/* Google Analytics — lazyOnload defers until page is fully idle */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-WBWV3Z1Z1E"
+          strategy="lazyOnload"
+        />
+        <Script id="ga-init" strategy="lazyOnload">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-WBWV3Z1Z1E');
+          `}
+        </Script>
+        {/* Google AdSense — lazyOnload prevents main-thread blocking during LCP */}
+        <Script
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3646851872285015"
+          strategy="lazyOnload"
           crossOrigin="anonymous"
         />
       </body>
