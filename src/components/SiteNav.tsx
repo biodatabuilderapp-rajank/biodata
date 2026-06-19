@@ -15,9 +15,8 @@ interface SiteNavProps {
 
 const NAV_LINKS = [
   { href: "/#how-it-works", label: "How it Works" },
-  { href: "/#themes", label: "Themes" },
-  { href: "/articles", label: "Articles" },
-  { href: "/#faq", label: "FAQ" },
+  { href: "/#themes", label: "Templates" },
+  { href: "/articles", label: "Guides" },
 ];
 
 export default function SiteNav({ locale, onLocaleChange, activeHref }: SiteNavProps) {

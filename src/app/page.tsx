@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { MoveRight, FileText, Image as ImageIcon, CheckCircle2, Star, Sparkles, Shield, Smartphone, Zap, Languages } from "lucide-react";
 import ClientThemeGallery from "@/components/ClientThemeGallery";
 import { useUITranslation } from "@/lib/useUITranslation";
@@ -9,6 +10,18 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { useState, useEffect, Suspense } from "react";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
+
+// ─── Example biodata images for carousel ────────────────────────────────────
+const EXAMPLE_IMAGES = [
+  { src: "/examples/Boy-biodata-example.webp", alt: "Marriage biodata format for boy" },
+  { src: "/examples/Girl-biodata-example.webp", alt: "Shaadi biodata format for girl" },
+  { src: "/examples/Hindu-biodata-example.webp", alt: "Hindu marriage biodata format" },
+  { src: "/examples/Boy-biodata-example-Marathi.webp", alt: "Marathi lagna biodata" },
+  { src: "/examples/Muslim-biodata-example.webp", alt: "Muslim marriage biodata format" },
+  { src: "/examples/Christian-biodata-example.webp", alt: "Christian marriage biodata format" },
+  { src: "/examples/Boy-biodata-example-Tamil.webp", alt: "Tamil thirumanam biodata" },
+  { src: "/examples/Girl-biodata-example-Gujarati.webp", alt: "Gujarati lagna biodata for girl" },
+];
 
 // ─── Step descriptions (long copy stays in English) ─────────────────────────
 const STEP_DESCRIPTIONS = [
@@ -151,6 +164,26 @@ function HomeContent() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* ========== EXAMPLE IMAGE CAROUSEL ========== */}
+        <section className="py-14 overflow-hidden bg-zinc-50 dark:bg-zinc-900/50">
+          <div className="max-w-6xl mx-auto px-5 mb-8 text-center">
+            <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-2">Real Examples</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white">Biodata formats created with BiodataBuilder</h2>
+          </div>
+          <div className="flex gap-4 overflow-x-auto pb-4 px-5 snap-x snap-mandatory scrollbar-hide">
+            {EXAMPLE_IMAGES.map((img) => (
+              <div key={img.src} className="snap-center shrink-0 w-48 sm:w-60 rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all">
+                <Image src={img.src} alt={img.alt} width={400} height={566} className="w-full h-auto" />
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-6">
+            <Link href="/create" className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm transition-all shadow-md hover:-translate-y-0.5">
+              Create Yours Free <MoveRight className="w-4 h-4" />
+            </Link>
           </div>
         </section>
 
@@ -306,20 +339,25 @@ function HomeContent() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {[
-                { title: "Biodata for Marriage: Complete Guide", slug: "biodata-for-marriage", tag: "Pillar Guide", tagColor: "bg-indigo-50 text-indigo-700 dark:bg-indigo-950/50 dark:text-indigo-300", desc: "Everything you need to know about creating a bio data for marriage in India." },
-                { title: "Biodata Tips: Photos, Mistakes & Hobbies", slug: "biodata-tips", tag: "Tips", tagColor: "bg-emerald-50 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300", desc: "Avoid the most common mistakes in a matrimonial biodata format." },
-                { title: "Biodata Format in Word — PDF Is Better", slug: "biodata-format-word-download", tag: "Formats", tagColor: "bg-amber-50 text-amber-700 dark:bg-amber-950/50 dark:text-amber-300", desc: "Why PDF beats a Word download for your wedding biodata format." },
-                { title: "Marriage Biodata Statistics (2026)", slug: "marriage-biodata-statistics-india", tag: "Insights", tagColor: "bg-purple-50 text-purple-700 dark:bg-purple-950/50 dark:text-purple-300", desc: "Key data on how Indian families use and share bio data for marriage." },
-                { title: "Modern vs Traditional Biodata Format", slug: "modern-vs-traditional-biodata", tag: "Design", tagColor: "bg-rose-50 text-rose-700 dark:bg-rose-950/50 dark:text-rose-300", desc: "Which style of matrimonial biodata format is right for your family?" },
-                { title: "Biodata Format in Hindi (हिंदी विवाह बायोडाटा)", slug: "biodata-format-hindi", tag: "Hindi", tagColor: "bg-orange-50 text-orange-700 dark:bg-orange-950/50 dark:text-orange-300", desc: "Create a beautiful bio data format in Hindi — free download included." },
-                { title: "How to Share Biodata on WhatsApp", slug: "biodata-format-for-whatsapp", tag: "Sharing", tagColor: "bg-teal-50 text-teal-700 dark:bg-teal-950/50 dark:text-teal-300", desc: "PDF vs PNG — the best way to share your marriage biodata on WhatsApp." },
-                { title: "Kundali Details in Marriage Biodata", slug: "kundali-details-in-biodata", tag: "Kundali", tagColor: "bg-sky-50 text-sky-700 dark:bg-sky-950/50 dark:text-sky-300", desc: "What Rashi, Nakshatra, Gotra, and Manglik details to include in your biodata." },
+                { title: "Biodata for Marriage: Complete Guide", slug: "biodata-for-marriage", tag: "Pillar Guide", tagColor: "bg-indigo-50 text-indigo-700 dark:bg-indigo-950/50 dark:text-indigo-300", desc: "Everything you need to know about creating a bio data for marriage in India.", img: "/examples/Hero-composite.webp" },
+                { title: "Biodata Tips: Photos, Mistakes & Hobbies", slug: "biodata-tips", tag: "Tips", tagColor: "bg-emerald-50 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300", desc: "Avoid the most common mistakes in a matrimonial biodata format.", img: "/examples/Biodata-hobbies-good-bad.webp" },
+                { title: "Biodata Format in Word — PDF Is Better", slug: "biodata-format-word-download", tag: "Formats", tagColor: "bg-amber-50 text-amber-700 dark:bg-amber-950/50 dark:text-amber-300", desc: "Why PDF beats a Word download for your wedding biodata format.", img: "/examples/word_vs_pdf_biodata_infographic.webp" },
+                { title: "Marriage Biodata Statistics (2026)", slug: "marriage-biodata-statistics-india", tag: "Insights", tagColor: "bg-purple-50 text-purple-700 dark:bg-purple-950/50 dark:text-purple-300", desc: "Key data on how Indian families use and share bio data for marriage.", img: "/examples/india-marriage-statistics-infographic-2024.webp" },
+                { title: "Modern vs Traditional Biodata Format", slug: "modern-vs-traditional-biodata", tag: "Design", tagColor: "bg-rose-50 text-rose-700 dark:bg-rose-950/50 dark:text-rose-300", desc: "Which style of matrimonial biodata format is right for your family?", img: "/examples/modern_vs_traditional_infographic.webp" },
+                { title: "Biodata Format in Hindi (हिंदी विवाह बायोडाटा)", slug: "biodata-format-hindi", tag: "Hindi", tagColor: "bg-orange-50 text-orange-700 dark:bg-orange-950/50 dark:text-orange-300", desc: "Create a beautiful bio data format in Hindi — free download included.", img: "/examples/Hindi-biodata-fields-infographic.webp" },
+                { title: "How to Share Biodata on WhatsApp", slug: "biodata-format-for-whatsapp", tag: "Sharing", tagColor: "bg-teal-50 text-teal-700 dark:bg-teal-950/50 dark:text-teal-300", desc: "PDF vs PNG — the best way to share your marriage biodata on WhatsApp.", img: "/examples/whatsapp-biodata-infographic.webp" },
+                { title: "Kundali Details in Marriage Biodata", slug: "kundali-details-in-biodata", tag: "Kundali", tagColor: "bg-sky-50 text-sky-700 dark:bg-sky-950/50 dark:text-sky-300", desc: "What Rashi, Nakshatra, Gotra, and Manglik details to include in your biodata.", img: "/examples/kundali_components_infographic.webp" },
               ].map((art) => (
-                <Link key={art.slug} href={`/articles/${art.slug}`} className="group flex flex-col p-5 rounded-2xl border border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:border-indigo-200 dark:hover:border-indigo-800 hover:-translate-y-1 hover:shadow-lg transition-all">
-                  <span className={`self-start text-xs font-semibold px-2.5 py-1 rounded-full mb-3 ${art.tagColor}`}>{art.tag}</span>
-                  <h3 className="font-bold text-zinc-900 dark:text-white text-base mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors leading-snug">{art.title}</h3>
-                  <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed flex-1">{art.desc}</p>
-                  <span className="text-indigo-600 dark:text-indigo-400 text-xs font-semibold mt-4 inline-block group-hover:translate-x-1 transition-transform">Read article →</span>
+                <Link key={art.slug} href={`/articles/${art.slug}`} className="group flex flex-col rounded-2xl border border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:border-indigo-200 dark:hover:border-indigo-800 hover:-translate-y-1 hover:shadow-lg transition-all overflow-hidden">
+                  <div className="aspect-[16/9] overflow-hidden bg-zinc-100 dark:bg-zinc-800">
+                    <Image src={art.img} alt={art.title} width={400} height={225} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                  </div>
+                  <div className="p-5 flex flex-col flex-1">
+                    <span className={`self-start text-xs font-semibold px-2.5 py-1 rounded-full mb-3 ${art.tagColor}`}>{art.tag}</span>
+                    <h3 className="font-bold text-zinc-900 dark:text-white text-base mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors leading-snug">{art.title}</h3>
+                    <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed flex-1">{art.desc}</p>
+                    <span className="text-indigo-600 dark:text-indigo-400 text-xs font-semibold mt-4 inline-block group-hover:translate-x-1 transition-transform">Read article →</span>
+                  </div>
                 </Link>
               ))}
             </div>
@@ -357,21 +395,56 @@ function HomeContent() {
           </div>
         </section>
 
-        {/* ========== FAQ ========== */}
-        <section id="faq" className="py-20 px-5">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-14">
-              <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-3">{t("section.faq.badge") ?? "Quick Answers"}</p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-zinc-900 dark:text-white">{t("section.faq.title") ?? "Frequently asked questions"}</h2>
-            </div>
-            <div className="space-y-4">
-              {FAQS.map((faq, i) => (
-                <div key={i} className="p-6 rounded-2xl border border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-900">
-                  <h3 className="font-semibold text-zinc-900 dark:text-white mb-2">{faq.q}</h3>
-                  <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">{faq.a}</p>
+        {/* ========== WHAT IS A MARRIAGE BIODATA ========== */}
+        <section id="about-biodata" className="py-20 px-5">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-3">What Is It?</p>
+                <h2 className="text-3xl sm:text-4xl font-bold text-zinc-900 dark:text-white mb-6">What is a Marriage Biodata?</h2>
+                <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
+                  A <strong className="text-zinc-900 dark:text-white">marriage biodata</strong> is a one-page document used across India to introduce a person to prospective families during the arranged marriage process. It covers personal details, family background, education, occupation, and astrological information — your first impression before families meet.
+                </p>
+                <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-8">
+                  Unlike a resume (career-focused), a biodata covers the whole person — roots, values, hobbies, and expectations from a life partner. It is shared on WhatsApp, matrimony websites, and through community networks.
+                </p>
+                <div className="space-y-3">
+                  {[
+                    { q: "Who needs a marriage biodata?", a: "Anyone entering the arranged marriage process in India — Hindu, Muslim, Christian, Sikh, or any community." },
+                    { q: "What should it include?", a: "Name, date & time of birth, education, occupation, income, family details, horoscope/kundali info, and a clear photo." },
+                    { q: "How long should it be?", a: "Always 1 page. Families review many profiles — a clean, focused single page is far more effective." },
+                    { q: "PDF or Word document?", a: "Always PDF. Word documents break formatting on different phones. A PDF looks identical on every device." },
+                  ].map((item, i) => (
+                    <div key={i} className="p-4 rounded-xl border border-zinc-100 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900">
+                      <p className="font-semibold text-zinc-900 dark:text-white text-sm mb-1">{item.q}</p>
+                      <p className="text-sm text-zinc-500 dark:text-zinc-400">{item.a}</p>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+              <div className="relative">
+                <div className="rounded-3xl overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-2xl">
+                  <Image src="/examples/Boy-biodata-example.webp" alt="Sample marriage biodata format — BiodataBuilder" width={600} height={800} className="w-full h-auto" />
+                </div>
+                <div className="absolute -bottom-4 -left-4 bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800 shadow-xl p-4">
+                  <p className="text-xs text-zinc-500 mb-0.5">Generated with</p>
+                  <p className="font-bold text-zinc-900 dark:text-white text-sm">BiodataBuilder.in</p>
+                  <p className="text-xs text-emerald-600 font-medium">100% Free · No Watermark</p>
+                </div>
+              </div>
             </div>
+          </div>
+        </section>
+
+        {/* ========== BEFORE / AFTER ========== */}
+        <section className="py-12 px-5 bg-zinc-50 dark:bg-zinc-900/50">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-3">See the Difference</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-8">Plain Word doc vs BiodataBuilder PDF</h2>
+            <div className="rounded-3xl overflow-hidden border border-zinc-200 dark:border-zinc-700 shadow-xl">
+              <Image src="/examples/Before-after.webp" alt="Before and after comparison — plain Word biodata vs BiodataBuilder PDF" width={1200} height={600} className="w-full h-auto" />
+            </div>
+            <p className="mt-4 text-sm text-zinc-500 dark:text-zinc-400">Left: typical Word template shared on WhatsApp. Right: BiodataBuilder PDF — consistent on every device.</p>
           </div>
         </section>
 
