@@ -52,18 +52,6 @@ const TESTIMONIALS = [
   { name: "Anjali Verma", location: "Delhi, NCR", text: "Loved the photo feature and the god icon selector. It made our biodata look very traditional and beautiful. Downloaded in PNG and it looks great when shared on WhatsApp!", rating: 5 },
 ];
 
-const FAQS = [
-  { q: "Is this biodata maker completely free?", a: "Yes! Creating, previewing, and downloading your biodata is free to use." },
-  { q: "Is this a matchmaking or dating service?", a: "No. BiodataBuilder is purely a free design utility to format and generate PDF documents. We do not provide matrimonial services, we do not connect users, and we do not store your personal data on any servers." },
-  { q: "Do I need to create an account?", a: "No. You can start creating your biodata immediately without any registration or sign-up." },
-  { q: "What formats can I download my biodata in?", a: "You can download your biodata as a high-quality PDF (ideal for printing) or PNG image (ideal for sharing on WhatsApp)." },
-  { q: "Can I add my photo?", a: "Yes! You can upload and crop your photo and choose between a circular or square frame." },
-  { q: "Which languages are supported?", a: "You can create your biodata in English, Hindi (हिंदी), Gujarati (ગુજરાતી), Marathi (मराठी), Tamil (தமிழ்), and Telugu (తెలుగు). Simply select your language at the top of the form — field labels and section titles will be translated automatically." },
-  { q: "How to make a marriage biodata format word download?", a: "While many look for a word download, BiodataBuilder provides a much better experience by outputting a perfectly formatted, print-ready PDF. Word documents often lose formatting when opened on different devices, but our PDFs look beautiful and consistent everywhere." },
-  { q: "What is the best simple biodata format in India for free?", a: "The best simple biodata format focuses on clean typography, easy-to-read sections for family background and personal details, and a professional photo. We offer multiple free themes that capture this elegant simplicity." },
-  { q: "How can I find a biodata format for a girl in Marathi PDF?", a: "BiodataBuilder supports Marathi language natively. Simply select 'Marathi (मराठी)' from the language dropdown, and all your section headings and labels will be translated. Your final downloaded PDF will be perfectly formatted in Marathi." },
-  { q: "Is there a specific Shaadi biodata format for a girl?", a: "Yes, our templates are designed to be versatile. You can choose themes with softer color palettes and elegant fonts that are incredibly popular for a girl's Shaadi biodata. You can also easily add your hobbies, expectations, and Kundali details." }
-];
 
 // ─── Inner component that uses useSearchParams ───────────────────────────────
 function HomeContent() {
