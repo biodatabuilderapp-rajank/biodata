@@ -33,6 +33,7 @@ export default function SiteNav({ locale, onLocaleChange, activeHref }: SiteNavP
             <Link
               key={link.href}
               href={link.href}
+              prefetch={false}
               className={`hover:text-zinc-900 dark:hover:text-white transition-colors ${
                 activeHref === link.href ? "text-indigo-600 dark:text-indigo-400" : ""
               }`}
@@ -65,6 +66,7 @@ export default function SiteNav({ locale, onLocaleChange, activeHref }: SiteNavP
 
           <Link
             href="/create"
+            prefetch={false}
             className="hidden sm:flex items-center gap-2 px-5 py-2 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm transition-all shadow-md shadow-indigo-500/25 hover:shadow-lg hover:shadow-indigo-500/30 hover:-translate-y-0.5"
           >
             Create Free
@@ -90,6 +92,7 @@ export default function SiteNav({ locale, onLocaleChange, activeHref }: SiteNavP
               <Link
                 key={link.href}
                 href={link.href}
+                prefetch={false}
                 onClick={() => setMenuOpen(false)}
                 className="py-2.5 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
               >
@@ -98,6 +101,7 @@ export default function SiteNav({ locale, onLocaleChange, activeHref }: SiteNavP
             ))}
             <Link
               href="/create"
+              prefetch={false}
               onClick={() => setMenuOpen(false)}
               className="mt-3 flex items-center justify-center gap-2 py-3 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm transition-all"
             >

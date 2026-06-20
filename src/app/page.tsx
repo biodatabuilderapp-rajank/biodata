@@ -189,7 +189,7 @@ function HomeContent() {
           <div className="flex gap-4 overflow-x-auto pb-4 px-5 snap-x snap-mandatory scrollbar-hide">
             {EXAMPLE_IMAGES.map((img) => (
               <div key={img.src} className="snap-center shrink-0 w-48 sm:w-60 rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all">
-                <Image src={img.src} alt={img.alt} width={400} height={566} className="w-full h-auto" />
+                <Image src={img.src} alt={img.alt} width={400} height={566} sizes="(max-width: 640px) 50vw, 256px" className="w-full h-auto" />
               </div>
             ))}
           </div>
