@@ -251,7 +251,7 @@ export default function Article() {
               In Islamic marriage traditions, a <strong className="font-semibold text-zinc-900 dark:text-white">Wali</strong> is a male guardian (typically the father, elder brother, or paternal uncle) who is responsible for the bride during the Nikah process. 
             </p>
             <p className="mt-4">
-              Even if you are an independent working professional, including a Wali's contact information in your biodata signals respectful family involvement and adherence to Islamic protocol. It is highly reassuring to prospective families. If your family operates differently, you might find broader regional approaches interesting, such as the <Link href="/articles/marriage-biodata-format-in-marathi" className="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">Marathi biodata format</Link> which also heavily emphasizes family elders.
+              Even if you are an independent working professional, including a Wali's contact information in your biodata signals respectful family involvement and adherence to Islamic protocol. It is highly reassuring to prospective families. If your family operates differently, you might find broader regional approaches interesting, such as the <Link href="/articles/lagna-biodata-format-marathi" className="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">Marathi biodata format</Link> which also heavily emphasizes family elders.
             </p>
             <div className="mt-6 bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 font-mono text-sm text-zinc-800 dark:text-zinc-200">
               <p className="mb-2 text-zinc-500">Example Wali Contact:</p>
@@ -343,7 +343,7 @@ export default function Article() {
           <section id="conclusion" className="scroll-mt-24 mt-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-6">Conclusion</h2>
             <p>
-              Creating a Muslim marriage biodata requires a delicate balance of providing necessary personal details while clearly conveying your religious identity and lifestyle. Unlike a generic <Link href="/articles/biodata-format-for-marriage-in-word" className="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">Word document template</Link>, a dedicated Rishta biodata ensures that crucial elements like your Sect, practicing level, and Wali contact are front and center.
+              Creating a Muslim marriage biodata requires a delicate balance of providing necessary personal details while clearly conveying your religious identity and lifestyle. Unlike a generic <Link href="/articles/biodata-format-word-download" className="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">Word document template</Link>, a dedicated Rishta biodata ensures that crucial elements like your Sect, practicing level, and Wali contact are front and center.
             </p>
             <p className="mt-4">
               By following this guide, you can create an honest, respectful, and highly effective biodata that helps your family find a truly compatible match. 
@@ -365,7 +365,7 @@ export default function Article() {
           <div className="mt-16 border-t border-zinc-200 dark:border-zinc-800 pt-10">
             <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-6">What to Read Next</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Link href="/articles/best-biodata-format-for-marriage" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-emerald-500 transition group">
+              <Link href="/articles/biodata-for-marriage" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-emerald-500 transition group">
                 <div className="text-sm text-zinc-500 mb-1">Guide</div>
                 <div className="font-bold text-zinc-900 dark:text-white group-hover:text-emerald-600 transition">Best Biodata Format For Marriage</div>
               </Link>

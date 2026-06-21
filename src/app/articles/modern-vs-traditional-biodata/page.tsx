@@ -175,7 +175,7 @@ export default function Article() {
 
             <figure className="my-10">
               <div className="relative w-full aspect-square sm:aspect-[4/3] rounded-2xl overflow-hidden shadow border border-zinc-100 dark:border-zinc-800">
-                <Image src="/examples/whatsapp_biodata_infographic.png" alt="A traditional biodata being shared on WhatsApp" fill className="object-cover" />
+                <Image src="/examples/whatsapp-biodata-infographic.png" alt="A traditional biodata being shared on WhatsApp" fill className="object-cover" />
               </div>
               <figcaption className="text-center text-sm text-zinc-500 mt-3 italic">
                 Traditional biodatas are frequently shared via WhatsApp between parents and matchmakers.
