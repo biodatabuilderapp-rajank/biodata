@@ -10,7 +10,6 @@ import jsPDF from "jspdf";
 import { ThemeMeta } from "@/components/BiodataPreview";
 import { useUITranslation } from "@/lib/useUITranslation";
 import LazyThemeImage from "@/components/LazyThemeImage";
-// import { sendGAEvent } from "@next/third-parties/google";
 
 declare global {
     interface Window {
@@ -130,10 +129,6 @@ export default function PreviewPage() {
             pdf.save(`${data.personalDetails.fullName?.value || "Biodata"}.pdf`);
 
             // Track successful PDF download
-            // sendGAEvent('event', 'file_download', {
-            //     file_extension: 'pdf',
-            //     theme_used: template
-            // });
             window.gtag?.('event', 'file_download', {
                 file_extension: 'pdf',
                 theme_used: template,
@@ -166,10 +161,6 @@ export default function PreviewPage() {
             document.body.removeChild(link);
 
             // Track successful PNG download
-            // sendGAEvent('event', 'file_download', {
-            //     file_extension: 'png',
-            //     theme_used: template
-            // });
             window.gtag?.('event', 'file_download', {
                 file_extension: 'png',
                 theme_used: template,
