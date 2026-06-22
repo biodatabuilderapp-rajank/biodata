@@ -10,8 +10,13 @@ import jsPDF from "jspdf";
 import { ThemeMeta } from "@/components/BiodataPreview";
 import { useUITranslation } from "@/lib/useUITranslation";
 import LazyThemeImage from "@/components/LazyThemeImage";
-import { sendGAEvent } from "@next/third-parties/google";
+// import { sendGAEvent } from "@next/third-parties/google";
 
+declare global {
+    interface Window {
+        gtag?: (...args: any[]) => void;
+    }
+}
 
 export default function PreviewPage() {
     const [data, setData] = useState<Biodata>(initialData);
@@ -21,7 +26,7 @@ export default function PreviewPage() {
     const [isLoaded, setIsLoaded] = useState(false);
     const [isDownloadingPDF, setIsDownloadingPDF] = useState(false);
     const [isDownloadingPNG, setIsDownloadingPNG] = useState(false);
-    
+
     // We get the language from localStorage to know what UI language they selected
     const [language, setLanguage] = useState("en");
     const { t } = useUITranslation(language);
@@ -74,7 +79,7 @@ export default function PreviewPage() {
             }
             const savedLang = localStorage.getItem("biodataLang");
             if (savedLang) setLanguage(savedLang);
-            
+
             setIsLoaded(true);
         };
 
@@ -123,11 +128,15 @@ export default function PreviewPage() {
             const pdfHeight = (element.offsetHeight * pdfWidth) / element.offsetWidth;
             pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
             pdf.save(`${data.personalDetails.fullName?.value || "Biodata"}.pdf`);
-            
+
             // Track successful PDF download
-            sendGAEvent('event', 'file_download', {
+            // sendGAEvent('event', 'file_download', {
+            //     file_extension: 'pdf',
+            //     theme_used: template
+            // });
+            window.gtag?.('event', 'file_download', {
                 file_extension: 'pdf',
-                theme_used: template
+                theme_used: template,
             });
         } catch (error) {
             console.error("Error generating PDF:", error);
@@ -157,9 +166,13 @@ export default function PreviewPage() {
             document.body.removeChild(link);
 
             // Track successful PNG download
-            sendGAEvent('event', 'file_download', {
+            // sendGAEvent('event', 'file_download', {
+            //     file_extension: 'png',
+            //     theme_used: template
+            // });
+            window.gtag?.('event', 'file_download', {
                 file_extension: 'png',
-                theme_used: template
+                theme_used: template,
             });
         } catch (error) {
             console.error("Error generating PNG:", error);
