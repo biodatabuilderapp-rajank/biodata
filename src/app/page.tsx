@@ -6,10 +6,10 @@ import { MoveRight, FileText, Image as ImageIcon, CheckCircle2, Star, Sparkles, 
 import ClientThemeGallery from "@/components/ClientThemeGallery";
 import { useUITranslation } from "@/lib/useUITranslation";
 import { SUPPORTED_LANGUAGES } from "@/components/LanguageSelector";
-import { useSearchParams, useRouter } from "next/navigation";
 import { useState, useEffect, Suspense } from "react";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
+import LocaleWatcher from "@/components/LocaleWatcher";
 
 // ─── Example biodata images for carousel ────────────────────────────────────
 const EXAMPLE_IMAGES = [
@@ -53,44 +53,35 @@ const TESTIMONIALS = [
 ];
 
 
-// ─── Inner component that uses useSearchParams ───────────────────────────────
+// ─── Main page content — no useSearchParams here so Next.js renders full HTML ─
 function HomeContent() {
-  const searchParams = useSearchParams();
-  const router = useRouter();
-
-  // Priority: ?locale= query param → localStorage → "en"
+  // Priority: localStorage → "en" (URL sync is handled by LocaleWatcher)
   const [locale, setLocale] = useState<string>(() => {
     if (typeof window !== "undefined") {
-      return searchParams.get("locale") ?? localStorage.getItem("biodataLang") ?? "en";
+      return localStorage.getItem("biodataLang") ?? "en";
     }
-    return searchParams.get("locale") ?? "en";
+    return "en";
   });
 
   const { t } = useUITranslation(locale);
 
-  // Sync state inbound from URL — URL is the source of truth when it changes externally
-  // (e.g. user pastes a link with ?locale=, or uses browser back/forward).
-  // We do NOT rewrite the URL here — that's handleLocaleChange's job.
+  // Listen for locale changes dispatched by LocaleWatcher
   useEffect(() => {
-    const fromUrl = searchParams.get("locale");
-    if (fromUrl && fromUrl !== locale) {
-      setLocale(fromUrl);
-      localStorage.setItem("biodataLang", fromUrl);
-    }
-  }, [searchParams]);
+    const handler = (e: Event) => {
+      const lang = (e as CustomEvent<string>).detail;
+      if (lang && lang !== locale) {
+        setLocale(lang);
+      }
+    };
+    window.addEventListener("localeChange", handler);
+    return () => window.removeEventListener("localeChange", handler);
+  }, [locale]);
 
   const handleLocaleChange = (lang: string) => {
     setLocale(lang);
     localStorage.setItem("biodataLang", lang);
-    // Update URL without adding a history entry
-    const params = new URLSearchParams(searchParams.toString());
-    if (lang === "en") {
-      params.delete("locale");
-    } else {
-      params.set("locale", lang);
-    }
-    const newUrl = params.size > 0 ? `/?${params.toString()}` : "/";
-    router.replace(newUrl, { scroll: false });
+    // Tell LocaleWatcher to update the URL
+    window.dispatchEvent(new CustomEvent("localeSet", { detail: lang }));
   };
 
   const TRUST_ITEMS = [
@@ -568,11 +559,18 @@ function HomeContent() {
   );
 }
 
-// ─── Page wrapper with Suspense (required for useSearchParams) ────────────────
+// ─── Page wrapper ─────────────────────────────────────────────────────────────
+// LocaleWatcher is the ONLY component that uses useSearchParams, so Suspense
+// only wraps it. HomeContent renders its full HTML immediately — bots and
+// crawlers (Ahrefs, Googlebot) see all links and content without JavaScript.
 export default function Home() {
   return (
-    <Suspense fallback={<div className="min-h-screen bg-white dark:bg-zinc-950" />}>
+    <>
+      {/* Suspense boundary is tiny — only the invisible locale watcher */}
+      <Suspense fallback={null}>
+        <LocaleWatcher />
+      </Suspense>
       <HomeContent />
-    </Suspense>
+    </>
   );
 }
