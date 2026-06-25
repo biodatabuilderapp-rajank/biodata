@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     title: "Terms of Use — BiodataBuilder",
     description: "Terms of Use for BiodataBuilder — read our terms before using the service.",
     url: "https://biodatabuilder.in/terms",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "BiodataBuilder — Free Marriage Biodata Maker" }],
   },
 };
 

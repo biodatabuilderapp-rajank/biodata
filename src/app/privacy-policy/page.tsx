@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     title: "Privacy Policy — BiodataBuilder.in",
     description: "Read BiodataBuilder's Privacy Policy to learn how we protect your data. All biodata you create stays in your browser — we never store it on our servers.",
     url: "https://biodatabuilder.in/privacy-policy",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "BiodataBuilder — Free Marriage Biodata Maker" }],
   },
 };
 

@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     title: "Free Marriage Biodata Maker — Create & Download PDF",
     description:
       "Build a beautiful Indian marriage biodata online in minutes. Free matrimonial biodata templates, instant PDF download, no registration needed.",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "BiodataBuilder — Free Marriage Biodata Maker" }],
   },
 };
 

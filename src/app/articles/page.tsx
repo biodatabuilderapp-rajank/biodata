@@ -9,6 +9,7 @@ export const metadata = {
     title: "Biodata Formats & Guides | Learn How to Make a Biodata",
     description: "Explore comprehensive guides on creating the perfect marriage and job biodata, in English and Indian regional languages.",
     url: "https://biodatabuilder.in/articles",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "BiodataBuilder — Free Marriage Biodata Maker" }],
   },
 };
 

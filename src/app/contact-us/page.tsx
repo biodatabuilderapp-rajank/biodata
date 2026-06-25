@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     title: "Contact Us — BiodataBuilder.in",
     description: "Get in touch with BiodataBuilder for support, feedback, or technical issues.",
     url: "https://biodatabuilder.in/contact-us",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "BiodataBuilder — Free Marriage Biodata Maker" }],
   },
 };
 
