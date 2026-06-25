@@ -13,7 +13,7 @@ import {
 export const metadata: Metadata = {
   title: "Free Marriage Biodata Maker — Create & Download PDF Instantly",
   description:
-    "Create a beautiful Indian marriage biodata online in minutes. Choose from stunning matrimonial biodata templates for Hindu, Muslim, Christian, and regional formats. Fill in your details and download as PDF or PNG — completely free, no sign-up required. The best free biodata maker in India.",
+    "Create a beautiful Indian marriage biodata online in minutes. Free matrimonial biodata templates for Hindu, Muslim & Christian families. Download PDF free — no sign-up.",
   alternates: { canonical: "https://biodatabuilder.in/create" },
   openGraph: {
     url: "https://biodatabuilder.in/create",

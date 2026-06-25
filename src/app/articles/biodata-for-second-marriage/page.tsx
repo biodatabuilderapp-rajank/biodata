@@ -293,6 +293,10 @@ export default function Article() {
               <li>🕍 <Link href="/articles/best-marriage-biodata-format-for-hindu" className="text-indigo-600 dark:text-indigo-400 hover:underline">Best Marriage Biodata Format for Hindu</Link></li>
               <li>♆️ <Link href="/articles/marriage-biodata-format-for-muslim" className="text-indigo-600 dark:text-indigo-400 hover:underline">Muslim Marriage Biodata Format</Link></li>
               <li>✝️ <Link href="/articles/marriage-biodata-format-for-christian" className="text-indigo-600 dark:text-indigo-400 hover:underline">Christian Marriage Biodata Format</Link></li>
+              <li>🇮🇳 <Link href="/articles/biodata-format-hindi" className="text-indigo-600 dark:text-indigo-400 hover:underline">Biodata Format in Hindi — हिंदी विवाह बायोडाटा गाइड</Link></li>
+              <li>⚖️ <Link href="/articles/modern-vs-traditional-biodata" className="text-indigo-600 dark:text-indigo-400 hover:underline">Modern vs Traditional Biodata — Which Format to Choose</Link></li>
+              <li>📊 <Link href="/articles/marriage-biodata-statistics-india" className="text-indigo-600 dark:text-indigo-400 hover:underline">Marriage Biodata Statistics in India (2024 Trends)</Link></li>
+              <li>🔮 <Link href="/articles/kundali-details-in-biodata" className="text-indigo-600 dark:text-indigo-400 hover:underline">Kundali Details in Biodata — What Horoscope Info to Include</Link></li>
             </ul>
           </div>
 

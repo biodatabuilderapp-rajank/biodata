@@ -386,7 +386,19 @@ export default function Article() {
               </Link>
               <Link href="/articles/biodata-tips" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 transition group">
                 <div className="text-sm text-zinc-500 mb-1">Guide</div>
-                <div className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 transition">15 Expert Tips for a Winning Marriage Biodata</div>
+                <div className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 transition">15 Expert Tips to Write a Winning Biodata</div>
+              </Link>
+              <Link href="/articles/biodata-format-hindi" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 transition group">
+                <div className="text-sm text-zinc-500 mb-1">Language</div>
+                <div className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 transition">Biodata Format in Hindi — हिंदी विवाह बायोडाटा ગાઇડ</div>
+              </Link>
+              <Link href="/articles/modern-vs-traditional-biodata" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 transition group">
+                <div className="text-sm text-zinc-500 mb-1">Comparison</div>
+                <div className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 transition">Modern vs Traditional Biodata Format</div>
+              </Link>
+              <Link href="/articles/biodata-for-second-marriage" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 transition group">
+                <div className="text-sm text-zinc-500 mb-1">Specialized</div>
+                <div className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 transition">Biodata for Second Marriage — A Sensitive Guide</div>
               </Link>
             </div>
           </div>

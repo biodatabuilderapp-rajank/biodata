@@ -439,7 +439,19 @@ export default function Article() {
               </Link>
               <Link href="/articles/modern-vs-traditional-biodata" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
                 <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Modern vs Traditional Biodata</h4>
-                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">How marriage biodata design has evolved in India.</p>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">How design trends in marriage biodata have evolved.</p>
+              </Link>
+              <Link href="/articles/marriage-biodata-statistics-india" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Marriage Biodata Statistics India</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">Key data on how Indian families use and share biodatas.</p>
+              </Link>
+              <Link href="/articles/biodata-for-second-marriage" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Biodata for Second Marriage</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">Sensitive guide for divorced and widowed individuals.</p>
+              </Link>
+              <Link href="/articles/manglik-biodata-format" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Manglik Biodata Format</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">How to disclose Manglik status correctly in a biodata.</p>
               </Link>
             </div>
           </section>

@@ -365,6 +365,26 @@ export default function Article() {
                 <div className="text-sm text-zinc-500 mb-1">Differences</div>
                 <div className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 transition">Job vs Marriage Biodata Formats</div>
               </Link>
+              <Link href="/articles/biodata-format-hindi" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 transition group">
+                <div className="text-sm text-zinc-500 mb-1">Language</div>
+                <div className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 transition">Biodata Format in Hindi — हिंदी వివాహ బయోడేటా</div>
+              </Link>
+              <Link href="/articles/biodata-for-second-marriage" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 transition group">
+                <div className="text-sm text-zinc-500 mb-1">Specialized</div>
+                <div className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 transition">Biodata for Second Marriage — A Sensitive Guide</div>
+              </Link>
+              <Link href="/articles/marriage-biodata-statistics-india" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 transition group">
+                <div className="text-sm text-zinc-500 mb-1">Research</div>
+                <div className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 transition">Indian Marriage Biodata Statistics (2024)</div>
+              </Link>
+              <Link href="/articles/manglik-biodata-format" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 transition group">
+                <div className="text-sm text-zinc-500 mb-1">Specialized</div>
+                <div className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 transition">Manglik Biodata Format — Horoscope Guide</div>
+              </Link>
+              <Link href="/articles/kundali-details-in-biodata" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 transition group">
+                <div className="text-sm text-zinc-500 mb-1">Guide</div>
+                <div className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 transition">Kundali Details in Biodata — What to Include</div>
+              </Link>
             </div>
           </div>
         </div>

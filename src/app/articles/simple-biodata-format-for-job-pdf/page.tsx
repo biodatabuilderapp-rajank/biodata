@@ -345,6 +345,10 @@ export default function Article() {
               <li>📷 <Link href="/articles/biodata-tips" className="text-indigo-600 dark:text-indigo-400 hover:underline">Biodata Tips: Photos, Hobbies &amp; Mistakes to Avoid</Link></li>
               <li>📱 <Link href="/articles/biodata-format-for-whatsapp" className="text-indigo-600 dark:text-indigo-400 hover:underline">Biodata Format for WhatsApp — PDF Guide</Link></li>
               <li>📜 <Link href="/articles/biodata-for-marriage" className="text-indigo-600 dark:text-indigo-400 hover:underline">Complete Marriage Biodata Guide — All Sections Explained</Link></li>
+              <li>🇮🇳 <Link href="/articles/biodata-format-hindi" className="text-indigo-600 dark:text-indigo-400 hover:underline">Biodata Format in Hindi — हिंदी विवाह बायोडाटा गाइड</Link></li>
+              <li>📊 <Link href="/articles/marriage-biodata-statistics-india" className="text-indigo-600 dark:text-indigo-400 hover:underline">Marriage Biodata Statistics in India (2024 Trends)</Link></li>
+              <li>🕍 <Link href="/articles/best-marriage-biodata-format-for-hindu" className="text-indigo-600 dark:text-indigo-400 hover:underline">Best Marriage Biodata Format for Hindu</Link></li>
+              <li>⚖️ <Link href="/articles/modern-vs-traditional-biodata" className="text-indigo-600 dark:text-indigo-400 hover:underline">Modern vs Traditional Biodata — Which Format to Choose</Link></li>
             </ul>
           </div>
 

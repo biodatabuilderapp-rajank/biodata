@@ -339,6 +339,9 @@ export default function Article() {
               <li>🔄 <Link href="/articles/biodata-for-second-marriage" className="text-indigo-600 dark:text-indigo-400 hover:underline">Biodata for Second Marriage — Sensitive Guide</Link></li>
               <li>🏠 <Link href="/articles/best-marriage-biodata-format-for-hindu" className="text-indigo-600 dark:text-indigo-400 hover:underline">Best Marriage Biodata Format for Hindu</Link></li>
               <li>📤 <Link href="/articles/biodata-format-for-whatsapp" className="text-indigo-600 dark:text-indigo-400 hover:underline">Biodata Format for WhatsApp Sharing</Link></li>
+              <li>🇮🇳 <Link href="/articles/biodata-format-hindi" className="text-indigo-600 dark:text-indigo-400 hover:underline">Biodata Format in Hindi — हिंदी विवाह बायोडाटा गाइड</Link></li>
+              <li>💼 <Link href="/articles/simple-biodata-format-for-job-pdf" className="text-indigo-600 dark:text-indigo-400 hover:underline">Simple Biodata Format for Job PDF — Key Differences</Link></li>
+              <li>📊 <Link href="/articles/marriage-biodata-statistics-india" className="text-indigo-600 dark:text-indigo-400 hover:underline">Marriage Biodata Statistics in India (2024 Trends)</Link></li>
             </ul>
           </div>
 

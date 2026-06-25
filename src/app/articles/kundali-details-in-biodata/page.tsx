@@ -434,6 +434,18 @@ export default function Article() {
                 <div className="text-sm text-zinc-500 mb-1">Guide</div>
                 <div className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 transition">15 Expert Tips for a Winning Marriage Biodata</div>
               </Link>
+              <Link href="/articles/biodata-format-hindi" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 transition group">
+                <div className="text-sm text-zinc-500 mb-1">Language</div>
+                <div className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 transition">Biodata Format in Hindi — हिंदी विवाह बायोडाटा गाइड</div>
+              </Link>
+              <Link href="/articles/simple-biodata-format-for-job-pdf" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 transition group">
+                <div className="text-sm text-zinc-500 mb-1">Career</div>
+                <div className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 transition">Job vs Marriage Biodata — Key Differences</div>
+              </Link>
+              <Link href="/articles/biodata-for-second-marriage" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 transition group">
+                <div className="text-sm text-zinc-500 mb-1">Specialized</div>
+                <div className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 transition">Biodata for Second Marriage — A Sensitive Guide</div>
+              </Link>
             </div>
           </div>
         </div>

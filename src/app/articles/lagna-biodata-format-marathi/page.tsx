@@ -8,12 +8,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Lagna Biodata Format Marathi | लग्न बायोडाटा PDF",
   description:
-    "सुंदर मराठी लग्न बायोडाटा ऑनलाइन मोफत तयार करा. आधुनिक टेम्पलेट निवडा आणि PDF डाउनलोड करा.",
+    "सुंदर मराठी लग्न बायोडाटा ऑनलाइन मोफत तयार करा. व्यक्तिगत माहिती, कुटुंब, पत्रिका व अपेक्षा भरा — आधुनिक टेम्पलेट निवडा आणि लगेच PDF डाउनलोड करा. नोंदणी नाही.",
   alternates: { canonical: "https://biodatabuilder.in/articles/lagna-biodata-format-marathi" },
   openGraph: {
     title: "Lagna Biodata Format Marathi | लग्न बायोडाटा PDF",
     description:
-      "सुंदर मराठी लग्न बायोडाटा ऑनलाइन मोफत तयार करा. आधुनिक टेम्पलेट निवडा आणि PDF डाउनलोड करा.",
+      "सुंदर मराठी लग्न बायोडाटा ऑनलाइन मोफत तयार करा. व्यक्तिगत माहिती, कुटुंब, पत्रिका व अपेक्षा भरा — आधुनिक टेम्पलेट निवडा आणि लगेच PDF डाउनलोड करा. नोंदणी नाही.",
     url: "https://biodatabuilder.in/articles/lagna-biodata-format-marathi",
     images: [{ url: "/examples/Hero-composite.webp", width: 1200, height: 630, alt: "Marathi Lagna Biodata Format Templates" }],
   },
@@ -397,6 +397,26 @@ export default function LagnaBiodataFormatMarathiPage() {
               <Link href="/articles/biodata-format-for-whatsapp" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
                 <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">WhatsApp साठी बायोडाटा</h4>
                 <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">WhatsApp वर परफेक्ट PDF कशी शेअर करावी</p>
+              </Link>
+              <Link href="/articles/biodata-format-hindi" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">हिंदी विवाह बायोडाटा गाइड</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">हिंदी भाषेत बायोडाटा कसा बनवायचा — मार्गदर्शन</p>
+              </Link>
+              <Link href="/articles/modern-vs-traditional-biodata" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Modern vs Traditional Biodata</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">आधुनिक की पारंपरिक — कोणता बायोडाटा फॉर्मेट निवडावा?</p>
+              </Link>
+              <Link href="/articles/simple-biodata-format-for-job-pdf" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Job Biodata vs Marriage Biodata</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">नोकरी आणि लग्न बायोडाटामध्ये काय फरक आहे?</p>
+              </Link>
+              <Link href="/articles/biodata-for-second-marriage" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">दुसऱ्या लग्नासाठी बायोडाटा</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">घटस्फोटित किंवा विधवा व्यक्तींसाठी संवेदनशील मार्गदर्शन</p>
+              </Link>
+              <Link href="/articles/marriage-biodata-statistics-india" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">भारतातील बायोडाटा आकडेवारी</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">2024 मधील लग्न बायोडाटाबद्दलची माहिती</p>
               </Link>
             </div>
           </section>

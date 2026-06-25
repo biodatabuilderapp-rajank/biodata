@@ -403,6 +403,18 @@ export default function Article() {
                 <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Biodata Tips: Photos, Hobbies &amp; Mistakes</h4>
                 <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">The most common biodata mistakes and how to fix them.</p>
               </Link>
+              <Link href="/articles/biodata-format-hindi" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Biodata Format in Hindi</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">Creating a marriage biodata in Hindi — free PDF guide.</p>
+              </Link>
+              <Link href="/articles/biodata-for-second-marriage" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Biodata for Second Marriage</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">Sensitive guide for divorced and widowed individuals.</p>
+              </Link>
+              <Link href="/articles/marriage-biodata-statistics-india" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Marriage Biodata Statistics India</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">Key data on how Indian families use and share biodata.</p>
+              </Link>
             </div>
           </section>
 

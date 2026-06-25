@@ -8,12 +8,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Vivah Biodata Format in Hindi | शादी बायोडाटा PDF",
   description:
-    "सुंदर हिंदी शादी बायोडाटा ऑनलाइन मुफ्त में बनाएं। आधुनिक टेम्पलेट चुनें और तुरंत PDF डाउनलोड करें।",
+    "सुंदर हिंदी शादी बायोडाटा ऑनलाइन मुफ्त में बनाएं। व्यक्तिगत जानकारी, परिवार, कुंडली और अपेक्षाएं भरें — आधुनिक टेम्पलेट चुनें और तुरंत PDF डाउनलोड करें। कोई रजिस्ट्रेशन नहीं।",
   alternates: { canonical: "https://biodatabuilder.in/articles/vivah-biodata-format-hindi" },
   openGraph: {
     title: "Vivah Biodata Format in Hindi | शादी बायोडाटा PDF",
     description:
-      "सुंदर हिंदी शादी बायोडाटा ऑनलाइन मुफ्त में बनाएं। आधुनिक टेम्पलेट चुनें और तुरंत PDF डाउनलोड करें।",
+      "सुंदर हिंदी शादी बायोडाटा ऑनलाइन मुफ्त में बनाएं। व्यक्तिगत जानकारी, परिवार, कुंडली और अपेक्षाएं भरें — आधुनिक टेम्पलेट चुनें और तुरंत PDF डाउनलोड करें। कोई रजिस्ट्रेशन नहीं।",
     url: "https://biodatabuilder.in/articles/vivah-biodata-format-hindi",
     images: [{ url: "/examples/Hero-composite.webp", width: 1200, height: 630, alt: "Hindi Vivah Biodata Format Templates" }],
   },
@@ -405,6 +405,26 @@ export default function VivahBiodataFormatHindiPage() {
               <Link href="/articles/kundali-details-in-biodata" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
                 <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">कुंडली डिटेल्स बायोडाटा में</h4>
                 <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">राशि, नक्षत्र, गोत्र — कौन सी जानकारी देनी जरूरी है?</p>
+              </Link>
+              <Link href="/articles/biodata-format-hindi" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">हिंदी विवाह बायोडाटा फॉर्मेट गाइड</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">हिंदी में शादी बायोडाटा कैसे बनाएं — सैंपल और टेम्पलेट्स।</p>
+              </Link>
+              <Link href="/articles/modern-vs-traditional-biodata" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Modern vs Traditional Biodata</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">कौन सा बायोडाटा फॉर्मेट आपके लिए सही है?</p>
+              </Link>
+              <Link href="/articles/marriage-biodata-statistics-india" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Marriage Biodata Statistics India</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">भारत में शादी बायोडाटा के रोचक आँकड़े (2024)।</p>
+              </Link>
+              <Link href="/articles/simple-biodata-format-for-job-pdf" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Job Biodata vs Marriage Biodata</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">नौकरी और शादी बायोडाटा में क्या अंतर होता है?</p>
+              </Link>
+              <Link href="/articles/biodata-format-word-download" className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-colors group">
+                <h4 className="font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Biodata Format Word Download</h4>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">Word vs PDF — बायोडाटा के लिए कौन सा फॉर्मेट बेहतर है?</p>
               </Link>
             </div>
           </section>
