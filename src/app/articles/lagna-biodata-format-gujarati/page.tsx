@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   description: "Gujarati marriage biodata format with all fields in Gujarati and English. Jati, Gotra, Gana, Rashi details. Download your lagna biodata as PDF free.",
   alternates: { canonical: "https://biodatabuilder.in/articles/lagna-biodata-format-gujarati" },
   openGraph: {
+    type: "article",
     title: "Lagna Biodata Format Gujarati | લગ્ન બાયોડેટા PDF",
     description: "Complete Gujarati lagna biodata format with Jati, Gotra, Gana, Rashi — free PDF download.",
     url: "https://biodatabuilder.in/articles/lagna-biodata-format-gujarati",

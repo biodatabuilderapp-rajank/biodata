@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description: "Write an honest, dignified biodata for second marriage. Includes 4 sample texts, comparison table, cultural tips for Hindu/Muslim/Christian, and checklist.",
   alternates: { canonical: "https://biodatabuilder.in/articles/biodata-for-second-marriage" },
   openGraph: {
+    type: "article",
     title: "Biodata for Second Marriage | Divorced & Widowed Guide",
     description: "Write an honest, dignified biodata for second marriage. Includes 4 sample texts, comparison table, cultural tips for Hindu/Muslim/Christian, and checklist.",
     url: "https://biodatabuilder.in/articles/biodata-for-second-marriage",

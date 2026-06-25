@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "सुंदर मराठी लग्न बायोडाटा ऑनलाइन मोफत तयार करा. व्यक्तिगत माहिती, कुटुंब, पत्रिका व अपेक्षा भरा — आधुनिक टेम्पलेट निवडा आणि लगेच PDF डाउनलोड करा. नोंदणी नाही.",
   alternates: { canonical: "https://biodatabuilder.in/articles/lagna-biodata-format-marathi" },
   openGraph: {
+    type: "article",
     title: "Lagna Biodata Format Marathi | लग्न बायोडाटा PDF",
     description:
       "सुंदर मराठी लग्न बायोडाटा ऑनलाइन मोफत तयार करा. व्यक्तिगत माहिती, कुटुंब, पत्रिका व अपेक्षा भरा — आधुनिक टेम्पलेट निवडा आणि लगेच PDF डाउनलोड करा. नोंदणी नाही.",

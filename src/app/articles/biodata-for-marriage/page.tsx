@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Create beautiful Indian marriage biodata online for free. Choose modern biodata templates, add your details, and instantly download PDF for WhatsApp sharing.",
   alternates: { canonical: "https://biodatabuilder.in/articles/biodata-for-marriage" },
   openGraph: {
+    type: "article",
     title: "Marriage Biodata Maker Online Free | Create Biodata PDF",
     description:
       "Create beautiful Indian marriage biodata online for free. Choose modern biodata templates, add your details, and instantly download PDF for WhatsApp sharing.",

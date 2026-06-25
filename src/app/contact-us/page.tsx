@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description: "Get in touch with BiodataBuilder. Reach out for support, feedback, or technical issues regarding our free online marriage biodata maker.",
   alternates: { canonical: "https://biodatabuilder.in/contact-us" },
   openGraph: {
+    type: "website",
     title: "Contact Us — BiodataBuilder.in",
     description: "Get in touch with BiodataBuilder for support, feedback, or technical issues.",
     url: "https://biodatabuilder.in/contact-us",

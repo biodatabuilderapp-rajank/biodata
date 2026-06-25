@@ -50,6 +50,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
+    url: "https://biodatabuilder.in/",
     locale: "en_IN",
     siteName: "BiodataBuilder",
     title: "Free Marriage Biodata Maker — Create & Download PDF",

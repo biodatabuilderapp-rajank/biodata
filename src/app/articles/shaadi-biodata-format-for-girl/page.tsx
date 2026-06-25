@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   description: "Create the perfect marriage biodata for a girl. Sections to include, sample About Me text, expectations wording, template tips, and free PDF download.",
   alternates: { canonical: "https://biodatabuilder.in/articles/shaadi-biodata-format-for-girl" },
   openGraph: {
+    type: "article",
     title: "Shaadi Biodata for Girl | Complete Marriage Biodata Guide",
     description: "Create the perfect marriage biodata for a girl. Sections to include, sample About Me text, expectations wording, template tips, and free PDF download.",
     url: "https://biodatabuilder.in/articles/shaadi-biodata-format-for-girl",

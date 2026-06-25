@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   description: "Complete guide to creating a marriage biodata when you are Manglik. How to state Manglik status, what to write, how to match, and how to address concerns honestly.",
   alternates: { canonical: "https://biodatabuilder.in/articles/manglik-biodata-format" },
   openGraph: {
+    type: "article",
     title: "Manglik Biodata Format | Marriage Biodata for Manglik Boy & Girl",
     description: "Complete guide to creating a marriage biodata when you are Manglik — what to write, how to match, and common concerns addressed.",
     url: "https://biodatabuilder.in/articles/manglik-biodata-format",

@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   description: "Complete Telugu marriage biodata format with all fields in Telugu and English. Rasi, Nakshatra, Gotra, Cheyvvai Dosham — free PDF download.",
   alternates: { canonical: "https://biodatabuilder.in/articles/vivah-biodata-format-telugu" },
   openGraph: {
+    type: "article",
     title: "Vivah Biodata Format Telugu | వివాహ బయోడేటా PDF",
     description: "Telugu marriage biodata with Rasi, Nakshatra, Gotra, Cheyvvai details — free PDF download.",
     url: "https://biodatabuilder.in/articles/vivah-biodata-format-telugu",

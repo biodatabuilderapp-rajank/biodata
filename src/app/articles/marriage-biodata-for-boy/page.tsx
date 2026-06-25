@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   description: "Complete guide to creating a marriage biodata for a boy (groom). What sections to include, sample text, income tips, common mistakes, and free PDF download.",
   alternates: { canonical: "https://biodatabuilder.in/articles/marriage-biodata-for-boy" },
   openGraph: {
+    type: "article",
     title: "Marriage Biodata for Boy | Complete Groom Biodata Format Guide",
     description: "Complete guide to creating a marriage biodata for a boy (groom). What sections to include, sample text, income tips, common mistakes, and free PDF download.",
     url: "https://biodatabuilder.in/articles/marriage-biodata-for-boy",

@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     "Not sure what to write in your marriage biodata About Me section? Step-by-step guide, 6 real examples for boys & girls, cultural tips and mistakes to avoid.",
   alternates: { canonical: "https://biodatabuilder.in/articles/how-to-write-biodata-about-me" },
   openGraph: {
+    type: "article",
     title: "How to Write About Me in Marriage Biodata | Examples & Tips",
     description:
       "Not sure what to write in your marriage biodata About Me section? Step-by-step guide, 6 real examples for boys & girls, cultural tips and mistakes to avoid.",

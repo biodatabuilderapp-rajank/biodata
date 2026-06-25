@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     "हिंदी में शादी का बायोडाटा कैसे बनाएं? Step-by-step guide, sample Hindi biodata format, fields checklist, and free PDF maker. Perfect for UP, MP, Rajasthan & Bihar families.",
   alternates: { canonical: "https://biodatabuilder.in/articles/biodata-format-hindi" },
   openGraph: {
+    type: "article",
     title: "Biodata Format in Hindi | हिंदी विवाह बायोडाटा गाइड",
     description:
       "हिंदी में शादी का बायोडाटा कैसे बनाएं? Step-by-step guide, sample Hindi biodata format, fields checklist, and free PDF maker. Perfect for UP, MP, Rajasthan & Bihar families.",

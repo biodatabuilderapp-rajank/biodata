@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   description: "Confused between a biodata, resume, and CV? Learn the key differences, when to use each, and how to create the perfect document for jobs or marriage.",
   alternates: { canonical: "https://biodatabuilder.in/articles/biodata-vs-resume-difference" },
   openGraph: {
+    type: "article",
     title: "Biodata vs Resume vs CV | The Real Difference Explained",
     description: "Confused between a biodata, resume, and CV? Learn the key differences, when to use each, and how to create the perfect document for jobs or marriage.",
     url: "https://biodatabuilder.in/articles/biodata-vs-resume-difference",

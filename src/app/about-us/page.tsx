@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description: "Learn more about BiodataBuilder — a free online tool designed to help Indian families create beautiful, professional marriage biodata PDFs in minutes.",
   alternates: { canonical: "https://biodatabuilder.in/about-us" },
   openGraph: {
+    type: "website",
     title: "About Us — BiodataBuilder.in",
     description: "Learn more about BiodataBuilder — a free online tool for creating beautiful marriage biodata PDFs in minutes.",
     url: "https://biodatabuilder.in/about-us",

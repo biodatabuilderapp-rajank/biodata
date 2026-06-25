@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "सुंदर हिंदी शादी बायोडाटा ऑनलाइन मुफ्त में बनाएं। व्यक्तिगत जानकारी, परिवार, कुंडली और अपेक्षाएं भरें — आधुनिक टेम्पलेट चुनें और तुरंत PDF डाउनलोड करें। कोई रजिस्ट्रेशन नहीं।",
   alternates: { canonical: "https://biodatabuilder.in/articles/vivah-biodata-format-hindi" },
   openGraph: {
+    type: "article",
     title: "Vivah Biodata Format in Hindi | शादी बायोडाटा PDF",
     description:
       "सुंदर हिंदी शादी बायोडाटा ऑनलाइन मुफ्त में बनाएं। व्यक्तिगत जानकारी, परिवार, कुंडली और अपेक्षाएं भरें — आधुनिक टेम्पलेट चुनें और तुरंत PDF डाउनलोड करें। कोई रजिस्ट्रेशन नहीं।",

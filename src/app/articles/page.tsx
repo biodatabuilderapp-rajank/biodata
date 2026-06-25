@@ -5,6 +5,7 @@ export const metadata = {
   description: "Explore comprehensive guides on creating the perfect marriage and job biodata, in English and Indian regional languages.",
   alternates: { canonical: "https://biodatabuilder.in/articles" },
   openGraph: {
+    type: "website",
     title: "Biodata Formats & Guides | Learn How to Make a Biodata",
     description: "Explore comprehensive guides on creating the perfect marriage and job biodata, in English and Indian regional languages.",
     url: "https://biodatabuilder.in/articles",

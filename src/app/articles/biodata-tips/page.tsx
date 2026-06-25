@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     "Master guide to a perfect marriage biodata. Right photo, genuine hobbies, strong About Me, and the 8 fatal mistakes families notice instantly.",
   alternates: { canonical: "https://biodatabuilder.in/articles/biodata-tips" },
   openGraph: {
+    type: "article",
     title: "Biodata Tips: Photo, Hobbies & Mistakes to Avoid",
     description:
       "Master guide to a perfect marriage biodata. Right photo, genuine hobbies, strong About Me, and the 8 fatal mistakes families notice instantly.",

@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   description: "Looking for a marriage biodata format in Word? Discover why a PDF builder creates better results than Word, and how to get a beautiful biodata for free in seconds.",
   alternates: { canonical: "https://biodatabuilder.in/articles/biodata-format-word-download" },
   openGraph: {
+    type: "article",
     title: "Biodata Format in Word for Marriage: Free Download Alternative",
     description: "Looking for a marriage biodata format in Word? Discover why a PDF builder creates better results than Word, and how to get a beautiful biodata for free in seconds.",
     url: "https://biodatabuilder.in/articles/biodata-format-word-download",

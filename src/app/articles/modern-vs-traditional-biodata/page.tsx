@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   description: "Should you use a modern or traditional biodata format? Compare layouts, content styles, and learn which works best for your family and matchmaking context.",
   alternates: { canonical: "https://biodatabuilder.in/articles/modern-vs-traditional-biodata" },
   openGraph: {
+    type: "article",
     title: "Modern vs Traditional Biodata Format | Which One Should You Use?",
     description: "Should you use a modern or traditional biodata format? Compare layouts, content styles, and learn which works best for your family and matchmaking context.",
     url: "https://biodatabuilder.in/articles/modern-vs-traditional-biodata",

@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   description: "Fascinating data and statistics on arranged marriage and biodata trends in India. What do men and women look for? At what age are biodatas created?",
   alternates: { canonical: "https://biodatabuilder.in/articles/marriage-biodata-statistics-india" },
   openGraph: {
+    type: "article",
     title: "Marriage Biodata Statistics in India (2024 Trends)",
     description: "Fascinating data and statistics on arranged marriage and biodata trends in India. What do men and women look for? At what age are biodatas created?",
     url: "https://biodatabuilder.in/articles/marriage-biodata-statistics-india",

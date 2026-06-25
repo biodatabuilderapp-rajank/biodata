@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   description: "Learn the best way to share your marriage biodata on WhatsApp. PDF vs image vs Word, how to send as document, file size tips, and what to write in the message.",
   alternates: { canonical: "https://biodatabuilder.in/articles/biodata-format-for-whatsapp" },
   openGraph: {
+    type: "article",
     title: "How to Share Biodata on WhatsApp | Best Format for Sharing",
     description: "Learn the best way to share your marriage biodata on WhatsApp. PDF vs image vs Word, how to send as document, file size tips, and what to write in the message.",
     url: "https://biodatabuilder.in/articles/biodata-format-for-whatsapp",

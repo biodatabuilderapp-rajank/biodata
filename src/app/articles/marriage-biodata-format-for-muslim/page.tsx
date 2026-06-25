@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   description: "Complete guide to creating a Muslim marriage biodata (Rishta biodata). Covers Sect, Biraderi, Mehr, Wali details and sample format. Free PDF download.",
   alternates: { canonical: "https://biodatabuilder.in/articles/marriage-biodata-format-for-muslim" },
   openGraph: {
+    type: "article",
     title: "Muslim Marriage Biodata Format | Rishta Biodata Guide",
     description: "Muslim Rishta biodata format — Sect, Biraderi, Mehr, Wali details — free PDF download.",
     url: "https://biodatabuilder.in/articles/marriage-biodata-format-for-muslim",

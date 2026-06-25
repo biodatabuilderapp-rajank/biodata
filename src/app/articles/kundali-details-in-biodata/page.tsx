@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   description: "What kundali and horoscope details should you include in a marriage biodata? A complete guide to Rashi, Nakshatra, Gotra, Manglik status and more.",
   alternates: { canonical: "https://biodatabuilder.in/articles/kundali-details-in-biodata" },
   openGraph: {
+    type: "article",
     title: "Kundali Details in Biodata | What Horoscope Info to Include",
     description: "What kundali and horoscope details should you include in a marriage biodata? A complete guide to Rashi, Nakshatra, Gotra, Manglik status and more.",
     url: "https://biodatabuilder.in/articles/kundali-details-in-biodata",

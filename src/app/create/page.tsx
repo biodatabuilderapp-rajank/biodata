@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     "Create a beautiful Indian marriage biodata online in minutes. Free matrimonial biodata templates for Hindu, Muslim & Christian families. Download PDF free — no sign-up.",
   alternates: { canonical: "https://biodatabuilder.in/create" },
   openGraph: {
+    type: "website",
     url: "https://biodatabuilder.in/create",
     title: "Free Marriage Biodata Maker — Create & Download PDF",
     description:
@@ -199,9 +200,9 @@ export default function CreatePage() {
         {/* How it works */}
         <section className="max-w-5xl mx-auto px-5 py-20">
           <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-3 text-center">Simple Process</p>
-          <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-3 text-center">
+          <h1 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-3 text-center">
             How to Create a Marriage Biodata Online — In 4 Simple Steps
-          </h2>
+          </h1>
           <p className="text-center text-zinc-500 dark:text-zinc-400 mb-12 max-w-xl mx-auto">
             No design skills needed. No registration. Your beautiful matrimonial biodata PDF is ready in under 5 minutes — completely free, no watermarks.
           </p>

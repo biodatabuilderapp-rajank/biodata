@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   description: "Complete Tamil thirumanam biodata format with all fields in Tamil and English. Jathagam, Rasi, Nakshatra, community fields, and free PDF download.",
   alternates: { canonical: "https://biodatabuilder.in/articles/thirumanam-biodata-format-tamil" },
   openGraph: {
+    type: "article",
     title: "Thirumanam Biodata Format Tamil | திருமண பயோடேட்டா",
     description: "Tamil marriage biodata with Jathagam details, Rasi, Natchathiram, community fields — free PDF.",
     url: "https://biodatabuilder.in/articles/thirumanam-biodata-format-tamil",

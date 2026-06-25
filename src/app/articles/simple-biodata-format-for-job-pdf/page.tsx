@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description: "Simple biodata format for a job PDF — what to include, how it differs from a marriage biodata, sample text, formatting tips, and common mistakes.",
   alternates: { canonical: "https://biodatabuilder.in/articles/simple-biodata-format-for-job-pdf" },
   openGraph: {
+    type: "article",
     title: "Simple Biodata Format for Job PDF | Tips & Guide",
     description: "Simple biodata format for a job PDF — what to include, how it differs from a marriage biodata, sample text, formatting tips, and common mistakes.",
     url: "https://biodatabuilder.in/articles/simple-biodata-format-for-job-pdf",

@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   description: "Complete guide to the best marriage biodata format for Hindu families. Covers biodata structure, design, regional variations, and free PDF template download.",
   alternates: { canonical: "https://biodatabuilder.in/articles/best-marriage-biodata-format-for-hindu" },
   openGraph: {
+    type: "article",
     title: "Best Marriage Biodata Format for Hindu | Complete Guide",
     description: "Complete guide to the best marriage biodata format for Hindu families — structure, design, regional variations, and free PDF template.",
     url: "https://biodatabuilder.in/articles/best-marriage-biodata-format-for-hindu",

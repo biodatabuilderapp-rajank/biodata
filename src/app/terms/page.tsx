@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     description: "Terms of Use for BiodataBuilder.in — learn how you can use our free marriage biodata maker, what data we store, and your rights as a user. Read before using.",
     alternates: { canonical: "https://biodatabuilder.in/terms" },
   openGraph: {
+    type: "website",
     title: "Terms of Use — BiodataBuilder",
     description: "Terms of Use for BiodataBuilder — read our terms before using the service.",
     url: "https://biodatabuilder.in/terms",

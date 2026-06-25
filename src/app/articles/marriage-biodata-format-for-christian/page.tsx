@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   description: "Complete guide to creating a Christian marriage biodata. What sections to include, Kerala vs Goa community differences, sample format, and free PDF download.",
   alternates: { canonical: "https://biodatabuilder.in/articles/marriage-biodata-format-for-christian" },
   openGraph: {
+    type: "article",
     title: "Christian Marriage Biodata Format | Free PDF Template",
     description: "Complete Christian marriage biodata format — denomination, church, family, and contact details. Free PDF download.",
     url: "https://biodatabuilder.in/articles/marriage-biodata-format-for-christian",
