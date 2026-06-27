@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Logo from "@/components/Logo";
+import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import type { Metadata } from "next";
 
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     title: "Terms of Use — BiodataBuilder",
-    description: "Terms of Use for BiodataBuilder — read our terms before using the service.",
+    description: "Terms of Use for BiodataBuilder.in — learn how you can use our free marriage biodata maker, what data we store, and your rights as a user. Read before using.",
     url: "https://biodatabuilder.in/terms",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "BiodataBuilder — Free Marriage Biodata Maker" }],
   },
@@ -19,11 +19,8 @@ export const metadata: Metadata = {
 export default function TermsOfUse() {
     return (
         <div className="min-h-screen bg-white dark:bg-zinc-950 font-sans">
-            <nav className="border-b border-zinc-100 dark:border-zinc-900 bg-white dark:bg-zinc-950 px-5 h-16 flex items-center">
-                <Link href="/" className="flex items-center gap-2">
-                    <Logo />
-                </Link>
-            </nav>
+            <SiteNav />
+            <div className="h-16" />{/* spacer for fixed nav */}
 
             <main className="max-w-3xl mx-auto px-5 py-16">
                 <script
@@ -38,7 +35,7 @@ export default function TermsOfUse() {
                   }) }}
                 />
                 <h1 className="text-3xl font-bold text-zinc-900 dark:text-white mb-2">Terms of Use</h1>
-                <p className="text-sm text-zinc-500 mb-10">Last updated: March 2025</p>
+                <p className="text-sm text-zinc-500 mb-10">Last updated: June 2025</p>
 
                 <div className="space-y-8 text-zinc-700 dark:text-zinc-300 leading-relaxed">
                     <section>
@@ -72,7 +69,12 @@ export default function TermsOfUse() {
                     </section>
 
                     <section>
-                        <h2 className="text-xl font-semibold text-zinc-900 dark:text-white mb-3">7. Contact</h2>
+                        <h2 className="text-xl font-semibold text-zinc-900 dark:text-white mb-3">7. Governing Law</h2>
+                        <p>These Terms of Use shall be governed by and construed in accordance with the laws of India. Any disputes arising from the use of this service shall be subject to the exclusive jurisdiction of the courts located in India.</p>
+                    </section>
+
+                    <section>
+                        <h2 className="text-xl font-semibold text-zinc-900 dark:text-white mb-3">8. Contact</h2>
                         <p>If you have any questions about these Terms of Use, please visit our <Link href="/contact-us" className="text-indigo-600 hover:underline">Contact Us page</Link> or review our <Link href="/privacy-policy" className="text-indigo-600 hover:underline">Privacy Policy</Link> for more information on how we handle your data.</p>
                     </section>
                 </div>
