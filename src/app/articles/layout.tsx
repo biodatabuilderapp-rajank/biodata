@@ -19,8 +19,8 @@ export default function ArticlesLayout({
     <div className="min-h-screen bg-white dark:bg-zinc-950 font-sans flex flex-col">
       <SiteNav activeHref="/articles" />
 
-      <main className="flex-1 pt-32 pb-20 px-5">
-        <div className="max-w-4xl mx-auto">
+      <main className="flex-1 pt-24 pb-20 px-5">
+        <div className="max-w-7xl mx-auto">
           {children}
         </div>
       </main>
