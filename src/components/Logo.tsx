@@ -10,12 +10,22 @@ interface LogoProps {
 export default function Logo({ size = 180, showText = false, className = "" }: LogoProps) {
     return (
         <Link href="/" className={`flex items-center gap-2.5 ${className}`}>
+            {/* Mobile logo */}
+            <Image
+                src="/logo_m.png"
+                alt="Biodata Builder"
+                width={64}
+                height={64}
+                className="rounded-lg sm:hidden"
+                priority
+            />
+            {/* Desktop logo */}
             <Image
                 src="/logo.png"
                 alt="Biodata Builder"
                 width={size}
                 height={size}
-                className="rounded-lg"
+                className="rounded-lg hidden sm:block"
                 priority
             />
             {showText && (

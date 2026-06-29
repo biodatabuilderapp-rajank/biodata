@@ -67,7 +67,7 @@ export default function SiteNav({ locale, onLocaleChange, activeHref }: SiteNavP
           <Link
             href="/create"
             prefetch={false}
-            className="hidden sm:flex items-center gap-2 px-5 py-2 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm transition-all shadow-md shadow-indigo-500/25 hover:shadow-lg hover:shadow-indigo-500/30 hover:-translate-y-0.5"
+            className="flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm transition-all shadow-md shadow-indigo-500/25 hover:shadow-lg hover:shadow-indigo-500/30 hover:-translate-y-0.5 whitespace-nowrap"
           >
             Create Free
             <MoveRight className="w-4 h-4" />
@@ -99,14 +99,7 @@ export default function SiteNav({ locale, onLocaleChange, activeHref }: SiteNavP
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/create"
-              prefetch={false}
-              onClick={() => setMenuOpen(false)}
-              className="mt-3 flex items-center justify-center gap-2 py-3 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm transition-all"
-            >
-              Create Free <MoveRight className="w-4 h-4" />
-            </Link>
+
             {/* Mobile language selector */}
             {locale !== undefined && onLocaleChange && (
               <div className="flex items-center gap-2 mt-3 pt-3 border-t border-zinc-100 dark:border-zinc-800">
