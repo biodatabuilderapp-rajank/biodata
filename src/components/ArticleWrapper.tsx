@@ -60,8 +60,10 @@ export default function ArticleWrapper({
     ],
   };
 
+  const adsEnabled = process.env.NEXT_PUBLIC_ADSENSE_ENABLED === "true";
+
   return (
-    <div className="grid grid-cols-1 xl:grid-cols-[minmax(0,768px)_300px] gap-10 justify-center">
+    <div className={`grid grid-cols-1 ${adsEnabled ? "xl:grid-cols-[minmax(0,768px)_300px]" : ""} gap-10 justify-center`}>
       <article className="max-w-3xl">
         {/* Breadcrumb JSON-LD — injected on every article automatically */}
         <script
@@ -139,16 +141,18 @@ export default function ArticleWrapper({
         )}
       </article>
 
-      <aside className="hidden xl:block">
-        <div className="sticky top-28">
-          <AdSlot
-            slotId="article-sidebar"
-            adSlot="YOUR_ARTICLE_SIDEBAR_AD_SLOT_ID"
-            format="display"
-            className="mt-0"
-          />
-        </div>
-      </aside>
+      {adsEnabled && (
+        <aside className="hidden xl:block">
+          <div className="sticky top-28">
+            <AdSlot
+              slotId="article-sidebar"
+              adSlot="YOUR_ARTICLE_SIDEBAR_AD_SLOT_ID"
+              format="display"
+              className="mt-0"
+            />
+          </div>
+        </aside>
+      )}
     </div>
   );
 }
