@@ -10,6 +10,7 @@ import { useState, useEffect, Suspense } from "react";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import LocaleWatcher from "@/components/LocaleWatcher";
+import AdSlot from "@/components/AdSlot";
 
 // ─── Example biodata images for carousel ────────────────────────────────────
 const EXAMPLE_IMAGES = [
@@ -191,6 +192,14 @@ function HomeContent() {
           </div>
         </section>
 
+        <div className="px-5 max-w-4xl mx-auto">
+          <AdSlot
+            slotId="home-after-examples"
+            adSlot="YOUR_HOME_AFTER_EXAMPLES_AD_SLOT_ID"
+            format="banner"
+          />
+        </div>
+
         {/* ========== HOW IT WORKS ========== */}
         <section id="how-it-works" className="py-20 px-5">
           <div className="max-w-6xl mx-auto">
@@ -227,6 +236,15 @@ function HomeContent() {
             </div>
           </div>
         </section>
+
+        {/* ── Ad banner — between how-it-works and themes ── */}
+        <div className="px-5 max-w-4xl mx-auto">
+          <AdSlot
+            slotId="home-mid"
+            adSlot="YOUR_HOME_MID_AD_SLOT_ID"
+            format="banner"
+          />
+        </div>
 
         {/* ========== THEME GALLERY ========== */}
         <section id="themes" className="py-20 px-5 bg-zinc-50 dark:bg-zinc-900/50">
@@ -438,6 +456,14 @@ function HomeContent() {
         </section>
 
         {/* ========== TESTIMONIALS ========== */}
+        <div className="px-5 max-w-4xl mx-auto">
+          <AdSlot
+            slotId="home-after-featured-articles"
+            adSlot="YOUR_HOME_AFTER_FEATURED_ARTICLES_AD_SLOT_ID"
+            format="banner"
+          />
+        </div>
+
         <section className="py-20 px-5 bg-zinc-50 dark:bg-zinc-900/50">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-14">

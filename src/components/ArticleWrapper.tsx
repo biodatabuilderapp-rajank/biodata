@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import AdSlot from "@/components/AdSlot";
 
 interface RelatedArticle {
   title: string;
@@ -60,12 +61,13 @@ export default function ArticleWrapper({
   };
 
   return (
-    <article className="max-w-3xl mx-auto">
-      {/* Breadcrumb JSON-LD — injected on every article automatically */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
+    <div className="grid grid-cols-1 xl:grid-cols-[minmax(0,768px)_300px] gap-10 justify-center">
+      <article className="max-w-3xl">
+        {/* Breadcrumb JSON-LD — injected on every article automatically */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
 
       {/* Back link */}
       <Link
@@ -94,31 +96,59 @@ export default function ArticleWrapper({
         </div>
       </div>
 
+      {/* Mid-article ad — responsive, between author bar and body */}
+      <AdSlot
+        slotId="article-top"
+        adSlot="YOUR_ARTICLE_TOP_AD_SLOT_ID"
+        format="banner"
+        className="mb-8"
+      />
+
       {/* Article body */}
       {children}
 
-      {/* Related articles */}
-      {related.length > 0 && (
-        <div className="mt-16 border-t border-zinc-100 dark:border-zinc-800 pt-10">
-          <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-5">
-            Related Articles
-          </p>
-          <div className="grid gap-3">
-            {related.map((r) => (
-              <Link
-                key={r.slug}
-                href={`/articles/${r.slug}`}
-                className="flex items-center justify-between p-4 rounded-xl border border-zinc-100 dark:border-zinc-800 hover:border-indigo-200 dark:hover:border-indigo-800 hover:bg-indigo-50/50 dark:hover:bg-indigo-950/20 transition-all group"
-              >
-                <span className="text-sm font-medium text-zinc-800 dark:text-zinc-200 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
-                  {r.title}
-                </span>
-                <span className="text-indigo-500 text-sm shrink-0 ml-3 group-hover:translate-x-1 transition-transform">→</span>
-              </Link>
-            ))}
+      {/* Post-article ad — above related articles */}
+      <AdSlot
+        slotId="article-bottom"
+        adSlot="YOUR_ARTICLE_BOTTOM_AD_SLOT_ID"
+        format="banner"
+        className="mt-12 mb-4"
+      />
+
+        {/* Related articles */}
+        {related.length > 0 && (
+          <div className="mt-16 border-t border-zinc-100 dark:border-zinc-800 pt-10">
+            <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-5">
+              Related Articles
+            </p>
+            <div className="grid gap-3">
+              {related.map((r) => (
+                <Link
+                  key={r.slug}
+                  href={`/articles/${r.slug}`}
+                  className="flex items-center justify-between p-4 rounded-xl border border-zinc-100 dark:border-zinc-800 hover:border-indigo-200 dark:hover:border-indigo-800 hover:bg-indigo-50/50 dark:hover:bg-indigo-950/20 transition-all group"
+                >
+                  <span className="text-sm font-medium text-zinc-800 dark:text-zinc-200 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                    {r.title}
+                  </span>
+                  <span className="text-indigo-500 text-sm shrink-0 ml-3 group-hover:translate-x-1 transition-transform">→</span>
+                </Link>
+              ))}
+            </div>
           </div>
+        )}
+      </article>
+
+      <aside className="hidden xl:block">
+        <div className="sticky top-28">
+          <AdSlot
+            slotId="article-sidebar"
+            adSlot="YOUR_ARTICLE_SIDEBAR_AD_SLOT_ID"
+            format="display"
+            className="mt-0"
+          />
         </div>
-      )}
-    </article>
+      </aside>
+    </div>
   );
 }

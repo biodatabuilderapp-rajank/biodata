@@ -8,6 +8,7 @@ import { Biodata, initialData } from "@/lib/biodata";
 import { useRouter } from "next/navigation";
 import { translateBiodata } from "@/lib/translateBiodata";
 import { useUITranslation } from "@/lib/useUITranslation";
+import AdSlot from "@/components/AdSlot";
 
 // Module-level flag: resets to false on every browser refresh (module re-executes),
 // stays true across SPA navigations within the same browser session.
@@ -161,6 +162,8 @@ export default function CreatePageClient() {
         router.push("/preview");
     };
 
+    const adsEnabled = process.env.NEXT_PUBLIC_ADSENSE_ENABLED === "true";
+
     if (!isLoaded) return <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 flex items-center justify-center">Loading...</div>;
 
     return (
@@ -179,16 +182,52 @@ export default function CreatePageClient() {
                 </div>
             </header>
 
-            <main className="max-w-[800px] mx-auto p-4 md:p-6 lg:p-8 min-h-[calc(100vh-64px)] overflow-y-auto px-4 pb-24">
-                <BiodataForm data={data} onChange={handleDataChange} language={language} onLanguageChange={handleLanguageChange} />
-
-                <HelpSection />
-
-                <div className="mt-8 flex justify-end">
-                    <button onClick={handlePreview} className="w-full sm:w-auto px-8 py-3.5 text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl transition-colors shadow-sm shadow-indigo-500/20">
-                        {t("create.previewBtn") || "Preview & Select Theme"}
-                    </button>
+            {/* Mobile-only ad — rendered only when ads are enabled.
+                Hidden on xl where the sidebar slot handles desktop impressions. */}
+            {adsEnabled && (
+                <div className="xl:hidden flex justify-center px-4 py-3 bg-zinc-50 dark:bg-zinc-950">
+                    <AdSlot
+                        slotId="create-mobile-top"
+                        adSlot="YOUR_CREATE_MOBILE_TOP_AD_SLOT_ID"
+                        format="display"
+                        label="Advertisement"
+                        className="my-0"
+                    />
                 </div>
+            )}
+
+            <main className={`max-w-7xl mx-auto grid grid-cols-1 ${adsEnabled ? "xl:grid-cols-[minmax(0,800px)_300px]" : ""} gap-8 p-4 md:p-6 lg:p-8 px-4 pb-24`}>
+                <div>
+                    <BiodataForm data={data} onChange={handleDataChange} language={language} onLanguageChange={handleLanguageChange} />
+
+                    <HelpSection />
+
+                    <AdSlot
+                        slotId="create-after-help"
+                        adSlot="YOUR_CREATE_AFTER_HELP_AD_SLOT_ID"
+                        format="banner"
+                    />
+
+                    <div className="mt-8 flex justify-end">
+                        <button onClick={handlePreview} className="w-full sm:w-auto px-8 py-3.5 text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl transition-colors shadow-sm shadow-indigo-500/20">
+                            {t("create.previewBtn") || "Preview & Select Theme"}
+                        </button>
+                    </div>
+                </div>
+
+                {/* Desktop sticky sidebar — only rendered when ads are enabled.
+                    self-start collapses the aside to ad height so sticky stops
+                    naturally when the grid row ends (≈ Preview button). */}
+                {adsEnabled && (
+                    <aside className="hidden xl:block self-start sticky top-[88px]">
+                        <AdSlot
+                            slotId="create-sidebar"
+                            adSlot="YOUR_CREATE_SIDEBAR_AD_SLOT_ID"
+                            format="display"
+                            className="mt-0"
+                        />
+                    </aside>
+                )}
             </main>
         </div>
     );

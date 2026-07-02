@@ -445,6 +445,39 @@ export default function CreatePage() {
         </section>
 
 
+        {/* ── Internal Link Block ── */}
+        <section className="max-w-5xl mx-auto px-5 py-16 border-t border-zinc-100 dark:border-zinc-900">
+          <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-3 text-center">Expert Guides</p>
+          <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-3 text-center">
+            Guides to Help You Write Your Biodata
+          </h2>
+          <p className="text-center text-zinc-500 dark:text-zinc-400 mb-10 max-w-xl mx-auto">
+            Not sure what to write? Our expert guides cover every section — from the About Me paragraph to Kundali details.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { title: "How to Write Your About Me Section", slug: "how-to-write-biodata-about-me", emoji: "✍️" },
+              { title: "Kundali Details to Include in Biodata", slug: "kundali-details-in-biodata", emoji: "🔯" },
+              { title: "Biodata Tips & Mistakes to Avoid", slug: "biodata-tips", emoji: "💡" },
+              { title: "Marriage Biodata for Boy (Groom Guide)", slug: "marriage-biodata-for-boy", emoji: "👨" },
+              { title: "Shaadi Biodata Format for Girl", slug: "shaadi-biodata-format-for-girl", emoji: "👩" },
+              { title: "Best Hindu Marriage Biodata Format", slug: "best-marriage-biodata-format-for-hindu", emoji: "🪔" },
+            ].map((guide) => (
+              <Link
+                key={guide.slug}
+                href={`/articles/${guide.slug}`}
+                className="flex items-start gap-3 p-4 rounded-xl border border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:border-indigo-300 dark:hover:border-indigo-700 hover:bg-indigo-50/30 dark:hover:bg-indigo-950/20 transition-all group"
+              >
+                <span className="text-2xl shrink-0 mt-0.5">{guide.emoji}</span>
+                <span className="text-sm font-medium text-zinc-800 dark:text-zinc-200 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 leading-snug">
+                  {guide.title}
+                  <span className="block text-indigo-400 text-xs mt-1 group-hover:translate-x-1 transition-transform">Read guide →</span>
+                </span>
+              </Link>
+            ))}
+          </div>
+        </section>
+
         {/* FAQ */}
         <section className="max-w-3xl mx-auto px-5 py-20">
           <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-3 text-center">FAQ</p>
